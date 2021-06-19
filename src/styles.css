@@ -1,0 +1,22 @@
+/* Add application styles & imports to this file! */
+
+:root {
+  --white: #ffffff;
+  --semi-white: #fcfcfc;
+  --dark-purple: #160c28;
+  --blue-jeans: #4ab6f2;
+  --sea-green: #00bc65;
+  --tart-orange: #fa403f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--semi-white);
+}
