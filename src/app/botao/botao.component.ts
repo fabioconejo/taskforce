@@ -10,5 +10,6 @@ export class BotaoComponent implements OnInit {
 
   ngOnInit() {}
 
-  @Input() cor: String;
+  @Input() corFundo: String;
+  @Input() corFonte: String;
 }
