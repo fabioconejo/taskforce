@@ -27,10 +27,15 @@ export class BotaoComponent implements OnInit {
         this.corFundo = 'var(--medium-sea-green)';
         this.sombra = 'var(--sea-green)';
         break;
+      case 'vermelho':
+        this.corFonte = 'var(--white)';
+        this.corFundo = 'var(--tart-orange)';
+        this.sombra = 'var(--firebrick)';
+        break;
       default:
         this.corFonte = 'var(--saphire-blue)';
         this.corFundo = 'var(--semi-white)';
-        this.sombra = '#999999';
+        this.sombra = 'var(--silver-chalice)';
         break;
     }
   }

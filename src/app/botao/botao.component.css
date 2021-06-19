@@ -1,4 +1,5 @@
-button {
+button,
+select {
   height: 100%;
   width: 100%;
   margin-top: 0px;
@@ -12,9 +13,12 @@ button {
   transition: all 0.05s;
   box-shadow: 0px 6px var(--box-shadow-color);
   font-size: inherit;
+  -webkit-tap-highlight-color: transparent;
+  display: none;
 }
 
-button:active {
+button:active,
+select:active {
   margin-top: 4px;
   margin-bottom: 2px;
   box-shadow: 0px 2px var(--box-shadow-color);
