@@ -1,5 +1,11 @@
 <div>
-  <button [style.background]="cor-fundo" [style.color]="cor-fonte">
+  <button
+    class="active"
+    [style.background]="corFundo"
+    [style.color]="corFonte"
+    [style.box-shadow]="sombra"
+    [class.active.style.box-shadow]="sombraActive"
+  >
     Criar Sala
   </button>
 </div>
