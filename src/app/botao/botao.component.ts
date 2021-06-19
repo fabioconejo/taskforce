@@ -10,6 +10,8 @@ export class BotaoComponent implements OnInit {
   corFonte: string;
   sombra: string;
   @Input() cor: string;
+  @Input() texto: string;
+  @Input() tamanhoFonte: string;
 
   constructor() {}
 
@@ -26,8 +28,8 @@ export class BotaoComponent implements OnInit {
         this.sombra = 'var(--sea-green)';
         break;
       default:
-        this.corFonte = '#000000';
-        this.corFundo = '#ffffff';
+        this.corFonte = 'var(--saphire-blue)';
+        this.corFundo = 'var(--semi-white)';
         this.sombra = '#999999';
         break;
     }
