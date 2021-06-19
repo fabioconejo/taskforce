@@ -8,6 +8,8 @@ button {
   outline: none;
   cursor: pointer;
   font-weight: 700;
+  transition: all 0.05s;
+  background-color: {{cor}};
 }
 
 button:active {

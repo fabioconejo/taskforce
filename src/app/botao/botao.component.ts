@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'botao',
@@ -9,4 +9,6 @@ export class BotaoComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  @Input() cor: String;
 }
