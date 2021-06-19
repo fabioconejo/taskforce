@@ -3,8 +3,7 @@
     class="active"
     [style.background]="corFundo"
     [style.color]="corFonte"
-    [style.box-shadow]="sombra"
-    [class.active.style.box-shadow]="sombraActive"
+    [style]="{'--box-shadow-color': sombra}"
   >
     Criar Sala
   </button>
