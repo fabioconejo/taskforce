@@ -20,6 +20,11 @@ export class BotaoComponent implements OnInit {
 
   ngOnInit() {
     switch (this.cor) {
+      case 'azul-escuro':
+        this.corFonte = 'var(--white)';
+        this.corFundo = 'var(--space-cadet)';
+        this.sombra = 'var(--black-fogra)';
+        break;
       case 'azul':
         this.corFonte = 'var(--white)';
         this.corFundo = 'var(--blue-jeans)';
