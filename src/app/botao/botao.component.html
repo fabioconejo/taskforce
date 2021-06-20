@@ -3,9 +3,19 @@
     [style.color]="corFonte"
     [style]="{'--box-shadow-color': sombra}"
     [style.font-size]="tamanhoFonte"
+    [style.display]="displayBotao"
   >
     {{texto}}
 </button>
 
-<select>
-</select>
+<div class="lista">
+  <select
+    [style.background]="corFundo"
+    [style.color]="corFonte"
+    [style]="{'--box-shadow-color': sombra}"
+    [style.font-size]="tamanhoFonte"
+    [style.display]="displayLista"
+  >
+    <option value="teste">teste</option>
+  </select>
+</div>

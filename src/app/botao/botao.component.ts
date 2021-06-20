@@ -6,9 +6,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./botao.component.css']
 })
 export class BotaoComponent implements OnInit {
+  displayBotao: string;
+  displayLista: string;
   corFundo: string;
   corFonte: string;
   sombra: string;
+  @Input() tipo: string;
   @Input() cor: string;
   @Input() texto: string;
   @Input() tamanhoFonte: string;
@@ -36,6 +39,15 @@ export class BotaoComponent implements OnInit {
         this.corFonte = 'var(--saphire-blue)';
         this.corFundo = 'var(--semi-white)';
         this.sombra = 'var(--silver-chalice)';
+        break;
+    }
+
+    switch (this.tipo) {
+      case 'botao':
+        this.displayBotao = 'block';
+        break;
+      case 'lista':
+        this.displayLista = 'block';
         break;
     }
   }
