@@ -4,6 +4,7 @@
 :root {
   --white: #ffffff;
   --semi-white: #fcfcfc;
+  --cultured: #ededed;
   --dark-purple: #160c28;
   --blue-jeans: #4ab6f2;
   --medium-sea-green: #00bc65;
@@ -12,6 +13,8 @@
   --sea-green: #008343;
   --silver-chalice: #b3b3b3;
   --firebrick: #b72a2a;
+  --space-cadet: #252d41;
+  --black-fogra: #04050a;
 }
 
 * {

@@ -37,7 +37,7 @@ export class BotaoComponent implements OnInit {
         break;
       default:
         this.corFonte = 'var(--saphire-blue)';
-        this.corFundo = 'var(--semi-white)';
+        this.corFundo = 'var(--cultured)';
         this.sombra = 'var(--silver-chalice)';
         break;
     }
