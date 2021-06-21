@@ -32,8 +32,13 @@ export class TarefaComponent implements OnInit {
         this.textoBotao = this.texto;
         break;
       case 'estado':
-        this.corBotao = "azul"
-        this.tipoBotao = "botao"
+        if (this.corBotao == 'verde') {
+          this.corBotao = 'vermelho';
+        } else {
+          this.corBotao == 'verde';
+        }
+
+        this.tipoBotao = 'botao';
         this.textoBotao = this.texto;
         break;
       case 'escolha':
