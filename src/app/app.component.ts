@@ -26,19 +26,19 @@ export class AppComponent implements OnInit {
           complemento: 'Prontuário'
         },
         {
-          texto: 'Receitar cloroquina',
-          verbo: 'Receitar',
-          complemento: 'Cloroquina'
+          texto: 'Indicar médico especialista',
+          verbo: 'Indicar',
+          complemento: 'Médico especialista'
         },
         {
-          texto: 'Receitar cloroquina',
-          verbo: 'Receitar',
-          complemento: 'Cloroquina'
+          texto: 'Informar riscos da cirurgia',
+          verbo: 'Informar',
+          complemento: 'Riscos da cirurgia'
         },
         {
-          texto: 'Receitar cloroquina',
-          verbo: 'Receitar',
-          complemento: 'Cloroquina'
+          texto: 'Atender paciente',
+          verbo: 'Atender',
+          complemento: 'Paciente'
         }
       ]
     }
