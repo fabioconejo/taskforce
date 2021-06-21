@@ -9,11 +9,14 @@ export class PainelComponent implements OnInit {
   nomeProfissao: string;
   imgProfissao: string;
   tarefas: any;
+  maxNumTarefas: number = 8;
 
   @Input() numTarefas: number;
   @Input() profissao: any;
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.numTarefas = 6;
+  }
 }
