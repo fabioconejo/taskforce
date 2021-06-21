@@ -16,6 +16,14 @@ export class BotaoComponent implements OnInit {
   @Input() texto: string;
   @Input() tamanhoFonte: string;
 
+  lista = [
+    { id: 1, texto: 'United States', selected: 'selected' },
+    { id: 2, texto: 'Australia', selected: '' },
+    { id: 3, texto: 'Canada', selected: '' },
+    { id: 4, texto: 'Brazil', selected: '' },
+    { id: 5, texto: 'England', selected: '' }
+  ];
+
   constructor() {}
 
   ngOnInit() {

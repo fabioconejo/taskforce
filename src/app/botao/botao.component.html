@@ -15,6 +15,6 @@
     [style.font-size]="tamanhoFonte"
     [style.display]="displayLista"
   >
-    <option value="teste">teste</option>
-    <option value="teste2">teste2</option>
+    <option value="" selected hidden disabled>{{texto}}</option>
+    <option *ngFor="let l of lista" [value]="l.id">{{l.texto}}</option>
   </select>
