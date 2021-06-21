@@ -1,5 +1,5 @@
 <button
-    [style.background]="corFundo"
+    [style.background-color]="corFundo"
     [style.color]="corFonte"
     [style]="{'--box-shadow-color': sombra}"
     [style.font-size]="tamanhoFonte"
@@ -8,9 +8,8 @@
     {{texto}}
 </button>
 
-<div class="lista">
-  <select
-    [style.background]="corFundo"
+<select
+    [style.background-color]="corFundo"
     [style.color]="corFonte"
     [style]="{'--box-shadow-color': sombra}"
     [style.font-size]="tamanhoFonte"
@@ -18,4 +17,3 @@
   >
     <option value="teste">teste</option>
   </select>
-</div>
