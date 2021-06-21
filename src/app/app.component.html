@@ -1,9 +1,5 @@
-<div>
-  <tarefa frase="Cloroquina" texto="Receitar" tipo="acao"></tarefa>
-</div>
-<div>
-  <tarefa frase="Monitor cardíaco" texto="Ligado" tipo="estado"></tarefa>
-</div>
-<div>
-  <tarefa frase="Respirador" texto="Pressão em libras" tipo="escolha"></tarefa>
+<div *ngFor="let tarefa of baseProfissoes[0].tarefas">
+  <tarefa [frase]="tarefa.complemento" [texto]="tarefa.verbo" [tipo]="tarefa.tipo" [estado]="tarefa.estado"
+    [lista]="tarefa.lista">
+  </tarefa>
 </div>

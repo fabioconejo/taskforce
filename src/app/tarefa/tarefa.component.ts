@@ -13,8 +13,8 @@ export class TarefaComponent implements OnInit {
   @Input() frase: string;
   @Input() texto: string;
   @Input() tipo: string;
-  @Input() estado: string;
-  @Input() lista: string;
+  @Input() estado: any;
+  @Input() lista: any;
 
   constructor() {}
 
