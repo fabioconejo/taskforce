@@ -15,6 +15,7 @@ export class BotaoComponent implements OnInit {
   @Input() cor: string;
   @Input() texto: string;
   @Input() tamanhoFonte: string;
+  @Input() estado: any;
   @Input() lista: any;
 
   constructor() {}
@@ -52,9 +53,26 @@ export class BotaoComponent implements OnInit {
       case 'botao':
         this.displayBotao = 'block';
         break;
+      case 'estado':
+        this.displayBotao = 'block';
+        break;
       case 'lista':
         this.displayLista = 'block';
         break;
     }
+  }
+
+  public inverter() {
+    if (this.tipo == 'estado') {
+      if (this.cor == 'verde') {
+        this.texto = this.estado[1];
+        this.cor = 'vermelho';
+      } else if (this.cor == 'vermelho') {
+        this.texto = this.estado[0];
+        this.cor = 'verde';
+      }
+    }
+
+    this.ngOnInit();
   }
 }

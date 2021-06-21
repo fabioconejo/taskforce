@@ -14,6 +14,8 @@ export class TarefaComponent implements OnInit {
   @Input() texto: string;
   @Input() tipo: string;
 
+  estado = ['Ligado', 'Desligado'];
+
   lista = [
     { id: 1, texto: 'United States' },
     { id: 2, texto: 'Australia' },
@@ -35,10 +37,10 @@ export class TarefaComponent implements OnInit {
         if (this.corBotao == 'verde') {
           this.corBotao = 'vermelho';
         } else {
-          this.corBotao == 'verde';
+          this.corBotao = 'verde';
         }
 
-        this.tipoBotao = 'botao';
+        this.tipoBotao = 'estado';
         this.textoBotao = this.texto;
         break;
       case 'escolha':
