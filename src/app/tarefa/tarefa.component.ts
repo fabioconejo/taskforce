@@ -13,16 +13,8 @@ export class TarefaComponent implements OnInit {
   @Input() frase: string;
   @Input() texto: string;
   @Input() tipo: string;
-
-  estado = ['Ligado', 'Desligado'];
-
-  lista = [
-    { id: 1, texto: 'United States' },
-    { id: 2, texto: 'Australia' },
-    { id: 3, texto: 'Canada' },
-    { id: 4, texto: 'Brazil' },
-    { id: 5, texto: 'England' }
-  ];
+  @Input() estado: string;
+  @Input() lista: string;
 
   constructor() {}
 
