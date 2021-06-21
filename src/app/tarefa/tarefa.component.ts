@@ -41,6 +41,9 @@ export class TarefaComponent implements OnInit {
         this.textoBotao = this.texto;
         break;
       default:
+        this.corBotao = 'azul';
+        this.tipoBotao = 'botao';
+        this.textoBotao = this.texto;
         break;
     }
   }
