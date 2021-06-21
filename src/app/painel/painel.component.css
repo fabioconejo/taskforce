@@ -1,2 +1,52 @@
+.painel {
+  height: 100%;
+  width: 100%;
+}
+
 .tarefa {
+  float: left;
+}
+
+.vazio {
+  background-color: var(--cultured);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .tarefa {
+    width: 50%;
+    height: 25%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .tarefa {
+    width: 50%;
+    height: 25%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .tarefa {
+    width: 25%;
+    height: 50%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .tarefa {
+    width: 25%;
+    height: 50%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .tarefa {
+    width: 25%;
+    height: 50%;
+  }
 }

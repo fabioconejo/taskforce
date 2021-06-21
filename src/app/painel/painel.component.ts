@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'painel',
@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./painel.component.css']
 })
 export class PainelComponent implements OnInit {
+  nomeProfissao: string;
+  imgProfissao: string;
+  tarefas: any;
+
+  @Input() numTarefas: number;
+  @Input() profissao: any;
+
   constructor() {}
 
   ngOnInit() {}
