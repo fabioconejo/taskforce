@@ -8,15 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PainelComponent implements OnInit {
   nomeProfissao: string;
   imgProfissao: string;
-  tarefas: any;
+  numTarefas: number;
   maxNumTarefas: number = 8;
 
-  @Input() numTarefas: number;
+  @Input() tarefas: any;
   @Input() profissao: any;
 
   constructor() {}
 
   ngOnInit() {
-    this.numTarefas = 6;
+    this.numTarefas = this.tarefas.length;
   }
 }

@@ -77,7 +77,13 @@ export class AppComponent implements OnInit {
     }
   ];
 
+  amostraTarefa: any;
+
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.amostraTarefa = this.baseProfissoes[0].tarefas
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 5);
+  }
 }
