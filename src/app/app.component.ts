@@ -58,6 +58,7 @@ export class AppComponent implements OnInit {
           eTexto: ['Ligar oxímetro', 'Desligar oxímetro'],
           eVerbo: ['Ligar', 'Desligar'],
           verbo: 'Ligado',
+          texto: 'Ligar oxímetro',
           complemento: 'Oxímetro',
           estado: ['Ligado', 'Desligado']
         },

@@ -19,12 +19,13 @@ export class MonitorComponent implements OnInit {
 
   ngOnInit() {
     this.cloneTarefas = JSON.parse(JSON.stringify(this.tarefas));
+    this.mudarTarefa(false);
     let intervalo = setInterval(() => {
-      this.mudarTarefa();
+      this.mudarTarefa(false);
     }, this.tempo * 1000);
   }
 
-  mudarTarefa() {
+  mudarTarefa(concluido: boolean) {
     var registro: any;
     var j: number = 0;
 
@@ -39,6 +40,9 @@ export class MonitorComponent implements OnInit {
     this.cloneTarefas.sort(() => 0.5 - Math.random());
     do {
       j = Math.floor(Math.random() * (this.cloneTarefas.length - 1));
+      if (typeof this.tarefa === 'undefined') {
+        this.tarefa = this.cloneTarefas[j];
+      }
     } while (this.cloneTarefas[j].id === this.tarefa.id);
 
     this.tarefa = this.cloneTarefas[j];
@@ -51,8 +55,10 @@ export class MonitorComponent implements OnInit {
         break;
       case 'estado':
         j = Math.floor(Math.random() * (this.tarefa.eVerbo.length - 1));
-        this.complemento = this.tarefa.eVerbo[j];
-        this.texto = this.tarefa.eTexto[j];
+        this.complemento = this.tarefa.estado.filter(
+          e => e != this.tarefa.verbo
+        )[0];
+        this.texto = this.tarefa.eTexto.filter(e => e != this.tarefa.texto)[0];
         break;
       case 'escolha':
         j = Math.floor(Math.random() * (this.tarefa.lista.length - 1));
@@ -60,13 +66,13 @@ export class MonitorComponent implements OnInit {
         this.texto = this.tarefa.texto + ' ' + this.complemento;
         break;
     }
-    this.complemento = this.tarefa.verbo;
 
     //adicionar tarefa no registro
     registro = {
       id: this.tarefa.id,
       ativo: true,
-      valor: this.tarefa.verbo
+      concluido: concluido,
+      valor: this.complemento
     };
     this.registro.push(registro);
   }
