@@ -7,6 +7,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { BotaoComponent } from './botao/botao.component';
 import { TarefaComponent } from './tarefa/tarefa.component';
 import { PainelComponent } from './painel/painel.component';
+import { MonitorComponent } from './monitor/monitor.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -15,7 +16,8 @@ import { PainelComponent } from './painel/painel.component';
     InicioComponent,
     BotaoComponent,
     TarefaComponent,
-    PainelComponent
+    PainelComponent,
+    MonitorComponent
   ],
   bootstrap: [AppComponent]
 })
