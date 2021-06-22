@@ -76,6 +76,7 @@ export class AppComponent implements OnInit {
       ]
     }
   ];
+  registro = [];
 
   amostraTarefa: any;
   tempoMonitor: number;

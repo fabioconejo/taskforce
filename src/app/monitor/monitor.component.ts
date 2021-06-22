@@ -7,13 +7,26 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MonitorComponent implements OnInit {
   texto: string;
-  tempo: number = 10;
+  tempo: number = 20;
+  tarefa: any;
 
   @Input() tarefas: any;
+  @Input() registro: any;
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.tarefa = JSON.parse(JSON.stringify(this.tarefas));
+    let intervalo = setInterval(() => {
+      this.mudarTarefa();
+    }, this.tempo * 1000);
+  }
 
-  mudarTarefa() {}
+  mudarTarefa() {
+    this.texto = this.tarefa
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 1)[0].texto;
+    this.registro.push('{id:' + this.tarefa[0].id + ', ativo:' + true + '}');
+    console.log(this.registro);
+  }
 }
