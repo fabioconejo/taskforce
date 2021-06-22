@@ -39,6 +39,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 90%;
 }
 
 .monitor p::after {
@@ -50,14 +51,13 @@
 
 .tempo {
   width: 90%;
-  height: 2px;
+  height: 3px;
   margin-left: 5%;
   background-image: linear-gradient(
     to right,
     var(--eletric-purple),
     var(--blue-jeans)
   );
-  border-radius: 2px;
 }
 
 .tempo-decorrido {
@@ -66,7 +66,6 @@
   width: 0%;
   float: right;
   animation-name: tempo;
-  animation-duration: 15s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }

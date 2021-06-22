@@ -78,6 +78,7 @@ export class AppComponent implements OnInit {
   ];
 
   amostraTarefa: any;
+  tempoMonitor: number;
 
   constructor() {}
 
@@ -85,5 +86,7 @@ export class AppComponent implements OnInit {
     this.amostraTarefa = this.baseProfissoes[0].tarefas
       .sort(() => 0.5 - Math.random())
       .slice(0, 5);
+
+    this.tempoMonitor = 10;
   }
 }
