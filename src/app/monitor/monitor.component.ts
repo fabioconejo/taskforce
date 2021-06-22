@@ -32,7 +32,11 @@ export class MonitorComponent implements OnInit {
     this.texto = this.tarefa
       .sort(() => 0.5 - Math.random())
       .slice(0, 1)[0].texto;
-    registro = { id: this.tarefa[0].id, ativo: true };
+    registro = {
+      id: this.tarefa[0].id,
+      ativo: true,
+      valor: this.tarefa[0].verbo
+    };
     this.registro.push(registro);
   }
 }
