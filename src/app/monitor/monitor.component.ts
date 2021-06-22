@@ -13,9 +13,7 @@ export class MonitorComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    this.texto = this.tarefas
-      .sort(() => 0.5 - Math.random())
-      .slice(0, 1)[0].texto;
-  }
+  ngOnInit() {}
+
+  mudarTarefa() {}
 }
