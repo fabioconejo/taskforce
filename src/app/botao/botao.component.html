@@ -4,7 +4,7 @@
     [style]="{'--box-shadow-color': sombra}"
     [style.font-size]="tamanhoFonte"
     [style.display]="displayBotao"
-    (click)="inverter()"
+    (click)="inverter(); clickCallback(id, tipo, texto)"
   >
     {{texto}}
 </button>
@@ -15,6 +15,7 @@
     [style]="{'--box-shadow-color': sombra}"
     [style.font-size]="tamanhoFonte"
     [style.display]="displayLista"
+    (change)="clickCallback(id, tipo, texto)"
   >
     <option value="" selected hidden disabled>{{texto}}</option>
     <option *ngFor="let l of lista" [value]="l.id">{{l.texto}}</option>

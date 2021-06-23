@@ -10,6 +10,7 @@ export class TarefaComponent implements OnInit {
   tipoBotao: string;
   corBotao: string;
 
+  @Input() id: number;
   @Input() frase: string;
   @Input() texto: string;
   @Input() tipo: string;
@@ -48,4 +49,8 @@ export class TarefaComponent implements OnInit {
         break;
     }
   }
+
+  botaoClick = (id: number, tipo: string, complemento: string): void => {
+    console.log(id, tipo, complemento);
+  };
 }

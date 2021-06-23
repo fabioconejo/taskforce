@@ -11,13 +11,18 @@ export class BotaoComponent implements OnInit {
   corFundo: string;
   corFonte: string;
   sombra: string;
+  @Input() id: number;
   @Input() tipo: string;
   @Input() cor: string;
   @Input() texto: string;
   @Input() tamanhoFonte: string;
   @Input() estado: any;
   @Input() lista: any;
-  @Input() registro: any;
+  @Input() clickCallback: (
+    id: number,
+    tipo: string,
+    complemento: string
+  ) => void;
 
   constructor() {}
 
@@ -80,6 +85,4 @@ export class BotaoComponent implements OnInit {
 
     this.atualizarCores();
   }
-
-  onClick() {}
 }
