@@ -1,0 +1,8 @@
+<div class="quadro">
+  <div class="tarefa" *ngFor="let t of tarefas">
+    <tarefa [id]="t.id" [tipo]="t.tipo" [frase]="t.complemento" [texto]="t.verbo" [estado]="t.estado" [lista]="t.lista"
+      [registro]="registro"></tarefa>
+  </div>
+  <div class="vazio" *ngFor="let item of [].constructor(maxNumTarefas - tarefas.length)">
+  </div>
+</div>

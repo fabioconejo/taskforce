@@ -50,7 +50,12 @@ export class TarefaComponent implements OnInit {
     }
   }
 
-  botaoClick = (id: number, tipo: string, complemento: string): void => {
-    console.log(id, tipo, complemento);
+  botaoClick = (args: any): void => {
+    var tarefa: any;
+    tarefa = this.registro.filter(r => ((r.id = args[0]), (r.ativo = true), (r.valor = args[2])));
+    for (var i = 0; i < tarefa.length; i++) {
+      tarefa[i].ativo = false;
+      tarefa[i].concluido = true;
+    }
   };
 }

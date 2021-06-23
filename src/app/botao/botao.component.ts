@@ -18,11 +18,7 @@ export class BotaoComponent implements OnInit {
   @Input() tamanhoFonte: string;
   @Input() estado: any;
   @Input() lista: any;
-  @Input() clickCallback: (
-    id: number,
-    tipo: string,
-    complemento: string
-  ) => void;
+  @Input() clickCallback: (args: any) => void;
 
   constructor() {}
 

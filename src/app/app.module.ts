@@ -8,6 +8,7 @@ import { BotaoComponent } from './botao/botao.component';
 import { TarefaComponent } from './tarefa/tarefa.component';
 import { PainelComponent } from './painel/painel.component';
 import { MonitorComponent } from './monitor/monitor.component';
+import { QuadroComponent } from './quadro/quadro.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -17,7 +18,8 @@ import { MonitorComponent } from './monitor/monitor.component';
     BotaoComponent,
     TarefaComponent,
     PainelComponent,
-    MonitorComponent
+    MonitorComponent,
+    QuadroComponent
   ],
   bootstrap: [AppComponent]
 })
