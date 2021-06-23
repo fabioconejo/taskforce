@@ -83,6 +83,8 @@ export class PainelComponent implements OnInit {
   tempoMonitor: number;
   tarefaSorteada: any;
   textoExibicao: string;
+  intervalo: any;
+  pausa: boolean;
 
   constructor() {}
 
@@ -92,11 +94,21 @@ export class PainelComponent implements OnInit {
       .slice(0, 5);
 
     this.tempoMonitor = 10;
-    this.sortearTarefa();
-    this.textoExibicao = this.exibirTarefa();
+    this.atualizarTarefa();
+  }
 
-    setInterval(() => {
+  atualizarTarefa() {
+    this.pausa = true;
+    clearInterval(this.intervalo);
+    this.sortearTarefa();
+    this.adicionarRegistro();
+    this.textoExibicao = this.exibirTarefa();
+    this.pausa = false;
+
+    this.intervalo = setInterval(() => {
+      this.desabilitarRegistro();
       this.sortearTarefa();
+      this.adicionarRegistro();
       this.textoExibicao = this.exibirTarefa();
     }, this.tempoMonitor * 1000);
   }
@@ -146,20 +158,23 @@ export class PainelComponent implements OnInit {
     return texto;
   }
 
-  adicionarRegistro(tarefa: any) {
+  adicionarRegistro() {
     var registro: any;
     registro = {
-      id: tarefa.id,
+      id: this.tarefaSorteada.id,
       ativo: true,
       concluido: false,
-      valor: tarefa.verbo
+      texto: this.tarefaSorteada.verbo
     };
     this.registro.push(registro);
   }
 
-  desabilitarRegistro(tarefa: any) {
+  desabilitarRegistro() {
     for (var i = 0; i < this.registro.length; i++) {
-      if (this.registro[i].ativo && this.registro[i].id === tarefa.id) {
+      if (
+        this.registro[i].ativo &&
+        this.registro[i].id === this.tarefaSorteada.id
+      ) {
         this.registro[i].ativo = false;
       }
     }
@@ -168,18 +183,21 @@ export class PainelComponent implements OnInit {
   concluirRegistro(registro: any) {
     for (var i = 0; i < this.registro.length; i++) {
       if (
-        this.registro.ativo &&
-        this.registro.id === registro.id &&
-        this.registro.valor === registro.valor
+        this.registro[i].ativo &&
+        this.registro[i].id === registro.id &&
+        this.registro[i].texto === registro.texto
       ) {
         this.registro[i].ativo = false;
         this.registro[i].concluido = true;
 
         for (var j = 0; j < this.amostraTarefa.length; j++) {
           if (this.amostraTarefa[j].id === registro.id) {
-            this.amostraTarefa[j].verbo = registro.valor;
+            this.amostraTarefa[j].verbo = registro.texto;
+            break;
           }
         }
+
+        this.atualizarTarefa();
       }
     }
   }
