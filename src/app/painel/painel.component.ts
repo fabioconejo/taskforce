@@ -82,6 +82,7 @@ export class PainelComponent implements OnInit {
   amostraTarefa: any;
   tempoMonitor: number;
   tarefaSorteada: any;
+  textoExibicao: string;
 
   constructor() {}
 
@@ -92,13 +93,19 @@ export class PainelComponent implements OnInit {
 
     this.tempoMonitor = 10;
     this.sortearTarefa();
+    this.textoExibicao = this.exibirTarefa();
+
+    setInterval(() => {
+      this.sortearTarefa();
+      this.textoExibicao = this.exibirTarefa();
+    }, this.tempoMonitor * 1000);
   }
 
   sortearTarefa() {
     var j: number;
 
     do {
-      j = Math.floor(Math.random() * (this.amostraTarefa.length - 1));
+      j = Math.floor(Math.random() * this.amostraTarefa.length);
       if (typeof this.tarefaSorteada === 'undefined') {
         this.tarefaSorteada = this.amostraTarefa[j];
       }
@@ -111,6 +118,7 @@ export class PainelComponent implements OnInit {
     var texto: string;
     var complemento: string;
     var j: number;
+    var lista: any;
 
     switch (this.tarefaSorteada.tipo) {
       case 'acao':
@@ -118,7 +126,6 @@ export class PainelComponent implements OnInit {
         texto = this.tarefaSorteada.texto;
         break;
       case 'estado':
-        j = Math.floor(Math.random() * (this.tarefaSorteada.eVerbo.length - 1));
         complemento = this.tarefaSorteada.estado.filter(
           e => e != this.tarefaSorteada.verbo
         )[0];
@@ -127,10 +134,11 @@ export class PainelComponent implements OnInit {
         )[0];
         break;
       case 'escolha':
-        j = Math.floor(Math.random() * (this.tarefaSorteada.lista.length - 1));
-        complemento = this.tarefaSorteada.lista.filter(
-          l => l != this.tarefaSorteada.verbo
-        )[j].texto;
+        lista = this.tarefaSorteada.lista.filter(
+          l => l.texto != this.tarefaSorteada.verbo
+        );
+        j = Math.floor(Math.random() * lista.length);
+        complemento = lista[j].texto;
         texto = this.tarefaSorteada.texto + ' ' + complemento;
         break;
     }
