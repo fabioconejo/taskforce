@@ -77,8 +77,8 @@ export class PainelComponent implements OnInit {
       ]
     }
   ];
-  registro: any = [];
 
+  registro: any = [];
   amostraTarefa: any;
   tempoMonitor: number;
 
@@ -144,18 +144,71 @@ export class PainelComponent implements OnInit {
     this.registro.push(registro);
   }
 
-  
-
-  desabilitarTarefa() {}
-
-  concluirTarefa(args: any) {
+  sortearTarefa(): any {
     var tarefa: any;
-    tarefa = this.registro.filter(
-      r => ((r.id = args[0]), (r.ativo = true), (r.valor = args[2]))
-    );
-    for (var i = 0; i < tarefa.length; i++) {
-      tarefa[i].ativo = false;
-      tarefa[i].concluido = true;
+    var j: number;
+
+    do {
+      j = Math.floor(Math.random() * (this.amostraTarefa.length - 1));
+      if (typeof tarefa === 'undefined') {
+        tarefa = this.amostraTarefa[j];
+      }
+    } while (this.amostraTarefa[j].id === tarefa.id);
+
+    tarefa = this.amostraTarefa[j];
+    texto = tarefa.texto;
+
+    switch (tarefa.tipo) {
+      case 'acao':
+        complemento = '';
+        texto = tarefa.texto;
+        break;
+      case 'estado':
+        j = Math.floor(Math.random() * (tarefa.eVerbo.length - 1));
+        complemento = tarefa.estado.filter(e => e != tarefa.verbo)[0];
+        texto = tarefa.eTexto.filter(e => e != tarefa.texto)[0];
+        break;
+      case 'escolha':
+        j = Math.floor(Math.random() * (tarefa.lista.length - 1));
+        complemento = tarefa.lista.filter(l => l != tarefa.verbo)[j].texto;
+        texto = tarefa.texto + ' ' + complemento;
+        break;
+    }
+
+    return tarefa;
+  }
+
+  adicionarRegistro(tarefa: any) {
+    var registro: any;
+    registro = {
+      id: tarefa.id,
+      ativo: true,
+      concluido: false,
+      valor: tarefa.verbo
+    };
+    this.registro.push(registro);
+  }
+
+  exibirTarefa() {}
+
+  desabilitarRegistro(tarefa: any) {
+    for (var i = 0; i < this.registro.length; i++) {
+      if (this.registro[i].ativo && this.registro[i].id === tarefa.id) {
+        this.registro[i].ativo = false;
+      }
+    }
+  }
+
+  concluirRegistro(registro: any) {
+    for (var i = 0; i < this.registro.length; i++) {
+      if (
+        this.registro.ativo &&
+        this.registro.id === registro.id &&
+        this.registro.valor === registro.valor
+      ) {
+        this.registro[i].ativo = false;
+        this.registro[i].concluido = true;
+      }
     }
   }
 }
