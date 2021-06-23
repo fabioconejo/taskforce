@@ -81,6 +81,7 @@ export class PainelComponent implements OnInit {
   registro: any = [];
   amostraTarefa: any;
   tempoMonitor: number;
+  tarefaSorteada: any;
 
   constructor() {}
 
@@ -90,92 +91,51 @@ export class PainelComponent implements OnInit {
       .slice(0, 5);
 
     this.tempoMonitor = 10;
+    this.sortearTarefa();
   }
 
-  mudarTarefa(concluido: boolean) {
-    var registro: any;
-    var j: number = 0;
-    var tarefa: any;
-    var texto: string;
-    var complemento: string;
-
-    //desabilitar tarefa anterior no registro
-    for (var i = 0; i < this.registro.length; i++) {
-      if (this.registro[i].ativo && this.registro[i].id === tarefa.id) {
-        this.registro[i].ativo = false;
-      }
-    }
-
-    //sortear tarefa nova
-    do {
-      j = Math.floor(Math.random() * (this.amostraTarefa.length - 1));
-      if (typeof tarefa === 'undefined') {
-        tarefa = this.amostraTarefa[j];
-      }
-    } while (this.amostraTarefa[j].id === tarefa.id);
-
-    tarefa = this.amostraTarefa[j];
-    texto = tarefa.texto;
-
-    switch (tarefa.tipo) {
-      case 'acao':
-        complemento = '';
-        texto = tarefa.texto;
-        break;
-      case 'estado':
-        j = Math.floor(Math.random() * (tarefa.eVerbo.length - 1));
-        complemento = tarefa.estado.filter(e => e != tarefa.verbo)[0];
-        texto = tarefa.eTexto.filter(e => e != tarefa.texto)[0];
-        break;
-      case 'escolha':
-        j = Math.floor(Math.random() * (tarefa.lista.length - 1));
-        complemento = tarefa.lista.filter(l => l != tarefa.verbo)[j].texto;
-        texto = tarefa.texto + ' ' + complemento;
-        break;
-    }
-
-    //adicionar tarefa no registro
-    registro = {
-      id: tarefa.id,
-      ativo: true,
-      concluido: concluido,
-      valor: complemento
-    };
-    this.registro.push(registro);
-  }
-
-  sortearTarefa(): any {
-    var tarefa: any;
+  sortearTarefa() {
     var j: number;
 
     do {
       j = Math.floor(Math.random() * (this.amostraTarefa.length - 1));
-      if (typeof tarefa === 'undefined') {
-        tarefa = this.amostraTarefa[j];
+      if (typeof this.tarefaSorteada === 'undefined') {
+        this.tarefaSorteada = this.amostraTarefa[j];
       }
-    } while (this.amostraTarefa[j].id === tarefa.id);
+    } while (this.amostraTarefa[j].id === this.tarefaSorteada.id);
 
-    tarefa = this.amostraTarefa[j];
-    texto = tarefa.texto;
+    this.tarefaSorteada = this.amostraTarefa[j];
+  }
 
-    switch (tarefa.tipo) {
+  exibirTarefa(): string {
+    var texto: string;
+    var complemento: string;
+    var j: number;
+
+    switch (this.tarefaSorteada.tipo) {
       case 'acao':
         complemento = '';
-        texto = tarefa.texto;
+        texto = this.tarefaSorteada.texto;
         break;
       case 'estado':
-        j = Math.floor(Math.random() * (tarefa.eVerbo.length - 1));
-        complemento = tarefa.estado.filter(e => e != tarefa.verbo)[0];
-        texto = tarefa.eTexto.filter(e => e != tarefa.texto)[0];
+        j = Math.floor(Math.random() * (this.tarefaSorteada.eVerbo.length - 1));
+        complemento = this.tarefaSorteada.estado.filter(
+          e => e != this.tarefaSorteada.verbo
+        )[0];
+        texto = this.tarefaSorteada.eTexto.filter(
+          e => e != this.tarefaSorteada.texto
+        )[0];
         break;
       case 'escolha':
-        j = Math.floor(Math.random() * (tarefa.lista.length - 1));
-        complemento = tarefa.lista.filter(l => l != tarefa.verbo)[j].texto;
-        texto = tarefa.texto + ' ' + complemento;
+        j = Math.floor(Math.random() * (this.tarefaSorteada.lista.length - 1));
+        complemento = this.tarefaSorteada.lista.filter(
+          l => l != this.tarefaSorteada.verbo
+        )[j].texto;
+        texto = this.tarefaSorteada.texto + ' ' + complemento;
         break;
     }
 
-    return tarefa;
+    return texto;
   }
 
   adicionarRegistro(tarefa: any) {
@@ -188,8 +148,6 @@ export class PainelComponent implements OnInit {
     };
     this.registro.push(registro);
   }
-
-  exibirTarefa() {}
 
   desabilitarRegistro(tarefa: any) {
     for (var i = 0; i < this.registro.length; i++) {
@@ -208,6 +166,12 @@ export class PainelComponent implements OnInit {
       ) {
         this.registro[i].ativo = false;
         this.registro[i].concluido = true;
+
+        for (var j = 0; j < this.amostraTarefa.length; j++) {
+          if (this.amostraTarefa[j].id === registro.id) {
+            this.amostraTarefa[j].verbo = registro.valor;
+          }
+        }
       }
     }
   }

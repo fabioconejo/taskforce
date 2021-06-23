@@ -1,5 +1,5 @@
 <div>
-  <monitor [tarefas]="amostraTarefa" [registro]="registro"></monitor>
+  <monitor [texto]="exibirTarefa()" [tempo]="tempoMonitor"></monitor>
 </div>
 <div>
   <quadro [tarefas]="amostraTarefa" [registro]="registro" (quadroAtualizado)="concluirRegistro($event)"></quadro>
