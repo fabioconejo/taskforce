@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'botao',
@@ -19,6 +19,7 @@ export class BotaoComponent implements OnInit {
   @Input() estado: any;
   @Input() lista: any;
   @Input() clickCallback: (args: any) => void;
+  @Output() clique = new EventEmitter();
 
   constructor() {}
 

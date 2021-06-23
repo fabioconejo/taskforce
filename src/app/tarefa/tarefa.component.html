@@ -4,6 +4,6 @@
   </div>
   <div class="botao">
     <botao [id]="id" [texto]="textoBotao" [cor]="corBotao" [tipo]="tipoBotao" [estado]="estado" [lista]="lista"
-      [clickCallback]="botaoClick"></botao>
+      (clique)="botaoClick($event)"></botao>
   </div>
 </div>

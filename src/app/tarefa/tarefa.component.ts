@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'tarefa',
@@ -17,6 +17,7 @@ export class TarefaComponent implements OnInit {
   @Input() estado: any;
   @Input() lista: any;
   @Input() registro: any;
+  @Output() tarefaExecutada = new EventEmitter();
 
   constructor() {}
 
@@ -50,12 +51,7 @@ export class TarefaComponent implements OnInit {
     }
   }
 
-  botaoClick = (args: any): void => {
-    var tarefa: any;
-    tarefa = this.registro.filter(r => ((r.id = args[0]), (r.ativo = true), (r.valor = args[2])));
-    for (var i = 0; i < tarefa.length; i++) {
-      tarefa[i].ativo = false;
-      tarefa[i].concluido = true;
-    }
-  };
+  botaoClick(args: any) {
+    this.tarefaExecutada.emit(args);
+  }
 }

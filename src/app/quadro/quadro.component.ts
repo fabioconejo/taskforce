@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'quadro',
@@ -10,8 +10,13 @@ export class QuadroComponent implements OnInit {
 
   @Input() tarefas: any;
   @Input() registro: any;
+  @Output() quadroAtualizado = new EventEmitter();
 
   constructor() {}
 
   ngOnInit() {}
+
+  tarefaExecutada(args: any) {
+    this.quadroAtualizado.emit(args);
+  }
 }
