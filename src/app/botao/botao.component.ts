@@ -17,10 +17,15 @@ export class BotaoComponent implements OnInit {
   @Input() tamanhoFonte: string;
   @Input() estado: any;
   @Input() lista: any;
+  @Input() registro: any;
 
   constructor() {}
 
   ngOnInit() {
+    this.atualizarCores();
+  }
+
+  atualizarCores() {
     switch (this.cor) {
       case 'azul-escuro':
         this.corFonte = 'var(--white)';
@@ -62,7 +67,7 @@ export class BotaoComponent implements OnInit {
     }
   }
 
-  public inverter() {
+  inverter() {
     if (this.tipo == 'estado') {
       if (this.cor == 'verde') {
         this.texto = this.estado[1];
@@ -73,6 +78,8 @@ export class BotaoComponent implements OnInit {
       }
     }
 
-    this.ngOnInit();
+    this.atualizarCores();
   }
+
+  onClick() {}
 }

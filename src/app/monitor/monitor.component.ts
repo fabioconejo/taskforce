@@ -62,7 +62,9 @@ export class MonitorComponent implements OnInit {
         break;
       case 'escolha':
         j = Math.floor(Math.random() * (this.tarefa.lista.length - 1));
-        this.complemento = this.tarefa.lista[j].texto;
+        this.complemento = this.tarefa.lista.filter(
+          l => l != this.tarefa.verbo
+        )[j].texto;
         this.texto = this.tarefa.texto + ' ' + this.complemento;
         break;
     }

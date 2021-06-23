@@ -15,6 +15,7 @@ export class TarefaComponent implements OnInit {
   @Input() tipo: string;
   @Input() estado: any;
   @Input() lista: any;
+  @Input() registro: any;
 
   constructor() {}
 
