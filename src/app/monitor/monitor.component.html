@@ -2,6 +2,6 @@
   <p>{{texto}}</p>
 
   <div class="tempo">
-    <div [ngClass]="pausa ? 'none' : 'tempo-decorrido'" style.animation-duration="{{tempo}}s"></div>
+    <div class="tempo-decorrido" [style.display]="pausa ? 'none' : 'block'" style.animation-duration="{{tempo}}s"></div>
   </div>
 </div>

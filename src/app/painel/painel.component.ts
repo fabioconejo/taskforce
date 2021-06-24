@@ -79,6 +79,7 @@ export class PainelComponent implements OnInit {
   ];
 
   registro: any = [];
+  idRegistroSorteado: number;
   amostraTarefa: any;
   tempoMonitor: number;
   tarefaSorteada: any;
@@ -95,6 +96,7 @@ export class PainelComponent implements OnInit {
 
     this.tempoMonitor = 10;
     this.atualizarTarefa();
+    this.checarTarefa();
   }
 
   atualizarTarefa() {
@@ -103,7 +105,9 @@ export class PainelComponent implements OnInit {
     this.sortearTarefa();
     this.adicionarRegistro();
     this.textoExibicao = this.exibirTarefa();
-    this.pausa = false;
+    setTimeout(() => {
+      this.pausa = false;
+    }, 10);
 
     this.intervalo = setInterval(() => {
       this.desabilitarRegistro();
@@ -113,8 +117,17 @@ export class PainelComponent implements OnInit {
     }, this.tempoMonitor * 1000);
   }
 
+  checarTarefa() {
+    setInterval(() => {
+      if (this.registro[this.idRegistroSorteado].concluido) {
+        this.atualizarTarefa();
+      }
+    }, 10);
+  }
+
   sortearTarefa() {
     var j: number;
+    var verbo;
 
     do {
       j = Math.floor(Math.random() * this.amostraTarefa.length);
@@ -124,6 +137,26 @@ export class PainelComponent implements OnInit {
     } while (this.amostraTarefa[j].id === this.tarefaSorteada.id);
 
     this.tarefaSorteada = this.amostraTarefa[j];
+
+    switch (this.tarefaSorteada.tipo) {
+      case 'acao':
+        break;
+      case 'estado':
+        if (this.tarefaSorteada.estado[0] === this.tarefaSorteada.verbo) {
+          this.tarefaSorteada.verbo = this.tarefaSorteada.estado[1];
+          this.tarefaSorteada.texto = this.tarefaSorteada.eTexto[1];
+        } else {
+          this.tarefaSorteada.verbo = this.tarefaSorteada.estado[0];
+          this.tarefaSorteada.texto = this.tarefaSorteada.eTexto[0];
+        }
+      case 'escolha':
+        do {
+          j = Math.floor(Math.random() * this.tarefaSorteada.lista.length);
+          verbo = this.tarefaSorteada.lista[j].texto;
+        } while (this.tarefaSorteada.verbo === verbo);
+
+        this.tarefaSorteada.verbo = this.tarefaSorteada.lista[j].texto;
+    }
   }
 
   exibirTarefa(): string {
@@ -166,7 +199,9 @@ export class PainelComponent implements OnInit {
       concluido: false,
       texto: this.tarefaSorteada.verbo
     };
-    this.registro.push(registro);
+
+    //adiciona o registro na lista e armazena a posicao
+    this.idRegistroSorteado = this.registro.push(registro) - 1;
   }
 
   desabilitarRegistro() {
@@ -181,6 +216,7 @@ export class PainelComponent implements OnInit {
   }
 
   concluirRegistro(registro: any) {
+    console.log(this.tarefaSorteada);
     for (var i = 0; i < this.registro.length; i++) {
       if (
         this.registro[i].ativo &&
@@ -196,8 +232,6 @@ export class PainelComponent implements OnInit {
             break;
           }
         }
-
-        this.atualizarTarefa();
       }
     }
   }

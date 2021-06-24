@@ -12,5 +12,7 @@ export class MonitorComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 }
