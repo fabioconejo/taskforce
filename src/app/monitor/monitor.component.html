@@ -1,6 +1,8 @@
 <div class="monitor">
-  <p style="--tamanho: {{(texto.length * 0.6) + 0.6}}em" [style.display]="pausa ? 'none' : 'flex'"
-    style.animation-duration="{{tempo}}s">{{texto}}</p>
+  <div class="letreiro">
+    <p style="--tamanho: {{(texto.length * 0.6) + 0.6}}em" [style.display]="pausa ? 'none' : 'flex'"
+      style.animation-duration="{{tempo}}s">{{texto}}</p>
+  </div>
 
   <div class="tempo">
     <div class="tempo-decorrido" [style.display]="pausa ? 'none' : 'block'" style.animation-duration="{{tempo}}s"></div>
