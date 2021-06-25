@@ -1,5 +1,5 @@
 <div class="monitor">
-  <p>{{texto}}</p>
+  <p attr.data-text="{{texto}}" style="animation: type 1s steps({{texto.length}}) infinite;">{{texto}}</p>
 
   <div class="tempo">
     <div class="tempo-decorrido" [style.display]="pausa ? 'none' : 'block'" style.animation-duration="{{tempo}}s"></div>

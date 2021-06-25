@@ -25,6 +25,15 @@
   }
 }
 
+@keyframes type {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .monitor {
   height: 100%;
   width: 100%;
@@ -40,6 +49,13 @@
   justify-content: center;
   align-items: center;
   height: 90%;
+}
+
+.monitor p:before {
+  content: attr(data-text);
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .monitor p::after {
@@ -68,25 +84,4 @@
   animation-name: tempo;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-}
-
-.anim-typewriter {
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-    blinkTextCursor 500ms steps(44) infinite normal;
-}
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 24em;
-  }
-}
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
 }
