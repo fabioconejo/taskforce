@@ -49,15 +49,6 @@
   }
 }
 
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
-}
-
 .monitor {
   height: 100%;
   width: 100%;
@@ -82,7 +73,7 @@
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: typing 10s 1 normal both, blinkTextCursor 500ms infinite normal;
+  animation: typing 10s 1 normal both;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }

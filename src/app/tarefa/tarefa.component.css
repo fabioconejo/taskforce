@@ -2,12 +2,13 @@
   height: 100%;
   width: 100%;
   background-color: var(--white);
-  border: 1px solid var(--cultured);
+  border: 1px solid var(--semi-white);
+  box-sizing: border-box;
 }
 
 .frase {
   width: 100%;
-  height: 30%;
+  height: 25%;
   margin-top: 5%;
   display: flex;
   justify-content: center;
@@ -18,4 +19,39 @@
   width: 90%;
   height: 50%;
   margin-left: 5%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .frase {
+    font-size: 18px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .frase {
+    font-size: 20px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .frase {
+    font-size: 18px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .frase {
+    font-size: 18px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .frase {
+    font-size: 18px;
+  }
 }

@@ -66,7 +66,7 @@ export class PainelComponent implements OnInit {
           id: 8,
           tipo: 'escolha',
           texto: 'Ajustar pressão do respirador para',
-          verbo: 'Ajustar pressão',
+          verbo: 'Ajustar',
           complemento: 'Respirador',
           lista: [
             { id: 1, texto: '0 psi' },
