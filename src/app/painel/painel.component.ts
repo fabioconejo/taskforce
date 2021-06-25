@@ -107,7 +107,7 @@ export class PainelComponent implements OnInit {
     this.textoExibicao = this.exibirTarefa();
     setTimeout(() => {
       this.pausa = false;
-    }, 10);
+    }, 100);
 
     this.intervalo = setInterval(() => {
       this.desabilitarRegistro();

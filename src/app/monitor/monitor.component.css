@@ -25,12 +25,33 @@
   }
 }
 
-@keyframes type {
-  from {
+@keyframes typing {
+  0% {
     width: 0%;
   }
+  2.5% {
+    width: 0;
+  }
+  5% {
+    width: var(--tamanho);
+  }
+  95% {
+    width: var(--tamanho);
+  }
+  97.5% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
   to {
-    width: 100%;
+    border-right-color: transparent;
   }
 }
 
@@ -46,16 +67,16 @@
   color: var(--white);
   font-family: 'Roboto Mono';
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   height: 90%;
-}
 
-.monitor p:before {
-  content: attr(data-text);
-  color: #fff;
-  overflow: hidden;
-  white-space: nowrap;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: typing 10s 1 normal both, blinkTextCursor 500ms infinite normal;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 .monitor p::after {
