@@ -141,14 +141,6 @@ export class PainelComponent implements OnInit {
       } while (this.amostraTarefa[j].id === this.tarefaSorteada.id);
     }
 
-    do {
-      j = Math.floor(Math.random() * this.amostraTarefa.length);
-      if (typeof this.tarefaSorteada === 'undefined') {
-        this.tarefaSorteada = this.amostraTarefa[j];
-        break;
-      }
-    } while (this.amostraTarefa[j].id === this.tarefaSorteada.id);
-
     this.tarefaSorteada = this.amostraTarefa[j];
 
     switch (this.tarefaSorteada.tipo) {
