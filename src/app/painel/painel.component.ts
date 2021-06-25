@@ -131,11 +131,11 @@ export class PainelComponent implements OnInit {
 
     do {
       j = Math.floor(Math.random() * this.amostraTarefa.length);
-      if (
-        typeof this.tarefaSorteada === 'undefined' &&
-        this.amostraTarefa[j].tipo === 'acao'
-      ) {
-        this.tarefaSorteada = this.amostraTarefa[j];
+      if (typeof this.tarefaSorteada === 'undefined') {
+        do {
+          j = Math.floor(Math.random() * this.amostraTarefa.length);
+          this.tarefaSorteada = this.amostraTarefa[j];
+        } while (this.amostraTarefa[j].tipo !== 'acao');
       }
     } while (this.amostraTarefa[j].id === this.tarefaSorteada.id);
     console.log(this.tarefaSorteada.id);
@@ -211,7 +211,6 @@ export class PainelComponent implements OnInit {
   }
 
   concluirRegistro(registro: any) {
-    console.log(this.tarefaSorteada);
     for (var i = 0; i < this.registro.length; i++) {
       if (
         this.registro[i].ativo &&
