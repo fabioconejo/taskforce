@@ -1,6 +1,8 @@
-<div>
-  <monitor [texto]="textoExibicao" [tempo]="tempoMonitor" [pausa]="pausa"></monitor>
-</div>
-<div>
-  <quadro [tarefas]="amostraTarefa" [registro]="registro" (quadroAtualizado)="concluirRegistro($event)"></quadro>
+<div class="painel">
+  <div class="monitor">
+    <monitor [texto]="textoExibicao" [tempo]="tempoMonitor" [pausa]="pausa"></monitor>
+  </div>
+  <div class="quadro">
+    <quadro [tarefas]="amostraTarefa" [registro]="registro" (quadroAtualizado)="concluirRegistro($event)"></quadro>
+  </div>
 </div>

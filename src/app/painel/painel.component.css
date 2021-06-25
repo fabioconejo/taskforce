@@ -1,0 +1,15 @@
+.painel {
+  height: 100%;
+  width: 100%;
+}
+
+.monitor {
+  height: 40%;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.quadro {
+  height: 50%;
+  width: 100%;
+}

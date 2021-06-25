@@ -127,14 +127,18 @@ export class PainelComponent implements OnInit {
 
   sortearTarefa() {
     var j: number;
-    var verbo;
+    var verbo: string;
 
     do {
       j = Math.floor(Math.random() * this.amostraTarefa.length);
-      if (typeof this.tarefaSorteada === 'undefined') {
+      if (
+        typeof this.tarefaSorteada === 'undefined' &&
+        this.amostraTarefa[j].tipo === 'acao'
+      ) {
         this.tarefaSorteada = this.amostraTarefa[j];
       }
     } while (this.amostraTarefa[j].id === this.tarefaSorteada.id);
+    console.log(this.tarefaSorteada.id);
 
     this.tarefaSorteada = this.amostraTarefa[j];
 
@@ -149,6 +153,7 @@ export class PainelComponent implements OnInit {
           this.tarefaSorteada.verbo = this.tarefaSorteada.estado[0];
           this.tarefaSorteada.texto = this.tarefaSorteada.eTexto[0];
         }
+        break;
       case 'escolha':
         do {
           j = Math.floor(Math.random() * this.tarefaSorteada.lista.length);
@@ -156,6 +161,7 @@ export class PainelComponent implements OnInit {
         } while (this.tarefaSorteada.verbo === verbo);
 
         this.tarefaSorteada.verbo = this.tarefaSorteada.lista[j].texto;
+        break;
     }
   }
 
@@ -167,24 +173,13 @@ export class PainelComponent implements OnInit {
 
     switch (this.tarefaSorteada.tipo) {
       case 'acao':
-        complemento = '';
         texto = this.tarefaSorteada.texto;
         break;
       case 'estado':
-        complemento = this.tarefaSorteada.estado.filter(
-          e => e != this.tarefaSorteada.verbo
-        )[0];
-        texto = this.tarefaSorteada.eTexto.filter(
-          e => e != this.tarefaSorteada.texto
-        )[0];
+        texto = this.tarefaSorteada.texto;
         break;
       case 'escolha':
-        lista = this.tarefaSorteada.lista.filter(
-          l => l.texto != this.tarefaSorteada.verbo
-        );
-        j = Math.floor(Math.random() * lista.length);
-        complemento = lista[j].texto;
-        texto = this.tarefaSorteada.texto + ' ' + complemento;
+        texto = this.tarefaSorteada.texto + ' ' + this.tarefaSorteada.verbo;
         break;
     }
 
