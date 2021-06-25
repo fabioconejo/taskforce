@@ -220,13 +220,13 @@ export class PainelComponent implements OnInit {
       ) {
         this.registro[i].ativo = false;
         this.registro[i].concluido = true;
+      }
+    }
 
-        for (var j = 0; j < this.amostraTarefa.length; j++) {
-          if (this.amostraTarefa[j].id === registro.id) {
-            this.amostraTarefa[j].verbo = registro.texto;
-            break;
-          }
-        }
+    for (var i = 0; i < this.amostraTarefa.length; i++) {
+      if (this.amostraTarefa[i].id === registro.id) {
+        this.amostraTarefa[i].verbo = registro.texto;
+        break;
       }
     }
   }
