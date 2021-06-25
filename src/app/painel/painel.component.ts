@@ -207,6 +207,24 @@ export class PainelComponent implements OnInit {
         this.registro[i].ativo = false;
       }
     }
+
+    //Reseta o valor esperado
+    switch (this.tarefaSorteada.tipo) {
+      case 'acao':
+        break;
+      case 'estado':
+        if (this.tarefaSorteada.estado[0] === this.tarefaSorteada.verbo) {
+          this.tarefaSorteada.verbo = this.tarefaSorteada.estado[1];
+          this.tarefaSorteada.texto = this.tarefaSorteada.eTexto[1];
+        } else {
+          this.tarefaSorteada.verbo = this.tarefaSorteada.estado[0];
+          this.tarefaSorteada.texto = this.tarefaSorteada.eTexto[0];
+        }
+        break;
+      case 'escolha':
+        this.tarefaSorteada.verbo = '';
+        break;
+    }
   }
 
   concluirRegistro(registro: any) {
