@@ -138,7 +138,6 @@ export class PainelComponent implements OnInit {
         } while (this.amostraTarefa[j].tipo !== 'acao');
       }
     } while (this.amostraTarefa[j].id === this.tarefaSorteada.id);
-    console.log(this.tarefaSorteada.id);
 
     this.tarefaSorteada = this.amostraTarefa[j];
 
