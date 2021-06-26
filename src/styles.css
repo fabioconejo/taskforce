@@ -33,4 +33,5 @@ body {
   background-color: var(--semi-white);
   background-image: url(https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/backpattern.png);
   background-size: 150px;
+  color: var(--space-cadet);
 }

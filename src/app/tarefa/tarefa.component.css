@@ -2,7 +2,7 @@
   height: 100%;
   width: 100%;
   background-color: var(--white);
-  border: 1px solid var(--semi-white);
+  border: 1px solid var(--cultured);
   box-sizing: border-box;
 }
 
@@ -54,11 +54,12 @@
 @media only screen and (min-width: 1200px) {
   .frase {
     font-size: 20px;
+    height: 35%;
   }
 
   .botao {
     width: 80%;
-    height: 30%;
+    height: 40%;
     margin-left: 10%;
   }
 }
