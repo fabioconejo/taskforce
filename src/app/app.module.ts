@@ -9,6 +9,7 @@ import { TarefaComponent } from './tarefa/tarefa.component';
 import { PainelComponent } from './painel/painel.component';
 import { MonitorComponent } from './monitor/monitor.component';
 import { QuadroComponent } from './quadro/quadro.component';
+import { CentralComponent } from './central/central.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -19,7 +20,8 @@ import { QuadroComponent } from './quadro/quadro.component';
     TarefaComponent,
     PainelComponent,
     MonitorComponent,
-    QuadroComponent
+    QuadroComponent,
+    CentralComponent
   ],
   bootstrap: [AppComponent]
 })

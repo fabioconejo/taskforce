@@ -1,5 +1,113 @@
-div {
-  height: 50%;
-  width: 90%;
-  margin: 5%;
+.jogo {
+  box-sizing: border-box;
+}
+
+.amigos {
+  float: left;
+  background-color: var(--semi-white);
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px var(--cultured);
+}
+
+.central {
+  float: left;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px var(--cultured);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .jogo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .amigos {
+    display: none;
+  }
+
+  .central {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .jogo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .amigos {
+    display: none;
+  }
+
+  .central {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .jogo {
+    width: 100%;
+    height: 100%;
+
+    padding: 5%;
+  }
+
+  .amigos {
+    display: none;
+  }
+
+  .central {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .jogo {
+    width: 100%;
+    height: 100%;
+
+    padding: 5%;
+  }
+
+  .amigos {
+    width: 25%;
+    height: 100%;
+  }
+
+  .central {
+    width: 70%;
+    height: 100%;
+
+    margin-left: 5%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .jogo {
+    width: 100%;
+    height: 100%;
+
+    padding: 5%;
+  }
+
+  .amigos {
+    width: 25%;
+    height: 100%;
+  }
+
+  .central {
+    width: 70%;
+    height: 100%;
+
+    margin-left: 5%;
+  }
 }

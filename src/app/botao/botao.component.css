@@ -52,7 +52,7 @@ option {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 767px) {
   button,
   select {
     font-size: 22px;
@@ -60,7 +60,7 @@ option {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   button,
   select {
     font-size: 22px;
@@ -68,7 +68,7 @@ option {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   button,
   select {
     font-size: 24px;
