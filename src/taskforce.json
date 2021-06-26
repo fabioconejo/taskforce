@@ -224,7 +224,33 @@
         "verbo": "Deixar",
         "complemento": "Pão descansando"
       },
-
+      {
+        "id": 31,
+        "tipo": "estado",
+        "eTexto": ["Ligar coifa", "Desligar coifa"],
+        "verbo": "Ligado",
+        "texto": "Ligar coifa",
+        "complemento": "Coifa",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 32,
+        "tipo": "estado",
+        "eTexto": ["Ligar fritadeira", "Desligar fritadeira"],
+        "verbo": "Ligado",
+        "texto": "Ligar fritadeira",
+        "complemento": "Fritadeira",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 33,
+        "tipo": "estado",
+        "eTexto": ["Ligar freezer", "Desligar freezer"],
+        "verbo": "Ligado",
+        "texto": "Ligar freezer",
+        "complemento": "Freezer",
+        "estado": ["Ligado", "Desligado"]
+      }
     ]
   }
 ]
