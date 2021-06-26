@@ -8,7 +8,7 @@
 
 .frase {
   width: 100%;
-  height: 25%;
+  height: 35%;
   margin-top: 5%;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@
 
 .botao {
   width: 90%;
-  height: 50%;
+  height: 40%;
   margin-left: 5%;
 }
 
@@ -54,12 +54,5 @@
 @media only screen and (min-width: 1200px) {
   .frase {
     font-size: 20px;
-    height: 35%;
-  }
-
-  .botao {
-    width: 80%;
-    height: 40%;
-    margin-left: 10%;
   }
 }

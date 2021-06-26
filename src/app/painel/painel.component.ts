@@ -92,7 +92,7 @@ export class PainelComponent implements OnInit {
   ngOnInit() {
     this.amostraTarefa = this.baseProfissoes[0].tarefas
       .sort(() => 0.5 - Math.random())
-      .slice(0, 5);
+      .slice(0, 8);
 
     this.tempoMonitor = 10;
     this.atualizarTarefa();
