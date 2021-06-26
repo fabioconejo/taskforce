@@ -39,14 +39,14 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .frase {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .frase {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 
