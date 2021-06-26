@@ -19,5 +19,5 @@
     (change)="this.clique.emit({'id': id, 'tipo': tipo, 'texto': l.value})"
   >
     <option value="" selected hidden disabled>{{texto}}</option>
-    <option *ngFor="let l of lista" [value]="l.texto">{{l.texto}}</option>
+    <option *ngFor="let l of lista" [value]="l">{{l}}</option>
   </select>

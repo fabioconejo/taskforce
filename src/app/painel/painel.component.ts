@@ -13,9 +13,9 @@ export class PainelComponent implements OnInit {
         {
           id: 1,
           tipo: 'acao',
-          texto: 'Receitar cloroquina',
+          texto: 'Receitar remédio',
           verbo: 'Receitar',
-          complemento: 'Cloroquina'
+          complemento: 'Remédio'
         },
         {
           id: 2,
@@ -56,7 +56,6 @@ export class PainelComponent implements OnInit {
           id: 7,
           tipo: 'estado',
           eTexto: ['Ligar oxímetro', 'Desligar oxímetro'],
-          eVerbo: ['Ligar', 'Desligar'],
           verbo: 'Ligado',
           texto: 'Ligar oxímetro',
           complemento: 'Oxímetro',
@@ -68,11 +67,7 @@ export class PainelComponent implements OnInit {
           texto: 'Ajustar pressão do respirador para',
           verbo: 'Ajustar',
           complemento: 'Respirador',
-          lista: [
-            { id: 1, texto: '0 psi' },
-            { id: 2, texto: '20 psi' },
-            { id: 3, texto: '60 psi' }
-          ]
+          lista: ['0 psi', '20 psi', '60 psi']
         }
       ]
     }
@@ -156,10 +151,10 @@ export class PainelComponent implements OnInit {
       case 'escolha':
         do {
           j = Math.floor(Math.random() * this.tarefaSorteada.lista.length);
-          verbo = this.tarefaSorteada.lista[j].texto;
+          verbo = this.tarefaSorteada.lista[j];
         } while (this.tarefaSorteada.verbo === verbo);
 
-        this.tarefaSorteada.verbo = this.tarefaSorteada.lista[j].texto;
+        this.tarefaSorteada.verbo = this.tarefaSorteada.lista[j];
         break;
     }
   }
