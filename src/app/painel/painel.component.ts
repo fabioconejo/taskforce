@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TaskforceService } from '../taskforce.service';
 
 @Component({
   selector: 'painel',
@@ -6,73 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./painel.component.css']
 })
 export class PainelComponent implements OnInit {
-  baseProfissoes = [
-    {
-      profissao: 'Médico',
-      tarefas: [
-        {
-          id: 1,
-          tipo: 'acao',
-          texto: 'Receitar remédio',
-          verbo: 'Receitar',
-          complemento: 'Remédio'
-        },
-        {
-          id: 2,
-          tipo: 'acao',
-          texto: 'Medir pressão',
-          verbo: 'Medir',
-          complemento: 'Pressão'
-        },
-        {
-          id: 3,
-          tipo: 'acao',
-          texto: 'Preencher prontuário',
-          verbo: 'Preencher',
-          complemento: 'Prontuário'
-        },
-        {
-          id: 4,
-          tipo: 'acao',
-          texto: 'Indicar médico especialista',
-          verbo: 'Indicar',
-          complemento: 'Médico especialista'
-        },
-        {
-          id: 5,
-          tipo: 'acao',
-          texto: 'Informar riscos da cirurgia',
-          verbo: 'Informar',
-          complemento: 'Riscos da cirurgia'
-        },
-        {
-          id: 6,
-          tipo: 'acao',
-          texto: 'Atender paciente',
-          verbo: 'Atender',
-          complemento: 'Paciente'
-        },
-        {
-          id: 7,
-          tipo: 'estado',
-          eTexto: ['Ligar oxímetro', 'Desligar oxímetro'],
-          verbo: 'Ligado',
-          texto: 'Ligar oxímetro',
-          complemento: 'Oxímetro',
-          estado: ['Ligado', 'Desligado']
-        },
-        {
-          id: 8,
-          tipo: 'escolha',
-          texto: 'Ajustar pressão do respirador para',
-          verbo: 'Ajustar',
-          complemento: 'Respirador',
-          lista: ['0 psi', '20 psi', '60 psi']
-        }
-      ]
-    }
-  ];
-
   registro: any = [];
   idRegistroSorteado: number;
   amostraTarefa: any;
@@ -82,12 +16,13 @@ export class PainelComponent implements OnInit {
   intervalo: any;
   pausa: boolean;
 
-  constructor() {}
+  constructor(private taskForceService: TaskforceService) {}
 
   ngOnInit() {
-    this.amostraTarefa = this.baseProfissoes[0].tarefas
+    var baseProfissoes = this.taskForceService.getProfissoes();
+    this.amostraTarefa = baseProfissoes[1].tarefas
       .sort(() => 0.5 - Math.random())
-      .slice(0, 8);
+      .slice(0, 3);
 
     this.tempoMonitor = 10;
     this.atualizarTarefa();
