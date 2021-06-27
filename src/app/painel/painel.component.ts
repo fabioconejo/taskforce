@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TaskforceService } from '../taskforce.service';
 
-import profissoesJson from '../../assets/json/taskforce.json';
-
 @Component({
   selector: 'painel',
   templateUrl: './painel.component.html',
@@ -11,7 +9,7 @@ import profissoesJson from '../../assets/json/taskforce.json';
 export class PainelComponent implements OnInit {
   registro: any = [];
   idRegistroSorteado: number;
-  amostraTarefa: any;
+  profissao: any;
   tempoMonitor: number;
   tarefaSorteada: any;
   textoExibicao: string;
@@ -21,15 +19,22 @@ export class PainelComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
 
   ngOnInit() {
-    console.log(profissoesJson);
-    var baseProfissoes = this.taskForceService.getProfissoes();
-    this.amostraTarefa = baseProfissoes[1].tarefas
-      .sort(() => 0.5 - Math.random())
-      .slice(0, 3);
+    var baseProfissoes: any;
 
-    this.tempoMonitor = 10;
-    this.atualizarTarefa();
-    this.checarTarefa();
+    this.taskForceService.getProfissoes().subscribe(
+      (data: any): void => {
+        baseProfissoes = data;
+        this.profissao = baseProfissoes[
+          Math.floor(Math.random() * baseProfissoes.length)
+        ].tarefas
+          .sort(() => 0.5 - Math.random())
+          .slice(0, 3);
+
+        this.tempoMonitor = 10;
+        this.atualizarTarefa();
+        this.checarTarefa();
+      }
+    );
   }
 
   atualizarTarefa() {
@@ -64,15 +69,15 @@ export class PainelComponent implements OnInit {
 
     if (typeof this.tarefaSorteada === 'undefined') {
       do {
-        j = Math.floor(Math.random() * this.amostraTarefa.length);
-      } while (this.amostraTarefa[j].tipo !== 'acao');
+        j = Math.floor(Math.random() * this.profissao.length);
+      } while (this.profissao[j].tipo !== 'acao');
     } else {
       do {
-        j = Math.floor(Math.random() * this.amostraTarefa.length);
-      } while (this.amostraTarefa[j].id === this.tarefaSorteada.id);
+        j = Math.floor(Math.random() * this.profissao.length);
+      } while (this.profissao[j].id === this.tarefaSorteada.id);
     }
 
-    this.tarefaSorteada = this.amostraTarefa[j];
+    this.tarefaSorteada = this.profissao[j];
 
     switch (this.tarefaSorteada.tipo) {
       case 'acao':
@@ -172,9 +177,9 @@ export class PainelComponent implements OnInit {
       }
     }
 
-    for (var i = 0; i < this.amostraTarefa.length; i++) {
-      if (this.amostraTarefa[i].id === registro.id) {
-        this.amostraTarefa[i].verbo = registro.texto;
+    for (var i = 0; i < this.profissao.length; i++) {
+      if (this.profissao[i].id === registro.id) {
+        this.profissao[i].verbo = registro.texto;
         break;
       }
     }

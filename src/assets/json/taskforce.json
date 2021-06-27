@@ -1,302 +1,300 @@
-{
-  "profissoes": [
-    {
-      "id": 1,
-      "profissao": "Médico",
-      "tarefas": [
-        {
-          "id": 1,
-          "tipo": "acao",
-          "texto": "Receitar remédio",
-          "verbo": "Receitar",
-          "complemento": "Remédio"
-        },
-        {
-          "id": 2,
-          "tipo": "acao",
-          "texto": "Medir pressão",
-          "verbo": "Medir",
-          "complemento": "Pressão"
-        },
-        {
-          "id": 3,
-          "tipo": "acao",
-          "texto": "Preencher prontuário",
-          "verbo": "Preencher",
-          "complemento": "Prontuário"
-        },
-        {
-          "id": 4,
-          "tipo": "acao",
-          "texto": "Indicar médico especialista",
-          "verbo": "Indicar",
-          "complemento": "Médico especialista"
-        },
-        {
-          "id": 5,
-          "tipo": "acao",
-          "texto": "Informar riscos da cirurgia",
-          "verbo": "Informar",
-          "complemento": "Riscos da cirurgia"
-        },
-        {
-          "id": 6,
-          "tipo": "acao",
-          "texto": "Atender paciente",
-          "verbo": "Atender",
-          "complemento": "Paciente"
-        },
-        {
-          "id": 7,
-          "tipo": "acao",
-          "texto": "Aplicar bezentacil",
-          "verbo": "Aplicar",
-          "complemento": "Bezentacil"
-        },
-        {
-          "id": 8,
-          "tipo": "acao",
-          "texto": "Realizar plantão",
-          "verbo": "Realizar",
-          "complemento": "Plantão"
-        },
-        {
-          "id": 9,
-          "tipo": "acao",
-          "texto": "Declarar óbito",
-          "verbo": "Declarar",
-          "complemento": "Óbito"
-        },
-        {
-          "id": 10,
-          "tipo": "acao",
-          "texto": "Realizar exame do toque",
-          "verbo": "Realizar",
-          "complemento": "Exame do toque"
-        },
-        {
-          "id": 11,
-          "tipo": "acao",
-          "texto": "Dar alta",
-          "verbo": "Dar",
-          "complemento": "Alta"
-        },
-        {
-          "id": 12,
-          "tipo": "acao",
-          "texto": "Falar que é virose",
-          "verbo": "Falar",
-          "complemento": "Virose"
-        },
-        {
-          "id": 13,
-          "tipo": "acao",
-          "texto": "Medir temperatura",
-          "verbo": "Medir",
-          "complemento": "temperatura"
-        },
-        {
-          "id": 14,
-          "tipo": "estado",
-          "eTexto": [
-            "Ligar oxímetro",
-            "Desligar oxímetro"
-          ],
-          "verbo": "Ligado",
-          "texto": "Ligar oxímetro",
-          "complemento": "Oxímetro",
-          "estado": [
-            "Ligado",
-            "Desligado"
-          ]
-        },
-        {
-          "id": 15,
-          "tipo": "estado",
-          "eTexto": [
-            "Ligar monitor cardíaco",
-            "Desligar monitor cardíaco"
-          ],
-          "verbo": "Ligado",
-          "texto": "Ligar monitor cardíaco",
-          "complemento": "Monitor cardíaco",
-          "estado": [
-            "Ligado",
-            "Desligado"
-          ]
-        },
-        {
-          "id": 16,
-          "tipo": "escolha",
-          "texto": "Regular respirador para",
-          "verbo": "Regular",
-          "complemento": "Respirador",
-          "lista": [
-            "0 psi",
-            "20 psi",
-            "60 psi"
-          ]
-        },
-        {
-          "id": 17,
-          "tipo": "escolha",
-          "texto": "Ajustar desfibrilador para",
-          "verbo": "Ajustar",
-          "complemento": "Desfibrilador",
-          "lista": [
-            "1",
-            "2",
-            "3"
-          ]
-        },
-        {
-          "id": 18,
-          "tipo": "escolha",
-          "texto": "Ajustar dose para",
-          "verbo": "Ajustar",
-          "complemento": "Dose",
-          "lista": [
-            "1x ao dia",
-            "2x ao dia",
-            "4x ao dia"
-          ]
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "profissao": "Chef de cozinha",
-      "tarefas": [
-        {
-          "id": 19,
-          "tipo": "acao",
-          "texto": "Comprar ingredientes",
-          "verbo": "Comprar",
-          "complemento": "Ingredientes"
-        },
-        {
-          "id": 20,
-          "tipo": "acao",
-          "texto": "Limpar bancada",
-          "verbo": "Limpar",
-          "complemento": "Bancada"
-        },
-        {
-          "id": 21,
-          "tipo": "acao",
-          "texto": "Fatiar peixe",
-          "verbo": "Fatiar",
-          "complemento": "Peixe"
-        },
-        {
-          "id": 22,
-          "tipo": "acao",
-          "texto": "Limpar camarão",
-          "verbo": "Limpar",
-          "complemento": "Camarão"
-        },
-        {
-          "id": 23,
-          "tipo": "acao",
-          "texto": "Separar feijão",
-          "verbo": "Separar",
-          "complemento": "Feijão"
-        },
-        {
-          "id": 24,
-          "tipo": "acao",
-          "texto": "Lavar verduras",
-          "verbo": "Lavar",
-          "complemento": "Verduras"
-        },
-        {
-          "id": 25,
-          "tipo": "acao",
-          "texto": "Flambar bananas",
-          "verbo": "Flambar",
-          "complemento": "Bananas"
-        },
-        {
-          "id": 26,
-          "tipo": "acao",
-          "texto": "Experimentar comida",
-          "verbo": "Experimentar",
-          "complemento": "Comida"
-        },
-        {
-          "id": 27,
-          "tipo": "acao",
-          "texto": "Por sal e tempero",
-          "verbo": "Por",
-          "complemento": "Sal e tempero"
-        },
-        {
-          "id": 28,
-          "tipo": "acao",
-          "texto": "Preparar sobremesa",
-          "verbo": "Preparar",
-          "complemento": "Sobremesa"
-        },
-        {
-          "id": 29,
-          "tipo": "acao",
-          "texto": "Montar pratos",
-          "verbo": "Montar",
-          "complemento": "Pratos"
-        },
-        {
-          "id": 30,
-          "tipo": "acao",
-          "texto": "Deixar pão descansando",
-          "verbo": "Deixar",
-          "complemento": "Pão descansando"
-        },
-        {
-          "id": 31,
-          "tipo": "estado",
-          "eTexto": [
-            "Ligar coifa",
-            "Desligar coifa"
-          ],
-          "verbo": "Ligado",
-          "texto": "Ligar coifa",
-          "complemento": "Coifa",
-          "estado": [
-            "Ligado",
-            "Desligado"
-          ]
-        },
-        {
-          "id": 32,
-          "tipo": "estado",
-          "eTexto": [
-            "Ligar fritadeira",
-            "Desligar fritadeira"
-          ],
-          "verbo": "Ligado",
-          "texto": "Ligar fritadeira",
-          "complemento": "Fritadeira",
-          "estado": [
-            "Ligado",
-            "Desligado"
-          ]
-        },
-        {
-          "id": 33,
-          "tipo": "estado",
-          "eTexto": [
-            "Ligar freezer",
-            "Desligar freezer"
-          ],
-          "verbo": "Ligado",
-          "texto": "Ligar freezer",
-          "complemento": "Freezer",
-          "estado": [
-            "Ligado",
-            "Desligado"
-          ]
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "profissao": "Médico",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Receitar remédio",
+        "verbo": "Receitar",
+        "complemento": "Remédio"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Medir pressão",
+        "verbo": "Medir",
+        "complemento": "Pressão"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Preencher prontuário",
+        "verbo": "Preencher",
+        "complemento": "Prontuário"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Indicar médico especialista",
+        "verbo": "Indicar",
+        "complemento": "Médico especialista"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Informar riscos da cirurgia",
+        "verbo": "Informar",
+        "complemento": "Riscos da cirurgia"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Atender paciente",
+        "verbo": "Atender",
+        "complemento": "Paciente"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Aplicar bezentacil",
+        "verbo": "Aplicar",
+        "complemento": "Bezentacil"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Realizar plantão",
+        "verbo": "Realizar",
+        "complemento": "Plantão"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Declarar óbito",
+        "verbo": "Declarar",
+        "complemento": "Óbito"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Realizar exame do toque",
+        "verbo": "Realizar",
+        "complemento": "Exame do toque"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Dar alta",
+        "verbo": "Dar",
+        "complemento": "Alta"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Falar que é virose",
+        "verbo": "Falar",
+        "complemento": "Virose"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Medir temperatura",
+        "verbo": "Medir",
+        "complemento": "temperatura"
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar oxímetro",
+          "Desligar oxímetro"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar oxímetro",
+        "complemento": "Oxímetro",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar monitor cardíaco",
+          "Desligar monitor cardíaco"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar monitor cardíaco",
+        "complemento": "Monitor cardíaco",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Regular respirador para",
+        "verbo": "Regular",
+        "complemento": "Respirador",
+        "lista": [
+          "0 psi",
+          "20 psi",
+          "60 psi"
+        ]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Ajustar desfibrilador para",
+        "verbo": "Ajustar",
+        "complemento": "Desfibrilador",
+        "lista": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Ajustar dose para",
+        "verbo": "Ajustar",
+        "complemento": "Dose",
+        "lista": [
+          "1x ao dia",
+          "2x ao dia",
+          "4x ao dia"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "profissao": "Chef de cozinha",
+    "tarefas": [
+      {
+        "id": 19,
+        "tipo": "acao",
+        "texto": "Comprar ingredientes",
+        "verbo": "Comprar",
+        "complemento": "Ingredientes"
+      },
+      {
+        "id": 20,
+        "tipo": "acao",
+        "texto": "Limpar bancada",
+        "verbo": "Limpar",
+        "complemento": "Bancada"
+      },
+      {
+        "id": 21,
+        "tipo": "acao",
+        "texto": "Fatiar peixe",
+        "verbo": "Fatiar",
+        "complemento": "Peixe"
+      },
+      {
+        "id": 22,
+        "tipo": "acao",
+        "texto": "Limpar camarão",
+        "verbo": "Limpar",
+        "complemento": "Camarão"
+      },
+      {
+        "id": 23,
+        "tipo": "acao",
+        "texto": "Separar feijão",
+        "verbo": "Separar",
+        "complemento": "Feijão"
+      },
+      {
+        "id": 24,
+        "tipo": "acao",
+        "texto": "Lavar verduras",
+        "verbo": "Lavar",
+        "complemento": "Verduras"
+      },
+      {
+        "id": 25,
+        "tipo": "acao",
+        "texto": "Flambar bananas",
+        "verbo": "Flambar",
+        "complemento": "Bananas"
+      },
+      {
+        "id": 26,
+        "tipo": "acao",
+        "texto": "Experimentar comida",
+        "verbo": "Experimentar",
+        "complemento": "Comida"
+      },
+      {
+        "id": 27,
+        "tipo": "acao",
+        "texto": "Por sal e tempero",
+        "verbo": "Por",
+        "complemento": "Sal e tempero"
+      },
+      {
+        "id": 28,
+        "tipo": "acao",
+        "texto": "Preparar sobremesa",
+        "verbo": "Preparar",
+        "complemento": "Sobremesa"
+      },
+      {
+        "id": 29,
+        "tipo": "acao",
+        "texto": "Montar pratos",
+        "verbo": "Montar",
+        "complemento": "Pratos"
+      },
+      {
+        "id": 30,
+        "tipo": "acao",
+        "texto": "Deixar pão descansando",
+        "verbo": "Deixar",
+        "complemento": "Pão descansando"
+      },
+      {
+        "id": 31,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar coifa",
+          "Desligar coifa"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar coifa",
+        "complemento": "Coifa",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 32,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar fritadeira",
+          "Desligar fritadeira"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar fritadeira",
+        "complemento": "Fritadeira",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 33,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar freezer",
+          "Desligar freezer"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar freezer",
+        "complemento": "Freezer",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      }
+    ]
+  }
+]
