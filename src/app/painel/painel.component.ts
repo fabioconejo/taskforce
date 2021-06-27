@@ -21,6 +21,7 @@ export class PainelComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
 
   ngOnInit() {
+    console.log(profissoesJson);
     var baseProfissoes = this.taskForceService.getProfissoes();
     this.amostraTarefa = baseProfissoes[1].tarefas
       .sort(() => 0.5 - Math.random())
