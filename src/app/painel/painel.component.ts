@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TaskforceService } from '../taskforce.service';
 
+import * as profissoesJson from '.../assets/json/taskforce.json';
+
 @Component({
   selector: 'painel',
   templateUrl: './painel.component.html',
