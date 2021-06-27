@@ -1,6 +1,7 @@
 {
   "profissoes": [
     {
+      "id": 1,
       "profissao": "Médico",
       "tarefas": [
         {
@@ -163,6 +164,7 @@
       ]
     },
     {
+      "id": 2,
       "profissao": "Chef de cozinha",
       "tarefas": [
         {
