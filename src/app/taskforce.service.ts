@@ -43,7 +43,7 @@ export class TaskforceService {
     var jogador = {
       nick: 'Fabolas',
       ativo: true,
-      timeout: new Date()
+      timeout: +new Date()
     };
 
     return this.db.database.ref('salas/' + key + '/jogadores').push(jogador)
@@ -58,5 +58,10 @@ export class TaskforceService {
 
   desabilitarRegistro(registro: any) {}
 
-  keepAlive() {}
+  keepAlive(keySala: string, keyJogador: string) {
+    this.db.database
+      .ref('salas/' + keySala + '/jogadores/' + keyJogador)
+      .child('timeout')
+      .set(+new Date());
+  }
 }
