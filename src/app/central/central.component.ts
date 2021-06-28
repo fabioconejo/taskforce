@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskforceService } from '../taskforce.service';
 
 @Component({
   selector: 'central',
@@ -6,7 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./central.component.css']
 })
 export class CentralComponent implements OnInit {
-  constructor() {}
+  constructor(private taskForceService: TaskforceService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    //var key = this.taskForceService.criarSala();
+    //console.log(this.taskForceService.entrarSala('qlx29'));
+  }
+
+  sortearProfissao() {}
+
+  limparRegristro() {}
+
+  limparSorteio() {}
+
+  adicionarJogador() {}
+
+  removerJogador() {}
+
+  manterVivo() {}
 }
