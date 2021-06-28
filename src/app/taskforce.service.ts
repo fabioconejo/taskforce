@@ -14,20 +14,21 @@ export class TaskforceService {
   }
 
   monitorarJogadores(keySala: string) {
-    var intervaloOffline: number;
-    var intervaloKick: number;
+    var intervaloOffline: number = 20000;
+    var intervaloKick: number = 60000;
 
     this.db
       .object('salas/' + keySala + '/jogadores/')
       .valueChanges()
       .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe((jogadores: Object) => {
-        console.log(jogadores);
-        for (let j in jogadores) {
-          console.log(j['timestamp']);
-          if (j['timestamp'] + intervaloOffline < +new Date()) {
-            if (j['timestamp'] + intervaloKick < +new Date()) {
+      .subscribe((jogador: object) => {
+        for (let keyJogador in jogador) {
+          console.log(jogador[keyJogador].timestamp);
+          if (jogador[keyJogador].timestamp + intervaloOffline < +new Date()) {
+            if (jogador[keyJogador].timestamp + intervaloKick < +new Date()) {
+              this.sairSala(keySala, keyJogador);
             } else {
+              jogador[keyJogador].ativo = false;
             }
           }
         }
@@ -150,8 +151,7 @@ export class TaskforceService {
 
   keepAlive(keySala: string, keyJogador: string) {
     this.db.database
-      .ref('salas/' + keySala + '/jogadores/' + keyJogador)
-      .child('timeout')
-      .set(+new Date());
+      .ref('salas/' + keySala + '/registros/' + keyJogador)
+      .update({ timestamp: +new Date(), ativo: true });
   }
 }

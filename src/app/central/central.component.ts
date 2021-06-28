@@ -13,10 +13,10 @@ export class CentralComponent implements OnInit {
 
   ngOnInit() {
     //var key = this.taskForceService.criarSala();
-    //this.taskForceService.entrarSala('qlx29', 'Fabolas');
+    //this.taskForceService.entrarSala('qlx29', 'Pedrin');
     //this.taskForceService.keepAlive('qlx29', '-MdFA3gZCm-bKtJAughA');
     //this.taskForceService.desabilitarRegistro('qlx29', '-MdGMeK6uxrzmyO0Mfun');
-    this.taskForceService.monitorarJogadores('qlx29');
+    //this.taskForceService.monitorarJogadores('qlx29');
   }
 
   sortearProfissao() {}
