@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { map } from 'rxjs/operators';
+import { map, takeWhile } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class TaskforceService {
@@ -71,13 +72,40 @@ export class TaskforceService {
       .push(registro).key;
   }
 
+  monitorarRegistro(
+    keySala: string,
+    keyRegistro: string,
+    tempoIntervalo: number,
+    fConcluido: () => void,
+    fPrescrito: () => void
+  ) {
+    var tempoInicio = +new Date();
+    var tempoFim;
+
+    this.db
+      .object('salas/' + keySala + '/registro/' + keyRegistro)
+      .valueChanges()
+      .pipe(
+        takeWhile(r => {
+          tempoFim = +new Date();
+
+          return !(r['concluido'] || tempoInicio + tempoIntervalo > tempoFim);
+        }, true)
+      )
+      .subscribe(r => {
+        if (r['concluido']) {
+          fConcluido();
+        } else if (tempoInicio + tempoIntervalo > tempoFim) {
+          fPrescrito();
+        }
+      });
+  }
+
   concluirRegistro(keySala: string, registro: any) {
     var refRegistros = this.db.database.ref('salas/' + keySala + '/registro/');
 
     refRegistros.once('value', snapshot => {
       snapshot.forEach(r => {
-        console.log(r.key);
-
         if (
           r.val().ativo &&
           r.val().idProfissao === registro.idProfissao &&
