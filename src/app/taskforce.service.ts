@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable()
@@ -39,24 +38,56 @@ export class TaskforceService {
     return key;
   }
 
-  entrarSala(key: string): string {
+  entrarSala(keySala: string, nick: string): string {
     var jogador = {
-      nick: 'Fabolas',
+      nick: nick,
       ativo: true,
-      timeout: +new Date()
+      timestamp: +new Date()
     };
 
-    return this.db.database.ref('salas/' + key + '/jogadores').push(jogador)
+    return this.db.database.ref('salas/' + keySala + '/jogadores').push(jogador)
       .key;
   }
 
-  sairSala() {}
+  sairSala(keySala: string, keyJogador: string) {
+    this.db.database
+      .ref('salas/' + keySala + '/jogadores')
+      .child(keyJogador)
+      .remove();
+  }
 
-  adicionarRegistro(registro: any) {}
+  adicionarRegistro(keySala: string, profissao: any, tarefa: any): string {
+    var registro: any;
+    registro = {
+      idProfissao: profissao.id,
+      id: tarefa.id,
+      ativo: true,
+      concluido: false,
+      texto: tarefa.verbo
+    };
 
-  concluirRegistro(registro: any) {}
+    return this.db.database
+      .ref('salas/' + keySala + '/registro/')
+      .push(registro).key;
+  }
 
-  desabilitarRegistro(registro: any) {}
+  concluirRegistro(keySala: string, registro: any) {
+    var teste = this.db
+      .list('salas/' + keySala + '/registro/')
+      .snapshotChanges()
+      .pipe(
+        map(changes => {
+          return changes.map(c => ({
+            key: c.payload.key,
+            ...(c.payload.val() as Object)
+          }));
+        })
+      );
+
+    console.log(teste);
+  }
+
+  desabilitarRegistro(keySala: string, registro: any) {}
 
   keepAlive(keySala: string, keyJogador: string) {
     this.db.database

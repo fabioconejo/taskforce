@@ -11,8 +11,9 @@ export class CentralComponent implements OnInit {
 
   ngOnInit() {
     //var key = this.taskForceService.criarSala();
-    //console.log(this.taskForceService.entrarSala('qlx29'));
-    //this.taskForceService.keepAlive('qlx29', '-MdF7S0Fz0TKfsZps7q7');
+    //this.taskForceService.entrarSala('qlx29');
+    //this.taskForceService.keepAlive('qlx29', '-MdFA3gZCm-bKtJAughA');
+    //this.taskForceService.sairSala('qlx29', '-MdFA3gZCm-bKtJAughA');
   }
 
   sortearProfissao() {}
