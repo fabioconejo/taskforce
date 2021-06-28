@@ -1,18 +1,38 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { map, takeWhile } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { map, takeUntil, takeWhile } from 'rxjs/operators';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable()
 export class TaskforceService {
   constructor(private db: AngularFireDatabase, private http: HttpClient) {}
+  private ngUnsubscribe = new Subject();
 
   getProfissoes(): any {
     return this.http.get('assets/json/taskforce.json');
   }
 
-  getJogadores() {}
+  monitorarJogadores(keySala: string) {
+    var intervaloOffline: number;
+    var intervaloKick: number;
+
+    this.db
+      .object('salas/' + keySala + '/jogadores/')
+      .valueChanges()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((jogadores: Object) => {
+        console.log(jogadores);
+        for (let j in jogadores) {
+          console.log(j['timestamp']);
+          if (j['timestamp'] + intervaloOffline < +new Date()) {
+            if (j['timestamp'] + intervaloKick < +new Date()) {
+            } else {
+            }
+          }
+        }
+      });
+  }
 
   getSorteio() {}
 
@@ -27,8 +47,8 @@ export class TaskforceService {
       numRodada: 0,
       vidas: 10,
       jogadores: [],
-      sorteio: [],
-      registro: []
+      tarefas: [],
+      registros: []
     };
 
     this.db.database
@@ -55,6 +75,9 @@ export class TaskforceService {
       .ref('salas/' + keySala + '/jogadores')
       .child(keyJogador)
       .remove();
+
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
   }
 
   adicionarRegistro(keySala: string, profissao: any, tarefa: any): string {
@@ -68,7 +91,7 @@ export class TaskforceService {
     };
 
     return this.db.database
-      .ref('salas/' + keySala + '/registro/')
+      .ref('salas/' + keySala + '/registros/')
       .push(registro).key;
   }
 
@@ -83,9 +106,10 @@ export class TaskforceService {
     var tempoFim;
 
     this.db
-      .object('salas/' + keySala + '/registro/' + keyRegistro)
+      .object('salas/' + keySala + '/registros/' + keyRegistro)
       .valueChanges()
       .pipe(
+        takeUntil(this.ngUnsubscribe),
         takeWhile(r => {
           tempoFim = +new Date();
 
@@ -102,7 +126,7 @@ export class TaskforceService {
   }
 
   concluirRegistro(keySala: string, registro: any) {
-    var refRegistros = this.db.database.ref('salas/' + keySala + '/registro/');
+    var refRegistros = this.db.database.ref('salas/' + keySala + '/registros/');
 
     refRegistros.once('value', snapshot => {
       snapshot.forEach(r => {
@@ -112,21 +136,17 @@ export class TaskforceService {
           r.val().id === registro.id &&
           r.val().texto === registro.texto
         ) {
-          refRegistros
-            .child(r.key)
-            .child('ativo')
-            .set(false);
-
-          refRegistros
-            .child(r.key)
-            .child('concluido')
-            .set(true);
+          refRegistros.child(r.key).update({ ativo: false, concluido: true });
         }
       });
     });
   }
 
-  desabilitarRegistro(keySala: string, registro: any) {}
+  desabilitarRegistro(keySala: string, keyRegistro: string) {
+    this.db.database
+      .ref('salas/' + keySala + '/registros/' + keyRegistro)
+      .update({ ativo: false });
+  }
 
   keepAlive(keySala: string, keyJogador: string) {
     this.db.database

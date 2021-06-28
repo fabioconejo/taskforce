@@ -13,15 +13,10 @@ export class CentralComponent implements OnInit {
 
   ngOnInit() {
     //var key = this.taskForceService.criarSala();
-    //this.taskForceService.entrarSala('qlx29');
+    //this.taskForceService.entrarSala('qlx29', 'Fabolas');
     //this.taskForceService.keepAlive('qlx29', '-MdFA3gZCm-bKtJAughA');
-    /*this.taskForceService.monitorarRegistro(
-      'qlx29',
-      '-MdGMeK6uxrzmyO0Mfun',
-      () => {
-        console.log('Registro Ativo');
-      }
-    );*/
+    //this.taskForceService.desabilitarRegistro('qlx29', '-MdGMeK6uxrzmyO0Mfun');
+    this.taskForceService.monitorarJogadores('qlx29');
   }
 
   sortearProfissao() {}
