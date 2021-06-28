@@ -72,19 +72,30 @@ export class TaskforceService {
   }
 
   concluirRegistro(keySala: string, registro: any) {
-    var teste = this.db
-      .list('salas/' + keySala + '/registro/')
-      .snapshotChanges()
-      .pipe(
-        map(changes => {
-          return changes.map(c => ({
-            key: c.payload.key,
-            ...(c.payload.val() as Object)
-          }));
-        })
-      );
+    var refRegistros = this.db.database.ref('salas/' + keySala + '/registro/');
 
-    console.log(teste);
+    refRegistros.once('value', snapshot => {
+      snapshot.forEach(r => {
+        console.log(r.key);
+
+        if (
+          r.val().ativo &&
+          r.val().idProfissao === registro.idProfissao &&
+          r.val().id === registro.id &&
+          r.val().texto === registro.texto
+        ) {
+          refRegistros
+            .child(r.key)
+            .child('ativo')
+            .set(false);
+
+          refRegistros
+            .child(r.key)
+            .child('concluido')
+            .set(true);
+        }
+      });
+    });
   }
 
   desabilitarRegistro(keySala: string, registro: any) {}
