@@ -86,13 +86,18 @@ export class TaskforceService {
     var info = {
       idProfissao: profissao.id,
       ativo: true,
-      responsavel: keyJogador,
-      tarefas: tarefas
+      responsavel: keyJogador
     };
 
     var keyProfissao = this.db.database
       .ref('salas/' + keySala + '/profissoes/')
       .push(info).key;
+
+    for (let t in tarefas) {
+      this.db.database
+        .ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/tarefas/')
+        .push(t);
+    }
 
     return keyProfissao;
   }
@@ -110,7 +115,12 @@ export class TaskforceService {
         var keyProfissao = Object.keys(snapshot.val())[
           Math.floor(Math.random() * Object.keys(snapshot.val()).length)
         ];
-        console.log(snapshot.child(keyProfissao).child('tarefas').val()[0]);
+        console.log(
+          snapshot
+            .child(keyProfissao)
+            .child('tarefas')
+            .val()[0]
+        );
       });
   }
 
