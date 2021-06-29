@@ -17,6 +17,7 @@ export class CentralComponent implements OnInit {
     //this.taskForceService.keepAlive('qlx29', '-MdFA3gZCm-bKtJAughA');
     //this.taskForceService.desabilitarRegistro('qlx29', '-MdGMeK6uxrzmyO0Mfun');
     //this.taskForceService.monitorarJogadores('qlx29');
+    this.taskForceService.updateOnDisconnect('qlx29', '-MdKVJFCZ8XtaMz5TTJd');
   }
 
   sortearProfissao() {}
@@ -29,5 +30,13 @@ export class CentralComponent implements OnInit {
 
   removerJogador() {}
 
-  manterVivo() {}
+  manterVivo() {
+    setInterval(() => {
+      this.taskForceService.keepAlive('qlx29', '-MdJxZjLD3hQbZfVikp7');
+    }, 5000);
+  }
+
+  ngOnDestroy() {
+    this.taskForceService.unsubscribe();
+  }
 }
