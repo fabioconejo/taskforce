@@ -93,10 +93,10 @@ export class TaskforceService {
       .ref('salas/' + keySala + '/profissoes/')
       .push(info).key;
 
-    for (let t in tarefas) {
+    for (var i = 0; i < tarefas.length; i++) {
       this.db.database
         .ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/tarefas/')
-        .push(t);
+        .push(tarefas[i]);
     }
 
     return keyProfissao;
