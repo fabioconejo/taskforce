@@ -112,7 +112,7 @@ export class TaskforceService {
   async sortearTarefa(keySala: string) {
     var keyTarefa: string;
 
-    this.db.database
+    await this.db.database
       .ref('salas/' + keySala + '/profissoes/')
       .once('value', snapshot => {
         var keyProfissao = Object.keys(snapshot.val())[
@@ -126,7 +126,7 @@ export class TaskforceService {
         ];
       });
 
-      return keyTarefa;
+    return keyTarefa;
   }
 
   adicionarRegistro(keySala: string, profissao: any, tarefa: any): string {
