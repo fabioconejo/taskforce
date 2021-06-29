@@ -18,7 +18,7 @@ export class CentralComponent implements OnInit {
     //this.taskForceService.desabilitarRegistro('qlx29', '-MdGMeK6uxrzmyO0Mfun');
     //this.taskForceService.monitorarJogadores('qlx29');
     //this.taskForceService.sortearProfissao('qlx29', '-MdJxZjLD3hQbZfVikp7', 4);
-    //this.taskForceService.sortearTarefa('qlx29');
+    //console.log(this.taskForceService.sortearTarefa('qlx29'));
   }
 
   sortearProfissao() {}

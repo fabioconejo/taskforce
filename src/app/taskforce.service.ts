@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map, take, takeUntil, takeWhile } from 'rxjs/operators';
 import { Observable, Subject } from 'rxjs';
+import { DataSnapshot } from '@angular/fire/database/interfaces';
 
 @Injectable()
 export class TaskforceService {
@@ -108,20 +109,24 @@ export class TaskforceService {
       .remove();
   }
 
-  sortearTarefa(keySala: string) {
+  async sortearTarefa(keySala: string) {
+    var keyTarefa: string;
+
     this.db.database
       .ref('salas/' + keySala + '/profissoes/')
       .once('value', snapshot => {
         var keyProfissao = Object.keys(snapshot.val())[
           Math.floor(Math.random() * Object.keys(snapshot.val()).length)
         ];
-        console.log(
-          snapshot
-            .child(keyProfissao)
-            .child('tarefas')
-            .val()[0]
-        );
+
+        var snapshotTarefas = snapshot.child(keyProfissao).child('tarefas');
+
+        keyTarefa = Object.keys(snapshotTarefas.val())[
+          Math.floor(Math.random() * Object.keys(snapshotTarefas.val()).length)
+        ];
       });
+
+      return keyTarefa;
   }
 
   adicionarRegistro(keySala: string, profissao: any, tarefa: any): string {
