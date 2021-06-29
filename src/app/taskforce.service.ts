@@ -60,6 +60,13 @@ export class TaskforceService {
       .update({ ativo: false });
   }
 
+  aoDesconectarProfissao(keySala: string, keyProfissao: string) {
+    this.db
+      .object('salas/' + keySala + '/profissoes/' + keyProfissao)
+      .query.ref.onDisconnect()
+      .update({ ativo: false });
+  }
+
   getProfissoes(): any {
     return this.http.get('assets/json/taskforce.json');
   }
@@ -67,19 +74,19 @@ export class TaskforceService {
   sortearProfissao(keySala: string, keyJogador: string, numTarefas: number) {
     this.getProfissoes().subscribe(
       (profissoes: any): string => {
-        var profissao = profissoes[
-          Math.floor(Math.random() * profissoes.length)
-        ]
-        
+        var profissao =
+          profissoes[Math.floor(Math.random() * profissoes.length)];
+
         var tarefas = profissao.tarefas
           .sort(() => 0.5 - Math.random())
           .slice(0, numTarefas);
 
         var info = {
           idProfissao: profissao.id,
+          ativo: true,
           responsavel: keyJogador,
           tarefas: tarefas
-        }
+        };
 
         var keyProfissao = this.db.database
           .ref('salas/' + keySala + '/profissoes/')
