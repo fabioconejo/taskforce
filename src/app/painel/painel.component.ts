@@ -18,23 +18,19 @@ export class PainelComponent implements OnInit {
 
   constructor(private taskForceService: TaskforceService) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     var baseProfissoes: any;
 
-    this.taskForceService.getProfissoes().subscribe(
-      (data: any): void => {
-        baseProfissoes = data;
-        this.profissao = baseProfissoes[
-          Math.floor(Math.random() * baseProfissoes.length)
-        ].tarefas
-          .sort(() => 0.5 - Math.random())
-          .slice(0, 3);
+    baseProfissoes = await this.taskForceService.getProfissoes();
+    this.profissao = baseProfissoes[
+      Math.floor(Math.random() * baseProfissoes.length)
+    ].tarefas
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 3);
 
-        this.tempoMonitor = 10;
-        this.atualizarTarefa();
-        this.checarTarefa();
-      }
-    );
+    this.tempoMonitor = 10;
+    this.atualizarTarefa();
+    this.checarTarefa();
   }
 
   atualizarTarefa() {

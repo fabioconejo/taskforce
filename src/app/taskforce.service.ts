@@ -68,34 +68,40 @@ export class TaskforceService {
   }
 
   getProfissoes(): any {
-    return this.http.get('assets/json/taskforce.json');
+    return this.http.get('assets/json/taskforce.json').toPromise();
   }
 
-  sortearProfissao(keySala: string, keyJogador: string, numTarefas: number) {
-    this.getProfissoes().subscribe(
-      (profissoes: any): string => {
-        var profissao =
-          profissoes[Math.floor(Math.random() * profissoes.length)];
+  async sortearProfissao(keySala: string, keyJogador: string, numTarefas: number):Promise<string> {
+    var profissoes = await this.getProfissoes()
+    var profissao =
+      profissoes[Math.floor(Math.random() * profissoes.length)];
 
-        var tarefas = profissao.tarefas
-          .sort(() => 0.5 - Math.random())
-          .slice(0, numTarefas);
+    var tarefas = profissao.tarefas
+      .sort(() => 0.5 - Math.random())
+      .slice(0, numTarefas);
 
-        var info = {
-          idProfissao: profissao.id,
-          ativo: true,
-          responsavel: keyJogador,
-          tarefas: tarefas
-        };
+    var info = {
+      idProfissao: profissao.id,
+      ativo: true,
+      responsavel: keyJogador,
+      tarefas: tarefas
+    };
 
-        var keyProfissao = this.db.database
-          .ref('salas/' + keySala + '/profissoes/')
-          .push(info).key;
+    var keyProfissao = this.db.database
+      .ref('salas/' + keySala + '/profissoes/')
+      .push(info).key;
 
-        return keyProfissao;
-      },
-      error => {}
-    );
+    return keyProfissao;
+  }
+
+  removerProfissao(keySala: string, keyProfissao: string) {
+    this.db.database
+      .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
+      .remove();
+  }
+
+  sortearTarefa(keySala: string) {
+
   }
 
   adicionarRegistro(keySala: string, profissao: any, tarefa: any): string {
