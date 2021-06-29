@@ -85,7 +85,7 @@ export class TaskforceService {
       .slice(0, numTarefas);
 
     var info = {
-      idProfissao: profissao.id,
+      id: profissao.id,
       ativo: true,
       responsavel: keyJogador
     };
@@ -109,17 +109,21 @@ export class TaskforceService {
       .remove();
   }
 
-  async sortearTarefa(keySala: string) {
+  async sortearTarefa(keySala: string): Promise<string> {
     var keyTarefa: string;
+    var keyProfissao: string;
+    var snapshotTarefas: DataSnapshot;
+    var j: number;
 
     await this.db.database
       .ref('salas/' + keySala + '/profissoes/')
       .once('value', snapshot => {
-        var keyProfissao = Object.keys(snapshot.val())[
-          Math.floor(Math.random() * Object.keys(snapshot.val()).length)
-        ];
+        do {
+          j = Math.floor(Math.random() * Object.keys(snapshot.val()).length);
+          keyProfissao = Object.keys(snapshot.val())[j];
+        } while (!snapshot.child(keyProfissao).val().ativo);
 
-        var snapshotTarefas = snapshot.child(keyProfissao).child('tarefas');
+        snapshotTarefas = snapshot.child(keyProfissao).child('tarefas');
 
         keyTarefa = Object.keys(snapshotTarefas.val())[
           Math.floor(Math.random() * Object.keys(snapshotTarefas.val()).length)
@@ -129,14 +133,35 @@ export class TaskforceService {
     return keyTarefa;
   }
 
-  adicionarRegistro(keySala: string, profissao: any, tarefa: any): string {
+  
+
+  async adicionarRegistro(
+    keySala: string,
+    keyProfissao: string,
+    keyTarefa: string
+  ): Promise<string> {
     var registro: any;
+    var idProfissao: number;
+    var idTarefa: number;
+    var texto: string;
+    var snapshotTarefas: DataSnapshot;
+
+    await this.db.database
+      .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
+      .once('value', snapshot => {
+        console.log(snapshot.val().id);
+        idProfissao = snapshot.val().id;
+        snapshotTarefas = snapshot.child('tarefas').child(keyTarefa);
+        idTarefa = snapshotTarefas.val().id;
+        texto = snapshotTarefas.val().verbo;
+      });
+
     registro = {
-      idProfissao: profissao.id,
-      id: tarefa.id,
+      idProfissao: idProfissao,
+      id: idTarefa,
       ativo: true,
       concluido: false,
-      texto: tarefa.verbo
+      texto: texto
     };
 
     return this.db.database
