@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map, take, takeUntil, takeWhile } from 'rxjs/operators';
 import { Observable, Subject } from 'rxjs';
-import firebase from 'firebase/app';
 
 @Injectable()
 export class TaskforceService {
@@ -14,12 +13,6 @@ export class TaskforceService {
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
   }
-
-  getProfissoes(): any {
-    return this.http.get('assets/json/taskforce.json');
-  }
-
-  getSorteio() {}
 
   criarSala(): string {
     var sala: any;
@@ -32,7 +25,7 @@ export class TaskforceService {
       numRodada: 0,
       vidas: 10,
       jogadores: [],
-      tarefas: [],
+      profissoes: [],
       registros: []
     };
 
@@ -44,7 +37,7 @@ export class TaskforceService {
     return key;
   }
 
-  entrarSala(keySala: string, nick: string): string {
+  aoEntrarSala(keySala: string, nick: string): string {
     var jogador = {
       nick: nick,
       ativo: true
@@ -54,11 +47,48 @@ export class TaskforceService {
       .key;
   }
 
-  sairSala(keySala: string, keyJogador: string) {
+  aoSairSala(keySala: string, keyJogador: string) {
+    this.db
+      .object('salas/' + keySala + '/jogadores/' + keyJogador)
+      .update({ ativo: false });
+  }
+
+  aoDesconectarSala(keySala: string, keyJogador: string) {
     this.db
       .object('salas/' + keySala + '/jogadores/' + keyJogador)
       .query.ref.onDisconnect()
-      .update({ativo: false});
+      .update({ ativo: false });
+  }
+
+  getProfissoes(): any {
+    return this.http.get('assets/json/taskforce.json');
+  }
+
+  sortearProfissao(keySala: string, keyJogador: string, numTarefas: number) {
+    this.getProfissoes().subscribe(
+      (profissoes: any): string => {
+        var profissao = profissoes[
+          Math.floor(Math.random() * profissoes.length)
+        ]
+        
+        var tarefas = profissao.tarefas
+          .sort(() => 0.5 - Math.random())
+          .slice(0, numTarefas);
+
+        var info = {
+          idProfissao: profissao.id,
+          responsavel: keyJogador,
+          tarefas: tarefas
+        }
+
+        var keyProfissao = this.db.database
+          .ref('salas/' + keySala + '/profissoes/')
+          .push(info).key;
+
+        return keyProfissao;
+      },
+      error => {}
+    );
   }
 
   adicionarRegistro(keySala: string, profissao: any, tarefa: any): string {

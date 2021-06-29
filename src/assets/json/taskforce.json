@@ -92,7 +92,7 @@
         "tipo": "acao",
         "texto": "Medir temperatura",
         "verbo": "Medir",
-        "complemento": "temperatura"
+        "complemento": "Temperatura"
       },
       {
         "id": 14,
