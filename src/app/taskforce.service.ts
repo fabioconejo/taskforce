@@ -71,10 +71,13 @@ export class TaskforceService {
     return this.http.get('assets/json/taskforce.json').toPromise();
   }
 
-  async sortearProfissao(keySala: string, keyJogador: string, numTarefas: number):Promise<string> {
-    var profissoes = await this.getProfissoes()
-    var profissao =
-      profissoes[Math.floor(Math.random() * profissoes.length)];
+  async sortearProfissao(
+    keySala: string,
+    keyJogador: string,
+    numTarefas: number
+  ): Promise<string> {
+    var profissoes = await this.getProfissoes();
+    var profissao = profissoes[Math.floor(Math.random() * profissoes.length)];
 
     var tarefas = profissao.tarefas
       .sort(() => 0.5 - Math.random())
@@ -101,7 +104,14 @@ export class TaskforceService {
   }
 
   sortearTarefa(keySala: string) {
-
+    this.db.database
+      .ref('salas/' + keySala + '/profissoes/')
+      .once('value', snapshot => {
+        var keyProfissao = Object.keys(snapshot.val())[
+          Math.floor(Math.random() * Object.keys(snapshot.val()).length)
+        ];
+        console.log(snapshot.child(keyProfissao).child('tarefas').val()[0]);
+      });
   }
 
   adicionarRegistro(keySala: string, profissao: any, tarefa: any): string {
