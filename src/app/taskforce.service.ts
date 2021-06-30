@@ -150,10 +150,28 @@ export class TaskforceService {
           keyTarefa
       )
       .once('value', snapshot => {
-        tarefa = snapshot.toJSON;
+        tarefa = snapshot.val();
       });
 
     return tarefa;
+  }
+
+  setTarefa(
+    keySala: string,
+    keyProfissao: string,
+    keyTarefa: string,
+    tarefa: any
+  ) {
+    this.db.database
+      .ref(
+        'salas/' +
+          keySala +
+          '/profissoes/' +
+          keyProfissao +
+          '/tarefas/' +
+          keyTarefa
+      )
+      .update(tarefa);
   }
 
   async adicionarRegistro(
