@@ -133,7 +133,28 @@ export class TaskforceService {
     return keyTarefa;
   }
 
-  
+  async getTarefa(
+    keySala: string,
+    keyProfissao: string,
+    keyTarefa: string
+  ): Promise<any> {
+    var tarefa: any;
+
+    await this.db.database
+      .ref(
+        'salas/' +
+          keySala +
+          '/profissoes/' +
+          keyProfissao +
+          '/tarefas/' +
+          keyTarefa
+      )
+      .once('value', snapshot => {
+        tarefa = snapshot.toJSON;
+      });
+
+    return tarefa;
+  }
 
   async adicionarRegistro(
     keySala: string,
