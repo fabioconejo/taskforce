@@ -18,13 +18,13 @@
 
 @keyframes tempo {
   0% {
-    width: 0%;
-  }
-  99% {
     width: 100%;
   }
-  100% {
+  1% {
     width: 0%;
+  }
+  100% {
+    width: 100%;
   }
 }
 
@@ -73,8 +73,7 @@
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: typing 10s 1 normal both;
-  animation-iteration-count: infinite;
+  animation: typing 1 normal both;
   animation-timing-function: ease-in-out;
 }
 
@@ -103,7 +102,6 @@
   float: right;
   animation-name: tempo;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 
 /* Extra small devices (phones, 600px and down) */

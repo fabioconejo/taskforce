@@ -1,8 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { map, take, takeUntil, takeWhile } from 'rxjs/operators';
-import { Observable, Subject } from 'rxjs';
+import {
+  map,
+  take,
+  takeUntil,
+  takeWhile,
+  timeout,
+  catchError
+} from 'rxjs/operators';
+import { interval, Observable, Subject, timer } from 'rxjs';
 import { DataSnapshot } from '@angular/fire/database/interfaces';
 
 @Injectable()
@@ -222,12 +229,12 @@ export class TaskforceService {
   async adicionarRegistro(
     keySala: string,
     keyProfissao: string,
-    keyTarefa: string
+    keyTarefa: string,
+    texto: string
   ): Promise<string> {
     var registro: any;
     var idProfissao: number;
     var idTarefa: number;
-    var texto: string;
     var snapshotTarefas: DataSnapshot;
 
     await this.db.database
@@ -236,7 +243,6 @@ export class TaskforceService {
         idProfissao = snapshot.val().id;
         snapshotTarefas = snapshot.child('tarefas').child(keyTarefa);
         idTarefa = snapshotTarefas.val().id;
-        texto = snapshotTarefas.val().verbo;
       });
 
     registro = {
@@ -260,7 +266,7 @@ export class TaskforceService {
     fPrescrito: () => void
   ) {
     var tempoInicio = +new Date();
-    var tempoFim;
+    var tempoFim: number;
 
     this.db
       .object('salas/' + keySala + '/registros/' + keyRegistro)
@@ -268,17 +274,21 @@ export class TaskforceService {
       .pipe(
         takeUntil(this.ngUnsubscribe),
         takeWhile(r => {
-          tempoFim = +new Date();
-          return !(r['concluido'] || tempoInicio + tempoIntervalo > tempoFim);
-        }, true)
-      )
-      .subscribe(r => {
-        if (r['concluido']) {
-          fConcluido();
-        } else if (tempoInicio + tempoIntervalo > tempoFim) {
+          return !r['concluido'];
+        }, true),
+        timeout(tempoIntervalo),
+        catchError(err => {
           fPrescrito();
+          return [];
+        })
+      )
+      .subscribe(
+        r => {
+          if (r['concluido']) {
+            fConcluido();
+          }
         }
-      });
+      );
   }
 
   concluirRegistro(keySala: string, registro: any) {

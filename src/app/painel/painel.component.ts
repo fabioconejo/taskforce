@@ -11,7 +11,6 @@ export class PainelComponent implements OnInit {
   @Input() keyJogador: string;
   @Input() keyProfissaoSorteada: string;
   @Input() profissaoSorteada: any;
-  
 
   keyProfissaoMonitor: string;
   keyTarefaSorteada: string;
@@ -20,7 +19,7 @@ export class PainelComponent implements OnInit {
   registro: any = [];
   idRegistroSorteado: number;
   profissao: any;
-  tempoMonitor: number;
+  tempoMonitor: number = 10;
   tarefaSorteada: any;
   textoExibicao: string;
   intervalo: any;
@@ -29,6 +28,10 @@ export class PainelComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
 
   async ngOnInit() {
+    //this.atualizarTarefa();
+  }
+
+  async atualizarTarefa() {
     this.keyProfissaoMonitor = await this.taskForceService.sortearProfissaoMonitor(
       this.keySala
     );
@@ -41,33 +44,34 @@ export class PainelComponent implements OnInit {
       this.keyProfissaoMonitor,
       this.keyTarefaSorteada
     );
-    this.tarefaSorteada = this.taskForceService.sortearItem(this.tarefaSorteada);
-    this.taskForceService.adicionarRegistro(
+    this.tarefaSorteada = this.taskForceService.sortearItem(
+      this.tarefaSorteada
+    );
+    this.keyRegistro = await this.taskForceService.adicionarRegistro(
       this.keySala,
       this.keyProfissaoMonitor,
-      this.keyTarefaSorteada
+      this.keyTarefaSorteada,
+      this.tarefaSorteada.verbo
+    );
+    this.exibirTarefa();
+    this.reiniciarAnimacao();
+    this.taskForceService.monitorarRegistro(
+      this.keySala,
+      this.keyRegistro,
+      this.tempoMonitor * 1000,
+      async () => {
+        await this.atualizarTarefa();
+      },
+      async () => {
+        this.taskForceService.desabilitarRegistro(
+          this.keySala,
+          this.keyRegistro
+        );
+        await this.atualizarTarefa();
+      }
     );
 
-    this.exibirTarefa();
-
-    /*
-    var baseProfissoes: any;
-
-    baseProfissoes = await this.taskForceService.getProfissoes();
-    this.profissao = baseProfissoes[
-      Math.floor(Math.random() * baseProfissoes.length)
-    ].tarefas
-      .sort(() => 0.5 - Math.random())
-      .slice(0, 8);
-
-    this.tempoMonitor = 10;
-    this.atualizarTarefa();
-    this.checarTarefa();
-    */
-  }
-
-  atualizarTarefa() {
-    this.pausa = true;
+    /*this.pausa = true;
     clearInterval(this.intervalo);
     this.sortearTarefa();
     this.adicionarRegistro();
@@ -81,7 +85,14 @@ export class PainelComponent implements OnInit {
       this.sortearTarefa();
       this.adicionarRegistro();
       //this.textoExibicao = this.exibirTarefa();
-    }, this.tempoMonitor * 1000);
+    }, this.tempoMonitor * 1000);*/
+  }
+
+  reiniciarAnimacao() {
+    this.pausa = true;
+    setTimeout(() => {
+      this.pausa = false;
+    }, 100);
   }
 
   checarTarefa() {
@@ -196,6 +207,11 @@ export class PainelComponent implements OnInit {
 
   concluirRegistro(registro: any) {
     this.taskForceService.concluirRegistro(this.keySala, registro);
-    this.taskForceService.setTarefa(this.keySala, this.keyProfissaoSorteada, this.keyTarefaSorteada, {verbo : registro.texto})
+    this.taskForceService.setTarefa(
+      this.keySala,
+      this.keyProfissaoSorteada,
+      this.keyTarefaSorteada,
+      { verbo: registro.texto }
+    );
   }
 }
