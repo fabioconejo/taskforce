@@ -26,7 +26,7 @@ export class PainelComponent implements OnInit {
       Math.floor(Math.random() * baseProfissoes.length)
     ].tarefas
       .sort(() => 0.5 - Math.random())
-      .slice(0, 3);
+      .slice(0, 8);
 
     this.tempoMonitor = 10;
     this.atualizarTarefa();
