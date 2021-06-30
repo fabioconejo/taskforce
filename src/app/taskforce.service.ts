@@ -174,6 +174,32 @@ export class TaskforceService {
       .update(tarefa);
   }
 
+  sortearItem(tarefa: any): any {
+    switch (tarefa.tipo) {
+      case 'acao':
+        break;
+      case 'estado':
+        if (tarefa.estado[0] === tarefa.verbo) {
+          tarefa.verbo = tarefa.estado[1];
+          tarefa.texto = tarefa.eTexto[1];
+        } else {
+          tarefa.verbo = tarefa.estado[0];
+          tarefa.texto = tarefa.eTexto[0];
+        }
+        break;
+      case 'escolha':
+        do {
+          var j = Math.floor(Math.random() * tarefa.lista.length);
+          var verbo = tarefa.lista[j];
+        } while (tarefa.verbo === verbo);
+
+        tarefa.verbo = tarefa.lista[j];
+        break;
+    }
+
+    return tarefa;
+  }
+
   async adicionarRegistro(
     keySala: string,
     keyProfissao: string,
