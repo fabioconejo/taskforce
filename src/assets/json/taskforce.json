@@ -167,91 +167,91 @@
     "profissao": "Chef de cozinha",
     "tarefas": [
       {
-        "id": 19,
+        "id": 1,
         "tipo": "acao",
         "texto": "Comprar ingredientes",
         "verbo": "Comprar",
         "complemento": "Ingredientes"
       },
       {
-        "id": 20,
+        "id": 2,
         "tipo": "acao",
         "texto": "Limpar bancada",
         "verbo": "Limpar",
         "complemento": "Bancada"
       },
       {
-        "id": 21,
+        "id": 3,
         "tipo": "acao",
         "texto": "Fatiar peixe",
         "verbo": "Fatiar",
         "complemento": "Peixe"
       },
       {
-        "id": 22,
+        "id": 4,
         "tipo": "acao",
         "texto": "Limpar camarão",
         "verbo": "Limpar",
         "complemento": "Camarão"
       },
       {
-        "id": 23,
+        "id": 5,
         "tipo": "acao",
         "texto": "Separar feijão",
         "verbo": "Separar",
         "complemento": "Feijão"
       },
       {
-        "id": 24,
+        "id": 6,
         "tipo": "acao",
         "texto": "Lavar verduras",
         "verbo": "Lavar",
         "complemento": "Verduras"
       },
       {
-        "id": 25,
+        "id": 7,
         "tipo": "acao",
         "texto": "Flambar bananas",
         "verbo": "Flambar",
         "complemento": "Bananas"
       },
       {
-        "id": 26,
+        "id": 8,
         "tipo": "acao",
         "texto": "Experimentar comida",
         "verbo": "Experimentar",
         "complemento": "Comida"
       },
       {
-        "id": 27,
+        "id": 9,
         "tipo": "acao",
         "texto": "Por sal e tempero",
         "verbo": "Por",
         "complemento": "Sal e tempero"
       },
       {
-        "id": 28,
+        "id": 10,
         "tipo": "acao",
         "texto": "Preparar sobremesa",
         "verbo": "Preparar",
         "complemento": "Sobremesa"
       },
       {
-        "id": 29,
+        "id": 11,
         "tipo": "acao",
         "texto": "Montar pratos",
         "verbo": "Montar",
         "complemento": "Pratos"
       },
       {
-        "id": 30,
+        "id": 12,
         "tipo": "acao",
         "texto": "Deixar pão descansando",
         "verbo": "Deixar",
         "complemento": "Pão descansando"
       },
       {
-        "id": 31,
+        "id": 13,
         "tipo": "estado",
         "eTexto": [
           "Ligar coifa",
@@ -266,7 +266,7 @@
         ]
       },
       {
-        "id": 32,
+        "id": 14,
         "tipo": "estado",
         "eTexto": [
           "Ligar fritadeira",
@@ -281,7 +281,7 @@
         ]
       },
       {
-        "id": 33,
+        "id": 15,
         "tipo": "estado",
         "eTexto": [
           "Ligar freezer",

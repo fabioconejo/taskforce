@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class QuadroComponent implements OnInit {
   maxNumTarefas: number = 8;
 
+  @Input() idProfissao: number;
   @Input() tarefas: any;
   @Input() registro: any;
   @Output() quadroAtualizado = new EventEmitter();

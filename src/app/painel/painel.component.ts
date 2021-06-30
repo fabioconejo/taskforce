@@ -9,7 +9,9 @@ import { TaskforceService } from '../taskforce.service';
 export class PainelComponent implements OnInit {
   @Input() keySala: string;
   @Input() keyJogador: string;
+  @Input() keyProfissaoSorteada: string;
   @Input() profissaoSorteada: any;
+  
 
   keyProfissaoMonitor: string;
   keyTarefaSorteada: string;
@@ -39,6 +41,7 @@ export class PainelComponent implements OnInit {
       this.keyProfissaoMonitor,
       this.keyTarefaSorteada
     );
+    this.tarefaSorteada = this.taskForceService.sortearItem(this.tarefaSorteada);
     this.taskForceService.adicionarRegistro(
       this.keySala,
       this.keyProfissaoMonitor,
@@ -192,22 +195,7 @@ export class PainelComponent implements OnInit {
   }
 
   concluirRegistro(registro: any) {
-    for (var i = 0; i < this.registro.length; i++) {
-      if (
-        this.registro[i].ativo &&
-        this.registro[i].id === registro.id &&
-        this.registro[i].texto === registro.texto
-      ) {
-        this.registro[i].ativo = false;
-        this.registro[i].concluido = true;
-      }
-    }
-
-    for (var i = 0; i < this.profissao.length; i++) {
-      if (this.profissao[i].id === registro.id) {
-        this.profissao[i].verbo = registro.texto;
-        break;
-      }
-    }
+    this.taskForceService.concluirRegistro(this.keySala, registro);
+    this.taskForceService.setTarefa(this.keySala, this.keyProfissaoSorteada, this.keyTarefaSorteada, {verbo : registro.texto})
   }
 }

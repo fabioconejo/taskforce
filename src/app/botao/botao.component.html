@@ -4,7 +4,7 @@
     [style]="{'--box-shadow-color': sombra}"
     [style.font-size]="tamanhoFonte"
     [style.display]="displayBotao"
-    (click)="inverter(); this.clique.emit({'id': id, 'tipo': tipo, 'texto': texto})"
+    (click)="inverter(); this.clique.emit({'id': id, 'idProfissao':idProfissao, 'tipo': tipo, 'texto': texto})"
   >
     {{texto}}
 </button>

@@ -12,6 +12,7 @@ export class BotaoComponent implements OnInit {
   corFonte: string;
   sombra: string;
   @Input() id: number;
+  @Input() idProfissao: number;
   @Input() tipo: string;
   @Input() cor: string;
   @Input() texto: string;

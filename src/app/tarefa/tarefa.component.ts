@@ -11,6 +11,7 @@ export class TarefaComponent implements OnInit {
   corBotao: string;
 
   @Input() id: number;
+  @Input() idProfissao: number;
   @Input() frase: string;
   @Input() texto: string;
   @Input() tipo: string;
