@@ -9,7 +9,6 @@ import { TaskforceService } from '../taskforce.service';
 export class PainelComponent implements OnInit {
   @Input() keySala: string;
   @Input() keyJogador: string;
-  @Input() keyProfissaoSorteada: string;
   @Input() profissaoSorteada: any;
 
   keyTarefaSorteada: string;
