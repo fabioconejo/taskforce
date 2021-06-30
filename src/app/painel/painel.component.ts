@@ -11,6 +11,7 @@ export class PainelComponent implements OnInit {
   @Input() keyJogador: string;
   @Input() profissaoSorteada: any;
 
+  keyProfissaoMonitor: string;
   keyTarefaSorteada: string;
   keyRegistro: string;
 
@@ -26,6 +27,27 @@ export class PainelComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
 
   async ngOnInit() {
+    this.keyProfissaoMonitor = await this.taskForceService.sortearProfissaoMonitor(
+      this.keySala
+    );
+    this.keyTarefaSorteada = await this.taskForceService.sortearTarefa(
+      this.keySala,
+      this.keyProfissaoMonitor
+    );
+    this.tarefaSorteada = await this.taskForceService.getTarefa(
+      this.keySala,
+      this.keyProfissaoMonitor,
+      this.keyTarefaSorteada
+    );
+    this.taskForceService.adicionarRegistro(
+      this.keySala,
+      this.keyProfissaoMonitor,
+      this.keyTarefaSorteada
+    );
+
+    this.exibirTarefa();
+
+    /*
     var baseProfissoes: any;
 
     baseProfissoes = await this.taskForceService.getProfissoes();
@@ -38,6 +60,7 @@ export class PainelComponent implements OnInit {
     this.tempoMonitor = 10;
     this.atualizarTarefa();
     this.checarTarefa();
+    */
   }
 
   atualizarTarefa() {
@@ -45,7 +68,7 @@ export class PainelComponent implements OnInit {
     clearInterval(this.intervalo);
     this.sortearTarefa();
     this.adicionarRegistro();
-    this.textoExibicao = this.exibirTarefa();
+    //this.textoExibicao = this.exibirTarefa();
     setTimeout(() => {
       this.pausa = false;
     }, 100);
@@ -54,7 +77,7 @@ export class PainelComponent implements OnInit {
       this.desabilitarRegistro();
       this.sortearTarefa();
       this.adicionarRegistro();
-      this.textoExibicao = this.exibirTarefa();
+      //this.textoExibicao = this.exibirTarefa();
     }, this.tempoMonitor * 1000);
   }
 
@@ -105,7 +128,7 @@ export class PainelComponent implements OnInit {
     }
   }
 
-  exibirTarefa(): string {
+  exibirTarefa() {
     var texto: string;
     var complemento: string;
     var j: number;
@@ -123,7 +146,7 @@ export class PainelComponent implements OnInit {
         break;
     }
 
-    return texto;
+    this.textoExibicao = texto;
   }
 
   adicionarRegistro() {

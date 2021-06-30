@@ -12,9 +12,13 @@ export class QuadroComponent implements OnInit {
   @Input() registro: any;
   @Output() quadroAtualizado = new EventEmitter();
 
+  tarefasArray: any;
+
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.tarefasArray = Object.keys(this.tarefas).map(key => this.tarefas[key]);
+  }
 
   tarefaExecutada(args: any) {
     this.quadroAtualizado.emit(args);

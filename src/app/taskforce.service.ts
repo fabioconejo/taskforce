@@ -103,6 +103,23 @@ export class TaskforceService {
     return keyProfissao;
   }
 
+  async sortearProfissaoMonitor(keySala: string): Promise<string> {
+    var keyProfissao: string;
+    var snapshotTarefas: DataSnapshot;
+    var j: number;
+
+    await this.db.database
+      .ref('salas/' + keySala + '/profissoes/')
+      .once('value', snapshot => {
+        do {
+          j = Math.floor(Math.random() * Object.keys(snapshot.val()).length);
+          keyProfissao = Object.keys(snapshot.val())[j];
+        } while (!snapshot.child(keyProfissao).val().ativo);
+      });
+
+    return keyProfissao;
+  }
+
   async getProfissao(keySala: string, keyProfissao: string): Promise<any> {
     var profissao: any;
 
@@ -121,24 +138,14 @@ export class TaskforceService {
       .remove();
   }
 
-  async sortearTarefa(keySala: string): Promise<string> {
+  async sortearTarefa(keySala: string, keyProfissao: string): Promise<string> {
     var keyTarefa: string;
-    var keyProfissao: string;
-    var snapshotTarefas: DataSnapshot;
-    var j: number;
 
     await this.db.database
-      .ref('salas/' + keySala + '/profissoes/')
+      .ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/tarefas/')
       .once('value', snapshot => {
-        do {
-          j = Math.floor(Math.random() * Object.keys(snapshot.val()).length);
-          keyProfissao = Object.keys(snapshot.val())[j];
-        } while (!snapshot.child(keyProfissao).val().ativo);
-
-        snapshotTarefas = snapshot.child(keyProfissao).child('tarefas');
-
-        keyTarefa = Object.keys(snapshotTarefas.val())[
-          Math.floor(Math.random() * Object.keys(snapshotTarefas.val()).length)
+        keyTarefa = Object.keys(snapshot.val())[
+          Math.floor(Math.random() * Object.keys(snapshot.val()).length)
         ];
       });
 
@@ -226,7 +233,6 @@ export class TaskforceService {
     await this.db.database
       .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
       .once('value', snapshot => {
-        console.log(snapshot.val().id);
         idProfissao = snapshot.val().id;
         snapshotTarefas = snapshot.child('tarefas').child(keyTarefa);
         idTarefa = snapshotTarefas.val().id;
