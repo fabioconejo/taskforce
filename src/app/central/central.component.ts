@@ -9,17 +9,23 @@ import { TaskforceService } from '../taskforce.service';
 })
 export class CentralComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
-  registroConcluido: boolean;
+  keySala: string;
+  keyJogador: string;
+  keyProfissaoSorteada: string;
+  profissaoSorteada: any;
 
   async ngOnInit() {
-    //var key = this.taskForceService.criarSala();
-    //this.taskForceService.entrarSala('qlx29', 'Pedrin');
-    //this.taskForceService.keepAlive('qlx29', '-MdFA3gZCm-bKtJAughA');
-    //this.taskForceService.desabilitarRegistro('qlx29', '-MdGMeK6uxrzmyO0Mfun');
-    //this.taskForceService.monitorarJogadores('qlx29');
-    //await this.taskForceService.sortearProfissao('qlx29', '-MdJxZjLD3hQbZfVikp7', 4);
-    //await this.taskForceService.adicionarRegistro('qlx29', '-MdOUwwk_sVVrd2u_KTP', '-MdOUwwlaKgvHlWAWxos');
-    //await this.taskForceService.setTarefa('qlx29', '-MdOUwwk_sVVrd2u_KTP', '-MdOUwwlaKgvHlWAWxos', {verbo: "Falar"});
+    this.keySala = 'qlx29';
+    this.keyJogador = '-MdJxZjLD3hQbZfVikp7';
+    this.keyProfissaoSorteada = await this.taskForceService.sortearProfissao(
+      this.keySala,
+      this.keyJogador,
+      4
+    );
+    this.profissaoSorteada = await this.taskForceService.getProfissao(
+      this.keySala,
+      this.keyProfissaoSorteada
+    );
   }
 
   sortearProfissao() {}

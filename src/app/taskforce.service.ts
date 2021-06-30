@@ -103,6 +103,18 @@ export class TaskforceService {
     return keyProfissao;
   }
 
+  async getProfissao(keySala: string, keyProfissao: string): Promise<any> {
+    var profissao: any;
+
+    await this.db.database
+      .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
+      .once('value', snapshot => {
+        profissao = snapshot.val();
+      });
+
+    return profissao;
+  }
+
   removerProfissao(keySala: string, keyProfissao: string) {
     this.db.database
       .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
