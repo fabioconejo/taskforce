@@ -4,7 +4,7 @@
       style.animation-duration="{{tempo}}s">{{texto}}</p>
   </div>
 
-  <div class="tempo">
-    <div class="tempo-decorrido" [style.display]="pausa ? 'none' : 'block'" style.animation-duration="{{tempo}}s"></div>
+  <div class="tempo" [style.display]="pausa ? 'none' : 'block'">
+    <div class="tempo-decorrido" style.animation-duration="{{tempo}}s"></div>
   </div>
 </div>

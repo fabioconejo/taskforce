@@ -98,7 +98,7 @@
 .tempo-decorrido {
   background-color: var(--eeire-black);
   height: 100%;
-  width: 0%;
+  width: 100%;
   float: right;
   animation-name: tempo;
   animation-timing-function: linear;
