@@ -772,15 +772,41 @@
       {
         "id": 16,
         "tipo": "escolha",
-        "texto": "Alterar TCP/IP para",
+        "texto": "Alterar IPv4 para",
         "verbo": "Alterar",
-        "complemento": "TCP/IP",
+        "complemento": "IPv4",
         "lista": [
           "192.168.1.1",
-          "1000 requisições",
-          "10000 requisições",
-          "100000 requisições",
-          "1000000 requisições"
+          "192.168.0.1",
+          "204.153.201.58",
+          "185.65.174.1",
+          "25.100.250.14"
+        ]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Alterar DNS para",
+        "verbo": "Alterar",
+        "complemento": "DNS",
+        "lista": [
+          "Padrão",
+          "8.8.8.8",
+          "8.8.4.4",
+          "1.0.0.1",
+          "1.1.1.1"
+        ]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Alterar certificado digital",
+        "verbo": "Alterar",
+        "complemento": "Certificado digital",
+        "lista": [
+          "A1",
+          "A3",
+          "SSL"
         ]
       }
     ]
