@@ -7,8 +7,9 @@
 
 .profissao-jogador {
   height: 80%;
-  width: 50%;
+  width: 48%;
 
+  margin-right: 1.5%;
   float: left;
   background-color: var(--white);
   border-radius: 3px;
@@ -17,8 +18,7 @@
 
 .amigos {
   height: 80%;
-  width: 45%;
-  margin-left: 2.5%;
+  width: 48%;
 
   float: left;
   overflow-y: auto;

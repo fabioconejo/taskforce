@@ -294,6 +294,377 @@
           "Ligado",
           "Desligado"
         ]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Ajustar temperatura do forno para",
+        "verbo": "Ajustar",
+        "complemento": "Temperatura do forno",
+        "lista": [
+          "160°C",
+          "190°C",
+          "200°C",
+          "250°C"
+        ]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Regular velocidade da batedeira para",
+        "verbo": "Regular",
+        "complemento": "Velocidade da batedeira",
+        "lista": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Usar boca do fogão de número",
+        "verbo": "Usar",
+        "complemento": "Boca do fogão",
+        "lista": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "profissao": "Cientista",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Colocar lamínula",
+        "verbo": "Colocar",
+        "complemento": "Lamínula"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Anotar resultados",
+        "verbo": "Anotar",
+        "complemento": "Resultados"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Escrever artigo",
+        "verbo": "Escrever",
+        "complemento": "Artigo"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Publicar descoberta",
+        "verbo": "Publicar",
+        "complemento": "Descoberta"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Realizar testes em ratos",
+        "verbo": "Realizar",
+        "complemento": "Testes em ratos"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Fazer contas",
+        "verbo": "Fazer",
+        "complemento": "Contas"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Limpar béquer",
+        "verbo": "Limpar",
+        "complemento": "Béquer"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Decorar tabela periódica",
+        "verbo": "Decorar",
+        "complemento": "Tabela periódica"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Realizar amostragem",
+        "verbo": "Realizar",
+        "complemento": "Amostragem"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Ler artigos",
+        "verbo": "Ler",
+        "complemento": "Artigos"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Patentear invenção",
+        "verbo": "Patentear",
+        "complemento": "Invenção"
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar globo de plasma",
+          "Desligar globo de plasma"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar globo de plasma",
+        "complemento": "Globo de plasma",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar luz ultravioleta",
+          "Desligar luz ultravioleta"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar luz ultravioleta",
+        "complemento": "Luz ultravioleta",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Ajustar zoom do microscópio para",
+        "verbo": "Ajustar",
+        "complemento": "Zoom do microscópio",
+        "lista": [
+          "150x",
+          "450x",
+          "900x"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Ajustar potência do bico de bunsen para",
+        "verbo": "Ajustar",
+        "complemento": "Potência do bico de bunsen",
+        "lista": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Regular potenciômetro para",
+        "verbo": "Regular",
+        "complemento": "Potenciômetro",
+        "lista": [
+          "10%",
+          "25%",
+          "36%",
+          "47%",
+          "83%",
+          "100%"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "profissao": "Soldado",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Defender país",
+        "verbo": "Defender",
+        "complemento": "País"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Treinar tiro ao alvo",
+        "verbo": "Treinar",
+        "complemento": "Tiro ao alvo"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Usar camuflagem",
+        "verbo": "Usar",
+        "complemento": "Camuflagem"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Cantar hino nacional",
+        "verbo": "Cantar",
+        "complemento": "Hino nacional"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Cantar hino da bandeira",
+        "verbo": "Cantar",
+        "complemento": "Hino da bandeira"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Obedecer ordem",
+        "verbo": "Obedecer",
+        "complemento": "Ordem"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Realizar flexão",
+        "verbo": "Realizar",
+        "complemento": "Flexão"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Realizar polichinelo",
+        "verbo": "Realizar",
+        "complemento": "Polichinelo"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Realizar abdominal",
+        "verbo": "Realizar",
+        "complemento": "Abdominal"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Preparar sobremesa",
+        "verbo": "Preparar",
+        "complemento": "Sobremesa"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Montar pratos",
+        "verbo": "Montar",
+        "complemento": "Pratos"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Deixar pão descansando",
+        "verbo": "Deixar",
+        "complemento": "Pão descansando"
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar coifa",
+          "Desligar coifa"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar coifa",
+        "complemento": "Coifa",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar fritadeira",
+          "Desligar fritadeira"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar fritadeira",
+        "complemento": "Fritadeira",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar freezer",
+          "Desligar freezer"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar freezer",
+        "complemento": "Freezer",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Ajustar temperatura do forno para",
+        "verbo": "Ajustar",
+        "complemento": "Temperatura do forno",
+        "lista": [
+          "160°C",
+          "190°C",
+          "200°C",
+          "250°C"
+        ]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Regular velocidade da batedeira para",
+        "verbo": "Regular",
+        "complemento": "Velocidade da batedeira",
+        "lista": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Usar boca do fogão de número",
+        "verbo": "Usar",
+        "complemento": "Boca do fogão",
+        "lista": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
       }
     ]
   }
