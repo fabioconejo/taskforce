@@ -17,18 +17,20 @@ export class CentralComponent implements OnInit {
   async ngOnInit() {
     this.keySala = 'qlx29';
     this.keyJogador = '-MdJxZjLD3hQbZfVikp7';
+  }
+
+  async sortearProfissao() {
     this.keyProfissaoSorteada = await this.taskForceService.sortearProfissao(
       this.keySala,
       this.keyJogador,
       4
     );
+
     this.profissaoSorteada = await this.taskForceService.getProfissao(
       this.keySala,
       this.keyProfissaoSorteada
     );
   }
-
-  sortearProfissao() {}
 
   limparRegristro() {}
 

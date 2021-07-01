@@ -35,3 +35,17 @@ body {
   background-size: 150px;
   color: var(--space-cadet);
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--cultured);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--space-cadet);
+  border-radius: 3px;
+}

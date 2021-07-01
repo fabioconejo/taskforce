@@ -16,7 +16,7 @@
     [style.font-size]="tamanhoFonte"
     [style.display]="displayLista"
     #l
-    (change)="this.clique.emit({'id': id, 'tipo': tipo, 'texto': l.value})"
+    (change)="this.clique.emit({'id': id, 'idProfissao':idProfissao, 'tipo': tipo, 'texto': l.value})"
   >
     <option value="" selected hidden disabled>{{texto}}</option>
     <option *ngFor="let l of lista" [value]="l">{{l}}</option>
