@@ -492,7 +492,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 4,
     "profissao": "Soldado",
     "tarefas": [
       {
@@ -561,109 +561,226 @@
       {
         "id": 10,
         "tipo": "acao",
-        "texto": "Preparar sobremesa",
-        "verbo": "Preparar",
-        "complemento": "Sobremesa"
+        "texto": "Recarregar fuzil",
+        "verbo": "Recarregar",
+        "complemento": "Fuzil"
       },
       {
         "id": 11,
         "tipo": "acao",
-        "texto": "Montar pratos",
-        "verbo": "Montar",
-        "complemento": "Pratos"
+        "texto": "Pilotar tanque de guerra",
+        "verbo": "Pilotar",
+        "complemento": "Tanque de guerra"
       },
       {
         "id": 12,
         "tipo": "acao",
-        "texto": "Deixar pão descansando",
-        "verbo": "Deixar",
-        "complemento": "Pão descansando"
+        "texto": "Sobreviver na floresta",
+        "verbo": "Sobreviver",
+        "complemento": "Floresta"
       },
       {
         "id": 13,
         "tipo": "estado",
         "eTexto": [
-          "Ligar coifa",
-          "Desligar coifa"
+          "Fazer postura",
+          "Desfazer postura"
         ],
-        "verbo": "Ligado",
-        "texto": "Ligar coifa",
-        "complemento": "Coifa",
+        "verbo": "Feita",
+        "texto": "Feita postura",
+        "complemento": "Postura",
         "estado": [
-          "Ligado",
-          "Desligado"
+          "Feita",
+          "Desfeita"
         ]
       },
       {
         "id": 14,
+        "tipo": "escolha",
+        "texto": "Ajustar zoom do rifle para",
+        "verbo": "Ajustar",
+        "complemento": "Zoom do rifle",
+        "lista": [
+          "1x",
+          "2x",
+          "4x",
+          "8x"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Regular quantidade de explosivos para",
+        "verbo": "Regular",
+        "complemento": "Quantidade de explosivos",
+        "lista": [
+          "200g",
+          "400g",
+          "1kg",
+          "1,5kg",
+          "4kg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "profissao": "Hacker",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Desenvolver spyware",
+        "verbo": "Desenvolver",
+        "complemento": "Spyware"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Desenvolver malware",
+        "verbo": "Desenvolver",
+        "complemento": "Malware"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Fazer programa",
+        "verbo": "Fazer",
+        "complemento": "Programa"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Perguntar senha para a vítima",
+        "verbo": "Perguntar",
+        "complemento": "Senha para a vítima"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Invadir banco de dados",
+        "verbo": "Invadir",
+        "complemento": "Banco de dados"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Vazar nudes",
+        "verbo": "Vazar",
+        "complemento": "Nudes"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Acessar deepweb",
+        "verbo": "Acessar",
+        "complemento": "Deepweb"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Expor dados pessoais",
+        "verbo": "Expor",
+        "complemento": "Dados pessoais"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Retirar dinheiro de contas bancárias",
+        "verbo": "Retirar",
+        "complemento": "Dinheiro de contas bancárias"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Despistar polícia federal",
+        "verbo": "Despistar",
+        "complemento": "Polícia federal"
+      },
+      {
+        "id": 11,
         "tipo": "estado",
         "eTexto": [
-          "Ligar fritadeira",
-          "Desligar fritadeira"
+          "Ligar antivírus",
+          "Desligar antivírus"
         ],
         "verbo": "Ligado",
-        "texto": "Ligar fritadeira",
-        "complemento": "Fritadeira",
+        "texto": "Ligar antivírus",
+        "complemento": "Antivírus",
         "estado": [
           "Ligado",
           "Desligado"
         ]
       },
       {
-        "id": 15,
+        "id": 12,
         "tipo": "estado",
         "eTexto": [
-          "Ligar freezer",
-          "Desligar freezer"
+          "Ligar firewall",
+          "Desligar firewall"
         ],
         "verbo": "Ligado",
-        "texto": "Ligar freezer",
-        "complemento": "Freezer",
+        "texto": "Ligar firewall",
+        "complemento": "Firewall",
         "estado": [
           "Ligado",
           "Desligado"
+        ]
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": [
+          "Criptografar arquivo",
+          "Descriptografar arquivo"
+        ],
+        "verbo": "Criptografado",
+        "texto": "Criptografar arquivo",
+        "complemento": "Arquivo",
+        "estado": [
+          "Criptografado",
+          "Descriptografado"
+        ]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Ajustar nível de segurança para",
+        "verbo": "Ajustar",
+        "complemento": "Nível de segurança",
+        "lista": [
+          "Baixo",
+          "Médio",
+          "Alto",
+          "Rigoroso"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Ajustar ataque DDoS para",
+        "verbo": "Ajustar",
+        "complemento": "Ataque DDoS",
+        "lista": [
+          "100 requisições",
+          "1000 requisições",
+          "10000 requisições",
+          "100000 requisições",
+          "1000000 requisições"
         ]
       },
       {
         "id": 16,
         "tipo": "escolha",
-        "texto": "Ajustar temperatura do forno para",
-        "verbo": "Ajustar",
-        "complemento": "Temperatura do forno",
+        "texto": "Alterar TCP/IP para",
+        "verbo": "Alterar",
+        "complemento": "TCP/IP",
         "lista": [
-          "160°C",
-          "190°C",
-          "200°C",
-          "250°C"
-        ]
-      },
-      {
-        "id": 17,
-        "tipo": "escolha",
-        "texto": "Regular velocidade da batedeira para",
-        "verbo": "Regular",
-        "complemento": "Velocidade da batedeira",
-        "lista": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ]
-      },
-      {
-        "id": 18,
-        "tipo": "escolha",
-        "texto": "Usar boca do fogão de número",
-        "verbo": "Usar",
-        "complemento": "Boca do fogão",
-        "lista": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
+          "192.168.1.1",
+          "1000 requisições",
+          "10000 requisições",
+          "100000 requisições",
+          "1000000 requisições"
         ]
       }
     ]
