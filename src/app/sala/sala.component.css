@@ -35,3 +35,41 @@
   border-radius: 3px;
   box-shadow: 0px 0px 10px var(--cultured);
 }
+
+.acoes {
+  height: 10%;
+  width: 70%;
+
+  margin-top: 2.5%;
+  margin-left: 15%;
+
+  float: left;
+}
+
+.acao {
+  height: 100%;
+  width: 45%;
+  margin-left: 2.5%;
+
+  float: left;
+}
+
+.convidar {
+  background-color: var(--space-cadet);
+  color: var(--white);
+  box-shadow: 0px 6px var(--black-fogra);
+}
+
+.convidar:active {
+  box-shadow: 0px 2px var(--black-fogra);
+}
+
+.pronto {
+  background-color: var(--medium-sea-green);
+  color: var(--white);
+  box-shadow: 0px 6px var(--sea-green);
+}
+
+.pronto:active {
+  box-shadow: 0px 2px var(--sea-green);
+}
