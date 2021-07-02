@@ -13,14 +13,32 @@
 }
 
 .cabecalho {
+  overflow:auto;
   width: 100%;
-  height: 10%;
+}
+
+.img-coracao {
+  width: 10%;
+  position: relative;
+
+  background-image: url('https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/heart.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: right;
+}
+
+.img-coracao:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
 }
 
 .num-vidas {
   width: 100%;
   height: 100%;
   float: right;
+  position: absolute;
 
   display: flex;
   justify-content: center;
@@ -30,34 +48,43 @@
   font-weight: bold;
 }
 
-.img-coracao {
-  width: 10%;
-  height: 100%;
-
-  background-image: url('https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/heart.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  float: right;
-}
-
 .rodada {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5%;
+  height: 5%;
+  width: 100%;
 }
 
 .rodada p {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 50px;
+  text-align: center;
 }
 
 .img-jogador {
   width: 80%;
   height: 40%;
+  margin-left: 10%;
+  margin-top: 5%;
 
-  background-image: url('https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/profissionais/000-unknwon.png');
+  background-image: url('https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/profissionais/000-unknown.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.info {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  text-align: center;
+  font-weight: bold;
+
+  font-size: 26px;
+}
+
+.info span {
+  color: var(--blue-jeans);
 }
 
 .amigos {
