@@ -2,6 +2,7 @@
   {
     "id": 1,
     "profissao": "Médico",
+    "imagem": "006-doctor.svg",
     "tarefas": [
       {
         "id": 1,
@@ -165,6 +166,7 @@
   {
     "id": 2,
     "profissao": "Chef de cozinha",
+    "imagem": "039-chef.svg",
     "tarefas": [
       {
         "id": 1,
@@ -342,6 +344,7 @@
   {
     "id": 3,
     "profissao": "Cientista",
+    "imagem": "044-scientist.svg",
     "tarefas": [
       {
         "id": 1,
@@ -494,6 +497,7 @@
   {
     "id": 4,
     "profissao": "Soldado",
+    "imagem": "030-soldier.svg",
     "tarefas": [
       {
         "id": 1,
@@ -626,6 +630,7 @@
   {
     "id": 5,
     "profissao": "Hacker",
+    "imagem": "019-hacker.svg",
     "tarefas": [
       {
         "id": 1,
