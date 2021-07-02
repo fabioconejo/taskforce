@@ -30,7 +30,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: var(--semi-white);
+  background-color: var(--blue-jeans);
   background-image: url(https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/backpattern.png);
   background-size: 150px;
   color: var(--space-cadet);
