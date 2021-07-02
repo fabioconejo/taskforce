@@ -17,6 +17,8 @@
   --black-fogra: #04050a;
   --eeire-black: #232323;
   --eletric-purple: #be3fff;
+
+  --bg-color: var(--cultured);
 }
 
 * {
@@ -30,10 +32,13 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: var(--blue-jeans);
+  background-color: var(--bg-color);
   background-image: url(https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/backpattern.png);
   background-size: 150px;
+  background-position: 0px 0px;
   color: var(--space-cadet);
+
+  animation: bg-slide 15s linear infinite;
 }
 
 ::-webkit-scrollbar {
@@ -92,6 +97,15 @@ option {
   color: var(--semi-white);
   font-family: 'Roboto Mono';
   scroll-behavior: smooth;
+}
+
+@keyframes bg-slide {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 150px 150px;
+  }
 }
 
 /* Extra small devices (phones, 600px and down) */
