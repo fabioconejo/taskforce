@@ -30,8 +30,10 @@ export class TaskforceService {
       .substr(2, 5);
 
     sala = {
-      numRodada: 0,
+      status: 'Em espera',
+      numRodada: 1,
       vidas: 10,
+      numJogadores: 0,
       jogadores: [],
       profissoes: [],
       registros: []
@@ -282,13 +284,11 @@ export class TaskforceService {
           return [];
         })
       )
-      .subscribe(
-        r => {
-          if (r['concluido']) {
-            fConcluido();
-          }
+      .subscribe(r => {
+        if (r['concluido']) {
+          fConcluido();
         }
-      );
+      });
   }
 
   concluirRegistro(keySala: string, registro: any) {

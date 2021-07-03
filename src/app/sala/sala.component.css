@@ -89,7 +89,7 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
   border-left: 20px solid var(--medium-sea-green);
   box-sizing: border-box;
-  padding: 1.25%;
+  padding: 1%;
 }
 
 .img-amigo {
@@ -107,9 +107,16 @@
   float: left;
 }
 
+.info-amigo p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .info-amigo span {
   color: var(--blue-jeans);
   font-weight: bold;
+  overflow: auto;
 }
 
 .acoes {
@@ -193,14 +200,14 @@
   }
 
   .img-amigo {
-    width: 50%;
+    width: 40%;
     height: 100%;
   }
 
   .info-amigo {
-    width: 50%;
+    width: 60%;
     height: 100%;
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .acoes {
@@ -269,14 +276,14 @@
   }
 
   .img-amigo {
-    width: 50%;
+    width: 40%;
     height: 100%;
   }
 
   .info-amigo {
-    width: 50%;
+    width: 60%;
     height: 100%;
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .acoes {
@@ -352,14 +359,14 @@
   }
 
   .img-amigo {
-    width: 50%;
+    width: 40%;
     height: 100%;
   }
 
   .info-amigo {
-    width: 50%;
+    width: 60%;
     height: 100%;
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .acoes {
@@ -437,13 +444,13 @@
 
   .img-amigo {
     width: 100%;
-    height: 50%;
+    height: 70%;
   }
 
   .info-amigo {
     width: 100%;
-    height: 50%;
-    font-size: 24px;
+    height: 30%;
+    font-size: 18px;
   }
 
   .acoes {
@@ -521,13 +528,13 @@
 
   .img-amigo {
     width: 100%;
-    height: 50%;
+    height: 70%;
   }
 
   .info-amigo {
     width: 100%;
-    height: 50%;
-    font-size: 24px;
+    height: 30%;
+    font-size: 16px;
   }
 
   .acoes {

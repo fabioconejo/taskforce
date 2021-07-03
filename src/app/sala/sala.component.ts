@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sala.component.css']
 })
 export class SalaComponent implements OnInit {
+  
 
   constructor() { }
 
