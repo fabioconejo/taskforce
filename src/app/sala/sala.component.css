@@ -161,7 +161,7 @@
   }
 
   .num-vidas {
-    font-size: 12px;
+    font-size: 2.5vw;
   }
 
   .rodada {
@@ -169,7 +169,7 @@
   }
 
   .rodada p {
-    font-size: 42px;
+    font-size: 7vw;
   }
 
   .img-jogador {
@@ -181,7 +181,7 @@
 
   .info {
     height: 22.5%;
-    margin-top: 2.5%;
+    margin-top: 1%;
     font-size: 26px;
   }
 
@@ -208,7 +208,7 @@
   .info-amigo {
     width: 60%;
     height: 100%;
-    font-size: 22px;
+    font-size: 28px;
   }
 
   .acoes {
@@ -237,7 +237,7 @@
   }
 
   .num-vidas {
-    font-size: 14px;
+    font-size: 2vw;
   }
 
   .rodada {
@@ -245,7 +245,7 @@
   }
 
   .rodada p {
-    font-size: 42px;
+    font-size: 6.5vw;
   }
 
   .img-jogador {
@@ -257,12 +257,12 @@
 
   .info {
     height: 12.5%;
-    margin-top: 2.5%;
-    font-size: 26px;
+    margin-top: 2%;
+    font-size: 4vw;
   }
 
   .info span {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   .amigos {
@@ -318,7 +318,7 @@
   }
 
   .num-vidas {
-    font-size: 12px;
+    font-size: 1.5vw;
   }
 
   .rodada {
@@ -327,7 +327,7 @@
   }
 
   .rodada p {
-    font-size: 50px;
+    font-size: 5.5vw;
   }
 
   .img-jogador {
@@ -340,7 +340,7 @@
   .info {
     height: 17.5%;
     margin-top: 5%;
-    font-size: 24px;
+    font-size: 2.75vw;
     line-height: 1.4;
   }
 
@@ -403,7 +403,7 @@
   }
 
   .num-vidas {
-    font-size: 14px;
+    font-size: 1.25vw;
   }
 
   .rodada {
@@ -411,7 +411,7 @@
   }
 
   .rodada p {
-    font-size: 50px;
+    font-size: 4.5vw;
   }
 
   .img-jogador {
@@ -487,7 +487,7 @@
   }
 
   .num-vidas {
-    font-size: 16px;
+    font-size: 1vw;
   }
 
   .rodada {
@@ -495,7 +495,7 @@
   }
 
   .rodada p {
-    font-size: 58px;
+    font-size: 3.5vw;
   }
 
   .img-jogador {
