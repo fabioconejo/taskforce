@@ -18,10 +18,11 @@
   </div>
 
   <div class="amigos">
-    <div class="profissao-amigo" *ngFor="let l of listaJogadores | async">
-      <div class="img-amigo"></div>
+    <div class="profissao-amigo" *ngFor="let l of listaJogadores | async"
+      [style.display]="l.responsavel === this.nickJogador ? 'none' : 'inherit'">
+      <div class="img-amigo" style.background-image="url({{baseUrl}}profissionais/{{l.imagem}})"></div>
       <div class="info-amigo">
-        <p>{{l.nick}}<br/><span>Comissária de voo</span></p>
+        <p>{{l.responsavel}}<br/><span>{{l.profissao}}</span></p>
       </div>
     </div>
   </div>

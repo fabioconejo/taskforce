@@ -17,6 +17,10 @@ export class TaskforceService {
   constructor(private db: AngularFireDatabase, private http: HttpClient) {}
   private ngUnsubscribe = new Subject();
 
+  baseUrl(): string {
+    return 'https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/';
+  }
+
   unsubscribe() {
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
@@ -81,19 +85,23 @@ export class TaskforceService {
     return this.http.get('assets/json/taskforce.json').toPromise();
   }
 
-  getJogadores(keySala:string):any {
-    return this.db.list('salas/' + keySala + '/jogadores/')
+  getJogadores(keySala: string): any {
+    return this.db
+      .list('salas/' + keySala + '/profissoes/')
       .snapshotChanges()
       .pipe(
         map(changes => {
-          return changes.map(c => ({ key: c.payload.key, ...c.payload.val() as {}}));
+          return changes.map(c => ({
+            key: c.payload.key,
+            ...(c.payload.val() as {})
+          }));
         })
       );
   }
 
   async sortearProfissao(
     keySala: string,
-    keyJogador: string,
+    nickJogador: string,
     numTarefas: number
   ): Promise<string> {
     var profissoes = await this.getProfissoes();
@@ -106,7 +114,9 @@ export class TaskforceService {
     var info = {
       id: profissao.id,
       ativo: true,
-      responsavel: keyJogador
+      profissao: profissao.profissao,
+      imagem: profissao.imagem,
+      responsavel: nickJogador
     };
 
     var keyProfissao = this.db.database

@@ -19,6 +19,7 @@ export class CentralComponent implements OnInit {
   async ngOnInit() {
     this.keySala = 'qlx29';
     this.keyJogador = '-MdJxZjLD3hQbZfVikp7';
+    this.nickJogador = 'Fabolas';
     this.listaJogadores = this.taskForceService.getJogadores(this.keySala);
   }
 
