@@ -11,12 +11,15 @@ export class CentralComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
   keySala: string;
   keyJogador: string;
+  nickJogador: string;
+  listaJogadores: Observable<any>;
   keyProfissaoSorteada: string;
   profissaoSorteada: any;
 
   async ngOnInit() {
     this.keySala = 'qlx29';
     this.keyJogador = '-MdJxZjLD3hQbZfVikp7';
+    this.listaJogadores = this.taskForceService.getJogadores(this.keySala);
   }
 
   async sortearProfissao() {

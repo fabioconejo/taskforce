@@ -1,5 +1,5 @@
 <div class="central">
-  <sala></sala>
+  <sala [keySala]="keySala" [keyJogador]="keyJogador" [listaJogadores]="listaJogadores"></sala>
   <painel *ngIf="profissaoSorteada" [keySala]="keySala" [keyJogador]="keyJogador"
     [keyProfissaoSorteada]="keyProfissaoSorteada" [profissaoSorteada]="profissaoSorteada"></painel>
 </div>

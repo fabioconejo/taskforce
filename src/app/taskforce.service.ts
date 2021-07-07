@@ -81,6 +81,16 @@ export class TaskforceService {
     return this.http.get('assets/json/taskforce.json').toPromise();
   }
 
+  getJogadores(keySala:string):any {
+    return this.db.list('salas/' + keySala + '/jogadores/')
+      .snapshotChanges()
+      .pipe(
+        map(changes => {
+          return changes.map(c => ({ key: c.payload.key, ...c.payload.val() as {}}));
+        })
+      );
+  }
+
   async sortearProfissao(
     keySala: string,
     keyJogador: string,

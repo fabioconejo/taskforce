@@ -18,10 +18,10 @@
   </div>
 
   <div class="amigos">
-    <div class="profissao-amigo">
+    <div class="profissao-amigo" *ngFor="let l of listaJogadores | async">
       <div class="img-amigo"></div>
       <div class="info-amigo">
-        <p>Fabolas<br/><span>Comissária de voo</span></p>
+        <p>{{l.nick}}<br/><span>Comissária de voo</span></p>
       </div>
     </div>
   </div>
