@@ -10,9 +10,11 @@ import { TaskforceService } from '../taskforce.service';
 export class CentralComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
   keySala: string;
+  numRodada: number;
   keyJogador: string;
   nickJogador: string;
   listaJogadores: Observable<any>;
+  listaProfissoesSorteadas: Observable<any>;
   keyProfissaoSorteada: string;
   profissaoSorteada: any;
 
@@ -20,13 +22,15 @@ export class CentralComponent implements OnInit {
     this.keySala = 'qlx29';
     this.keyJogador = '-MdJxZjLD3hQbZfVikp7';
     this.nickJogador = 'Fabolas';
-    this.listaJogadores = this.taskForceService.getJogadores(this.keySala);
+    this.listaProfissoesSorteadas = this.taskForceService.getProfissoesSorteadas(this.keySala);
   }
 
   async sortearProfissao() {
     this.keyProfissaoSorteada = await this.taskForceService.sortearProfissao(
       this.keySala,
       this.keyJogador,
+      this.nickJogador,
+      this.numRodada,
       4
     );
 

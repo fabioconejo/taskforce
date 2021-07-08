@@ -6,6 +6,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { HttpClientModule } from '@angular/common/http';
 
 import { environment } from '../environments/environment';
+import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { BotaoComponent } from './botao/botao.component';
 import { TarefaComponent } from './tarefa/tarefa.component';
@@ -22,7 +23,8 @@ import { SalaComponent } from './sala/sala.component';
     FormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,

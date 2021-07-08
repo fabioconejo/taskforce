@@ -11,7 +11,7 @@ export class SalaComponent implements OnInit {
   @Input() keySala: string;
   @Input() keyJogador: string;
   @Input() nickJogador: string;
-  @Input() listaJogadores: Observable<any>;
+  @Input() listaProfissoesSorteadas: Observable<any>;
 
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 

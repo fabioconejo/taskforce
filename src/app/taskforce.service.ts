@@ -37,7 +37,6 @@ export class TaskforceService {
       status: 'Em espera',
       numRodada: 1,
       vidas: 10,
-      numJogadores: 0,
       jogadores: [],
       profissoes: [],
       registros: []
@@ -85,7 +84,7 @@ export class TaskforceService {
     return this.http.get('assets/json/taskforce.json').toPromise();
   }
 
-  getJogadores(keySala: string): any {
+  getProfissoesSorteadas(keySala: string): any {
     return this.db
       .list('salas/' + keySala + '/profissoes/')
       .snapshotChanges()
@@ -101,7 +100,9 @@ export class TaskforceService {
 
   async sortearProfissao(
     keySala: string,
+    keyJogador:string,
     nickJogador: string,
+    numRodada: number,
     numTarefas: number
   ): Promise<string> {
     var profissoes = await this.getProfissoes();
@@ -116,7 +117,9 @@ export class TaskforceService {
       ativo: true,
       profissao: profissao.profissao,
       imagem: profissao.imagem,
-      responsavel: nickJogador
+      responsavel: keyJogador,
+      nickResponsavel: nickJogador,
+      numRodada: numRodada
     };
 
     var keyProfissao = this.db.database
