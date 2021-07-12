@@ -10,12 +10,15 @@ import { TaskforceService } from '../taskforce.service';
   styleUrls: ['./central.component.css']
 })
 export class CentralComponent implements OnInit {
-  constructor(private taskForceService: TaskforceService, private router: Router) {}
+  constructor(
+    private taskForceService: TaskforceService,
+    private router: Router
+  ) {}
   keySala: string;
+  sala: Observable<any>;
   numRodada: number;
   keyJogador: string;
   nickJogador: string;
-  listaJogadores: Observable<any>;
   listaProfissoesSorteadas: Observable<any>;
   keyProfissaoSorteada: string;
   profissaoSorteada: any;
@@ -24,6 +27,8 @@ export class CentralComponent implements OnInit {
     this.keySala = 'qlx29';
     this.keyJogador = '-MdJxZjLD3hQbZfVikp7';
     this.nickJogador = 'Fabolas';
+    this.sala = this.taskForceService.getSala(this.keySala);
+    console.log(this.sala);
     this.listaProfissoesSorteadas = this.taskForceService.getProfissoesSorteadas(
       this.keySala
     );

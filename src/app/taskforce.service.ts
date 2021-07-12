@@ -73,6 +73,22 @@ export class TaskforceService {
       .update({ ativo: false });
   }
 
+  getSala(keySala: string): Observable<any> {
+    return this.db
+      .list('salas/' + keySala)
+      .snapshotChanges()
+      .pipe(
+        map(changes => {
+          return changes.map(c => ({
+            key: c.payload.key,
+            ...(c.payload.val() as {})
+          }));
+        })
+      );
+  }
+
+  setStatusSala(keySala: string, status: string) {}
+
   aoDesconectarProfissao(keySala: string, keyProfissao: string) {
     this.db
       .object('salas/' + keySala + '/profissoes/' + keyProfissao)
@@ -100,7 +116,7 @@ export class TaskforceService {
 
   async sortearProfissao(
     keySala: string,
-    keyJogador:string,
+    keyJogador: string,
     nickJogador: string,
     numRodada: number,
     numTarefas: number
