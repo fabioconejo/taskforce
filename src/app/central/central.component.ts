@@ -28,7 +28,11 @@ export class CentralComponent implements OnInit {
     this.keyJogador = '-MdJxZjLD3hQbZfVikp7';
     this.nickJogador = 'Fabolas';
     this.sala = this.taskForceService.getSala(this.keySala);
-    console.log(this.sala);
+    this.sala.subscribe(s =>
+      s.map(t => {
+        console.log(t.status);
+      })
+    );
     this.listaProfissoesSorteadas = this.taskForceService.getProfissoesSorteadas(
       this.keySala
     );
