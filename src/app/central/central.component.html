@@ -1,7 +1,5 @@
 <div class="central">
-
-  <router-outlet></router-outlet>
-  <sala [keySala]="keySala" [keyJogador]="keyJogador" [nickJogador]="nickJogador"
+  <sala *ngIf="!profissaoSorteada" [keySala]="keySala" [keyJogador]="keyJogador" [nickJogador]="nickJogador"
     [listaProfissoesSorteadas]="listaProfissoesSorteadas">
   </sala>
   <painel *ngIf="profissaoSorteada" [keySala]="keySala" [keyJogador]="keyJogador"

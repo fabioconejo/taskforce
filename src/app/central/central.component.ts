@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+
 import { TaskforceService } from '../taskforce.service';
 
 @Component({
@@ -8,7 +10,7 @@ import { TaskforceService } from '../taskforce.service';
   styleUrls: ['./central.component.css']
 })
 export class CentralComponent implements OnInit {
-  constructor(private taskForceService: TaskforceService) {}
+  constructor(private taskForceService: TaskforceService, private router: Router) {}
   keySala: string;
   numRodada: number;
   keyJogador: string;
@@ -22,7 +24,9 @@ export class CentralComponent implements OnInit {
     this.keySala = 'qlx29';
     this.keyJogador = '-MdJxZjLD3hQbZfVikp7';
     this.nickJogador = 'Fabolas';
-    this.listaProfissoesSorteadas = this.taskForceService.getProfissoesSorteadas(this.keySala);
+    this.listaProfissoesSorteadas = this.taskForceService.getProfissoesSorteadas(
+      this.keySala
+    );
   }
 
   async sortearProfissao() {
