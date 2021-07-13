@@ -15,7 +15,7 @@ import { DataSnapshot } from '@angular/fire/database/interfaces';
 @Injectable()
 export class TaskforceService {
   constructor(private db: AngularFireDatabase, private http: HttpClient) {}
-  private ngUnsubscribe = new Subject();
+  ngUnsubscribe = new Subject();
 
   baseUrl(): string {
     return 'https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/';
@@ -61,30 +61,18 @@ export class TaskforceService {
   }
 
   aoSairSala(keySala: string, keyJogador: string) {
-    this.db
-      .object('salas/' + keySala + '/jogadores/' + keyJogador)
-      .update({ ativo: false });
+    this.db.object('salas/' + keySala + '/jogadores/' + keyJogador).remove();
   }
 
   aoDesconectarSala(keySala: string, keyJogador: string) {
     this.db
       .object('salas/' + keySala + '/jogadores/' + keyJogador)
       .query.ref.onDisconnect()
-      .update({ ativo: false });
+      .remove();
   }
 
   getSala(keySala: string): Observable<any> {
-    return this.db
-      .list('salas/' + keySala)
-      .snapshotChanges()
-      .pipe(
-        map(changes => {
-          return changes.map(c => ({
-            key: c.payload.key,
-            ...(c.payload.val() as {})
-          }));
-        })
-      );
+    return this.db.object('salas/' + keySala).valueChanges();
   }
 
   setStatusSala(keySala: string, status: string) {}
@@ -93,7 +81,7 @@ export class TaskforceService {
     this.db
       .object('salas/' + keySala + '/profissoes/' + keyProfissao)
       .query.ref.onDisconnect()
-      .update({ ativo: false });
+      .remove();
   }
 
   getProfissoes(): any {

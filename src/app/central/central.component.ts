@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
 import { TaskforceService } from '../taskforce.service';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'central',
@@ -17,6 +18,8 @@ export class CentralComponent implements OnInit {
   keySala: string;
   sala: Observable<any>;
   numRodada: number;
+  statusSala: string;
+  vidas: number;
   keyJogador: string;
   nickJogador: string;
   listaProfissoesSorteadas: Observable<any>;
@@ -28,11 +31,11 @@ export class CentralComponent implements OnInit {
     this.keyJogador = '-MdJxZjLD3hQbZfVikp7';
     this.nickJogador = 'Fabolas';
     this.sala = this.taskForceService.getSala(this.keySala);
-    this.sala.subscribe(s =>
-      s.map(t => {
-        console.log(t.status);
-      })
-    );
+    this.sala.pipe(takeUntil(this.taskForceService.ngUnsubscribe)).subscribe(s => {
+      this.numRodada = s.numRodada;
+      this.statusSala = s.status;
+      this.vidas = s.vidas;
+    });
     this.listaProfissoesSorteadas = this.taskForceService.getProfissoesSorteadas(
       this.keySala
     );
