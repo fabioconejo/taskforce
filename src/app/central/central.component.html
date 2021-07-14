@@ -1,6 +1,6 @@
 <div class="central">
   <sala *ngIf="statusSala === 'espera'" [keySala]="keySala" [keyJogador]="keyJogador" [nickJogador]="nickJogador"
-    [listaProfissoesSorteadas]="listaProfissoesSorteadas">
+    [listaProfissoesSorteadas]="listaProfissoesSorteadas" [numRodada]="numRodada" [vidas]="vidas">
   </sala>
   <painel *ngIf="statusSala === 'jogo'" [keySala]="keySala" [keyJogador]="keyJogador"
     [keyProfissaoSorteada]="keyProfissaoSorteada" [profissaoSorteada]="profissaoSorteada"></painel>
