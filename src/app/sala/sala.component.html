@@ -1,5 +1,6 @@
 <div class="sala">
-  <div class="profissao-jogador">
+  <div class="profissao-jogador" *ngFor="let l of listaProfissoesSorteadas | async"
+    [style.display]="l.responsavel === this.nickJogador ? 'inherit' : 'none'">
     <div class="cabecalho">
       <div class="img-coracao">
         <p class="num-vidas">{{vidas}}x</p>
@@ -10,10 +11,10 @@
       <p>Rodada {{numRodada}}</p>
     </div>
 
-    <div class="img-jogador"></div>
+    <div class="img-jogador" style.background-image="url({{baseUrl}}profissionais/{{l.imagem}})"></div>
 
     <div class="info">
-      <p>Sua profissão na rodada:<br/><span>Comissária de voo</span></p>
+      <p>Sua profissão na rodada:<br/><span>{{l.profissao}}</span></p>
     </div>
   </div>
 
