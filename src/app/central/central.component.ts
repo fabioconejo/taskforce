@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
 
 import { TaskforceService } from '../taskforce.service';
@@ -26,12 +26,14 @@ export class CentralComponent implements OnInit {
   keyProfissaoSorteada: string;
   profissaoSorteada: any;
 
+  ngUnsubscribe = new Subject();
+
   async ngOnInit() {
     this.keySala = 'qlx29';
     this.keyJogador = '-MdJxZjLD3hQbZfVikp7';
     this.nickJogador = 'Fabolas';
     this.sala = this.taskForceService.getSala(this.keySala);
-    this.sala.pipe(takeUntil(this.taskForceService.ngUnsubscribe)).subscribe(s => {
+    this.sala.pipe(takeUntil(this.ngUnsubscribe)).subscribe(s => {
       this.numRodada = s.numRodada;
       this.statusSala = s.status;
       this.vidas = s.vidas;
@@ -65,6 +67,7 @@ export class CentralComponent implements OnInit {
   removerJogador() {}
 
   ngOnDestroy() {
-    this.taskForceService.unsubscribe();
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
   }
 }

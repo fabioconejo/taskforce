@@ -15,15 +15,9 @@ import { DataSnapshot } from '@angular/fire/database/interfaces';
 @Injectable()
 export class TaskforceService {
   constructor(private db: AngularFireDatabase, private http: HttpClient) {}
-  ngUnsubscribe = new Subject();
 
   baseUrl(): string {
     return 'https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/';
-  }
-
-  unsubscribe() {
-    this.ngUnsubscribe.next();
-    this.ngUnsubscribe.complete();
   }
 
   criarSala(): string {
@@ -287,35 +281,10 @@ export class TaskforceService {
       .push(registro).key;
   }
 
-  monitorarRegistro(
-    keySala: string,
-    keyRegistro: string,
-    tempoIntervalo: number,
-    fConcluido: () => void,
-    fPrescrito: () => void
-  ) {
-    var tempoInicio = +new Date();
-    var tempoFim: number;
-
-    this.db
+  getRegistro(keySala: string, keyRegistro: string): Observable<any> {
+    return this.db
       .object('salas/' + keySala + '/registros/' + keyRegistro)
-      .valueChanges()
-      .pipe(
-        takeUntil(this.ngUnsubscribe),
-        takeWhile(r => {
-          return !r['concluido'];
-        }, true),
-        timeout(tempoIntervalo),
-        catchError(err => {
-          fPrescrito();
-          return [];
-        })
-      )
-      .subscribe(r => {
-        if (r['concluido']) {
-          fConcluido();
-        }
-      });
+      .valueChanges();
   }
 
   concluirRegistro(keySala: string, registro: any) {

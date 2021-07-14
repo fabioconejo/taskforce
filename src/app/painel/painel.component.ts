@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Subject } from 'rxjs';
+import { catchError, takeUntil, takeWhile, timeout } from 'rxjs/operators';
 import { TaskforceService } from '../taskforce.service';
 
 @Component({
@@ -24,6 +26,8 @@ export class PainelComponent implements OnInit {
   textoExibicao: string;
   intervalo: any;
   pausa: boolean;
+
+  ngUnsubscribe = new Subject();
 
   constructor(private taskForceService: TaskforceService) {}
 
@@ -57,21 +61,28 @@ export class PainelComponent implements OnInit {
     this.exibirTarefa();
     this.pausa = false;
 
-    this.taskForceService.monitorarRegistro(
-      this.keySala,
-      this.keyRegistro,
-      this.tempoMonitor * 1000,
-      async () => {
-        await this.atualizarTarefa();
-      },
-      async () => {
-        this.taskForceService.desabilitarRegistro(
-          this.keySala,
-          this.keyRegistro
-        );
-        await this.atualizarTarefa();
-      }
-    );
+    this.taskForceService
+      .getRegistro(this.keySala, this.keyRegistro)
+      .pipe(
+        takeUntil(this.ngUnsubscribe),
+        takeWhile(r => {
+          return !r['concluido'];
+        }, true),
+        timeout(this.tempoMonitor * 1000),
+        catchError(err => {
+          this.taskForceService.desabilitarRegistro(
+            this.keySala,
+            this.keyRegistro
+          );
+          this.atualizarTarefa();
+          return [];
+        })
+      )
+      .subscribe(r => {
+        if (r['concluido']) {
+          this.atualizarTarefa();
+        }
+      });
   }
 
   exibirTarefa() {
@@ -103,5 +114,10 @@ export class PainelComponent implements OnInit {
       this.keyTarefaSorteada,
       { verbo: registro.texto }
     );
+  }
+
+  ngOnDestroy() {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
   }
 }
