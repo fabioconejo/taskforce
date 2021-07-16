@@ -1,4 +1,11 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  HostListener,
+  EventEmitter,
+  Output
+} from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { TaskforceService } from '../taskforce.service';
@@ -11,7 +18,9 @@ import { TaskforceService } from '../taskforce.service';
 export class SalaComponent implements OnInit {
   @Input() keySala: string;
   @Input() keyProfissaoSorteada: string;
+  @Output() keyProfissaoSorteadaChange = new EventEmitter();
   @Input() profissaoSorteada: any;
+  @Output() profissaoSorteadaChange = new EventEmitter();
   @Input() nickJogador: string;
   @Input() numRodada: number;
   @Input() vidas: number;
@@ -33,6 +42,8 @@ export class SalaComponent implements OnInit {
       this.keySala,
       this.keyProfissaoSorteada
     );
+    this.profissaoSorteadaChange.emit(this.profissaoSorteada);
+    this.keyProfissaoSorteadaChange.emit(this.keyProfissaoSorteada);
 
     this.pronto = false;
     this.taskForceService.ficarPronto(
