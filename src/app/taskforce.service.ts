@@ -156,10 +156,8 @@ export class TaskforceService {
     await this.db.database
       .ref('salas/' + keySala + '/profissoes/')
       .once('value', snapshot => {
-        do {
-          j = Math.floor(Math.random() * Object.keys(snapshot.val()).length);
-          keyProfissao = Object.keys(snapshot.val())[j];
-        } while (!snapshot.child(keyProfissao).val().ativo);
+        j = Math.floor(Math.random() * Object.keys(snapshot.val()).length);
+        keyProfissao = Object.keys(snapshot.val())[j];
       });
 
     return keyProfissao;

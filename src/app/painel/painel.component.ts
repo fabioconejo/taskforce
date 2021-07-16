@@ -36,7 +36,6 @@ export class PainelComponent implements OnInit {
   }
 
   async atualizarTarefa() {
-    /*
     this.pausa = true;
     this.keyProfissaoMonitor = await this.taskForceService.sortearProfissaoMonitor(
       this.keySala
@@ -85,7 +84,6 @@ export class PainelComponent implements OnInit {
           this.atualizarTarefa();
         }
       });
-    */
   }
 
   exibirTarefa() {
