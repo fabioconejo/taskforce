@@ -28,10 +28,9 @@ export class TaskforceService {
       .substr(2, 5);
 
     sala = {
-      status: 'Em espera',
+      status: 'espera',
       numRodada: 1,
       vidas: 10,
-      jogadores: [],
       profissoes: [],
       registros: []
     };
@@ -44,23 +43,39 @@ export class TaskforceService {
     return key;
   }
 
-  aoEntrarSala(keySala: string, nick: string): string {
-    var jogador = {
-      nick: nick,
-      ativo: true
-    };
+  async checarStatusSala(keySala: string): Promise<boolean> {
+    let result = false;
 
-    return this.db.database.ref('salas/' + keySala + '/jogadores').push(jogador)
-      .key;
+    await this.db.database
+      .ref('salas/' + keySala + '/status/')
+      .once('value', snap => {
+        result = snap.val() === 'espera';
+      });
+
+    return result;
   }
 
-  aoSairSala(keySala: string, keyJogador: string) {
-    this.db.object('salas/' + keySala + '/jogadores/' + keyJogador).remove();
+  async checarNick(keySala: string, nick: string): Promise<boolean> {
+    let result = false;
+
+    await this.db.database
+      .ref('salas/' + keySala + '/profissoes/')
+      .orderByChild('responsavel')
+      .equalTo(nick)
+      .once('value', snap => {
+        result = snap.val() == null;
+      });
+
+    return result;
   }
 
-  aoDesconectarSala(keySala: string, keyJogador: string) {
+  aoSairSala(keySala: string, keyProfissao: string) {
+    this.db.object('salas/' + keySala + '/profissoes/' + keyProfissao).remove();
+  }
+
+  aoDesconectarSala(keySala: string, keyProfissao: string) {
     this.db
-      .object('salas/' + keySala + '/jogadores/' + keyJogador)
+      .object('salas/' + keySala + '/profissoes/' + keyProfissao)
       .query.ref.onDisconnect()
       .remove();
   }
@@ -115,8 +130,7 @@ export class TaskforceService {
       ativo: true,
       profissao: profissao.profissao,
       imagem: profissao.imagem,
-      responsavel: keyJogador,
-      nickResponsavel: nickJogador,
+      responsavel: nickJogador,
       numRodada: numRodada
     };
 
@@ -308,5 +322,11 @@ export class TaskforceService {
     this.db.database
       .ref('salas/' + keySala + '/registros/' + keyRegistro)
       .update({ ativo: false });
+  }
+
+  ficarPronto(keySala: string, keyProfissao: string, valor:boolean) {
+    this.db.database
+      .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
+      .update({ pronto: valor });
   }
 }
