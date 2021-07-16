@@ -32,7 +32,7 @@ export class PainelComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
 
   async ngOnInit() {
-    await this.atualizarTarefa();
+    //this.atualizarTarefa();
   }
 
   async atualizarTarefa() {
