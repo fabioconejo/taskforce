@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { TaskforceService } from '../taskforce.service';
@@ -25,15 +25,21 @@ export class SalaComponent implements OnInit {
 
   constructor(private taskForceService: TaskforceService) {}
 
-  ngOnInit() {
+  async ngOnInit() {
+    //this.removerProfissao();
+    //this.sortearProfissao();
+    this.keyProfissaoSorteada = '-MeiZoSvvwOhEGyW4MZ7';
+    this.profissaoSorteada = await this.taskForceService.getProfissao(
+      this.keySala,
+      this.keyProfissaoSorteada
+    );
+
     this.pronto = false;
     this.taskForceService.ficarPronto(
       this.keySala,
       this.keyProfissaoSorteada,
       this.pronto
     );
-
-    console.log(this.profissaoSorteada);
 
     this.listaProfissoesSorteadas
       .pipe(takeUntil(this.ngUnsubscribe))
@@ -47,10 +53,31 @@ export class SalaComponent implements OnInit {
           }
         });
 
-        if (prontos === total) {
+        if (prontos === total && prontos > 0) {
           this.taskForceService.setStatusSala(this.keySala, 'jogo');
         }
       });
+  }
+
+  async sortearProfissao() {
+    this.keyProfissaoSorteada = await this.taskForceService.sortearProfissao(
+      this.keySala,
+      this.nickJogador,
+      this.numRodada,
+      4
+    );
+
+    this.profissaoSorteada = await this.taskForceService.getProfissao(
+      this.keySala,
+      this.keyProfissaoSorteada
+    );
+  }
+
+  removerProfissao() {
+    this.taskForceService.removerProfissao(
+      this.keySala,
+      this.keyProfissaoSorteada
+    );
   }
 
   ficarPronto() {
@@ -65,5 +92,10 @@ export class SalaComponent implements OnInit {
   ngOnDestroy() {
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
+  }
+
+  @HostListener('window:unload', ['$event'])
+  unloadHandler(event) {
+    //this.removerProfissao();
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
 
@@ -31,11 +31,6 @@ export class CentralComponent implements OnInit {
   async ngOnInit() {
     this.keySala = 'qlx29';
     this.nickJogador = 'Fabolas';
-    this.keyProfissaoSorteada = '-MdViEE_fZpywPENTTK_';
-    this.profissaoSorteada = await this.taskForceService.getProfissao(
-      this.keySala,
-      this.keyProfissaoSorteada
-    );
     this.sala = this.taskForceService.getSala(this.keySala);
     this.sala.pipe(takeUntil(this.ngUnsubscribe)).subscribe(s => {
       this.numRodada = s.numRodada;
@@ -47,31 +42,26 @@ export class CentralComponent implements OnInit {
     );
   }
 
-  async sortearProfissao() {
-    this.keyProfissaoSorteada = await this.taskForceService.sortearProfissao(
-      this.keySala,
-      this.keyJogador,
-      this.nickJogador,
-      this.numRodada,
-      4
-    );
-
-    this.profissaoSorteada = await this.taskForceService.getProfissao(
-      this.keySala,
-      this.keyProfissaoSorteada
-    );
-  }
-
   limparRegristro() {}
 
   limparSorteio() {}
 
   adicionarJogador() {}
 
-  removerJogador() {}
+  removerProfissao() {
+    this.taskForceService.removerProfissao(
+      this.keySala,
+      this.keyProfissaoSorteada
+    );
+  }
 
   ngOnDestroy() {
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
+  }
+
+  @HostListener('window:unload', ['$event'])
+  unloadHandler(event) {
+    //this.removerProfissao();
   }
 }

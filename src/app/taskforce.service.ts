@@ -115,7 +115,6 @@ export class TaskforceService {
 
   async sortearProfissao(
     keySala: string,
-    keyJogador: string,
     nickJogador: string,
     numRodada: number,
     numTarefas: number
@@ -129,7 +128,7 @@ export class TaskforceService {
 
     var info = {
       id: profissao.id,
-      ativo: true,
+      pronto: false,
       profissao: profissao.profissao,
       imagem: profissao.imagem,
       responsavel: nickJogador,
