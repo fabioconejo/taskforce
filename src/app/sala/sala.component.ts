@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { TaskforceService } from '../taskforce.service';
 
 @Component({
@@ -17,6 +18,8 @@ export class SalaComponent implements OnInit {
 
   pronto: boolean;
 
+  ngUnsubscribe = new Subject();
+
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
   constructor(private taskForceService: TaskforceService) {}
@@ -28,6 +31,23 @@ export class SalaComponent implements OnInit {
       this.keyProfissaoSorteada,
       this.pronto
     );
+
+    this.listaProfissoesSorteadas
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(lista => {
+        let total: number = lista.length;
+        let prontos: number = 0;
+
+        lista.forEach((l: any) => {
+          if (l.pronto) {
+            prontos++;
+          }
+        });
+
+        if (prontos === total) {
+          this.taskForceService.setStatusSala(this.keySala, 'jogo');
+        }
+      });
   }
 
   ficarPronto() {
@@ -37,5 +57,10 @@ export class SalaComponent implements OnInit {
       this.keyProfissaoSorteada,
       this.pronto
     );
+  }
+
+  ngOnDestroy() {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
   }
 }

@@ -84,7 +84,9 @@ export class TaskforceService {
     return this.db.object('salas/' + keySala).valueChanges();
   }
 
-  setStatusSala(keySala: string, status: string) {}
+  setStatusSala(keySala: string, status: string) {
+    this.db.object('salas/' + keySala).update({ status: status });
+  }
 
   aoDesconectarProfissao(keySala: string, keyProfissao: string) {
     this.db
@@ -324,7 +326,7 @@ export class TaskforceService {
       .update({ ativo: false });
   }
 
-  ficarPronto(keySala: string, keyProfissao: string, valor:boolean) {
+  ficarPronto(keySala: string, keyProfissao: string, valor: boolean) {
     this.db.database
       .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
       .update({ pronto: valor });
