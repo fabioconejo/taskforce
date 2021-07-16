@@ -32,12 +32,11 @@ export class PainelComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
 
   async ngOnInit() {
-    //await this.atualizarTarefa();
+    await this.atualizarTarefa();
   }
 
   async atualizarTarefa() {
     this.pausa = true;
-
     this.keyProfissaoMonitor = await this.taskForceService.sortearProfissaoMonitor(
       this.keySala
     );
@@ -60,7 +59,9 @@ export class PainelComponent implements OnInit {
       this.tarefaSorteada.verbo
     );
     this.exibirTarefa();
-    this.pausa = false;
+    setTimeout(() => {
+      this.pausa = false;
+    }, 100);
 
     this.taskForceService
       .getRegistro(this.keySala, this.keyRegistro)
@@ -70,18 +71,18 @@ export class PainelComponent implements OnInit {
           return !r['concluido'];
         }, true),
         timeout(this.tempoMonitor * 1000),
-        catchError(err => {
+        catchError(async err => {
           this.taskForceService.desabilitarRegistro(
             this.keySala,
             this.keyRegistro
           );
-          this.atualizarTarefa();
+          await this.atualizarTarefa();
           return [];
         })
       )
-      .subscribe(r => {
+      .subscribe(async r => {
         if (r['concluido']) {
-          this.atualizarTarefa();
+          await this.atualizarTarefa();
         }
       });
   }
