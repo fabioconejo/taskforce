@@ -1,7 +1,7 @@
 <div class="sala">
-  <div class="profissao-jogador" *ngFor="let l of listaProfissoesSorteadas | async"
-    [style.display]="l.responsavel === this.nickJogador ? 'inherit' : 'none'"
-    [style.border-left-color]="l.pronto ? 'var(--medium-sea-green)' : 'var(--tart-orange)'">
+  <div class="profissao-jogador"
+    [style.display]="this.profissaoSorteada.responsavel === this.nickJogador ? 'inherit' : 'none'"
+    [style.border-left-color]="this.profissaoSorteada.pronto ? 'var(--medium-sea-green)' : 'var(--tart-orange)'">
     <div class="cabecalho">
       <div class="img-coracao">
         <p class="num-vidas">{{vidas}}x</p>
@@ -12,10 +12,11 @@
       <p>Rodada {{numRodada}}</p>
     </div>
 
-    <div class="img-jogador" style.background-image="url({{baseUrl}}profissionais/{{l.imagem}})"></div>
+    <div class="img-jogador" style.background-image="url({{baseUrl}}profissionais/{{this.profissaoSorteada.imagem}})">
+    </div>
 
     <div class="info">
-      <p>Sua profissão na rodada:<br/><span>{{l.profissao}}</span></p>
+      <p>Sua profissão na rodada:<br/><span>{{this.profissaoSorteada.profissao}}</span></p>
     </div>
   </div>
 
@@ -30,14 +31,13 @@
     </div>
   </div>
 
-  <div class="acoes" *ngFor="let l of listaProfissoesSorteadas | async"
-    [style.display]="l.responsavel === this.nickJogador ? 'inherit' : 'none'">
+  <div class="acoes" [style.display]="this.profissaoSorteada.responsavel === this.nickJogador ? 'inherit' : 'none'">
     <div class="acao">
       <button class="convidar">Convidar</button>
     </div>
 
     <div class="acao">
-      <button [ngClass]="l.pronto ? 'cancelar' : 'pronto'" (click)='ficarPronto()'></button>
+      <button [ngClass]="this.profissaoSorteada.pronto ? 'cancelar' : 'pronto'" (click)='ficarPronto()'></button>
     </div>
   </div>
 </div>

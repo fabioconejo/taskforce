@@ -11,6 +11,7 @@ import { TaskforceService } from '../taskforce.service';
 export class SalaComponent implements OnInit {
   @Input() keySala: string;
   @Input() keyProfissaoSorteada: string;
+  @Input() profissaoSorteada: any;
   @Input() nickJogador: string;
   @Input() numRodada: number;
   @Input() vidas: number;
@@ -31,6 +32,8 @@ export class SalaComponent implements OnInit {
       this.keyProfissaoSorteada,
       this.pronto
     );
+
+    console.log(this.profissaoSorteada);
 
     this.listaProfissoesSorteadas
       .pipe(takeUntil(this.ngUnsubscribe))

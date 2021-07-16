@@ -32,6 +32,10 @@ export class CentralComponent implements OnInit {
     this.keySala = 'qlx29';
     this.nickJogador = 'Fabolas';
     this.keyProfissaoSorteada = '-MdViEE_fZpywPENTTK_';
+    this.profissaoSorteada = await this.taskForceService.getProfissao(
+      this.keySala,
+      this.keyProfissaoSorteada
+    );
     this.sala = this.taskForceService.getSala(this.keySala);
     this.sala.pipe(takeUntil(this.ngUnsubscribe)).subscribe(s => {
       this.numRodada = s.numRodada;
