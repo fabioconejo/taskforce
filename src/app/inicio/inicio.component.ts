@@ -14,10 +14,51 @@ export class InicioComponent implements OnInit {
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/profissionais/';
 
   ngOnInit() {
-    let img = ['001-farmer.svg', '002-artist.svg'];
-    this.imagemBox = img[Math.floor(Math.random() * 2)];
+    let img = [
+      '001-farmer.svg',
+      '002-artist.svg',
+      '003-captain.svg',
+      '004-nurse.svg',
+      '005-clown.svg',
+      '006-doctor.svg',
+      '007-detective.svg',
+      '008-maid.svg',
+      '009-student.svg',
+      '010-mechanic.svg',
+      '011-judge.svg',
+      '012-wrestling.svg',
+      '013-mafia.svg',
+      '014-military.svg',
+      '015-diver.svg',
+      '016-taxi-driver.svg',
+      '017-surgeon.svg',
+      '018-thief.svg',
+      '019-hacker.svg',
+      '020-web.svg',
+      '021-lumberjack.svg',
+      '022-basketball-player.svg',
+      '023-athlete.svg',
+      '024-postman.svg',
+      '025-priest.svg',
+      '026-hunter.svg',
+      '027-sailor.svg',
+      '028-welder.svg',
+      '029-nun.svg',
+      '030-soldier.svg',
+      '031-air-hostess.svg',
+      '032-guide.svg',
+      '033-courier.svg',
+      '034-racer.svg',
+      '035-astronaut.svg',
+      '036-butler.svg',
+      '037-engineer.svg',
+      '038-cooker.svg',
+      '039-chef.svg',
+      '040-waiter.svg'
+    ];
+    this.imagemBox = img[Math.floor(Math.random() * img.length)];
     setInterval(() => {
-      this.imagemBox = img[Math.floor(Math.random() * 2)];
+      this.imagemBox = img[Math.floor(Math.random() * img.length)];
     }, 4000);
   }
 

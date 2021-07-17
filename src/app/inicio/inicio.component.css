@@ -30,6 +30,8 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  animation: pop 4s ease infinite;
 }
 
 .nick {
@@ -86,16 +88,19 @@
 
 @keyframes pop {
   0% {
-    
+    opacity: 0;
   }
 
   10% {
+    opacity: 1;
   }
 
   90% {
+    opacity: 1;
   }
 
   100% {
+    opacity: 0;
   }
 }
 
