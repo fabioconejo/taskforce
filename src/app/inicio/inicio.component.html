@@ -1,9 +1,12 @@
 <div class="inicio">
   <div class="logo"></div>
-  <div class="box">
+  <div class="box box-login">
     <div class="card">
-      <div class="personagem"></div>
-      <div class="nick"></div>
+      <div class="personagem" style.background-image="url({{baseUrl}}{{imagemBox}})"></div>
+      <form class="nick">
+        <p>Nickname:</p>
+        <input type="text" pattern="[A-Za-z0-9]+" maxlength="10">
+      </form>
       <div class="login">
         <button class="btn-login">
           Criar sala
@@ -11,7 +14,7 @@
       </div>
     </div>
   </div>
-  <div class="box">
+  <div class="box box-tutorial">
     <div class="card"></div>
   </div>
 </div>
