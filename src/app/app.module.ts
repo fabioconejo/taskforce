@@ -16,6 +16,7 @@ import { QuadroComponent } from './quadro/quadro.component';
 import { CentralComponent } from './central/central.component';
 import { TaskforceService } from './taskforce.service';
 import { SalaComponent } from './sala/sala.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { SalaComponent } from './sala/sala.component';
     MonitorComponent,
     QuadroComponent,
     CentralComponent,
-    SalaComponent
+    SalaComponent,
+    InicioComponent
   ],
   bootstrap: [AppComponent],
   providers: [TaskforceService]
