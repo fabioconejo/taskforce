@@ -54,7 +54,17 @@ export class InicioComponent implements OnInit {
       '037-engineer.svg',
       '038-cooker.svg',
       '039-chef.svg',
-      '040-waiter.svg'
+      '040-waiter.svg',
+      '041-photographer.svg',
+      '042-singer.svg',
+      '043-teacher.svg',
+      '044-scientist.svg',
+      '045-police.svg',
+      '046-telemarketer.svg',
+      '047-secretary.svg',
+      '048-office-worker.svg',
+      '049-firefighter.svg',
+      '050-pilot.svg'
     ];
     this.imagemBox = img[Math.floor(Math.random() * img.length)];
     setInterval(() => {
