@@ -27,9 +27,16 @@
   height: 55%;
   margin-left: 10%;
 
+  shape-outside: circle();
+  clip-path: circle();
+  background-color: var(--cultured);
+  float: left;
+}
+
+.img-personagem {
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-position: center bottom;
+  background-size: contain !important;
 
   animation: pop 4s ease infinite;
 }
@@ -38,10 +45,12 @@
   width: 80%;
   height: 20%;
   margin-left: 10%;
+  float: left;
 }
 
 .nick p {
   font-weight: 400;
+  margin-top: 5%;
 }
 
 .nick input {
@@ -115,6 +124,13 @@
     display: none;
   }
 
+  .img-personagem {
+    width: 95%;
+    height: 95%;
+    margin-left: 2.5%;
+    margin-top: 5%;
+  }
+
   .nick p {
     font-size: 4vw;
   }
@@ -134,6 +150,21 @@
   .box-tutorial {
     display: none;
   }
+
+  .img-personagem {
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
+  }
+
+  .nick p {
+    font-size: 3.5vw;
+  }
+
+  .nick input {
+    font-size: 4.5vw;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -149,6 +180,21 @@
 
   .box-tutorial {
     display: none;
+  }
+
+  .img-personagem {
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
+  }
+
+  .nick p {
+    font-size: 3vw;
+  }
+
+  .nick input {
+    font-size: 4vw;
   }
 }
 
@@ -168,6 +214,21 @@
   .box-tutorial {
     border-right: 1px solid var(--cultured);
   }
+
+  .img-personagem {
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
+  }
+
+  .nick p {
+    font-size: 2vw;
+  }
+
+  .nick input {
+    font-size: 2.5vw;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -185,5 +246,20 @@
 
   .box-tutorial {
     border-right: 1px solid var(--cultured);
+  }
+
+  .img-personagem {
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
+  }
+
+  .nick p {
+    font-size: 1.5vw;
+  }
+
+  .nick input {
+    font-size: 2vw;
   }
 }
