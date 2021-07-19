@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { TaskforceService } from '../taskforce.service';
 
@@ -8,7 +9,11 @@ import { TaskforceService } from '../taskforce.service';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-  constructor(private taskForceService: TaskforceService) {}
+  constructor(private taskForceService: TaskforceService, private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.queryParams.subscribe(params => {
+      console.log(params); // Print the parameter to the console. 
+  });
+  }
 
   imagemBox: string;
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/profissionais/';

@@ -1,13 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 
-import { PainelComponent } from './painel/painel.component';
-import { SalaComponent } from './sala/sala.component';
+import { InicioComponent } from './inicio/inicio.component';
 
-const routes: Routes = [
-  { path: 'sala', component: SalaComponent },
-  { path: 'painel', component: PainelComponent }
-]; // sets up routes constant where you define your routes
+const routes: Routes = [{ path: 'teste/:idSala', component: InicioComponent }]; // sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
 @NgModule({
