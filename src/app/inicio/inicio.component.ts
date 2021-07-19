@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, RoutesRecognized } from '@angular/router';
+import { Router, RoutesRecognized } from '@angular/router';
 
 import { TaskforceService } from '../taskforce.service';
 
@@ -11,15 +11,28 @@ import { TaskforceService } from '../taskforce.service';
 export class InicioComponent implements OnInit {
   constructor(
     private taskForceService: TaskforceService,
-    private activatedRoute: ActivatedRoute,
     private router: Router
-  ) {}
+  ) {
+    this.router.events.subscribe(async val => {
+      if (val instanceof RoutesRecognized) {
+        try {
+          this.keySala = val.state.root.firstChild.params['keySala'];
+          if (
+            !(await this.taskForceService.checarExistenciaSala(this.keySala))
+          ) {
+            this.keySala = null;
+            this.router.navigate(['/']);
+          }
+        } catch (e) {}
+      }
+    });
+  }
 
-  idSala: string;
+  keySala: string;
   imagemBox: string;
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/profissionais/';
 
-  ngOnInit() {
+  async ngOnInit() {
     let img = [
       '001-farmer.svg',
       '002-artist.svg',
@@ -73,22 +86,13 @@ export class InicioComponent implements OnInit {
       '050-pilot.svg'
     ];
 
-    this.router.events.subscribe(val => {
-      if (val instanceof RoutesRecognized) {
-        try {
-          this.idSala = val.state.root.firstChild.params['idSala'];
-        } catch (e) {}
-      }
-    });
-
     this.imagemBox = img[Math.floor(Math.random() * img.length)];
     setInterval(() => {
       this.imagemBox = img[Math.floor(Math.random() * img.length)];
     }, 4000);
   }
 
-  alphaOnly(event) {
-    var key = event.keyCode;
-    return (key >= 65 && key <= 90) || key == 8;
+  entrarSala() {
+    this.taskForceService.checarExistenciaSala(this.keySala);
   }
 }

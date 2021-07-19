@@ -13,7 +13,7 @@
         <button *ngIf="!idSala" class="btn-login">
           Criar sala
         </button>
-        <button *ngIf="idSala" class="btn-login">
+        <button *ngIf="idSala" class="btn-login" (click)="entrarSala()">
         Entrar na sala
       </button>
       </div>

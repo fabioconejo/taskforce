@@ -43,6 +43,20 @@ export class TaskforceService {
     return key;
   }
 
+  async checarExistenciaSala(keySala: string): Promise<boolean> {
+    let result = false;
+
+    await this.db.database
+      .ref('salas/')
+      .orderByKey()
+      .equalTo(keySala)
+      .once('value', snap => {
+        result = snap.val() !== null;
+      });
+
+    return result;
+  }
+
   async checarStatusSala(keySala: string): Promise<boolean> {
     let result = false;
 
