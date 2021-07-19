@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RoutesRecognized } from '@angular/router';
 
 import { TaskforceService } from '../taskforce.service';
 
@@ -9,12 +9,13 @@ import { TaskforceService } from '../taskforce.service';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-  constructor(private taskForceService: TaskforceService, private activatedRoute: ActivatedRoute) {
-    this.activatedRoute.queryParams.subscribe(params => {
-      console.log(params); // Print the parameter to the console. 
-  });
-  }
+  constructor(
+    private taskForceService: TaskforceService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) {}
 
+  idSala: string;
   imagemBox: string;
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/profissionais/';
 
@@ -71,6 +72,15 @@ export class InicioComponent implements OnInit {
       '049-firefighter.svg',
       '050-pilot.svg'
     ];
+
+    this.router.events.subscribe(val => {
+      if (val instanceof RoutesRecognized) {
+        try {
+          this.idSala = val.state.root.firstChild.params['idSala'];
+        } catch (e) {}
+      }
+    });
+
     this.imagemBox = img[Math.floor(Math.random() * img.length)];
     setInterval(() => {
       this.imagemBox = img[Math.floor(Math.random() * img.length)];

@@ -10,9 +10,12 @@
         <input type="text" pattern="[A-Za-z0-9]+" maxlength="10">
       </form>
       <div class="login">
-        <button class="btn-login">
+        <button *ngIf="!idSala" class="btn-login">
           Criar sala
         </button>
+        <button *ngIf="idSala" class="btn-login">
+        Entrar na sala
+      </button>
       </div>
     </div>
   </div>
