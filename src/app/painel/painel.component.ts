@@ -14,6 +14,7 @@ export class PainelComponent implements OnInit {
   @Input() keyProfissaoSorteada: string;
   @Input() profissaoSorteada: any;
   @Input() tempoMonitor: number;
+  @Input() vidas: number;
 
   keyProfissaoMonitor: string;
   keyTarefaSorteada: string;
@@ -72,9 +73,10 @@ export class PainelComponent implements OnInit {
         }, true),
         timeout(this.tempoMonitor * 1000),
         catchError(async err => {
-          this.taskForceService.desabilitarRegistro(
+          await this.taskForceService.desabilitarRegistro(
             this.keySala,
-            this.keyRegistro
+            this.keyRegistro,
+            this.vidas
           );
           await this.atualizarTarefa();
           return [];

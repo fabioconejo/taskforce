@@ -3,7 +3,7 @@
     [(profissaoSorteada)]="profissaoSorteada" [nickJogador]="nickJogador"
     [listaProfissoesSorteadas]="listaProfissoesSorteadas" [numRodada]="numRodada" [vidas]="vidas">
   </sala>
-  <painel *ngIf="statusSala === 'jogo'" [keySala]="keySala" [keyJogador]="keyJogador"
+  <painel *ngIf="statusSala === 'jogo'" [keySala]="keySala" [keyJogador]="keyJogador" [vidas]="vidas"
     [keyProfissaoSorteada]="keyProfissaoSorteada" [profissaoSorteada]="profissaoSorteada" [tempoMonitor]="tempoMonitor">
   </painel>
 </div>

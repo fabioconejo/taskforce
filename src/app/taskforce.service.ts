@@ -135,7 +135,7 @@ export class TaskforceService {
   ): Promise<string> {
     var profissoes = await this.getProfissoes();
     var profissao = profissoes[Math.floor(Math.random() * profissoes.length)];
-    
+
     var tarefas = profissao.tarefas
       .sort(() => 0.5 - Math.random())
       .slice(0, numTarefas);
@@ -148,17 +148,17 @@ export class TaskforceService {
       responsavel: nickJogador,
       numRodada: numRodada
     };
-    
+
     var keyProfissao = this.db.database
       .ref('salas/' + keySala + '/profissoes/')
       .push(info).key;
-      
+
     for (var i = 0; i < tarefas.length; i++) {
       this.db.database
         .ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/tarefas/')
         .push(tarefas[i]);
     }
-    
+
     return keyProfissao;
   }
 
@@ -331,10 +331,30 @@ export class TaskforceService {
     });
   }
 
-  desabilitarRegistro(keySala: string, keyRegistro: string) {
+  async desabilitarRegistro(
+    keySala: string,
+    keyRegistro: string,
+    vidas: number
+  ) {
+    let concluido = true;
+
     this.db.database
       .ref('salas/' + keySala + '/registros/' + keyRegistro)
       .update({ ativo: false });
+
+    await this.db.database
+      .ref('salas/' + keySala + '/registros/' + keyRegistro + '/concluido')
+      .once('value', snapshot => {
+        concluido = snapshot.val();
+      });
+
+    if (!concluido) {
+      this.removerVida(keySala, vidas);
+    }
+  }
+
+  removerVida(keySala: string, vidas: number) {
+    this.db.database.ref('salas/' + keySala).update({ vidas: vidas - 1 });
   }
 
   ficarPronto(keySala: string, keyProfissao: string, valor: boolean) {

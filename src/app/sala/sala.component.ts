@@ -28,7 +28,7 @@ export class SalaComponent implements OnInit {
   @Input() listaProfissoesSorteadas: Observable<any>;
 
   pronto: boolean;
-  textoConvite = 'Convidar'
+  textoConvite = 'Convidar';
 
   ngUnsubscribe = new Subject();
 
@@ -72,7 +72,7 @@ export class SalaComponent implements OnInit {
       this.keySala,
       this.nickJogador,
       this.numRodada,
-      4
+      6
     );
 
     this.profissaoSorteada = await this.taskForceService.getProfissao(
@@ -94,7 +94,7 @@ export class SalaComponent implements OnInit {
 
     setTimeout(() => {
       this.textoConvite = 'Convidar';
-    }, 3000)
+    }, 3000);
   }
 
   ficarPronto() {
