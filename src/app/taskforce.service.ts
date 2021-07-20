@@ -148,17 +148,17 @@ export class TaskforceService {
       responsavel: nickJogador,
       numRodada: numRodada
     };
-
+    
     var keyProfissao = this.db.database
       .ref('salas/' + keySala + '/profissoes/')
       .push(info).key;
-
+      
     for (var i = 0; i < tarefas.length; i++) {
       this.db.database
         .ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/tarefas/')
         .push(tarefas[i]);
     }
-
+    
     return keyProfissao;
   }
 

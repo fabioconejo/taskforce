@@ -3,6 +3,6 @@
     <inicio [(keySala)]="keySala"></inicio>
   </div>
   <div *ngIf="keySala" class="central">
-    <central></central>
+    <central [keySala]="keySala" [nickJogador]="nickJogador"></central>
   </div>
 </div>

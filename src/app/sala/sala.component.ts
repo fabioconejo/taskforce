@@ -100,9 +100,4 @@ export class SalaComponent implements OnInit {
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
   }
-
-  @HostListener('window:unload', ['$event'])
-  unloadHandler(event) {
-    this.removerProfissao();
-  }
 }

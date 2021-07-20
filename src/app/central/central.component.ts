@@ -19,12 +19,12 @@ export class CentralComponent implements OnInit {
   @Input() keySala: string;
   @Input() sala: Observable<any>;
   @Input() nickJogador: string;
-  
+
   numRodada: number;
   statusSala: string;
   vidas: number;
   keyJogador: string;
-  
+
   listaProfissoesSorteadas: Observable<any>;
   keyProfissaoSorteada: string;
   profissaoSorteada: any;
@@ -32,15 +32,13 @@ export class CentralComponent implements OnInit {
   ngUnsubscribe = new Subject();
 
   async ngOnInit() {
-    this.keySala = 'qlx29';
-    this.nickJogador = 'Fabolas';
     this.sala = this.taskForceService.getSala(this.keySala);
     this.sala.pipe(takeUntil(this.ngUnsubscribe)).subscribe(s => {
       this.numRodada = s.numRodada;
       this.statusSala = s.status;
       this.vidas = s.vidas;
     });
-    this.listaProfissoesSorteadas = this.taskForceService.getProfissoesSorteadas(
+    this.listaProfissoesSorteadas = await this.taskForceService.getProfissoesSorteadas(
       this.keySala
     );
   }
@@ -65,6 +63,6 @@ export class CentralComponent implements OnInit {
 
   @HostListener('window:unload', ['$event'])
   unloadHandler(event) {
-    //this.removerProfissao();
+    this.removerProfissao();
   }
 }
