@@ -1261,120 +1261,297 @@
         "complemento": "Gelo"
       },
       {
-        "id": 1,
+        "id": 6,
         "tipo": "acao",
-        "texto": "Desenvolver spyware",
-        "verbo": "Desenvolver",
-        "complemento": "Spyware"
+        "texto": "Perder para queniano na maratona",
+        "verbo": "Perder",
+        "complemento": "Queniano na maratona"
       },
       {
-        "id": 1,
+        "id": 7,
         "tipo": "acao",
-        "texto": "Desenvolver spyware",
-        "verbo": "Desenvolver",
-        "complemento": "Spyware"
+        "texto": "Amarrar o tênis",
+        "verbo": "Amarrar",
+        "complemento": "Tênis"
       },
       {
-        "id": 1,
+        "id": 8,
         "tipo": "acao",
-        "texto": "Desenvolver spyware",
-        "verbo": "Desenvolver",
-        "complemento": "Spyware"
+        "texto": "Falar sobre crossfit",
+        "verbo": "Falar",
+        "complemento": "Crossfit"
       },
       {
-        "id": 1,
+        "id": 9,
         "tipo": "acao",
-        "texto": "Desenvolver spyware",
-        "verbo": "Desenvolver",
-        "complemento": "Spyware"
+        "texto": "Tomar água",
+        "verbo": "Tomar",
+        "complemento": "Água"
       },
       {
-        "id": 1,
+        "id": 10,
         "tipo": "acao",
-        "texto": "Desenvolver spyware",
-        "verbo": "Desenvolver",
-        "complemento": "Spyware"
+        "texto": "Subir na balança",
+        "verbo": "Subir",
+        "complemento": "Balança"
       },
       {
-        "id": 1,
+        "id": 11,
         "tipo": "acao",
-        "texto": "Desenvolver spyware",
-        "verbo": "Desenvolver",
-        "complemento": "Spyware"
-      },
-      {
-        "id": 1,
-        "tipo": "acao",
-        "texto": "Desenvolver spyware",
-        "verbo": "Desenvolver",
-        "complemento": "Spyware"
+        "texto": "Seguir dieta",
+        "verbo": "Seguir",
+        "complemento": "Dieta"
       },
       {
         "id": 12,
+        "tipo": "acao",
+        "texto": "Fazer levantamento de copo",
+        "verbo": "Fazer",
+        "complemento": "Levantamento de copo"
+      },
+      {
+        "id": 13,
         "tipo": "estado",
         "eTexto": [
-          "Ligar firewall",
-          "Desligar firewall"
+          "Praticar esteira",
+          "Descansar da esteira"
+        ],
+        "verbo": "Praticando",
+        "texto": "Praticar esteira",
+        "complemento": "Esteira",
+        "estado": [
+          "Praticando",
+          "Descansando"
+        ]
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar contador de passos",
+          "Desligar contador de passos"
         ],
         "verbo": "Ligado",
-        "texto": "Ligar firewall",
-        "complemento": "Firewall",
+        "texto": "Ligar contador de passos",
+        "complemento": "Contador de passos",
         "estado": [
           "Ligado",
           "Desligado"
         ]
       },
       {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Pedalar",
+        "verbo": "Pedalar",
+        "complemento": "Pedalada",
+        "lista": [
+          "0km",
+          "2km",
+          "5km",
+          "7km",
+          "10km"
+        ]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Caminhar",
+        "verbo": "Caminhar",
+        "complemento": "Caminhada",
+        "lista": [
+          "0km",
+          "1km",
+          "2km",
+          "3km",
+          "4km",
+          "5km"
+        ]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Correr",
+        "verbo": "Correr",
+        "complemento": "Corrida",
+        "lista": [
+          "0m",
+          "50m",
+          "100m",
+          "150m",
+          "200m",
+          "500m"
+        ]
+      },
+      {
         "id": 18,
         "tipo": "escolha",
-        "texto": "Alterar certificado digital",
-        "verbo": "Alterar",
-        "complemento": "Certificado digital",
+        "texto": "Nadar",
+        "verbo": "Nadar",
+        "complemento": "Nado",
         "lista": [
-          "A1",
-          "A3",
-          "SSL"
+          "0m",
+          "25m",
+          "50m",
+          "75m",
+          "100m",
+          "200m"
+        ]
+      },
+      {
+        "id": 19,
+        "tipo": "escolha",
+        "texto": "Levantar peso",
+        "verbo": "Levantar",
+        "complemento": "Peso",
+        "lista": [
+          "10kg",
+          "30kg",
+          "50kg",
+          "80kg",
+          "100kg",
+          "120kg"
         ]
       }
     ]
   },
   {
-    "id": 5,
-    "profissao": "Hacker",
-    "imagem": "019-hacker.svg",
+    "id": 10,
+    "profissao": "Ladrão",
+    "imagem": "018-thief.svg",
     "tarefas": [
       {
         "id": 1,
         "tipo": "acao",
-        "texto": "Desenvolver spyware",
-        "verbo": "Desenvolver",
-        "complemento": "Spyware"
+        "texto": "Roubar celular",
+        "verbo": "Roubar",
+        "complemento": "Celular"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Desviar carga",
+        "verbo": "Desviar",
+        "complemento": "Carga"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Invadir condomínio",
+        "verbo": "Invadir",
+        "complemento": "Condomínio"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Praticar estelionato em idoso",
+        "verbo": "Praticar",
+        "complemento": "Estelionato em idoso"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Lavar dinheiro",
+        "verbo": "Lavar",
+        "complemento": "Dinheiro"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Aceitar suborno",
+        "verbo": "Aceitar",
+        "complemento": "Suborno"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Por meia calça na cabeça",
+        "verbo": "Por",
+        "complemento": "Meia calça"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Gritar 'perdeu playboy'",
+        "verbo": "Gritar",
+        "complemento": "Perdeu playboy"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Planejar roubo a banco",
+        "verbo": "Planejar",
+        "complemento": "Roubo a banco"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Ficar de olheiro",
+        "verbo": "Ficar",
+        "complemento": "Olheiro"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Canditadar-se a cargo político",
+        "verbo": "Canditadar-se",
+        "complemento": "Cargo político"
       },
       {
         "id": 12,
+        "tipo": "acao",
+        "texto": "Ingressar na milícia",
+        "verbo": "Ingressar",
+        "complemento": "Milícia"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Reunir-se com facção criminosa",
+        "verbo": "Reunir-se",
+        "complemento": "Facção criminosa"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Dividir grana com os comparsas",
+        "verbo": "Dividir",
+        "complemento": "Grana"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Fugir dos tiras",
+        "verbo": "Fugir",
+        "complemento": "Tiras"
+      },
+      {
+        "id": 16,
         "tipo": "estado",
         "eTexto": [
-          "Ligar firewall",
-          "Desligar firewall"
+          "Ligar tornozeleira eletrônica",
+          "Desligar tornozeleira eletrônica"
         ],
         "verbo": "Ligado",
-        "texto": "Ligar firewall",
-        "complemento": "Firewall",
+        "texto": "Ligar tornozeleira eletrônica",
+        "complemento": "Tornozeleira eletrônica",
         "estado": [
           "Ligado",
           "Desligado"
         ]
       },
       {
-        "id": 18,
+        "id": 17,
         "tipo": "escolha",
-        "texto": "Alterar certificado digital",
-        "verbo": "Alterar",
-        "complemento": "Certificado digital",
+        "texto": "Renegociar resgate para",
+        "verbo": "Renegociar",
+        "complemento": "Resgate",
         "lista": [
-          "A1",
-          "A3",
-          "SSL"
+          "1 coxinha e um guaraná",
+          "R$100,00",
+          "R$5000,00",
+          "R$10000,00",
+          "Meio milhão de reais"
         ]
       }
     ]
