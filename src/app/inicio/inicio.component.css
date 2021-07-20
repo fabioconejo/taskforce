@@ -96,6 +96,13 @@
   box-shadow: 0px 2px var(--black-fogra);
 }
 
+.btn-login:disabled {
+  background-color: var(--cultured);
+  box-shadow: 0px 6px var(--silver-chalice);
+  color: var(--silver-chalice);
+  cursor: default;
+}
+
 @keyframes pop {
   0% {
     opacity: 0;

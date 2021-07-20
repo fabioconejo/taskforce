@@ -36,13 +36,8 @@ export class SalaComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
 
   async ngOnInit() {
-    //this.removerProfissao();
-    //this.sortearProfissao();
-    this.keyProfissaoSorteada = '-MeiZoSvvwOhEGyW4MZ7';
-    this.profissaoSorteada = await this.taskForceService.getProfissao(
-      this.keySala,
-      this.keyProfissaoSorteada
-    );
+    this.removerProfissao();
+    await this.sortearProfissao();
     this.profissaoSorteadaChange.emit(this.profissaoSorteada);
     this.keyProfissaoSorteadaChange.emit(this.keyProfissaoSorteada);
 
@@ -108,6 +103,6 @@ export class SalaComponent implements OnInit {
 
   @HostListener('window:unload', ['$event'])
   unloadHandler(event) {
-    //this.removerProfissao();
+    this.removerProfissao();
   }
 }

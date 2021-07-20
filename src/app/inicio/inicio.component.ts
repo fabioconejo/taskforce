@@ -33,7 +33,6 @@ export class InicioComponent implements OnInit {
   @Input() nickJogador: string;
   @Output() nickJogadorChange = new EventEmitter();
 
-  status: string;
   imagemBox: string;
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/profissionais/';
 
@@ -92,7 +91,6 @@ export class InicioComponent implements OnInit {
     ];
 
     this.nickJogador = '';
-    this.status = 'busca';
     this.imagemBox = img[Math.floor(Math.random() * img.length)];
     setInterval(() => {
       this.imagemBox = img[Math.floor(Math.random() * img.length)];
@@ -104,13 +102,18 @@ export class InicioComponent implements OnInit {
   }
 
   async entrarSala() {
-    if (await this.taskForceService.checarExistenciaSala(this.keySala)) {
-      if (await this.taskForceService.checarStatusSala(this.keySala)) {
-        if (
-          await this.taskForceService.checarNick(this.keySala, this.nickJogador)
-        ) {
-          this.keySalaChange.emit(this.keySala);
-          this.nickJogadorChange.emit(this.nickJogador);
+    if (this.nickJogador !== '') {
+      if (await this.taskForceService.checarExistenciaSala(this.keySala)) {
+        if (await this.taskForceService.checarStatusSala(this.keySala)) {
+          if (
+            await this.taskForceService.checarNick(
+              this.keySala,
+              this.nickJogador
+            )
+          ) {
+            this.keySalaChange.emit(this.keySala);
+            this.nickJogadorChange.emit(this.nickJogador);
+          }
         }
       }
     }
