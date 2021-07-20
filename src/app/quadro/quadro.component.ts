@@ -19,6 +19,7 @@ export class QuadroComponent implements OnInit {
 
   ngOnInit() {
     this.tarefasArray = Object.keys(this.tarefas).map(key => this.tarefas[key]);
+    console.log(this.tarefasArray[0].key);
   }
 
   tarefaExecutada(args: any) {

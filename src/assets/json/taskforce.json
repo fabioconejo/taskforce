@@ -948,7 +948,7 @@
   {
     "id": 7,
     "profissao": "Universitária",
-    "imagem": "019-student.svg",
+    "imagem": "009-student.svg",
     "tarefas": [
       {
         "id": 1,
@@ -1555,5 +1555,5 @@
         ]
       }
     ]
-  },
+  }
 ]
