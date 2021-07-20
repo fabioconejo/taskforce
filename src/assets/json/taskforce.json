@@ -691,9 +691,9 @@
       {
         "id": 9,
         "tipo": "acao",
-        "texto": "Retirar dinheiro de contas bancárias",
+        "texto": "Retirar dinheiro de contas",
         "verbo": "Retirar",
-        "complemento": "Dinheiro de contas bancárias"
+        "complemento": "Dinheiro de contas"
       },
       {
         "id": 10,
@@ -815,5 +815,568 @@
         ]
       }
     ]
-  }
+  },
+  {
+    "id": 6,
+    "profissao": "Artista",
+    "imagem": "002-artist.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Escolher moldura",
+        "verbo": "Escolher",
+        "complemento": "Moldura"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Vender arte na praia",
+        "verbo": "Vender",
+        "complemento": "Arte na praia"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Pintar retrato",
+        "verbo": "Pintar",
+        "complemento": "Retrato"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Fazer artesanato",
+        "verbo": "Fazer",
+        "complemento": "Artesanato"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Esculpir mármore",
+        "verbo": "Esculpir",
+        "complemento": "Mármore"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Misturar cores",
+        "verbo": "Misturar",
+        "complemento": "Cores"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Fazer exposisões",
+        "verbo": "Fazer",
+        "complemento": "Exposisões"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Analisar quadros",
+        "verbo": "Analisar",
+        "complemento": "Quadros"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Participar da casa dos artistas",
+        "verbo": "Participar",
+        "complemento": "Casa dos artistas"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Visitar museu",
+        "verbo": "Visitar",
+        "complemento": "Museu"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Ver filmes",
+        "verbo": "Ver",
+        "complemento": "Filmes"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Escrever livros",
+        "verbo": "Escrever",
+        "complemento": "Livros"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Elogiar obra abstrata",
+        "verbo": "Elogiar",
+        "complemento": "Obra abstrata"
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": [
+          "Incorporar processo criativo",
+          "Desincorporar processo criativo"
+        ],
+        "verbo": "Incorporado",
+        "texto": "Incorporar processo criativo",
+        "complemento": "Processo criativo",
+        "estado": [
+          "Incorporado",
+          "Desincorporado"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Usar hashtag",
+        "verbo": "Usar",
+        "complemento": "hashtag",
+        "lista": [
+          "#OGolpeTaAiCaiQuemQuer",
+          "#Hashtag",
+          "#tbt",
+          "#PazEAmor",
+          "#BBB21",
+          "#happy",
+          "#love"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "profissao": "Universitária",
+    "imagem": "019-student.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Pedir pra por o nome no trabalho",
+        "verbo": "Pedir",
+        "complemento": "Nome no trabalho"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Colar na prova",
+        "verbo": "Colar",
+        "complemento": "Prova"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Realizar grupo de estudo",
+        "verbo": "Realizar",
+        "complemento": "Grupo de estudo"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Brigar com o grupo",
+        "verbo": "Brigar",
+        "complemento": "Grupo"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Chorar por nota para o professor",
+        "verbo": "Chorar por nota",
+        "complemento": "Professor"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Reivindicar direitos",
+        "verbo": "Reivindicar",
+        "complemento": "Direitos"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Estudar na biblioteca",
+        "verbo": "Estudar",
+        "complemento": "Biblioteca"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Ir para festas da faculdade",
+        "verbo": "Ir",
+        "complemento": "Festas da faculdade"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Refazer grade horária",
+        "verbo": "Refazer",
+        "complemento": "Grade horária"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Jubilar na faculdade",
+        "verbo": "Jubilar",
+        "complemento": "Faculdade"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Realizar colação de grau",
+        "verbo": "Realizar",
+        "complemento": "Colação de grau"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Assinar lista de chamada",
+        "verbo": "Assinar",
+        "complemento": "Lista de chamada"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Fazer TCC",
+        "verbo": "Fazer",
+        "complemento": "TCC"
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": [
+          "Cochilar na aula",
+          "Acordar na aula"
+        ],
+        "verbo": "Cochilando",
+        "texto": "Cochilar na aula",
+        "complemento": "Na aula",
+        "estado": [
+          "Cochilando",
+          "Acordado"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Pegar DP em",
+        "verbo": "Pegar",
+        "complemento": "DP",
+        "lista": [
+          "1 matéria",
+          "3 matérias",
+          "6 matérias",
+          "todas as matérias"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "profissao": "Fazendeiro",
+    "imagem": "001-farmer.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Colher frutas",
+        "verbo": "Colher",
+        "complemento": "Frutas"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Ordenhar vaca",
+        "verbo": "Ordenhar",
+        "complemento": "Vaca"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Pegar ovos do galinheiro",
+        "verbo": "Pegar",
+        "complemento": "Ovos do galinheiro"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Abater porco",
+        "verbo": "Abater",
+        "complemento": "Porco"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Cortar lã da ovelha",
+        "verbo": "Cortar",
+        "complemento": "Lã da ovelha"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Cercar curral",
+        "verbo": "Cercar",
+        "complemento": "Curral"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Vestir espantalho",
+        "verbo": "Vestir",
+        "complemento": "Espantalho"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Regar plantação",
+        "verbo": "Regar",
+        "complemento": "Plantação"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Escovar o cavalo",
+        "verbo": "Escovar",
+        "complemento": "Cavalo"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Fazer um rock rural",
+        "verbo": "Fazer",
+        "complemento": "Rock rural"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Tocar berrante",
+        "verbo": "Tocar",
+        "complemento": "Berrante"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Participar de leilão de gado",
+        "verbo": "Participar",
+        "complemento": "Leilão de gado"
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar moedor de cana",
+          "Desligar moedor de cana"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar moedor de cana",
+        "complemento": "Moedor de cana",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar canal do boi",
+          "Desligar canal do boi"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar canal do boi",
+        "complemento": "Canal do boi",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Ajustar nível do agrotóxico para",
+        "verbo": "Ajustar",
+        "complemento": "Nível do agrotóxico",
+        "lista": [
+          "Baixo",
+          "Médio",
+          "Alto"
+        ]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Ajustar preço da feira para",
+        "verbo": "Ajustar",
+        "complemento": "Preço da feira",
+        "lista": [
+          "100% de lucro",
+          "70% de lucro",
+          "50% de lucro",
+          "40% de lucro",
+          "25% de lucro",
+          "10% de lucro",
+          "0% de lucro"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "profissao": "Atleta",
+    "imagem": "023-athlete.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Jogar futebol",
+        "verbo": "Jogar",
+        "complemento": "Futebol"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Fazer acrobacias",
+        "verbo": "Fazer",
+        "complemento": "Acrobacias"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Jogar volei",
+        "verbo": "Jogar",
+        "complemento": "Volei"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Jogar basquete",
+        "verbo": "Jogar",
+        "complemento": "Basquete"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Patinar no gelo",
+        "verbo": "Patinar",
+        "complemento": "Gelo"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Desenvolver spyware",
+        "verbo": "Desenvolver",
+        "complemento": "Spyware"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Desenvolver spyware",
+        "verbo": "Desenvolver",
+        "complemento": "Spyware"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Desenvolver spyware",
+        "verbo": "Desenvolver",
+        "complemento": "Spyware"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Desenvolver spyware",
+        "verbo": "Desenvolver",
+        "complemento": "Spyware"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Desenvolver spyware",
+        "verbo": "Desenvolver",
+        "complemento": "Spyware"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Desenvolver spyware",
+        "verbo": "Desenvolver",
+        "complemento": "Spyware"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Desenvolver spyware",
+        "verbo": "Desenvolver",
+        "complemento": "Spyware"
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar firewall",
+          "Desligar firewall"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar firewall",
+        "complemento": "Firewall",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Alterar certificado digital",
+        "verbo": "Alterar",
+        "complemento": "Certificado digital",
+        "lista": [
+          "A1",
+          "A3",
+          "SSL"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "profissao": "Hacker",
+    "imagem": "019-hacker.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Desenvolver spyware",
+        "verbo": "Desenvolver",
+        "complemento": "Spyware"
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar firewall",
+          "Desligar firewall"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar firewall",
+        "complemento": "Firewall",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Alterar certificado digital",
+        "verbo": "Alterar",
+        "complemento": "Certificado digital",
+        "lista": [
+          "A1",
+          "A3",
+          "SSL"
+        ]
+      }
+    ]
+  },
 ]

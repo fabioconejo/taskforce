@@ -1,7 +1,7 @@
 <div class="sala">
   <div class="profissao-jogador"
     [style.display]="this.profissaoSorteada.responsavel === this.nickJogador ? 'inherit' : 'none'"
-    [style.border-left-color]="this.profissaoSorteada.pronto ? 'var(--medium-sea-green)' : 'var(--tart-orange)'">
+    [style.border-left-color]="this.pronto ? 'var(--medium-sea-green)' : 'var(--tart-orange)'">
     <div class="cabecalho">
       <div class="img-coracao">
         <p class="num-vidas">{{vidas}}x</p>
@@ -37,7 +37,7 @@
     </div>
 
     <div class="acao">
-      <button [ngClass]="this.profissaoSorteada.pronto ? 'cancelar' : 'pronto'" (click)='ficarPronto()'></button>
+      <button [ngClass]="this.pronto ? 'cancelar' : 'pronto'" (click)='ficarPronto()'></button>
     </div>
   </div>
 </div>

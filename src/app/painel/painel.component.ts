@@ -52,6 +52,7 @@ export class PainelComponent implements OnInit {
     this.tarefaSorteada = this.taskForceService.sortearItem(
       this.tarefaSorteada
     );
+    console.log(this.tarefaSorteada);
     this.keyRegistro = await this.taskForceService.adicionarRegistro(
       this.keySala,
       this.keyProfissaoMonitor,
@@ -108,14 +109,19 @@ export class PainelComponent implements OnInit {
     this.textoExibicao = texto;
   }
 
-  concluirRegistro(registro: any) {
-    this.taskForceService.concluirRegistro(this.keySala, registro);
+  async concluirRegistro(registro: any) {
+    if (this.pausa === false) {
+      await this.taskForceService.concluirRegistro(this.keySala, registro);
+    }
+
+    /*
     this.taskForceService.setTarefa(
       this.keySala,
       this.keyProfissaoSorteada,
       this.keyTarefaSorteada,
       { verbo: registro.texto }
     );
+    */
   }
 
   ngOnDestroy() {

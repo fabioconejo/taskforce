@@ -314,10 +314,10 @@ export class TaskforceService {
       .valueChanges();
   }
 
-  concluirRegistro(keySala: string, registro: any) {
+  async concluirRegistro(keySala: string, registro: any) {
     var refRegistros = this.db.database.ref('salas/' + keySala + '/registros/');
 
-    refRegistros.once('value', snapshot => {
+    await refRegistros.once('value', snapshot => {
       snapshot.forEach(r => {
         if (
           r.val().ativo &&
