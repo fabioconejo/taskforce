@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
 
@@ -15,13 +15,16 @@ export class CentralComponent implements OnInit {
     private taskForceService: TaskforceService,
     private router: Router
   ) {}
-  keySala: string;
-  sala: Observable<any>;
+
+  @Input() keySala: string;
+  @Input() sala: Observable<any>;
+  @Input() nickJogador: string;
+  
   numRodada: number;
   statusSala: string;
   vidas: number;
   keyJogador: string;
-  nickJogador: string;
+  
   listaProfissoesSorteadas: Observable<any>;
   keyProfissaoSorteada: string;
   profissaoSorteada: any;

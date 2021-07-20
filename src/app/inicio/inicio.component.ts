@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router, RoutesRecognized } from '@angular/router';
 
 import { TaskforceService } from '../taskforce.service';
@@ -28,7 +28,12 @@ export class InicioComponent implements OnInit {
     });
   }
 
-  keySala: string;
+  @Input() keySala: string;
+  @Output() keySalaChange = new EventEmitter();
+  @Input() nickJogador: string;
+  @Output() nickJogadorChange = new EventEmitter();
+
+  status: string;
   imagemBox: string;
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/profissionais/';
 
@@ -86,13 +91,28 @@ export class InicioComponent implements OnInit {
       '050-pilot.svg'
     ];
 
+    this.nickJogador = '';
+    this.status = 'busca';
     this.imagemBox = img[Math.floor(Math.random() * img.length)];
     setInterval(() => {
       this.imagemBox = img[Math.floor(Math.random() * img.length)];
     }, 4000);
   }
 
-  entrarSala() {
-    this.taskForceService.checarExistenciaSala(this.keySala);
+  onKey(event) {
+    this.nickJogador = event.target.value;
+  }
+
+  async entrarSala() {
+    if (await this.taskForceService.checarExistenciaSala(this.keySala)) {
+      if (await this.taskForceService.checarStatusSala(this.keySala)) {
+        if (
+          await this.taskForceService.checarNick(this.keySala, this.nickJogador)
+        ) {
+          this.keySalaChange.emit(this.keySala);
+          this.nickJogadorChange.emit(this.nickJogador);
+        }
+      }
+    }
   }
 }

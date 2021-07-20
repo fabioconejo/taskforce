@@ -1,5 +1,8 @@
 <div class="jogo">
-  <div class="inicio">
-    <inicio></inicio>
+  <div *ngIf="!keySala" class="inicio">
+    <inicio keySala="[(keySala)]"></inicio>
+  </div>
+  <div *ngIf="keySala" class="central">
+    <central></central>
   </div>
 </div>

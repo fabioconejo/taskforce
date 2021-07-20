@@ -7,13 +7,13 @@
       </div>
       <form class="nick">
         <p>Nickname:</p>
-        <input type="text" pattern="[A-Za-z0-9]+" maxlength="10">
+        <input type="text" pattern="[A-Za-z0-9]+" maxlength="10" (keyup)="onKey($event)">
       </form>
       <div class="login">
-        <button *ngIf="!idSala" class="btn-login">
+        <button *ngIf="!keySala" class="btn-login">
           Criar sala
         </button>
-        <button *ngIf="idSala" class="btn-login" (click)="entrarSala()">
+        <button *ngIf="keySala" class="btn-login" (click)="entrarSala()">
         Entrar na sala
       </button>
       </div>
