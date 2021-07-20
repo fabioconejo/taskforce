@@ -3,7 +3,7 @@
     <h3>{{frase}}</h3>
   </div>
   <div class="botao">
-    <botao [id]="id" [idProfissao]="idProfissao" [texto]="textoBotao" [cor]="corBotao" [tipo]="tipoBotao" [estado]="estado" [lista]="lista"
-      (clique)="botaoClick($event)"></botao>
+    <botao [key]="key" [id]="id" [idProfissao]="idProfissao" [texto]="textoBotao" [cor]="corBotao" [tipo]="tipoBotao"
+      [estado]="estado" [lista]="lista" (clique)="botaoClick($event)"></botao>
   </div>
 </div>

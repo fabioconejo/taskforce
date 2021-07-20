@@ -1,7 +1,8 @@
 <div class="quadro">
   <div class="tarefa" *ngFor="let t of tarefasArray">
-    <tarefa [id]="t.id" [idProfissao]="idProfissao" [tipo]="t.tipo" [frase]="t.complemento" [texto]="t.verbo"
-      [estado]="t.estado" [lista]="t.lista" [registro]="registro" (tarefaExecutada)="tarefaExecutada($event)"></tarefa>
+    <tarefa [key]="t.key" [id]="t.id" [idProfissao]="idProfissao" [tipo]="t.tipo" [frase]="t.complemento"
+      [texto]="t.verbo" [estado]="t.estado" [lista]="t.lista" [registro]="registro"
+      (tarefaExecutada)="tarefaExecutada($event)"></tarefa>
   </div>
   <div class="vazio" *ngFor="let item of [].constructor(maxNumTarefas - tarefasArray.length)">
   </div>
