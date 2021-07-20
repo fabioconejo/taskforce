@@ -26,6 +26,7 @@ export class CentralComponent implements OnInit {
   keyJogador: string;
   tempoMonitor: number;
   numJogadores: number;
+  numTarefasNecessarias: number;
 
   listaProfissoesSorteadas: Observable<any>;
   keyProfissaoSorteada: string;
@@ -39,16 +40,20 @@ export class CentralComponent implements OnInit {
       this.numRodada = s.numRodada;
       this.statusSala = s.status;
       this.vidas = s.vidas;
-      this.numJogadores = Object.keys(s.profissoes).length;
-
-      this.tempoMonitor = Math.floor(
-        (5 + this.numJogadores * 10) * Math.pow(0.9, this.numRodada)
-      );
-      console.log(this.tempoMonitor);
     });
+
     this.listaProfissoesSorteadas = await this.taskForceService.getProfissoesSorteadas(
       this.keySala
     );
+    this.listaProfissoesSorteadas
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(lista => {
+        this.numJogadores = lista.length;
+        this.tempoMonitor = Math.floor(
+          (5 + this.numJogadores * 10) * Math.pow(0.9, this.numRodada)
+        );
+        this.numTarefasNecessarias = (5 + this.numJogadores * 2) * Math.pow(1.2, this.numRodada)
+      });
   }
 
   limparRegristro() {}
