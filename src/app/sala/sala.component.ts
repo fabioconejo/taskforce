@@ -28,6 +28,7 @@ export class SalaComponent implements OnInit {
   @Input() listaProfissoesSorteadas: Observable<any>;
 
   pronto: boolean;
+  textoConvite = 'Convidar'
 
   ngUnsubscribe = new Subject();
 
@@ -85,6 +86,15 @@ export class SalaComponent implements OnInit {
       this.keySala,
       this.keyProfissaoSorteada
     );
+  }
+
+  convidar() {
+    navigator.clipboard.writeText(window.location.href);
+    this.textoConvite = 'Link copiado!';
+
+    setTimeout(() => {
+      this.textoConvite = 'Convidar';
+    }, 3000)
   }
 
   ficarPronto() {

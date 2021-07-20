@@ -33,7 +33,7 @@
 
   <div class="acoes" [style.display]="this.profissaoSorteada.responsavel === this.nickJogador ? 'inherit' : 'none'">
     <div class="acao">
-      <button class="convidar">Convidar</button>
+      <button class="convidar" (click)="convidar()">{{textoConvite}}</button>
     </div>
 
     <div class="acao">

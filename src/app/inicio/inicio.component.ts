@@ -101,6 +101,13 @@ export class InicioComponent implements OnInit {
     this.nickJogador = event.target.value;
   }
 
+  criarSala() {
+    if (this.nickJogador !== '') {
+      this.keySala = this.taskForceService.criarSala();
+      this.entrarSala();
+    }
+  }
+
   async entrarSala() {
     if (this.nickJogador !== '') {
       if (await this.taskForceService.checarExistenciaSala(this.keySala)) {
@@ -113,6 +120,7 @@ export class InicioComponent implements OnInit {
           ) {
             this.keySalaChange.emit(this.keySala);
             this.nickJogadorChange.emit(this.nickJogador);
+            this.router.navigate(['/' + this.keySala]);
           }
         }
       }

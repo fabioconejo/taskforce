@@ -10,7 +10,7 @@
         <input type="text" maxlength="10" (keyup)="onKey($event)">
       </form>
       <div class="login">
-        <button *ngIf="!keySala" class="btn-login">
+        <button *ngIf="!keySala" class="btn-login" (click)="criarSala()" [disabled]="nickJogador === ''">
           Criar sala
         </button>
         <button *ngIf="keySala" class="btn-login" (click)="entrarSala()" [disabled]="nickJogador === ''">

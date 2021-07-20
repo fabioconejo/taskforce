@@ -13,6 +13,7 @@ export class PainelComponent implements OnInit {
   @Input() keyJogador: string;
   @Input() keyProfissaoSorteada: string;
   @Input() profissaoSorteada: any;
+  @Input() tempoMonitor: number;
 
   keyProfissaoMonitor: string;
   keyTarefaSorteada: string;
@@ -21,7 +22,6 @@ export class PainelComponent implements OnInit {
   registro: any = [];
   idRegistroSorteado: number;
   profissao: any;
-  tempoMonitor: number = 10;
   tarefaSorteada: any;
   textoExibicao: string;
   intervalo: any;
