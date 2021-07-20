@@ -135,7 +135,7 @@ export class TaskforceService {
   ): Promise<string> {
     var profissoes = await this.getProfissoes();
     var profissao = profissoes[Math.floor(Math.random() * profissoes.length)];
-
+    
     var tarefas = profissao.tarefas
       .sort(() => 0.5 - Math.random())
       .slice(0, numTarefas);
