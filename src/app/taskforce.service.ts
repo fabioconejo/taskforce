@@ -130,17 +130,18 @@ export class TaskforceService {
   async sortearProfissao(
     keySala: string,
     nickJogador: string,
-    numRodada: number,
-    numTarefas: number
+    numRodada: number
   ): Promise<string> {
-    var profissoes = await this.getProfissoes();
-    var profissao = profissoes[Math.floor(Math.random() * profissoes.length)];
+    let profissoes = await this.getProfissoes();
+    let profissao = profissoes[Math.floor(Math.random() * profissoes.length)];
+    let numTarefas = Math.min(numRodada * 2, 8);
+    numTarefas = Math.max(2, numTarefas);
 
-    var tarefas = profissao.tarefas
+    let tarefas = profissao.tarefas
       .sort(() => 0.5 - Math.random())
       .slice(0, numTarefas);
 
-    var info = {
+    let info = {
       id: profissao.id,
       pronto: false,
       profissao: profissao.profissao,
@@ -149,11 +150,11 @@ export class TaskforceService {
       numRodada: numRodada
     };
 
-    var keyProfissao = this.db.database
+    let keyProfissao = this.db.database
       .ref('salas/' + keySala + '/profissoes/')
       .push(info).key;
 
-    for (var i = 0; i < tarefas.length; i++) {
+    for (let i = 0; i < tarefas.length; i++) {
       this.db.database
         .ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/tarefas/')
         .push(tarefas[i]);

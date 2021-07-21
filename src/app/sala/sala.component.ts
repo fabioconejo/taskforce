@@ -72,8 +72,7 @@ export class SalaComponent implements OnInit {
     this.keyProfissaoSorteada = await this.taskForceService.sortearProfissao(
       this.keySala,
       this.nickJogador,
-      this.numRodada,
-      6
+      this.numRodada
     );
 
     this.profissaoSorteada = await this.taskForceService.getProfissao(
