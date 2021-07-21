@@ -314,6 +314,10 @@ export class TaskforceService {
       .valueChanges();
   }
 
+  getRegistros(keySala: string): Observable<any> {
+    return this.db.object('salas/' + keySala + '/registros/').valueChanges();
+  }
+
   async concluirRegistro(keySala: string, registro: any) {
     var refRegistros = this.db.database.ref('salas/' + keySala + '/registros/');
 
@@ -353,8 +357,20 @@ export class TaskforceService {
     }
   }
 
+  limparRegistros(keySala: string) {
+    this.db.database.ref('salas/' + keySala + '/registros/').remove();
+  }
+
   removerVida(keySala: string, vidas: number) {
     this.db.database.ref('salas/' + keySala).update({ vidas: vidas - 1 });
+  }
+
+  adicionarRodada(keySala: string, rodada: number) {
+    this.db.database.ref('salas/' + keySala).update({ rodada: rodada + 1 });
+  }
+
+  resetarSala(keySala: string) {
+    this.db.database.ref('salas/' + keySala).update({ vidas: 10, rodada: 1 });
   }
 
   ficarPronto(keySala: string, keyProfissao: string, valor: boolean) {

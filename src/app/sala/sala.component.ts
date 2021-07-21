@@ -37,6 +37,7 @@ export class SalaComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
 
   async ngOnInit() {
+    this.taskForceService.limparRegistros(this.keySala);
     this.removerProfissao();
     await this.sortearProfissao();
     this.profissaoSorteadaChange.emit(this.profissaoSorteada);
