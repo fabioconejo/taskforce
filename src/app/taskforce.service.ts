@@ -315,7 +315,17 @@ export class TaskforceService {
   }
 
   getRegistros(keySala: string): Observable<any> {
-    return this.db.object('salas/' + keySala + '/registros/').valueChanges();
+    return this.db
+      .list('salas/' + keySala + '/registros/')
+      .snapshotChanges()
+      .pipe(
+        map(changes => {
+          return changes.map(c => ({
+            key: c.payload.key,
+            ...(c.payload.val() as {})
+          }));
+        })
+      );
   }
 
   async concluirRegistro(keySala: string, registro: any) {
@@ -366,11 +376,13 @@ export class TaskforceService {
   }
 
   adicionarRodada(keySala: string, rodada: number) {
-    this.db.database.ref('salas/' + keySala).update({ rodada: rodada + 1 });
+    this.db.database.ref('salas/' + keySala).update({ numRodada: rodada + 1 });
   }
 
   resetarSala(keySala: string) {
-    this.db.database.ref('salas/' + keySala).update({ vidas: 10, rodada: 1 });
+    this.db.database
+      .ref('salas/' + keySala)
+      .update({ vidas: 10, numRodada: 1 });
   }
 
   ficarPronto(keySala: string, keyProfissao: string, valor: boolean) {

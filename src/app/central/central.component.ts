@@ -40,6 +40,11 @@ export class CentralComponent implements OnInit {
       this.numRodada = s.numRodada;
       this.statusSala = s.status;
       this.vidas = s.vidas;
+
+      if (this.vidas <= 0) {
+        this.taskForceService.resetarSala(this.keySala);
+        this.taskForceService.setStatusSala(this.keySala, 'espera');
+      }
     });
 
     this.listaProfissoesSorteadas = await this.taskForceService.getProfissoesSorteadas(
@@ -52,8 +57,9 @@ export class CentralComponent implements OnInit {
         this.tempoMonitor = Math.floor(
           (7 + this.numJogadores * 2) * Math.pow(0.9, this.numRodada)
         );
-        this.numTarefasNecessarias =
-          (5 + this.numJogadores * 3) * Math.pow(1.3, this.numRodada);
+        this.numTarefasNecessarias = Math.floor(
+          (5 + this.numJogadores * 3) * Math.pow(1.3, this.numRodada)
+        );
       });
   }
 
