@@ -7,12 +7,10 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class MonitorComponent implements OnInit {
   @Input() texto: string;
-  @Input() tempo: number = 10;
+  @Input() tempo: number;
   @Input() pausa: boolean;
 
   constructor() {}
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
 }

@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Subject } from 'rxjs';
 import { catchError, takeUntil, takeWhile, timeout } from 'rxjs/operators';
 
-
 import { TaskforceService } from '../taskforce.service';
 
 @Component({
@@ -132,7 +131,11 @@ export class PainelComponent implements OnInit {
 
   async concluirRegistro(registro: any) {
     if (this.pausa === false) {
-      await this.taskForceService.concluirRegistro(this.keySala, registro);
+      await this.taskForceService.concluirRegistro(
+        this.keySala,
+        registro,
+        this.vidas
+      );
     }
 
     this.taskForceService.setTarefa(

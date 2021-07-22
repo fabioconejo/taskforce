@@ -344,8 +344,9 @@ export class TaskforceService {
       );
   }
 
-  async concluirRegistro(keySala: string, registro: any) {
-    var refRegistros = this.db.database.ref('salas/' + keySala + '/registros/');
+  async concluirRegistro(keySala: string, registro: any, vidas: any) {
+    let refRegistros = this.db.database.ref('salas/' + keySala + '/registros/');
+    let acaoIncorreta = true;
 
     await refRegistros.once('value', snapshot => {
       snapshot.forEach(r => {
@@ -356,8 +357,13 @@ export class TaskforceService {
           r.val().texto === registro.texto
         ) {
           refRegistros.child(r.key).update({ ativo: false, concluido: true });
+          acaoIncorreta = false;
         }
       });
+
+      if (acaoIncorreta) {
+        this.removerVida(keySala, vidas);
+      }
     });
   }
 
