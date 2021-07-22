@@ -1,10 +1,10 @@
 <div class="jogo">
-  <div *ngIf="!keySala" class="inicio">
+  <div *ngIf="!keySala" class="inicio" [@fade]="!keySala ? 'in' : 'out'">
     <inicio [(keySala)]="keySala" [(nickJogador)]="nickJogador"></inicio>
   </div>
   <div *ngIf="keySala" class="amigos">
   </div>
-  <div *ngIf="keySala" class="central">
+  <div *ngIf="keySala" class="central" [@fade]="keySala ? 'in' : 'out'">
     <central [keySala]="keySala" [nickJogador]="nickJogador"></central>
   </div>
 </div>
