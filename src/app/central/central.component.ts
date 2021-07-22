@@ -1,6 +1,7 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 import { TaskforceService } from '../taskforce.service';
 import { takeUntil } from 'rxjs/operators';
@@ -8,7 +9,19 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'central',
   templateUrl: './central.component.html',
-  styleUrls: ['./central.component.css']
+  styleUrls: ['./central.component.css'],
+  animations: [
+    trigger('fade', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('300ms 300ms ease-out', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [
+        style({ opacity: 1 }),
+        animate('300ms ease-in', style({ opacity: 0 }))
+      ])
+    ])
+  ]
 })
 export class CentralComponent implements OnInit {
   constructor(

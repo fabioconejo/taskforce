@@ -1,10 +1,4 @@
-import {
-  animate,
-  state,
-  style,
-  transition,
-  trigger
-} from '@angular/animations';
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit, VERSION } from '@angular/core';
 
 @Component({
@@ -13,9 +7,14 @@ import { Component, OnInit, VERSION } from '@angular/core';
   styleUrls: ['./app.component.css'],
   animations: [
     trigger('fade', [
-      state('out', style({ opacity: '0' })),
-      state('in', style({ opacity: '1' })),
-      transition('* => *', animate('300ms ease'))
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('300ms 300ms ease-out', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [
+        style({ opacity: 1 }),
+        animate('300ms ease-in', style({ opacity: 0 }))
+      ])
     ])
   ]
 })
