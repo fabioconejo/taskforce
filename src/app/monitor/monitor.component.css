@@ -71,9 +71,17 @@
   height: 90%;
 
   overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   animation: typing 1 normal both;
   animation-timing-function: ease-in-out;
+}
+
+.letreiro p::after {
+  content: '_';
+  animation-name: input-animation;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
 }
 
 .tempo {
@@ -122,33 +130,11 @@
   .letreiro {
     font-size: 26px;
   }
-
-  .letreiro p {
-    white-space: nowrap;
-  }
-
-  .letreiro p::after {
-    content: '_';
-    animation-name: input-animation;
-    animation-duration: 0.8s;
-    animation-iteration-count: infinite;
-  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .letreiro {
     font-size: 28px;
-  }
-
-  .letreiro p {
-    white-space: nowrap;
-  }
-
-  .letreiro p::after {
-    content: '_';
-    animation-name: input-animation;
-    animation-duration: 0.8s;
-    animation-iteration-count: infinite;
   }
 }
