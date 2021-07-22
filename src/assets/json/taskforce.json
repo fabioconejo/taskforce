@@ -2686,7 +2686,7 @@
       {
         "id": 3,
         "tipo": "acao",
-        "texto": "Fazer",
+        "texto": "Fazer exercícios vocais",
         "verbo": "Fazer",
         "complemento": "Exercícios vocais"
       },
@@ -2811,6 +2811,258 @@
           "Lá",
           "Si"
         ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "profissao": "Policial",
+    "imagem": "045-police.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Abordar usuário de droga",
+        "verbo": "Abordar",
+        "complemento": "Usuário de droga"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Fazer blitz",
+        "verbo": "Fazer",
+        "complemento": "Blitz"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Revistar meliante",
+        "verbo": "Revistar",
+        "complemento": "Meliante"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Prender criminoso",
+        "verbo": "Prender",
+        "complemento": "Criminoso"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Fiscalizar político",
+        "verbo": "Fiscalizar",
+        "complemento": "Político"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Fazer boletim de ocorrência",
+        "verbo": "Fazer",
+        "complemento": "Boletim de ocorrência"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Realizar investigações",
+        "verbo": "Realizar",
+        "complemento": "Investigações"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Trocar tiro",
+        "verbo": "Trocar",
+        "complemento": "Tiro"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Perseguir 2 caras numa moto",
+        "verbo": "Perseguir",
+        "complemento": "2 caras numa moto"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Dar enquadro",
+        "verbo": "Dar",
+        "complemento": "Enquadro"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Algemar bandido",
+        "verbo": "Algemar",
+        "complemento": "Bandido"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Informar direto de ficar calado",
+        "verbo": "Informar",
+        "complemento": "Direto de ficar calado"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Subir na favela para fazer operação",
+        "verbo": "Subir",
+        "complemento": "Operação na favela"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Nomear operação de investigação",
+        "verbo": "Nomear",
+        "complemento": "Operação de investigação"
+      },
+      {
+        "id": 17,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar sirene",
+          "Desligar sirene"
+        ],
+        "verbo": "Ligar",
+        "texto": "Ligar sirene",
+        "complemento": "Sirene",
+        "estado": [
+          "Ligada",
+          "Desligada"
+        ]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Dar tiro de aviso de número",
+        "verbo": "Dar",
+        "complemento": "Tiro de aviso",
+        "lista": [
+          "1",
+          "2",
+          "3",
+          "42"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "profissao": "Secretária",
+    "imagem": "047-secretary.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Servir café",
+        "verbo": "Servir",
+        "complemento": "Café"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Anotar recados",
+        "verbo": "Anotar",
+        "complemento": "Recados"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Atender telefonemas",
+        "verbo": "Atender",
+        "complemento": "Telefonemas"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Mandar e-mails",
+        "verbo": "Mandar",
+        "complemento": "E-mails"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Organizar reuniões",
+        "verbo": "Organizar",
+        "complemento": "Reuniões"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Organizar arquivos",
+        "verbo": "Organizar",
+        "complemento": "Arquivos"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Receber encomendas",
+        "verbo": "Receber",
+        "complemento": "Encomendas"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Organizar agenda",
+        "verbo": "Organizar",
+        "complemento": "Agenda"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Flexbilizar horário",
+        "verbo": "Flexbilizar",
+        "complemento": "Horário"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Informar que tem uma visita",
+        "verbo": "Informar",
+        "complemento": "Que tem visita"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Lembrar chefe sobre reuniões",
+        "verbo": "Lembrar",
+        "complemento": "Chefe sobre reuniões"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Verificar se a sala está vazia",
+        "verbo": "Verificar",
+        "complemento": "Sala vazia"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Chamar técnico para arrumar projetor",
+        "verbo": "Chamar",
+        "complemento": "Técnico para arrumar projetor"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Pedir para visita aguardar",
+        "verbo": "Pedir",
+        "complemento": "Visita aguardar"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Pedir para visita entrar",
+        "verbo": "Pedir",
+        "complemento": "Visita entrar"
+      },
+      {
+        "id": 16,
+        "tipo": "acao",
+        "texto": "Realizar orçamentos",
+        "verbo": "Realizar",
+        "complemento": "Orçamentos"
       }
     ]
   }
