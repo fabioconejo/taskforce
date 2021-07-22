@@ -97,5 +97,9 @@ export class CentralComponent implements OnInit {
   @HostListener('window:unload', ['$event'])
   unloadHandler(event) {
     this.removerProfissao();
+
+    if (this.numJogadores <= 1) {
+      this.taskForceService.removerSala(this.keySala);
+    }
   }
 }

@@ -407,6 +407,10 @@ export class TaskforceService {
       .update({ vidas: 10, numRodada: 1 });
   }
 
+  removerSala(keySala: string) {
+    this.db.database.ref('salas/' + keySala).remove();
+  }
+
   ficarPronto(keySala: string, keyProfissao: string, valor: boolean) {
     this.db.database
       .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
