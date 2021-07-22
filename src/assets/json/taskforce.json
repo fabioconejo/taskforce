@@ -1968,12 +1968,12 @@
           "Entrar em orbita",
           "Sair de orbita"
         ],
-        "verbo": "Em orbita",
+        "verbo": "Dentro",
         "texto": "Entrar em orbita",
         "complemento": "Orbita",
         "estado": [
-          "Em orbita",
-          "Fora de orbita"
+          "Dentro",
+          "Fora"
         ]
       },
       {
@@ -1983,12 +1983,12 @@
           "Entrar em estação espacial",
           "Sair de estação espacial"
         ],
-        "verbo": "Em orbita",
+        "verbo": "Dentro",
         "texto": "Entrar em estação espacial",
         "complemento": "Estação espacial",
         "estado": [
-          "Em estação espacial",
-          "Fora da estação espacial"
+          "Dentro",
+          "Fora"
         ]
       },
       {
@@ -2124,7 +2124,7 @@
           "Entregar cardápio",
           "Retirar cardápio"
         ],
-        "verbo": "Entregar",
+        "verbo": "Entregue",
         "texto": "Entregar cardápio",
         "complemento": "Cardápio",
         "estado": [
@@ -2288,7 +2288,7 @@
           "Ligar registro d'água",
           "Desligar registro d'água"
         ],
-        "verbo": "Ligar",
+        "verbo": "Ligado",
         "texto": "Entrar em registro d'água",
         "complemento": "Registro d'água",
         "estado": [
@@ -2427,7 +2427,7 @@
           "Acionar máscaras de oxigênio",
           "Remover máscaras de oxigênio"
         ],
-        "verbo": "Acionar",
+        "verbo": "Acionadas",
         "texto": "Acionar máscaras de oxigênio",
         "complemento": "Máscaras de oxigênio",
         "estado": [
@@ -2788,7 +2788,7 @@
           "Ligar autotune",
           "Desligar autotune"
         ],
-        "verbo": "Ligar",
+        "verbo": "Ligado",
         "texto": "Ligar autotune",
         "complemento": "Autotune",
         "estado": [
@@ -2924,7 +2924,7 @@
           "Ligar sirene",
           "Desligar sirene"
         ],
-        "verbo": "Ligar",
+        "verbo": "Ligada",
         "texto": "Ligar sirene",
         "complemento": "Sirene",
         "estado": [
