@@ -76,13 +76,6 @@
   animation-timing-function: ease-in-out;
 }
 
-.letreiro p::after {
-  content: '_';
-  animation-name: input-animation;
-  animation-duration: 0.8s;
-  animation-iteration-count: infinite;
-}
-
 .tempo {
   width: 90%;
   height: 3px;
