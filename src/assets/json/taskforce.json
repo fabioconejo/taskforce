@@ -1752,124 +1752,271 @@
         "complemento": "Mestre de obra"
       },
       {
-        "id": 1,
+        "id": 6,
         "tipo": "acao",
-        "texto": "Roubar celular",
-        "verbo": "Roubar",
-        "complemento": "Celular"
+        "texto": "Verificar consistência do cimento",
+        "verbo": "Verificar",
+        "complemento": "Consistência do cimento"
       },
       {
-        "id": 1,
+        "id": 7,
         "tipo": "acao",
-        "texto": "Roubar celular",
-        "verbo": "Roubar",
-        "complemento": "Celular"
+        "texto": "Adiar prazo de entrega",
+        "verbo": "Adiar",
+        "complemento": "Prazo de entrega"
       },
       {
-        "id": 1,
+        "id": 8,
         "tipo": "acao",
-        "texto": "Roubar celular",
-        "verbo": "Roubar",
-        "complemento": "Celular"
+        "texto": "Montar projeto no AutoCad",
+        "verbo": "Montar",
+        "complemento": "Projeto no AutoCad"
       },
       {
-        "id": 1,
+        "id": 9,
         "tipo": "acao",
-        "texto": "Roubar celular",
-        "verbo": "Roubar",
-        "complemento": "Celular"
+        "texto": "Responsabilizar-se pela obra",
+        "verbo": "Responsabilizar-se",
+        "complemento": "Obra"
       },
       {
-        "id": 1,
+        "id": 10,
         "tipo": "acao",
-        "texto": "Roubar celular",
-        "verbo": "Roubar",
-        "complemento": "Celular"
+        "texto": "Checar corpo de prova",
+        "verbo": "Checar",
+        "complemento": "Corpo de prova"
       },
       {
-        "id": 1,
+        "id": 11,
         "tipo": "acao",
-        "texto": "Roubar celular",
-        "verbo": "Roubar",
-        "complemento": "Celular"
+        "texto": "Avaliar fundação",
+        "verbo": "Avaliar",
+        "complemento": "Fundação"
       },
       {
-        "id": 1,
+        "id": 12,
         "tipo": "acao",
-        "texto": "Roubar celular",
-        "verbo": "Roubar",
-        "complemento": "Celular"
+        "texto": "Assinar planta",
+        "verbo": "Assinar",
+        "complemento": "Planta"
       },
       {
-        "id": 16,
+        "id": 13,
         "tipo": "estado",
         "eTexto": [
-          "Ligar tornozeleira eletrônica",
-          "Desligar tornozeleira eletrônica"
+          "Colocar fones de proteção",
+          "Retirar fones de proteção"
         ],
-        "verbo": "Ligado",
-        "texto": "Ligar tornozeleira eletrônica",
-        "complemento": "Tornozeleira eletrônica",
+        "verbo": "Colocado",
+        "texto": "Colocar fones de proteção",
+        "complemento": "Fones de proteção",
         "estado": [
-          "Ligado",
-          "Desligado"
+          "Colocado",
+          "Retirado"
         ]
       },
       {
-        "id": 17,
+        "id": 14,
         "tipo": "escolha",
-        "texto": "Renegociar resgate para",
-        "verbo": "Renegociar",
-        "complemento": "Resgate",
+        "texto": "X = ",
+        "verbo": "?",
+        "complemento": "Valor de X",
         "lista": [
-          "1 coxinha e 1 guaraná",
-          "R$100,00",
-          "R$5000,00",
-          "R$10000,00",
-          "Meio milhão de reais"
+          "9",
+          "13",
+          "17",
+          "100",
+          "200"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Y = ",
+        "verbo": "?",
+        "complemento": "Valor de Y",
+        "lista": [
+          "3,14159",
+          "2,71828",
+          "1,61803",
+          "6,0.10^23"
+        ]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "f(z) = ",
+        "verbo": "?",
+        "complemento": "Valor de f(z)",
+        "lista": [
+          "(-b ± √Δ)/2a",
+          "a^2 + b^2 = c^2",
+          "2.π.r",
+          "b.h/2"
         ]
       }
     ]
   },
   {
-    "id": 11,
-    "profissao": "Ladrão",
-    "imagem": "018-thief.svg",
+    "id": 13,
+    "profissao": "Astronauta",
+    "imagem": "035-astronaut.svg",
     "tarefas": [
       {
         "id": 1,
         "tipo": "acao",
-        "texto": "Roubar celular",
-        "verbo": "Roubar",
-        "complemento": "Celular"
+        "texto": "Coletar material",
+        "verbo": "Coletar",
+        "complemento": "Material"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Realizar contagem regressiva",
+        "verbo": "Realizar",
+        "complemento": "Contagem regressiva"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Deixar pegada na lua",
+        "verbo": "Deixar",
+        "complemento": "Pegada na lua"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Hastear bandeira do país",
+        "verbo": "Hastear",
+        "complemento": "Bandeira do país"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Verificar nível de oxigênio",
+        "verbo": "Verificar",
+        "complemento": "Nível de oxigênio"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Checar combustível",
+        "verbo": "Checar",
+        "complemento": "Combustível"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Desviar de lixo espacial",
+        "verbo": "Desviar",
+        "complemento": "Lixo espacial"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Desviar de asteroide",
+        "verbo": "Desviar",
+        "complemento": "Asteroide"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Acusar impostores",
+        "verbo": "Acusar",
+        "complemento": "Impostores"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Checar trajetória",
+        "verbo": "Checar",
+        "complemento": "Trajetória"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Realizar manutenções na nave",
+        "verbo": "Realizar",
+        "complemento": "Manutenções na nave"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Fazer piruetas na gravidade 0",
+        "verbo": "Fazer",
+        "complemento": "Piruetas na gravidade 0"
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": [
+          "Colocar traje espacial",
+          "Retirar traje espacial"
+        ],
+        "verbo": "Colocado",
+        "texto": "Colocar traje espacial",
+        "complemento": "Traje espacial",
+        "estado": [
+          "Colocado",
+          "Retirado"
+        ]
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": [
+          "Entrar em orbita",
+          "Sair de orbita"
+        ],
+        "verbo": "Em orbita",
+        "texto": "Entrar em orbita",
+        "complemento": "Orbita",
+        "estado": [
+          "Em orbita",
+          "Fora de orbita"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "estado",
+        "eTexto": [
+          "Entrar em estação espacial",
+          "Sair de estação espacial"
+        ],
+        "verbo": "Em orbita",
+        "texto": "Entrar em estação espacial",
+        "complemento": "Estação espacial",
+        "estado": [
+          "Em estação espacial",
+          "Fora da estação espacial"
+        ]
       },
       {
         "id": 16,
-        "tipo": "estado",
-        "eTexto": [
-          "Ligar tornozeleira eletrônica",
-          "Desligar tornozeleira eletrônica"
-        ],
-        "verbo": "Ligado",
-        "texto": "Ligar tornozeleira eletrônica",
-        "complemento": "Tornozeleira eletrônica",
-        "estado": [
-          "Ligado",
-          "Desligado"
+        "tipo": "escolha",
+        "texto": "Alterar força G para",
+        "verbo": "Alterar",
+        "complemento": "Força G",
+        "lista": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "10"
         ]
       },
       {
         "id": 17,
         "tipo": "escolha",
-        "texto": "Renegociar resgate para",
-        "verbo": "Renegociar",
-        "complemento": "Resgate",
+        "texto": "Nomear missão espacial para",
+        "verbo": "Nomear",
+        "complemento": "Missão espacial",
         "lista": [
-          "1 coxinha e 1 guaraná",
-          "R$100,00",
-          "R$5000,00",
-          "R$10000,00",
-          "Meio milhão de reais"
+          "Jaime IV",
+          "Zezin III",
+          "Pedrão XIV",
+          "Maicon XXV",
+          "Cleber II"
         ]
       }
     ]
