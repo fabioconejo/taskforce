@@ -1555,5 +1555,323 @@
         ]
       }
     ]
+  },
+  {
+    "id": 11,
+    "profissao": "Burocrata",
+    "imagem": "048-office-worker.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Pedir assinatura",
+        "verbo": "Pedir",
+        "complemento": "Assinatura"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Cobrar imposto",
+        "verbo": "Cobrar",
+        "complemento": "Imposto"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Tirar xerox",
+        "verbo": "Tirar",
+        "complemento": "Xerox"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Fazer reconhecimento em cartório",
+        "verbo": "Reconhecimento em cartório",
+        "complemento": "Fazer"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Solicitar foto 3x4",
+        "verbo": "Solicitar",
+        "complemento": "Foto 3x4"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Solicitar testemunhas",
+        "verbo": "Solicitar",
+        "complemento": "Testemunhas"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Solicitar certidão negativa de óbito",
+        "verbo": "Solicitar",
+        "complemento": "Certidão negativa de óbito"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Revisar papelada",
+        "verbo": "Revisar",
+        "complemento": "Papelada"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Orientar para pegar senha",
+        "verbo": "Orientar",
+        "complemento": "Senha"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Guardar documentos em caixas",
+        "verbo": "Guardar",
+        "complemento": "Documentos em caixas"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Guardar documentos nas gavetas",
+        "verbo": "Guardar",
+        "complemento": "Documentos nas gavetas"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Realizar reconhecimento de firma",
+        "verbo": "Realizar",
+        "complemento": "Reconhecimento de firma"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Escanear contrato",
+        "verbo": "Escanear",
+        "complemento": "Contrato"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Emitir segunda via do RG",
+        "verbo": "Emitir",
+        "complemento": "Segunda via do RG"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Cobrar taxa",
+        "verbo": "Cobrar",
+        "complemento": "Taxa"
+      },
+      {
+        "id": 16,
+        "tipo": "estado",
+        "eTexto": [
+          "Aprovar solicitação",
+          "Negar solicitação"
+        ],
+        "verbo": "Aprovado",
+        "texto": "Aprovar solicitação",
+        "complemento": "Solicitação",
+        "estado": [
+          "Aprovado",
+          "Negado"
+        ]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Orientar para aguardar na fila por",
+        "verbo": "Orientar",
+        "complemento": "Aguardar na fila",
+        "lista": [
+          "5 minutos",
+          "15 minutos",
+          "1 hora",
+          "3 horas",
+          "6 horas"
+        ]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Pedir para aguardar em casa por",
+        "verbo": "Pedir",
+        "complemento": "Aguardar em casa",
+        "lista": [
+          "1 dia útil",
+          "3 dias útil",
+          "1 dia corrido",
+          "6 dia corridos",
+          "3 anos"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "profissao": "Engenheiro civil",
+    "imagem": "037-engineer.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Realizar medições",
+        "verbo": "Realizar",
+        "complemento": "Medições"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Avaliar material",
+        "verbo": "Avaliar",
+        "complemento": "Material"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Reunir com arquiteto",
+        "verbo": "Reunir",
+        "complemento": "Arquiteto"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Colocar capacete",
+        "verbo": "Colocar",
+        "complemento": "Capacete"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Cobrar mestre de obra",
+        "verbo": "Cobrar",
+        "complemento": "Mestre de obra"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Roubar celular",
+        "verbo": "Roubar",
+        "complemento": "Celular"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Roubar celular",
+        "verbo": "Roubar",
+        "complemento": "Celular"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Roubar celular",
+        "verbo": "Roubar",
+        "complemento": "Celular"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Roubar celular",
+        "verbo": "Roubar",
+        "complemento": "Celular"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Roubar celular",
+        "verbo": "Roubar",
+        "complemento": "Celular"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Roubar celular",
+        "verbo": "Roubar",
+        "complemento": "Celular"
+      },
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Roubar celular",
+        "verbo": "Roubar",
+        "complemento": "Celular"
+      },
+      {
+        "id": 16,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar tornozeleira eletrônica",
+          "Desligar tornozeleira eletrônica"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar tornozeleira eletrônica",
+        "complemento": "Tornozeleira eletrônica",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Renegociar resgate para",
+        "verbo": "Renegociar",
+        "complemento": "Resgate",
+        "lista": [
+          "1 coxinha e 1 guaraná",
+          "R$100,00",
+          "R$5000,00",
+          "R$10000,00",
+          "Meio milhão de reais"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "profissao": "Ladrão",
+    "imagem": "018-thief.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Roubar celular",
+        "verbo": "Roubar",
+        "complemento": "Celular"
+      },
+      {
+        "id": 16,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar tornozeleira eletrônica",
+          "Desligar tornozeleira eletrônica"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar tornozeleira eletrônica",
+        "complemento": "Tornozeleira eletrônica",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Renegociar resgate para",
+        "verbo": "Renegociar",
+        "complemento": "Resgate",
+        "lista": [
+          "1 coxinha e 1 guaraná",
+          "R$100,00",
+          "R$5000,00",
+          "R$10000,00",
+          "Meio milhão de reais"
+        ]
+      }
+    ]
   }
 ]
