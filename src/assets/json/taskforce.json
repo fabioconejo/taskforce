@@ -2663,5 +2663,155 @@
         ]
       }
     ]
+  },
+  {
+    "id": 18,
+    "profissao": "Cantora",
+    "imagem": "042-singer.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Fazer cover",
+        "verbo": "Fazer",
+        "complemento": "Cover"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Cantar em barzinho",
+        "verbo": "Cantar",
+        "complemento": "Barzinho"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Fazer",
+        "verbo": "Fazer",
+        "complemento": "Exercícios vocais"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Participar do The Voice",
+        "verbo": "Participar",
+        "complemento": "The Voice"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Apresentar-se no Faustão",
+        "verbo": "Apresentar-se",
+        "complemento": "Faustão"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Realizar teste no microfone",
+        "verbo": "Realizar",
+        "complemento": "Teste no microfone"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Desafinar no refrão",
+        "verbo": "Desafinar",
+        "complemento": "Refrão"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Cantar no trio elétrico",
+        "verbo": "Cantar",
+        "complemento": "Trio elétrico"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Ficar sem voz",
+        "verbo": "Ficar",
+        "complemento": "Sem voz"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Escrever música",
+        "verbo": "Escrever",
+        "complemento": "Música"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Decorar letra",
+        "verbo": "Decorar",
+        "complemento": "Letra"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Trocar estilo musical",
+        "verbo": "Trocar",
+        "complemento": "Estilo musical"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Escutar música",
+        "verbo": "Escutar",
+        "complemento": "Música"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Fazer parceiria",
+        "verbo": "Fazer",
+        "complemento": "Parceiria"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Sofrer plágio",
+        "verbo": "Sofrer",
+        "complemento": "Plágio"
+      },
+      {
+        "id": 16,
+        "tipo": "acao",
+        "texto": "Tocar instrumento",
+        "verbo": "Tocar",
+        "complemento": "Instrumento"
+      },
+      {
+        "id": 17,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar autotune",
+          "Desligar autotune"
+        ],
+        "verbo": "Ligar",
+        "texto": "Ligar autotune",
+        "complemento": "Autotune",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Cantar nota",
+        "verbo": "Cantar",
+        "complemento": "Nota",
+        "lista": [
+          "Dó",
+          "Ré",
+          "Mi",
+          "Fá",
+          "Sol",
+          "Lá",
+          "Si"
+        ]
+      }
+    ]
   }
 ]
