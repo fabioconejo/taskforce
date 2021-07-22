@@ -2627,7 +2627,7 @@
           "Ligar iluminação",
           "Desligar iluminação"
         ],
-        "verbo": "Ligar",
+        "verbo": "Ligado",
         "texto": "Ligar iluminação",
         "complemento": "Iluminação",
         "estado": [
