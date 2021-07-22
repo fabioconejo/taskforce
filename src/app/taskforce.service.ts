@@ -133,7 +133,23 @@ export class TaskforceService {
     numRodada: number
   ): Promise<string> {
     let profissoes = await this.getProfissoes();
-    let profissao = profissoes[Math.floor(Math.random() * profissoes.length)];
+    let profissao: any;
+    let result: boolean;
+    let i = Math.floor(Math.random() * profissoes.length);
+    let j = i;
+
+    do {
+      profissao = profissoes[j++ % profissoes.length];
+
+      await this.db.database
+        .ref('salas/' + keySala + '/profissoes/')
+        .orderByChild('id')
+        .equalTo(profissao.id)
+        .once('value', snap => {
+          result = snap.val() !== null;
+        });
+    } while (result && i !== j % profissoes.length);
+
     let numTarefas = Math.min(numRodada * 2, 8);
     numTarefas = Math.max(2, numTarefas);
 
@@ -146,8 +162,7 @@ export class TaskforceService {
       pronto: false,
       profissao: profissao.profissao,
       imagem: profissao.imagem,
-      responsavel: nickJogador,
-      numRodada: numRodada
+      responsavel: nickJogador
     };
 
     let keyProfissao = this.db.database
