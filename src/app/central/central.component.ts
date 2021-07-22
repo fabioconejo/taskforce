@@ -55,7 +55,7 @@ export class CentralComponent implements OnInit {
       .subscribe(lista => {
         this.numJogadores = lista.length;
         this.tempoMonitor = Math.floor(
-          (7 + this.numJogadores * 2) * Math.pow(0.9, this.numRodada)
+          (10 + this.numJogadores * 5) * Math.pow(0.9, this.numRodada)
         );
         this.numTarefasNecessarias = Math.floor(
           (5 + this.numJogadores * 3) * Math.pow(1.3, this.numRodada)
