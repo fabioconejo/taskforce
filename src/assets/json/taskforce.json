@@ -2020,5 +2020,648 @@
         ]
       }
     ]
+  },
+  {
+    "id": 14,
+    "profissao": "Garçom",
+    "imagem": "040-waiter.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Anotar pedido",
+        "verbo": "Anotar",
+        "complemento": "Pedido"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Levar conta",
+        "verbo": "Levar",
+        "complemento": "Conta"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Equilibrar pratos",
+        "verbo": "Equilibrar",
+        "complemento": "Pratos"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Entregar pedidos à cozinha",
+        "verbo": "Entregar",
+        "complemento": "Pedidos à cozinha"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Tocar campainha da cozinha",
+        "verbo": "Tocar",
+        "complemento": "Campainha da cozinha"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Arrumar a mesa",
+        "verbo": "Arrumar",
+        "complemento": "Mesa"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Recolher cacos de vidro",
+        "verbo": "Recolher",
+        "complemento": "Cacos de vidro"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Guiar cliente até a mesa",
+        "verbo": "Guiar",
+        "complemento": "Cliente até a mesa"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Aguardar pedido",
+        "verbo": "Aguardar",
+        "complemento": "Pedido"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Perguntar 'mais alguma coisa, senhor?'",
+        "verbo": "Perguntar",
+        "complemento": "Mais alguma coisa?"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Perguntar se está tudo ok com o pedido",
+        "verbo": "Perguntar",
+        "complemento": "Está tudo ok com o pedido"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Avistar mão levantada",
+        "verbo": "Avistar",
+        "complemento": "Mão levantada"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Pedir para deixar a mesa livre",
+        "verbo": "Pedir",
+        "complemento": "Deixar a mesa livre"
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": [
+          "Entregar cardápio",
+          "Retirar cardápio"
+        ],
+        "verbo": "Entregar",
+        "texto": "Entregar cardápio",
+        "complemento": "Cardápio",
+        "estado": [
+          "Entregue",
+          "Retirado"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Alterar sugestão de gorjeta para",
+        "verbo": "Alterar",
+        "complemento": "Sugestão de gorjeta",
+        "lista": [
+          "10%",
+          "12%",
+          "15%"
+        ]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Ser chamado pelo apelido de",
+        "verbo": "Ser chamado",
+        "complemento": "Apelido",
+        "lista": [
+          "Amigo",
+          "Queridão",
+          "Gente boa",
+          "Mestre",
+          "Fera",
+          "Patrão",
+          "Chapa",
+          "Chefia",
+          "Campeão"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "profissao": "Bombeiro",
+    "imagem": "049-firefighter.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Conectar mangueira no hidrante",
+        "verbo": "Conectar",
+        "complemento": "Mangueira no hidrante"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Resgatar gato em árvore",
+        "verbo": "Resgatar",
+        "complemento": "Gato em árvore"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Apagar incêndio",
+        "verbo": "Apagar",
+        "complemento": "Incêndio"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Usar pé-de-cabra",
+        "verbo": "Usar",
+        "complemento": "Pé-de-cabra"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Colocar uniforme antifogo",
+        "verbo": "Colocar",
+        "complemento": "Uniforme antifogo"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Resgatar pessoa na janela",
+        "verbo": "Resgatar",
+        "complemento": "Pessoa na janela"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Alegar irregularidades no local",
+        "verbo": "Alegar",
+        "complemento": "Irregularidades no local"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Estender escada",
+        "verbo": "Estender",
+        "complemento": "Escada"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Pilotar caminhão",
+        "verbo": "Pilotar",
+        "complemento": "Caminhão"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Salvar pessoa de afogamento",
+        "verbo": "Salvar",
+        "complemento": "Pessoa de afogamento"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Usar extintor",
+        "verbo": "Usar",
+        "complemento": "Extintor"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Capturar animal silvestre",
+        "verbo": "Capturar",
+        "complemento": "Animal silvestre"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Usar mangueira",
+        "verbo": "Usar",
+        "complemento": "Mangueira"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Remover porta do carro",
+        "verbo": "Remover",
+        "complemento": "Porta do carro"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Resgatar pessoa soterrada",
+        "verbo": "Resgatar",
+        "complemento": "Pessoa soterrada"
+      },
+      {
+        "id": 16,
+        "tipo": "acao",
+        "texto": "Descer pelo cano",
+        "verbo": "Descer",
+        "complemento": "Cano"
+      },
+      {
+        "id": 17,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar registro d'água",
+          "Desligar registro d'água"
+        ],
+        "verbo": "Ligar",
+        "texto": "Entrar em registro d'água",
+        "complemento": "Registro d'água",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Ajustar pressão d'água para",
+        "verbo": "Ajustar",
+        "complemento": "Pressão d'água",
+        "lista": [
+          "Baixo",
+          "Médio",
+          "Alto"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "profissao": "Comissária de voo",
+    "imagem": "031-air-hostess.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Dar bom dia",
+        "verbo": "Dar",
+        "complemento": "Bom dia"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Ir na cabine durante ausência do piloto",
+        "verbo": "Ir",
+        "complemento": "Cabine"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Acalmar passageiro",
+        "verbo": "Acalmar",
+        "complemento": "Passageiro"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Informar duração da viagem",
+        "verbo": "Informar",
+        "complemento": "Duração da viagem"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Dar um sorriso",
+        "verbo": "Dar",
+        "complemento": "Sorriso"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Servir lanche",
+        "verbo": "Servir",
+        "complemento": "Lanche"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Identificar terrorista",
+        "verbo": "Identificar",
+        "complemento": "Terrorista"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Instruir informações de segurança",
+        "verbo": "Instruir",
+        "complemento": "Informações de segurança"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Pilotar carrinho",
+        "verbo": "Pilotar",
+        "complemento": "Carrinho"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Pedir para desligar o celular",
+        "verbo": "Pedir",
+        "complemento": "Desligar o celular"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Levar objeto ao achados e perdidos",
+        "verbo": "Levar",
+        "complemento": "Objeto ao achados e perdidos"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Arrumar compartimento de bagagem",
+        "verbo": "Arrumar",
+        "complemento": "Compartimento de bagagem"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Verificar documentos de menor de idade",
+        "verbo": "Verificar",
+        "complemento": "Documentos de menor de idade"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Pedir para pôr o cinto de segurança",
+        "verbo": "Pedir",
+        "complemento": "Pôr o cinto de segurança"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Realizar primeiros socorros",
+        "verbo": "Realizar",
+        "complemento": "Primeiros socorros"
+      },
+      {
+        "id": 16,
+        "tipo": "estado",
+        "eTexto": [
+          "Acionar máscaras de oxigênio",
+          "Remover máscaras de oxigênio"
+        ],
+        "verbo": "Acionar",
+        "texto": "Acionar máscaras de oxigênio",
+        "complemento": "Máscaras de oxigênio",
+        "estado": [
+          "Acionadas",
+          "Removidas"
+        ]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Falar em",
+        "verbo": "Falar",
+        "complemento": "Idioma",
+        "lista": [
+          "Mandarim",
+          "Espanhol",
+          "Inglês",
+          "Bengali",
+          "Hindi",
+          "Português",
+          "Russo",
+          "Japonês",
+          "Alemão",
+          "Chinês",
+          "Javanês",
+          "Coreano",
+          "Francês",
+          "Vietnamita",
+          "Telugo",
+          "Cantonês",
+          "Marati",
+          "Tamil",
+          "Turco",
+          "Urdu",
+          "Min nan",
+          "Jinyu",
+          "Gujarati",
+          "Polaco",
+          "Egípcio",
+          "Ucraniano",
+          "Italiano",
+          "Xiang",
+          "Malaio",
+          "Hakka",
+          "Kannada",
+          "Oriya",
+          "Panjabi",
+          "Sunda",
+          "Panjabi",
+          "Romeno",
+          "Bhojpuri",
+          "Azerbaijão",
+          "Farsi",
+          "Maitili",
+          "Hauçá",
+          "Argelino",
+          "Birmanês",
+          "Servo-croata",
+          "Gan",
+          "Awadhi",
+          "Tailandês",
+          "Holandês",
+          "Iorubá",
+          "Sindi"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "profissao": "Fotógrafo",
+    "imagem": "041-photographer.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Tirar fotos",
+        "verbo": "Tirar",
+        "complemento": "Fotos"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Renomear arquivos",
+        "verbo": "Renomear",
+        "complemento": "Arquivos"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Ver paleta de cores",
+        "verbo": "Ver",
+        "complemento": "Paleta de cores"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Pedir para olhar para a câmera",
+        "verbo": "Pedir",
+        "complemento": "Olhar para a câmera"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Pedir para fazer pose",
+        "verbo": "Pedir",
+        "complemento": "Fazer pose"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Fazer ensaios sensuais",
+        "verbo": "Fazer",
+        "complemento": "Ensaios sensuais"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Fazer foto colagem",
+        "verbo": "Fazer",
+        "complemento": "Foto colagem"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Fotografar a lua",
+        "verbo": "Fotografar",
+        "complemento": "Lua"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Tirar foto do homem aranha",
+        "verbo": "Tirar",
+        "complemento": "Foto do homem aranha"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Comprar câmeras antigas",
+        "verbo": "Comprar",
+        "complemento": "Câmeras antigas"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Editar foto",
+        "verbo": "Editar",
+        "complemento": "Foto"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Postar fotos no instagram",
+        "verbo": "Postar",
+        "complemento": "Fotos no instagram"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Regular tripé",
+        "verbo": "Regular",
+        "complemento": "Tripé"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Pedir para dar um sorriso",
+        "verbo": "Pedir",
+        "complemento": "Dar um sorriso"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Pedir para ficar parado",
+        "verbo": "Pedir",
+        "complemento": "Ficar parado"
+      },
+      {
+        "id": 16,
+        "tipo": "acao",
+        "texto": "Pedir para ser espontâneo",
+        "verbo": "Pedir",
+        "complemento": "Ser espontâneo"
+      },
+      {
+        "id": 17,
+        "tipo": "acao",
+        "texto": "Fazer foto 3x4",
+        "verbo": "Fazer",
+        "complemento": "Foto 3x4"
+      },
+      {
+        "id": 18,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar iluminação",
+          "Desligar iluminação"
+        ],
+        "verbo": "Ligar",
+        "texto": "Ligar iluminação",
+        "complemento": "Iluminação",
+        "estado": [
+          "Ligado",
+          "Desligado"
+        ]
+      },
+      {
+        "id": 19,
+        "tipo": "escolha",
+        "texto": "Ajustar foco para",
+        "verbo": "Ajustar",
+        "complemento": "Foco",
+        "lista": [
+          "Automático",
+          "1x",
+          "3x",
+          "5x"
+        ]
+      },
+      {
+        "id": 20,
+        "tipo": "escolha",
+        "texto": "Cobrar album de formatura por",
+        "verbo": "Cobrar",
+        "complemento": "Album de formatura",
+        "lista": [
+          "R$1000,00",
+          "R$2000,00",
+          "R$3000,00",
+          "R$4000,00",
+          "R$5000,00"
+        ]
+      }
+    ]
   }
 ]
