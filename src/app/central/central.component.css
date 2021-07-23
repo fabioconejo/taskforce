@@ -32,7 +32,7 @@
   float: left;
 }
 
-.nick {
+.info-amigo {
   width: 65%;
   height: 100%;
   margin-left: 5%;
@@ -42,6 +42,17 @@
   align-items: center;
 
   float: left;
+}
+
+.nick {
+  padding-top: 5%;
+  line-height: 0.75;
+  font-weight: bold;
+}
+
+.texto-profissao {
+  color: var(--blue-jeans);
+  font-weight: 400;
 }
 
 .central {
@@ -110,6 +121,10 @@
   .nick {
     font-size: 2.5vw;
   }
+
+  .texto-profissao {
+    font-size: 1.5vw;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -128,5 +143,9 @@
 
   .nick {
     font-size: 2vw;
+  }
+
+  .texto-profissao {
+    font-size: 1vw;
   }
 }
