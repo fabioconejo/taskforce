@@ -21,8 +21,8 @@ import { Component, OnInit, VERSION } from '@angular/core';
 export class AppComponent implements OnInit {
   constructor() {}
 
-  keySala: string;
-  nickJogador: string;
+  keySala: string = '8c1ev';
+  nickJogador: string = 'Fabolas';
 
   ngOnInit() {}
 }

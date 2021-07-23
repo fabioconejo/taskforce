@@ -36,7 +36,7 @@
 .img-personagem {
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: contain !important;
+  background-size: contain;
 
   animation: pop 4s ease infinite;
 }

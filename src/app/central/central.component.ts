@@ -46,6 +46,7 @@ export class CentralComponent implements OnInit {
   profissaoSorteada: any;
 
   ngUnsubscribe = new Subject();
+  baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
   async ngOnInit() {
     this.sala = this.taskForceService.getSala(this.keySala);

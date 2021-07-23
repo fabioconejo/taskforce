@@ -1,3 +1,11 @@
+<div class="amigos" >
+  <div class="amigo" *ngFor="let l of listaProfissoesSorteadas | async">
+    <div class="img-profissao" style.background-image="url({{baseUrl}}profissionais/{{this.profissaoSorteada.imagem}})">
+    </div>
+    <p class="nick">{{l.responsavel}}</p>
+  </div>
+</div>
+
 <div class="central">
   <div *ngIf="statusSala === 'espera'" [@fade]>
     <sala [keySala]="keySala" [(keyProfissaoSorteada)]="keyProfissaoSorteada" [(profissaoSorteada)]="profissaoSorteada"
