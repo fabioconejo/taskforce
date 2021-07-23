@@ -150,8 +150,8 @@ export class TaskforceService {
         });
     } while (result && i !== j % profissoes.length);
 
-    let numTarefas = Math.min(numRodada * 2, 8);
-    numTarefas = Math.max(2, numTarefas);
+    let numTarefas = Math.min(numRodada * 1, 8);
+    numTarefas = Math.max(1, numTarefas);
 
     let tarefas = profissao.tarefas
       .sort(() => 0.5 - Math.random())

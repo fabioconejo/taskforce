@@ -1,9 +1,11 @@
 .amigos {
+  padding: 0.25%;
   border-radius: 3px;
   backdrop-filter: blur(3px) brightness(102%);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
 
   float: left;
+  box-sizing: border-box;
   overflow-y: auto;
 }
 
@@ -13,6 +15,7 @@
 
   background-color: var(--semi-white);
   border-bottom: 1px solid var(--cultured);
+  overflow-x: auto;
 }
 
 .img-profissao {

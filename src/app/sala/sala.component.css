@@ -322,7 +322,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .sala {
-    padding: 1.25%;
+    padding: 0.5%;
   }
 
   .profissao-jogador {
@@ -369,7 +369,7 @@
 
   .amigos {
     height: 80%;
-    width: 48%;
+    width: 50%;
   }
 
   .profissao-amigo {
@@ -407,7 +407,7 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .sala {
-    padding: 1.25%;
+    padding: 0.5%;
   }
 
   .profissao-jogador {
@@ -453,7 +453,7 @@
 
   .amigos {
     height: 80%;
-    width: 48%;
+    width: 50%;
   }
 
   .profissao-amigo {
@@ -491,7 +491,7 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .sala {
-    padding: 1.25%;
+    padding: 0.5%;
   }
 
   .profissao-jogador {
@@ -537,7 +537,7 @@
 
   .amigos {
     height: 80%;
-    width: 48%;
+    width: 50%;
   }
 
   .profissao-amigo {
