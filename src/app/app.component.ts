@@ -1,4 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
+import { Meta } from '@angular/platform-browser';
 import { Component, OnInit, VERSION } from '@angular/core';
 
 @Component({
@@ -19,7 +20,13 @@ import { Component, OnInit, VERSION } from '@angular/core';
   ]
 })
 export class AppComponent implements OnInit {
-  constructor() {}
+  constructor(private meta: Meta) {
+    this.meta.addTag({
+      name: 'viewport',
+      content:
+        'height=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1'
+    });
+  }
 
   keySala: string; // = '8c1ev';
   nickJogador: string; // = 'Fabolas';
