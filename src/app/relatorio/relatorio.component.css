@@ -9,3 +9,30 @@ td {
   width: 100%;
   height: 100%;
 }
+
+.card-relatorio {
+  width: 50%;
+  height: 80%;
+  margin-top: 10%;
+  margin-left: 25%;
+
+  background-color: var(--semi-white);
+  float: left;
+}
+
+.tabela-relatorio {
+  width: 100%;
+  height: 80%;
+}
+
+.vitoria::after {
+  content: 'Rodada \A Concluída';
+  color: var(--blue-jeans);
+  white-space: pre;
+}
+
+.derrota::after {
+  content: 'Fim de \A Partida';
+  color: var(--tart-orange);
+  white-space: pre;
+}
