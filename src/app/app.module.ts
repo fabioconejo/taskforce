@@ -18,6 +18,7 @@ import { CentralComponent } from './central/central.component';
 import { TaskforceService } from './taskforce.service';
 import { SalaComponent } from './sala/sala.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { RelatorioComponent } from './relatorio/relatorio.component';
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import { InicioComponent } from './inicio/inicio.component';
     QuadroComponent,
     CentralComponent,
     SalaComponent,
-    InicioComponent
+    InicioComponent,
+    RelatorioComponent
   ],
   bootstrap: [AppComponent],
   providers: [TaskforceService]
