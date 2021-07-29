@@ -3,13 +3,13 @@
     <table class="tabela-relatorio">
       <thead>
         <tr>
-          <th class="titulo vitoria"></th>
+          <th class="titulo derrot"></th>
           <th>Tarefas Concluídas</th>
           <th>Vidas Perdidas</th>
         </tr>
       </thead>
-      <tbody *ngFor="let l of listaProfissoesSorteadas | async">
-        <tr>
+      <tbody>
+        <tr *ngFor="let l of listaProfissoesSorteadas | async">
           <td>
             <div class="img-profissao" style.background-image="url({{baseUrl}}profissionais/{{l.imagem}})">
             </div>
@@ -17,17 +17,10 @@
               <p class="nick">{{l.responsavel}}<br/><span class="texto-profissao">{{l.profissao}}</span></p>
             </div>
           </td>
-          <td></td>
-          <td></td>
+          <td class="num num-concluidas">3,5</td>
+          <td class="num num-perdidas">1,5</td>
         </tr>
       </tbody>
-      <tfoot>
-        <tr>
-          <td>Total</td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tfoot>
     </table>
   </div>
 </div>

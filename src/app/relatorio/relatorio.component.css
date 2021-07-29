@@ -12,6 +12,24 @@ th {
   padding: 2% 2% 0 2%;
 }
 
+tr {
+  height: 10vh;
+}
+
+td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+td:nth-child(1) {
+  width: 30%;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+  width: 35%;
+}
+
 .relatorio {
   width: 100%;
   height: 100%;
@@ -21,10 +39,12 @@ th {
   background-color: var(--semi-white);
   float: left;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
 }
 
 .tabela-relatorio {
   width: 100%;
+
   height: 100%;
 }
 
@@ -79,11 +99,24 @@ th {
   padding-top: 5%;
   line-height: 0.75;
   font-weight: bold;
+  text-align: left;
 }
 
 .texto-profissao {
   color: var(--blue-jeans);
   font-weight: 400;
+}
+
+.num {
+  font-weight: bold;
+}
+
+.num-concluidas {
+  color: var(--medium-sea-green);
+}
+
+.num-perdidas {
+  color: var(--tart-orange);
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -99,6 +132,18 @@ th {
 
   th {
     font-size: 3.5vw;
+  }
+
+  .nick {
+    font-size: 4.5vw;
+  }
+
+  .texto-profissao {
+    font-size: 2.5vw;
+  }
+
+  .num {
+    font-size: 7vw;
   }
 }
 
@@ -116,6 +161,18 @@ th {
   th {
     font-size: 3vw;
   }
+
+  .nick {
+    font-size: 3.5vw;
+  }
+
+  .texto-profissao {
+    font-size: 2vw;
+  }
+
+  .num {
+    font-size: 6vw;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -129,6 +186,22 @@ th {
 
   .titulo {
     font-size: 3.5vw;
+  }
+
+  th {
+    font-size: 2vw;
+  }
+
+  .nick {
+    font-size: 2.75vw;
+  }
+
+  .texto-profissao {
+    font-size: 1.5vw;
+  }
+
+  .num {
+    font-size: 4.5vw;
   }
 }
 
@@ -144,6 +217,22 @@ th {
   .titulo {
     font-size: 2.5vw;
   }
+
+  th {
+    font-size: 1.5vw;
+  }
+
+  .nick {
+    font-size: 2vw;
+  }
+
+  .texto-profissao {
+    font-size: 1.25vw;
+  }
+
+  .num {
+    font-size: 3vw;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -156,6 +245,22 @@ th {
   }
 
   .titulo {
+    font-size: 2vw;
+  }
+
+  th {
+    font-size: 1.25vw;
+  }
+
+  .nick {
+    font-size: 1.5vw;
+  }
+
+  .texto-profissao {
+    font-size: 1vw;
+  }
+
+  .num {
     font-size: 2vw;
   }
 }
