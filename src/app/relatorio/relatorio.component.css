@@ -119,6 +119,30 @@ td:nth-child(3) {
   color: var(--tart-orange);
 }
 
+.acao {
+  float: left;
+}
+
+.proximo {
+  background-color: var(--blue-jeans);
+  color: var(--white);
+  box-shadow: 0px 6px var(--saphire-blue);
+}
+
+.proximo:active {
+  box-shadow: 0px 2px var(--saphire-blue);
+}
+
+.reiniciar {
+  background-color: var(--space-cadet);
+  color: var(--white);
+  box-shadow: 0px 6px var(--black-fogra);
+}
+
+.proximo:active {
+  box-shadow: 0px 2px var(--black-fogra);
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .card-relatorio {
@@ -144,6 +168,13 @@ td:nth-child(3) {
 
   .num {
     font-size: 7vw;
+  }
+
+  .acao {
+    width: 90%;
+    height: 7.5%;
+    margin-left: 5%;
+    margin-top: 10%;
   }
 }
 
@@ -172,6 +203,13 @@ td:nth-child(3) {
 
   .num {
     font-size: 6vw;
+  }
+
+  .acao {
+    width: 70%;
+    height: 7.5%;
+    margin-left: 15%;
+    margin-top: 7.5%;
   }
 }
 
@@ -203,6 +241,13 @@ td:nth-child(3) {
   .num {
     font-size: 4.5vw;
   }
+
+  .acao {
+    width: 50%;
+    height: 7.5%;
+    margin-left: 25%;
+    margin-top: 2.5%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -233,6 +278,13 @@ td:nth-child(3) {
   .num {
     font-size: 3vw;
   }
+
+  .acao {
+    width: 50%;
+    height: 7.5%;
+    margin-left: 25%;
+    margin-top: 2.5%;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -262,5 +314,12 @@ td:nth-child(3) {
 
   .num {
     font-size: 2vw;
+  }
+
+  .acao {
+    width: 30%;
+    height: 7.5%;
+    margin-left: 35%;
+    margin-top: 2.5%;
   }
 }
