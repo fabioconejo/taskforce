@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { TaskforceService } from '../taskforce.service';
@@ -11,7 +11,7 @@ import { TaskforceService } from '../taskforce.service';
 export class RelatorioComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
 
-  listaProfissoesSorteadas: Observable<any>;
+  @Input() listaProfissoesSorteadas: Observable<any>;
 
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
