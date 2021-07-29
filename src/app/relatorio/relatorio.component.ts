@@ -11,9 +11,14 @@ import { TaskforceService } from '../taskforce.service';
 export class RelatorioComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
 
+  @Input() keySala: string;
   @Input() listaProfissoesSorteadas: Observable<any>;
 
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
   ngOnInit() {}
+
+  fecharRelatorio() {
+    this.taskForceService.setStatusSala(this.keySala, 'espera');
+  }
 }
