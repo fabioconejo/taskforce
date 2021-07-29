@@ -6,6 +6,17 @@
         <th>Tarefas Concluidas</th>
         <th>Vidas Perdidas</th>
       </tr>
+      <tr *ngFor="let l of listaProfissoesSorteadas | async">
+        <td>
+          <div class="img-profissao" style.background-image="url({{baseUrl}}profissionais/{{l.imagem}})">
+          </div>
+          <div class="info-amigo">
+            <p class="nick">{{l.responsavel}}<br/><span class="texto-profissao">{{l.profissao}}</span></p>
+          </div>
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
       <tr>
         <td>Total</td>
         <td></td>

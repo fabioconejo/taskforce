@@ -5,7 +5,6 @@
     <div class="info-amigo">
       <p class="nick">{{l.responsavel}}<br/><span class="texto-profissao">{{l.profissao}}</span></p>
     </div>
-
   </div>
 </div>
 
@@ -21,5 +20,8 @@
       [profissaoSorteada]="profissaoSorteada" [tempoMonitor]="tempoMonitor"
       [numTarefasNecessarias]="numTarefasNecessarias" [numRodada]="numRodada">
     </painel>
+  </div>
+  <div *ngIf="statusSala === 'relatorio'" [@fade]>
+    <relatorio></relatorio>
   </div>
 </div>

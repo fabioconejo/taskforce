@@ -28,8 +28,8 @@ export class AppComponent implements OnInit {
     });
   }
 
-  keySala: string; // = '8c1ev';
-  nickJogador: string; // = 'Fabolas';
+  keySala: string = 'fznmg';
+  nickJogador: string = 'Fabolas';
 
   ngOnInit() {}
 }

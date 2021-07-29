@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { TaskforceService } from '../taskforce.service';
 
 @Component({
   selector: 'relatorio',
@@ -6,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./relatorio.component.css']
 })
 export class RelatorioComponent implements OnInit {
-  constructor() {}
+  constructor(private taskForceService: TaskforceService) {}
+
+  listaProfissoesSorteadas: Observable<any>;
+
+  baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
   ngOnInit() {}
 }
