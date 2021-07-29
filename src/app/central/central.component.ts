@@ -57,7 +57,7 @@ export class CentralComponent implements OnInit {
 
       if (this.vidas <= 0) {
         this.taskForceService.resetarSala(this.keySala);
-        this.taskForceService.setStatusSala(this.keySala, 'espera');
+        this.taskForceService.setStatusSala(this.keySala, 'relatorio');
       }
     });
 

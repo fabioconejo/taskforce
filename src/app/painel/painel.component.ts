@@ -53,7 +53,7 @@ export class PainelComponent implements OnInit {
 
         if (concluidos >= this.numTarefasNecessarias) {
           this.taskForceService.adicionarRodada(this.keySala, rodada);
-          this.taskForceService.setStatusSala(this.keySala, 'espera');
+          this.taskForceService.setStatusSala(this.keySala, 'relatorio');
         }
       });
   }

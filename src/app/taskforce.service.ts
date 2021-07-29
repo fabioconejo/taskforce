@@ -162,7 +162,9 @@ export class TaskforceService {
       pronto: false,
       profissao: profissao.profissao,
       imagem: profissao.imagem,
-      responsavel: nickJogador
+      responsavel: nickJogador,
+      acertos: 0,
+      erros: 0
     };
 
     let keyProfissao = this.db.database
