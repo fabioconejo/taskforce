@@ -133,14 +133,22 @@ td:nth-child(3) {
   box-shadow: 0px 2px var(--saphire-blue);
 }
 
+.proximo::after {
+  content: 'Próxima rodada';
+}
+
 .reiniciar {
   background-color: var(--space-cadet);
   color: var(--white);
   box-shadow: 0px 6px var(--black-fogra);
 }
 
-.proximo:active {
+.reiniciar:active {
   box-shadow: 0px 2px var(--black-fogra);
+}
+
+.reiniciar::after {
+  content: 'Nova partida';
 }
 
 /* Extra small devices (phones, 600px and down) */
