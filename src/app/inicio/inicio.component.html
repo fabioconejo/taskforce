@@ -20,6 +20,10 @@
     </div>
   </div>
   <div class="box box-tutorial">
-    <div class="card"></div>
+    <div class="card" [style.display]="numCarrossel === 0 ? 'block' : 'none'">0</div>
+    <div class="card" [style.display]="numCarrossel === 1 ? 'block' : 'none'">1</div>
+    <div class="card" [style.display]="numCarrossel === 2 ? 'block' : 'none'">2</div>
+    <div class="card" [style.display]="numCarrossel === 3 ? 'block' : 'none'">3</div>
+    <div class="card" [style.display]="numCarrossel === 4 ? 'block' : 'none'">4</div>
   </div>
 </div>

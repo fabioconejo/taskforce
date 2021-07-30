@@ -9,7 +9,10 @@
 }
 
 .logo {
-  height: 10%;
+  background-image: url('https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .card {
@@ -123,9 +126,13 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .logo {
+    height: 15%;
+  }
+
   .box {
     width: 100%;
-    height: 90%;
+    height: 85%;
   }
 
   .box-tutorial {
@@ -150,9 +157,13 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 767px) {
+  .logo {
+    height: 15%;
+  }
+
   .box {
     width: 100%;
-    height: 90%;
+    height: 85%;
   }
 
   .box-tutorial {
@@ -177,13 +188,13 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .box {
-    width: 100%;
-    height: 90%;
+  .logo {
+    height: 15%;
   }
 
-  .box-login {
-    border-left: 1px solid var(--cultured);
+  .box {
+    width: 100%;
+    height: 85%;
   }
 
   .box-tutorial {
@@ -208,19 +219,21 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .logo {
+    height: 15%;
+  }
+
   .box {
     width: 50%;
-    height: 90%;
-    border-left: 1px solid var(--cultured);
-    border-right: 1px solid var(--cultured);
+    height: 85%;
   }
 
   .box-login {
-    border-left: 1px solid var(--cultured);
+    border-right: 1px solid var(--cultured);
   }
 
   .box-tutorial {
-    border-right: 1px solid var(--cultured);
+    border-left: 1px solid var(--cultured);
   }
 
   .img-personagem {
@@ -241,19 +254,25 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .logo {
+    height: 15%;
+  }
+
   .box {
-    width: 50%;
-    height: 90%;
-    border-left: 1px solid var(--cultured);
-    border-right: 1px solid var(--cultured);
+    width: 40%;
+    height: 85%;
+    box-sizing: content-box;
   }
 
   .box-login {
-    border-left: 1px solid var(--cultured);
+    padding-left: 5%;
+    padding-right: 5%;
+    border-right: 1px solid var(--cultured);
   }
 
   .box-tutorial {
-    border-right: 1px solid var(--cultured);
+    padding-left: 5%;
+    border-left: 1px solid var(--cultured);
   }
 
   .img-personagem {

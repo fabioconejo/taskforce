@@ -10,6 +10,8 @@
   border-radius: 3px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(3px) brightness(102%);
+  box-sizing: border-box;
+  padding: 1%;
 }
 
 .central {
@@ -44,5 +46,6 @@
 @media only screen and (min-width: 1200px) {
   .jogo {
     padding: 5%;
+    padding-top: 2.5%;
   }
 }

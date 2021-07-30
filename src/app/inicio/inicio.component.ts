@@ -34,6 +34,7 @@ export class InicioComponent implements OnInit {
   @Output() nickJogadorChange = new EventEmitter();
 
   imagemBox: string;
+  numCarrossel: number = 0;
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/profissionais/';
 
   async ngOnInit() {
