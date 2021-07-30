@@ -110,7 +110,7 @@ export class PainelComponent implements OnInit {
         if (r['concluido']) {
           await this.taskForceService.pontuarJogador(
             this.keySala,
-            this.keyProfissaoMonitor,
+            this.keyProfissaoSorteada,
             true,
             0.5
           );

@@ -355,9 +355,10 @@ export class TaskforceService {
     let refRegistros = this.db.database.ref('salas/' + keySala + '/registros/');
     let acaoIncorreta = true;
 
-    await refRegistros.once('value', snapshot => {
+    await refRegistros.once('value', async snapshot => {
+      let numTarefas = 0;
+
       snapshot.forEach(r => {
-        let numTarefas = 0;
         if (
           r.val().ativo &&
           r.val().idProfissao === registro.idProfissao &&
@@ -368,15 +369,20 @@ export class TaskforceService {
           acaoIncorreta = false;
           numTarefas++;
         }
-
-        if (numTarefas > 0) {
-          this.pontuarJogador(keySala, keyProfissao, true, 0.5 * numTarefas);
-        }
       });
+
+      if (numTarefas > 0) {
+        await this.pontuarJogador(
+          keySala,
+          keyProfissao,
+          true,
+          0.5 * numTarefas
+        );
+      }
 
       if (acaoIncorreta) {
         this.removerVida(keySala, vidas);
-        this.pontuarJogador(keySala, keyProfissao, false, 1);
+        await this.pontuarJogador(keySala, keyProfissao, false, 1);
       }
     });
   }
