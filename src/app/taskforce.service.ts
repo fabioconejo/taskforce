@@ -357,6 +357,7 @@ export class TaskforceService {
 
     await refRegistros.once('value', snapshot => {
       snapshot.forEach(r => {
+        let numTarefas = 0;
         if (
           r.val().ativo &&
           r.val().idProfissao === registro.idProfissao &&
@@ -365,7 +366,11 @@ export class TaskforceService {
         ) {
           refRegistros.child(r.key).update({ ativo: false, concluido: true });
           acaoIncorreta = false;
-          this.pontuarJogador(keySala, keyProfissao, true, 0.5);
+          numTarefas++;
+        }
+
+        if (numTarefas > 0) {
+          this.pontuarJogador(keySala, keyProfissao, true, 0.5 * numTarefas);
         }
       });
 
