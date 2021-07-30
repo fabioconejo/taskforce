@@ -12,6 +12,7 @@ export class RelatorioComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
 
   @Input() keySala: string;
+  @Input() vidas: number;
   @Input() listaProfissoesSorteadas: Observable<any>;
 
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
@@ -19,6 +20,9 @@ export class RelatorioComponent implements OnInit {
   ngOnInit() {}
 
   fecharRelatorio() {
+    if (this.vidas <= 0) {
+      this.taskForceService.resetarSala(this.keySala);
+    }
     this.taskForceService.setStatusSala(this.keySala, 'espera');
   }
 }

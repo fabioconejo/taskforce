@@ -98,6 +98,8 @@ export class PainelComponent implements OnInit {
           await this.taskForceService.desabilitarRegistro(
             this.keySala,
             this.keyRegistro,
+            this.keyProfissaoSorteada,
+            this.keyProfissaoMonitor,
             this.vidas
           );
           await this.atualizarTarefa();
@@ -106,6 +108,12 @@ export class PainelComponent implements OnInit {
       )
       .subscribe(async r => {
         if (r['concluido']) {
+          await this.taskForceService.pontuarJogador(
+            this.keySala,
+            this.keyProfissaoMonitor,
+            true,
+            0.5
+          );
           await this.atualizarTarefa();
         }
       });
@@ -133,6 +141,7 @@ export class PainelComponent implements OnInit {
     if (this.pausa === false) {
       await this.taskForceService.concluirRegistro(
         this.keySala,
+        this.keyProfissaoSorteada,
         registro,
         this.vidas
       );

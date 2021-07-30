@@ -346,7 +346,12 @@ export class TaskforceService {
       );
   }
 
-  async concluirRegistro(keySala: string, registro: any, vidas: any) {
+  async concluirRegistro(
+    keySala: string,
+    keyProfissao: string,
+    registro: any,
+    vidas: any
+  ) {
     let refRegistros = this.db.database.ref('salas/' + keySala + '/registros/');
     let acaoIncorreta = true;
 
@@ -360,11 +365,13 @@ export class TaskforceService {
         ) {
           refRegistros.child(r.key).update({ ativo: false, concluido: true });
           acaoIncorreta = false;
+          this.pontuarJogador(keySala, keyProfissao, true, 0.5);
         }
       });
 
       if (acaoIncorreta) {
         this.removerVida(keySala, vidas);
+        this.pontuarJogador(keySala, keyProfissao, false, 1);
       }
     });
   }
@@ -372,6 +379,8 @@ export class TaskforceService {
   async desabilitarRegistro(
     keySala: string,
     keyRegistro: string,
+    keyProfissao: string,
+    keyProfissaoMonitor: string,
     vidas: number
   ) {
     let concluido = true;
@@ -387,6 +396,8 @@ export class TaskforceService {
       });
 
     if (!concluido) {
+      await this.pontuarJogador(keySala, keyProfissao, false, 0.5);
+      await this.pontuarJogador(keySala, keyProfissaoMonitor, false, 0.5);
       this.removerVida(keySala, vidas);
     }
   }
@@ -397,6 +408,35 @@ export class TaskforceService {
 
   removerVida(keySala: string, vidas: number) {
     this.db.database.ref('salas/' + keySala).update({ vidas: vidas - 1 });
+  }
+
+  async pontuarJogador(
+    keySala: string,
+    keyProfissao: string,
+    acerto: boolean,
+    valor: number
+  ) {
+    if (acerto) {
+      await this.db.database
+        .ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/acertos')
+        .once('value', snapshot => {
+          valor = valor + snapshot.val();
+        });
+
+      this.db.database
+        .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
+        .update({ acertos: valor });
+    } else {
+      await this.db.database
+        .ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/erros')
+        .once('value', snapshot => {
+          valor = valor + snapshot.val();
+        });
+
+      this.db.database
+        .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
+        .update({ erros: valor });
+    }
   }
 
   adicionarRodada(keySala: string, rodada: number) {
