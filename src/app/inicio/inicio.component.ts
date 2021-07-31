@@ -35,7 +35,29 @@ export class InicioComponent implements OnInit {
 
   imagemBox: string;
   numCarrossel: number = 0;
-  baseUrl = this.taskForceService.baseUrl() + 'assets/images/profissionais/';
+  carrossel: any = [
+    {
+      imagem: 'tutorial-0.png',
+      texto: 'Chama a galera para um chat de voz (Discord, Zoom, Skype...)'
+    },
+    {
+      imagem: 'tutorial-1.png',
+      texto: 'Chama a galera para um chat de voz (Discord, Zoom, Skype...)'
+    },
+    {
+      imagem: 'tutorial-2.png',
+      texto: 'Chama a galera para um chat de voz (Discord, Zoom, Skype...)'
+    },
+    {
+      imagem: 'tutorial-3.png',
+      texto: 'Chama a galera para um chat de voz (Discord, Zoom, Skype...)'
+    },
+    {
+      imagem: 'tutorial-4.png',
+      texto: 'Chama a galera para um chat de voz (Discord, Zoom, Skype...)'
+    }
+  ];
+  baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
   async ngOnInit() {
     let img = [

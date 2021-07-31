@@ -3,7 +3,7 @@
   <div class="box box-login">
     <div class="card">
       <div class="personagem">
-        <div class="img-personagem" style.background-image="url({{baseUrl}}{{imagemBox}})"></div>
+        <div class="img-personagem" style.background-image="url({{baseUrl}}profissionais/{{imagemBox}})"></div>
       </div>
       <form class="nick">
         <p>Nickname:</p>
@@ -20,10 +20,17 @@
     </div>
   </div>
   <div class="box box-tutorial">
-    <div class="card" [style.display]="numCarrossel === 0 ? 'block' : 'none'">0</div>
-    <div class="card" [style.display]="numCarrossel === 1 ? 'block' : 'none'">1</div>
-    <div class="card" [style.display]="numCarrossel === 2 ? 'block' : 'none'">2</div>
-    <div class="card" [style.display]="numCarrossel === 3 ? 'block' : 'none'">3</div>
-    <div class="card" [style.display]="numCarrossel === 4 ? 'block' : 'none'">4</div>
+    <div class="card">
+      <div class="titulo">Como jogar?</div>
+      <div class="imagem" style.background-image="url({{baseUrl}}{{carrossel[numCarrossel].imagem}}"></div>
+      <div class="texto">{{carrossel[numCarrossel].texto}}</div>
+      <div class="navegacao">
+        <div class="slot" [ngClass]="numCarrossel === 0 ? 'slot-ativo' : ''"></div>
+        <div class="slot" [ngClass]="numCarrossel === 1 ? 'slot-ativo' : ''"></div>
+        <div class="slot" [ngClass]="numCarrossel === 2 ? 'slot-ativo' : ''"></div>
+        <div class="slot" [ngClass]="numCarrossel === 3 ? 'slot-ativo' : ''"></div>
+        <div class="slot" [ngClass]="numCarrossel === 4 ? 'slot-ativo' : ''"></div>
+      </div>
+    </div>
   </div>
 </div>
