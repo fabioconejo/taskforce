@@ -34,7 +34,7 @@ export class InicioComponent implements OnInit {
   @Output() nickJogadorChange = new EventEmitter();
 
   imagemBox: string;
-  numCarrossel: number = 0;
+  numCarrossel: number = 1;
   carrossel: any = [
     {
       imagem: 'tutorial-0.png',
@@ -42,15 +42,16 @@ export class InicioComponent implements OnInit {
     },
     {
       imagem: 'tutorial-1.png',
-      texto: 'Chama a galera para um chat de voz (Discord, Zoom, Skype...)'
+      texto: 'Veja qual profissão foi sorteada para você e seus amigos'
     },
     {
       imagem: 'tutorial-2.png',
-      texto: 'Chama a galera para um chat de voz (Discord, Zoom, Skype...)'
+      texto:
+        'Fique atento à tarefa exibida no monitor e informe as tarefas que não são suas'
     },
     {
       imagem: 'tutorial-3.png',
-      texto: 'Chama a galera para um chat de voz (Discord, Zoom, Skype...)'
+      texto: 'Execute as tarefas que estão na sua responsabilidade'
     },
     {
       imagem: 'tutorial-4.png',
