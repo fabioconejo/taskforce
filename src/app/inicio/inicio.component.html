@@ -25,11 +25,11 @@
       <div class="imagem" style.background-image="url({{baseUrl}}{{carrossel[numCarrossel].imagem}}"></div>
       <div class="texto">{{carrossel[numCarrossel].texto}}</div>
       <div class="navegacao">
-        <div class="slot" [ngClass]="numCarrossel === 0 ? 'slot-ativo' : ''"></div>
-        <div class="slot" [ngClass]="numCarrossel === 1 ? 'slot-ativo' : ''"></div>
-        <div class="slot" [ngClass]="numCarrossel === 2 ? 'slot-ativo' : ''"></div>
-        <div class="slot" [ngClass]="numCarrossel === 3 ? 'slot-ativo' : ''"></div>
-        <div class="slot" [ngClass]="numCarrossel === 4 ? 'slot-ativo' : ''"></div>
+        <div class="slot" [ngClass]="numCarrossel === 0 ? 'slot-ativo' : ''" (click)="acessarCarrossel(0)"></div>
+        <div class="slot" [ngClass]="numCarrossel === 1 ? 'slot-ativo' : ''" (click)="acessarCarrossel(1)"></div>
+        <div class="slot" [ngClass]="numCarrossel === 2 ? 'slot-ativo' : ''" (click)="acessarCarrossel(2)"></div>
+        <div class="slot" [ngClass]="numCarrossel === 3 ? 'slot-ativo' : ''" (click)="acessarCarrossel(3)"></div>
+        <div class="slot" [ngClass]="numCarrossel === 4 ? 'slot-ativo' : ''" (click)="acessarCarrossel(4)"></div>
       </div>
     </div>
   </div>

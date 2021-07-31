@@ -34,7 +34,8 @@ export class InicioComponent implements OnInit {
   @Output() nickJogadorChange = new EventEmitter();
 
   imagemBox: string;
-  numCarrossel: number = 1;
+  intervaloCarrossel: any;
+  numCarrossel: number = 4;
   carrossel: any = [
     {
       imagem: 'tutorial-0.png',
@@ -55,7 +56,8 @@ export class InicioComponent implements OnInit {
     },
     {
       imagem: 'tutorial-4.png',
-      texto: 'Chama a galera para um chat de voz (Discord, Zoom, Skype...)'
+      texto:
+        'Cuidado, cada falha significa vida a menos. Sobreviva o maior número de rodadas que conseguir'
     }
   ];
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
@@ -119,6 +121,15 @@ export class InicioComponent implements OnInit {
     setInterval(() => {
       this.imagemBox = img[Math.floor(Math.random() * img.length)];
     }, 4000);
+    this.acessarCarrossel(0);
+  }
+
+  acessarCarrossel(num: number) {
+    clearInterval(this.intervaloCarrossel);
+    this.numCarrossel = num;
+    this.intervaloCarrossel = setInterval(() => {
+      this.numCarrossel = num++ % 5;
+    }, 5000);
   }
 
   onKey(event) {
