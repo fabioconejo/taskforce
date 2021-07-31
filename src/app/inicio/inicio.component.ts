@@ -43,7 +43,7 @@ export class InicioComponent implements OnInit {
     },
     {
       imagem: 'tutorial-1.png',
-      texto: 'Veja qual profissão foi sorteada para você e seus amigos'
+      texto: 'Veja qual profissão foi sorteada para você e para seus amigos'
     },
     {
       imagem: 'tutorial-2.png',
