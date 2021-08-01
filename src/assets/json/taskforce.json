@@ -1586,8 +1586,8 @@
         "id": 4,
         "tipo": "acao",
         "texto": "Fazer reconhecimento em cartório",
-        "verbo": "Reconhecimento em cartório",
-        "complemento": "Fazer"
+        "verbo": "Fazer",
+        "complemento": "Reconhecimento em cartório"
       },
       {
         "id": 5,
