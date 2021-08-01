@@ -18,7 +18,7 @@
   --eeire-black: #232323;
   --eletric-purple: #be3fff;
 
-  --bg-color: var(--cultured);
+  --bg-color: var(var(--eletric-purple));
 }
 
 * {
