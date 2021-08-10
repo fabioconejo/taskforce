@@ -21,8 +21,16 @@ import { Meta } from '@angular/platform-browser';
 })
 export class AppComponent implements OnInit {
   constructor(private meta: Meta) {
-    this.meta.addTag({ property: 'og:title', content: 'Teste' });
-    this.meta.addTag({ property: 'og:title', content: 'Teste' });
+    this.meta.addTag({ property: 'og:title', content: 'Task Force' });
+    this.meta.addTag({
+      property: 'og:description',
+      content: 'Junte a galera e jogue online agora mesmo'
+    });
+    this.meta.addTag({
+      property: 'og:image',
+      content:
+        'https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/taskforce-print.png'
+    });
   }
 
   keySala: string;
