@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit, VERSION } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app',
@@ -19,7 +20,9 @@ import { Component, OnInit, VERSION } from '@angular/core';
   ]
 })
 export class AppComponent implements OnInit {
-  constructor() {}
+  constructor(private meta: Meta) {
+    this.meta.addTag({ name: 'og:title', content: 'Teste' });
+  }
 
   keySala: string;
   nickJogador: string;
