@@ -21,7 +21,7 @@ import { Meta } from '@angular/platform-browser';
 })
 export class AppComponent implements OnInit {
   constructor(private meta: Meta) {
-    this.meta.addTag({ name: 'og:title', content: 'Teste' });
+    this.meta.addTag({ property: 'og:title', content: 'Teste' });
   }
 
   keySala: string;
