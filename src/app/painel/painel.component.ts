@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Subject } from 'rxjs';
 import { catchError, takeUntil, takeWhile, timeout } from 'rxjs/operators';
 
@@ -19,6 +19,7 @@ export class PainelComponent implements OnInit {
   @Input() numTarefasNecessarias: number;
   @Input() numRodada: number;
   @Input() flagRelatorio: boolean;
+  @Output() flagRelatorioChange = new EventEmitter();
 
   keyProfissaoMonitor: string;
   keyTarefaSorteada: string;
@@ -38,6 +39,7 @@ export class PainelComponent implements OnInit {
 
   async ngOnInit() {
     this.flagRelatorio = true;
+    this.flagRelatorioChange.emit(this.flagRelatorio);
     await this.atualizarTarefa();
     let rodada = this.numRodada;
 

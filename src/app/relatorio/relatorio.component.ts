@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { TaskforceService } from '../taskforce.service';
@@ -15,6 +15,7 @@ export class RelatorioComponent implements OnInit {
   @Input() vidas: number;
   @Input() listaProfissoesSorteadas: Observable<any>;
   @Input() flagRelatorio: boolean;
+  @Output() flagRelatorioChange = new EventEmitter();
 
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
@@ -25,5 +26,6 @@ export class RelatorioComponent implements OnInit {
       this.taskForceService.resetarSala(this.keySala);
     }
     this.flagRelatorio = false;
+    this.flagRelatorioChange.emit(this.flagRelatorio);
   }
 }
