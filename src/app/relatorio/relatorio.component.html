@@ -9,7 +9,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let l of listaProfissoesSorteadas | async">
+        <tr *ngFor="let l of lista | async">
           <td>
             <div class="img-profissao" style.background-image="url({{baseUrl}}profissionais/{{l.imagem}})">
             </div>

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
+import { take } from 'rxjs/operators';
 
 import { TaskforceService } from '../taskforce.service';
 
@@ -17,9 +18,21 @@ export class RelatorioComponent implements OnInit {
   @Input() flagRelatorio: boolean;
   @Output() flagRelatorioChange = new EventEmitter();
 
+  lista: any;
+
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
-  ngOnInit() {}
+  async ngOnInit() {
+    this.listaProfissoesSorteadas.pipe(take(1)).subscribe(l => {
+      this.lista.push({
+        imagem: l.imagem,
+        responsavel: l.responsavel,
+        profissao: l.profissao,
+        acertos: l.acertos,
+        erros: l.erros,
+      })
+    });
+  }
 
   fecharRelatorio() {
     if (this.vidas <= 0) {
