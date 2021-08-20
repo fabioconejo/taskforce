@@ -14,6 +14,7 @@ export class RelatorioComponent implements OnInit {
   @Input() keySala: string;
   @Input() vidas: number;
   @Input() listaProfissoesSorteadas: Observable<any>;
+  @Input() flagRelatorio: boolean;
 
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
@@ -23,6 +24,6 @@ export class RelatorioComponent implements OnInit {
     if (this.vidas <= 0) {
       this.taskForceService.resetarSala(this.keySala);
     }
-    this.taskForceService.setStatusSala(this.keySala, 'espera');
+    this.flagRelatorio = false;
   }
 }

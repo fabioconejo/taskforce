@@ -9,7 +9,7 @@
 </div>
 
 <div class="central">
-  <div *ngIf="statusSala === 'espera'" [@fade]>
+  <div *ngIf="statusSala === 'espera' && flagRelatorio === false" [@fade]>
     <sala [keySala]="keySala" [(keyProfissaoSorteada)]="keyProfissaoSorteada" [(profissaoSorteada)]="profissaoSorteada"
       [nickJogador]="nickJogador" [listaProfissoesSorteadas]="listaProfissoesSorteadas" [numRodada]="numRodada"
       [vidas]="vidas">
@@ -18,10 +18,11 @@
   <div *ngIf="statusSala === 'jogo'" [@fade]>
     <painel [keySala]="keySala" [keyJogador]="keyJogador" [vidas]="vidas" [keyProfissaoSorteada]="keyProfissaoSorteada"
       [profissaoSorteada]="profissaoSorteada" [tempoMonitor]="tempoMonitor"
-      [numTarefasNecessarias]="numTarefasNecessarias" [numRodada]="numRodada">
+      [numTarefasNecessarias]="numTarefasNecessarias" [numRodada]="numRodada" [flagRelatorio]="flagRelatorio">
     </painel>
   </div>
-  <div *ngIf="statusSala === 'relatorio'" [@fade]>
-    <relatorio [keySala]="keySala" [vidas]="vidas" [listaProfissoesSorteadas]="listaProfissoesSorteadas"></relatorio>
+  <div *ngIf="statusSala === 'espera' && flagRelatorio === true" [@fade]>
+    <relatorio [keySala]="keySala" [vidas]="vidas" [listaProfissoesSorteadas]="listaProfissoesSorteadas"
+      [flagRelatorio]="flagRelatorio"></relatorio>
   </div>
 </div>

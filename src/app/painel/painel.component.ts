@@ -18,6 +18,7 @@ export class PainelComponent implements OnInit {
   @Input() vidas: number;
   @Input() numTarefasNecessarias: number;
   @Input() numRodada: number;
+  @Input() flagRelatorio: boolean;
 
   keyProfissaoMonitor: string;
   keyTarefaSorteada: string;
@@ -36,6 +37,7 @@ export class PainelComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
 
   async ngOnInit() {
+    this.flagRelatorio = true;
     await this.atualizarTarefa();
     let rodada = this.numRodada;
 
@@ -53,7 +55,7 @@ export class PainelComponent implements OnInit {
 
         if (concluidos >= this.numTarefasNecessarias) {
           this.taskForceService.adicionarRodada(this.keySala, rodada);
-          this.taskForceService.setStatusSala(this.keySala, 'relatorio');
+          this.taskForceService.setStatusSala(this.keySala, 'espera');
         }
       });
   }

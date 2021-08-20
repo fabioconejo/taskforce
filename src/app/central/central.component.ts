@@ -40,6 +40,7 @@ export class CentralComponent implements OnInit {
   tempoMonitor: number;
   numJogadores: number;
   numTarefasNecessarias: number;
+  flagRelatorio: boolean;
 
   listaProfissoesSorteadas: Observable<any>;
   keyProfissaoSorteada: string;
