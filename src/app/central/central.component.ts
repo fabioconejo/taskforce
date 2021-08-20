@@ -50,6 +50,7 @@ export class CentralComponent implements OnInit {
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
   async ngOnInit() {
+    this.flagRelatorio = false;
     this.sala = this.taskForceService.getSala(this.keySala);
     this.sala.pipe(takeUntil(this.ngUnsubscribe)).subscribe(s => {
       this.numRodada = s.numRodada;
