@@ -18,19 +18,21 @@ export class RelatorioComponent implements OnInit {
   @Input() flagRelatorio: boolean;
   @Output() flagRelatorioChange = new EventEmitter();
 
-  lista: any;
+  lista: any = [];
 
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
-  async ngOnInit() {
-    this.listaProfissoesSorteadas.pipe(take(1)).subscribe(l => {
-      this.lista.push({
+  ngOnInit() {
+    this.listaProfissoesSorteadas.pipe(take(1)).subscribe(async l => {
+      console.log(l);
+      await this.lista.push({
         imagem: l.imagem,
         responsavel: l.responsavel,
         profissao: l.profissao,
         acertos: l.acertos,
-        erros: l.erros,
-      })
+        erros: l.erros
+      });
+      console.log(this.lista);
     });
   }
 
