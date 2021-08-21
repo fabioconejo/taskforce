@@ -14,6 +14,7 @@ export class RelatorioComponent implements OnInit {
 
   @Input() keySala: string;
   @Input() vidas: number;
+  @Input() keyProfissaoSorteada: string;
   @Input() listaProfissoesSorteadas: Observable<any>;
   @Input() flagRelatorio: boolean;
   @Output() flagRelatorioChange = new EventEmitter();
@@ -23,16 +24,18 @@ export class RelatorioComponent implements OnInit {
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
   ngOnInit() {
+    let i: number = 0;
     this.listaProfissoesSorteadas.pipe(take(1)).subscribe(async l => {
-      console.log(l);
-      await this.lista.push({
-        imagem: l.imagem,
-        responsavel: l.responsavel,
-        profissao: l.profissao,
-        acertos: l.acertos,
-        erros: l.erros
-      });
-      console.log(this.lista);
+      for (i = 0; i < l.length; i++) {
+        await this.lista.push({
+          imagem: l[i].imagem,
+          responsavel: l[i].responsavel,
+          profissao: l[i].profissao,
+          acertos: l[i].acertos,
+          erros: l[i].erros
+        });
+        this.removerProfissao();
+      }
     });
   }
 
@@ -42,5 +45,12 @@ export class RelatorioComponent implements OnInit {
     }
     this.flagRelatorio = false;
     this.flagRelatorioChange.emit(this.flagRelatorio);
+  }
+
+  removerProfissao() {
+    this.taskForceService.removerProfissao(
+      this.keySala,
+      this.keyProfissaoSorteada
+    );
   }
 }
