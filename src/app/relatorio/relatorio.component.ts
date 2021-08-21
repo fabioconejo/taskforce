@@ -34,7 +34,10 @@ export class RelatorioComponent implements OnInit {
           acertos: l[i].acertos,
           erros: l[i].erros
         });
-        this.removerProfissao();
+
+        setTimeout(() => {
+          this.removerProfissao();
+        }, 1500);
       }
     });
   }
