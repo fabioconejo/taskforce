@@ -60,7 +60,7 @@ export class PainelComponent implements OnInit {
 
           setTimeout(() => {
             this.taskForceService.setStatusSala(this.keySala, 'espera');
-          }, 1000);
+          }, 500);
         }
       });
   }
