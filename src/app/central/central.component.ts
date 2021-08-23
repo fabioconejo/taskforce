@@ -75,6 +75,10 @@ export class CentralComponent implements OnInit {
         this.numTarefasNecessarias = Math.floor(
           (5 + this.numJogadores * 2) * Math.pow(1.2, this.numRodada)
         );
+
+        console.log(this.numJogadores);
+        console.log(this.tempoMonitor);
+        console.log(this.numTarefasNecessarias);
       });
   }
 
