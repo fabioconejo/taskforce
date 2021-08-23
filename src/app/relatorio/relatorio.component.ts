@@ -20,11 +20,13 @@ export class RelatorioComponent implements OnInit {
   @Output() flagRelatorioChange = new EventEmitter();
 
   lista: any = [];
+  vida: number;
 
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
   ngOnInit() {
     let i: number = 0;
+    this.vida = this.vidas;
 
     this.listaProfissoesSorteadas.pipe(take(1)).subscribe(l => {
       setTimeout(() => {
@@ -46,7 +48,7 @@ export class RelatorioComponent implements OnInit {
   }
 
   fecharRelatorio() {
-    if (this.vidas <= 0) {
+    if (this.vida <= 0) {
       this.taskForceService.resetarSala(this.keySala);
     }
     this.flagRelatorio = false;

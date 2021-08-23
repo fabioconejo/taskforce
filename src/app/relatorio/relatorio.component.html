@@ -3,7 +3,7 @@
     <table class="tabela-relatorio">
       <thead>
         <tr>
-          <th [ngClass]="(this.vidas <= 0) ? 'titulo derrota' : 'titulo vitoria'"></th>
+          <th [ngClass]="(this.vida <= 0) ? 'titulo derrota' : 'titulo vitoria'"></th>
           <th>Tarefas Concluídas</th>
           <th>Vidas Perdidas</th>
         </tr>
@@ -25,6 +25,6 @@
   </div>
 
   <div class="acao">
-    <button [ngClass]="(this.vidas <= 0) ? 'reiniciar' : 'proximo'" (click)="fecharRelatorio()"></button>
+    <button [ngClass]="(this.vida <= 0) ? 'reiniciar' : 'proximo'" (click)="fecharRelatorio()"></button>
   </div>
 </div>
