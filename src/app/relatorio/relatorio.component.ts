@@ -25,20 +25,20 @@ export class RelatorioComponent implements OnInit {
 
   ngOnInit() {
     let i: number = 0;
-    this.listaProfissoesSorteadas.pipe(take(1)).subscribe(async l => {
-      for (i = 0; i < l.length; i++) {
-        await this.lista.push({
-          imagem: l[i].imagem,
-          responsavel: l[i].responsavel,
-          profissao: l[i].profissao,
-          acertos: l[i].acertos,
-          erros: l[i].erros
-        });
+    this.listaProfissoesSorteadas.pipe(take(1)).subscribe(l => {
+      setTimeout(() => {
+        for (i = 0; i < l.length; i++) {
+          this.lista.push({
+            imagem: l[i].imagem,
+            responsavel: l[i].responsavel,
+            profissao: l[i].profissao,
+            acertos: l[i].acertos,
+            erros: l[i].erros
+          });
 
-        setTimeout(() => {
           this.resetarProfissao();
-        }, 1500);
-      }
+        }
+      }, 500);
     });
   }
 

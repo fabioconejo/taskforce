@@ -58,9 +58,7 @@ export class CentralComponent implements OnInit {
       this.vidas = s.vidas;
 
       if (this.vidas <= 0) {
-        setTimeout(() => {
-          this.taskForceService.setStatusSala(this.keySala, 'espera');
-        }, 500);
+        this.taskForceService.setStatusSala(this.keySala, 'espera');
       }
     });
 
@@ -79,12 +77,6 @@ export class CentralComponent implements OnInit {
         );
       });
   }
-
-  limparRegristro() {}
-
-  limparSorteio() {}
-
-  adicionarJogador() {}
 
   removerProfissao() {
     this.taskForceService.removerProfissao(
