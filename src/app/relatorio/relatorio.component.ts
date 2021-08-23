@@ -25,6 +25,7 @@ export class RelatorioComponent implements OnInit {
 
   ngOnInit() {
     let i: number = 0;
+
     this.listaProfissoesSorteadas.pipe(take(1)).subscribe(l => {
       setTimeout(() => {
         for (i = 0; i < l.length; i++) {
@@ -36,7 +37,9 @@ export class RelatorioComponent implements OnInit {
             erros: l[i].erros
           });
 
-          this.resetarProfissao();
+          setTimeout(() => {
+            this.resetarProfissao();
+          }, 1000);
         }
       }, 500);
     });
