@@ -41,7 +41,7 @@ export class RelatorioComponent implements OnInit {
 
           setTimeout(() => {
             this.resetarProfissao();
-          }, 1000);
+          }, 2000);
         }
       }, 500);
     });
