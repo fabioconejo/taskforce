@@ -207,6 +207,12 @@ export class TaskforceService {
     return profissao;
   }
 
+  resetarProfissao(keySala: string, keyProfissao: string) {
+    this.db.database
+      .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
+      .update({id: 0, profissao: "desconhecido", imagem: "000-unknown.png", pronto: false});
+  }
+
   removerProfissao(keySala: string, keyProfissao: string) {
     this.db.database
       .ref('salas/' + keySala + '/profissoes/' + keyProfissao)

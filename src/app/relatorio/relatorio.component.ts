@@ -36,7 +36,7 @@ export class RelatorioComponent implements OnInit {
         });
 
         setTimeout(() => {
-          this.removerProfissao();
+          this.resetarProfissao();
         }, 1500);
       }
     });
@@ -50,8 +50,8 @@ export class RelatorioComponent implements OnInit {
     this.flagRelatorioChange.emit(this.flagRelatorio);
   }
 
-  removerProfissao() {
-    this.taskForceService.removerProfissao(
+  resetarProfissao() {
+    this.taskForceService.resetarProfissao(
       this.keySala,
       this.keyProfissaoSorteada
     );
