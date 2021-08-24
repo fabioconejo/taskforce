@@ -207,14 +207,19 @@ export class TaskforceService {
     return profissao;
   }
 
-  resetarProfissao(keySala: string, keyProfissao: string) {
-    this.db.database
+  async resetarProfissao(keySala: string, keyProfissao: string) {
+    await this.db.database
       .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
-      .update({id: 0, profissao: "desconhecido", imagem: "000-unknown.png", pronto: false});
+      .update({
+        id: 0,
+        profissao: 'desconhecido',
+        imagem: '000-unknown.png',
+        pronto: false
+      });
   }
 
-  removerProfissao(keySala: string, keyProfissao: string) {
-    this.db.database
+  async removerProfissao(keySala: string, keyProfissao: string) {
+    await this.db.database
       .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
       .remove();
   }

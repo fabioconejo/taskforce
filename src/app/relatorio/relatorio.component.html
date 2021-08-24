@@ -25,6 +25,6 @@
   </div>
 
   <div class="acao">
-    <button [ngClass]="(this.vida <= 0) ? 'reiniciar' : 'proximo'" (click)="fecharRelatorio()"></button>
+    <button [disabled]="this.desabilitado" [ngClass]="(this.vida <= 0) ? 'reiniciar' : 'proximo'" (click)="fecharRelatorio()"></button>
   </div>
 </div>

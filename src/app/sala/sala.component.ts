@@ -38,7 +38,7 @@ export class SalaComponent implements OnInit {
 
   async ngOnInit() {
     this.taskForceService.limparRegistros(this.keySala);
-    this.removerProfissao();
+    await this.removerProfissao();
     await this.sortearProfissao();
     this.profissaoSorteadaChange.emit(this.profissaoSorteada);
     this.keyProfissaoSorteadaChange.emit(this.keyProfissaoSorteada);
@@ -81,8 +81,8 @@ export class SalaComponent implements OnInit {
     );
   }
 
-  removerProfissao() {
-    this.taskForceService.removerProfissao(
+  async removerProfissao() {
+    await this.taskForceService.removerProfissao(
       this.keySala,
       this.keyProfissaoSorteada
     );

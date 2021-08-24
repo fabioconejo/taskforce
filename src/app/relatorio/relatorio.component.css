@@ -137,6 +137,13 @@ td:nth-child(3) {
   content: 'Próxima rodada';
 }
 
+.proximo:disabled {
+  background-color: var(--cultured);
+  box-shadow: 0px 6px var(--silver-chalice);
+  color: var(--silver-chalice);
+  cursor: default;
+}
+
 .reiniciar {
   background-color: var(--space-cadet);
   color: var(--white);
@@ -149,6 +156,13 @@ td:nth-child(3) {
 
 .reiniciar::after {
   content: 'Nova partida';
+}
+
+.reiniciar:disabled {
+  background-color: var(--cultured);
+  box-shadow: 0px 6px var(--silver-chalice);
+  color: var(--silver-chalice);
+  cursor: default;
 }
 
 /* Extra small devices (phones, 600px and down) */

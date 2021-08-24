@@ -21,30 +21,32 @@ export class RelatorioComponent implements OnInit {
 
   lista: any = [];
   vida: number;
+  desabilitado: boolean;
 
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
   ngOnInit() {
     let i: number = 0;
     this.vida = this.vidas;
+    this.desabilitado = true;
 
-    this.listaProfissoesSorteadas.pipe(take(1)).subscribe(l => {
-      setTimeout(() => {
-        for (i = 0; i < l.length; i++) {
-          this.lista.push({
-            imagem: l[i].imagem,
-            responsavel: l[i].responsavel,
-            profissao: l[i].profissao,
-            acertos: l[i].acertos,
-            erros: l[i].erros
-          });
+    this.listaProfissoesSorteadas.pipe(take(1)).subscribe(async l => {
+      for (i = 0; i < l.length; i++) {
+        this.lista.push({
+          imagem: l[i].imagem,
+          responsavel: l[i].responsavel,
+          profissao: l[i].profissao,
+          acertos: l[i].acertos,
+          erros: l[i].erros
+        });
 
-          setTimeout(() => {
-            this.resetarProfissao();
-          }, 2000);
-        }
-      }, 1000);
+        await this.resetarProfissao();
+      }
     });
+
+    setTimeout(() => {
+      this.desabilitado = false;
+    }, 2000);
   }
 
   fecharRelatorio() {
@@ -55,8 +57,8 @@ export class RelatorioComponent implements OnInit {
     this.flagRelatorioChange.emit(this.flagRelatorio);
   }
 
-  resetarProfissao() {
-    this.taskForceService.resetarProfissao(
+  async resetarProfissao() {
+    await this.taskForceService.resetarProfissao(
       this.keySala,
       this.keyProfissaoSorteada
     );
