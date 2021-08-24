@@ -28,6 +28,7 @@ export class SalaComponent implements OnInit {
   @Input() listaProfissoesSorteadas: Observable<any>;
 
   pronto: boolean;
+  desabilitado: boolean;
   textoConvite = 'Convidar';
 
   ngUnsubscribe = new Subject();
@@ -37,6 +38,7 @@ export class SalaComponent implements OnInit {
   constructor(private taskForceService: TaskforceService) {}
 
   async ngOnInit() {
+    this.desabilitado = true;
     this.taskForceService.limparRegistros(this.keySala);
     await this.removerProfissao();
     await this.sortearProfissao();
@@ -44,6 +46,10 @@ export class SalaComponent implements OnInit {
     this.keyProfissaoSorteadaChange.emit(this.keyProfissaoSorteada);
 
     this.pronto = false;
+
+    setTimeout(() => {
+      this.desabilitado = false;
+    }, 1000);
 
     this.listaProfissoesSorteadas
       .pipe(takeUntil(this.ngUnsubscribe))
