@@ -43,7 +43,7 @@ export class RelatorioComponent implements OnInit {
             this.resetarProfissao();
           }, 2000);
         }
-      }, 500);
+      }, 1000);
     });
   }
 
