@@ -44,7 +44,7 @@ export class SalaComponent implements OnInit {
     this.keyProfissaoSorteadaChange.emit(this.keyProfissaoSorteada);
 
     this.pronto = false;
-    this.taskForceService.ficarPronto(
+    await this.taskForceService.ficarPronto(
       this.keySala,
       this.keyProfissaoSorteada,
       this.pronto
@@ -97,9 +97,9 @@ export class SalaComponent implements OnInit {
     }, 3000);
   }
 
-  ficarPronto() {
+  async ficarPronto() {
     this.pronto = !this.pronto;
-    this.taskForceService.ficarPronto(
+    await this.taskForceService.ficarPronto(
       this.keySala,
       this.keyProfissaoSorteada,
       this.pronto

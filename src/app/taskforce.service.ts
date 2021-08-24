@@ -475,8 +475,8 @@ export class TaskforceService {
     this.db.database.ref('salas/' + keySala).remove();
   }
 
-  ficarPronto(keySala: string, keyProfissao: string, valor: boolean) {
-    this.db.database
+  async ficarPronto(keySala: string, keyProfissao: string, valor: boolean) {
+    await this.db.database
       .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
       .update({ pronto: valor });
   }

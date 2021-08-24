@@ -50,6 +50,7 @@ export class RelatorioComponent implements OnInit {
   }
 
   fecharRelatorio() {
+    setTimeout(() => {}, 2000);
     if (this.vida <= 0) {
       this.taskForceService.resetarSala(this.keySala);
     }
