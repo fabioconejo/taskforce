@@ -61,4 +61,11 @@ export class RelatorioComponent implements OnInit {
       this.keyProfissaoSorteada
     );
   }
+
+  removerProfissao() {
+    this.taskForceService.removerProfissao(
+      this.keySala,
+      this.keyProfissaoSorteada
+    );
+  }
 }
