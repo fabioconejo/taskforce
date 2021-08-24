@@ -43,30 +43,22 @@ export class RelatorioComponent implements OnInit {
         await this.resetarProfissao();
       }
     });
-
-    setTimeout(() => {
-      this.desabilitado = false;
-    }, 2000);
+    this.desabilitado = false;
   }
 
   fecharRelatorio() {
-    setTimeout(() => {}, 2000);
-    if (this.vida <= 0) {
-      this.taskForceService.resetarSala(this.keySala);
+    if (!this.desabilitado) {
+      this.desabilitado = true;
+      if (this.vida <= 0) {
+        this.taskForceService.resetarSala(this.keySala);
+      }
+      this.flagRelatorio = false;
+      this.flagRelatorioChange.emit(this.flagRelatorio);
     }
-    this.flagRelatorio = false;
-    this.flagRelatorioChange.emit(this.flagRelatorio);
   }
 
   async resetarProfissao() {
     await this.taskForceService.resetarProfissao(
-      this.keySala,
-      this.keyProfissaoSorteada
-    );
-  }
-
-  removerProfissao() {
-    this.taskForceService.removerProfissao(
       this.keySala,
       this.keyProfissaoSorteada
     );

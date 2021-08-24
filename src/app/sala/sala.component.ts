@@ -44,11 +44,6 @@ export class SalaComponent implements OnInit {
     this.keyProfissaoSorteadaChange.emit(this.keyProfissaoSorteada);
 
     this.pronto = false;
-    await this.taskForceService.ficarPronto(
-      this.keySala,
-      this.keyProfissaoSorteada,
-      this.pronto
-    );
 
     this.listaProfissoesSorteadas
       .pipe(takeUntil(this.ngUnsubscribe))

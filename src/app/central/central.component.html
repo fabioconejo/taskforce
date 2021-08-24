@@ -21,7 +21,7 @@
       [numTarefasNecessarias]="numTarefasNecessarias" [numRodada]="numRodada" [(flagRelatorio)]="flagRelatorio">
     </painel>
   </div>
-  <div *ngIf="statusSala === 'espera' && flagRelatorio === true" [@fade]>
+  <div *ngIf="statusSala === 'espera' && flagRelatorio === true">
     <relatorio [keySala]="keySala" [vidas]="vidas" [keyProfissaoSorteada]="keyProfissaoSorteada"
       [listaProfissoesSorteadas]="listaProfissoesSorteadas" [(flagRelatorio)]="flagRelatorio"></relatorio>
   </div>
