@@ -30,6 +30,7 @@ export class SalaComponent implements OnInit {
   pronto: boolean;
   desabilitado: boolean;
   textoConvite = 'Convidar';
+  keyProfissaoSorteadaAnterior = '';
 
   ngUnsubscribe = new Subject();
 
@@ -40,8 +41,8 @@ export class SalaComponent implements OnInit {
   async ngOnInit() {
     this.desabilitado = true;
     this.taskForceService.limparRegistros(this.keySala);
-    await this.removerProfissao();
     await this.sortearProfissao();
+    await this.removerProfissao();
     this.profissaoSorteadaChange.emit(this.profissaoSorteada);
     this.keyProfissaoSorteadaChange.emit(this.keyProfissaoSorteada);
 
@@ -70,6 +71,7 @@ export class SalaComponent implements OnInit {
   }
 
   async sortearProfissao() {
+    this.keyProfissaoSorteadaAnterior = this.keyProfissaoSorteada;
     this.keyProfissaoSorteada = await this.taskForceService.sortearProfissao(
       this.keySala,
       this.nickJogador,
@@ -85,7 +87,7 @@ export class SalaComponent implements OnInit {
   async removerProfissao() {
     await this.taskForceService.removerProfissao(
       this.keySala,
-      this.keyProfissaoSorteada
+      this.keyProfissaoSorteadaAnterior
     );
   }
 
