@@ -50,7 +50,7 @@ export class RelatorioComponent implements OnInit {
     if (!this.desabilitado) {
       this.desabilitado = true;
       if (this.vida <= 0) {
-        this.taskForceService.resetarSala(this.keySala);
+        await this.taskForceService.resetarSala(this.keySala);
       }
       this.flagRelatorio = false;
       this.flagRelatorioChange.emit(this.flagRelatorio);
