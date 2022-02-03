@@ -46,7 +46,7 @@ export class RelatorioComponent implements OnInit {
     this.desabilitado = false;
   }
 
-  fecharRelatorio() {
+  async fecharRelatorio() {
     if (!this.desabilitado) {
       this.desabilitado = true;
       if (this.vida <= 0) {
