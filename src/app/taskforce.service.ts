@@ -465,8 +465,8 @@ export class TaskforceService {
     this.db.database.ref('salas/' + keySala).update({ numRodada: rodada + 1 });
   }
 
-  resetarSala(keySala: string) {
-    this.db.database
+  async resetarSala(keySala: string) {
+    await this.db.database
       .ref('salas/' + keySala)
       .update({ vidas: 10, numRodada: 1 });
   }
