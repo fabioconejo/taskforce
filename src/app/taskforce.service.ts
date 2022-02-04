@@ -261,13 +261,13 @@ export class TaskforceService {
     return tarefa;
   }
 
-  setTarefa(
+  async setTarefa(
     keySala: string,
     keyProfissao: string,
     keyTarefa: string,
     tarefa: any
   ) {
-    this.db.database
+    await this.db.database
       .ref(
         'salas/' +
           keySala +

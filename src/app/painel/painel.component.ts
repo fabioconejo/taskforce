@@ -154,7 +154,7 @@ export class PainelComponent implements OnInit {
       );
     }
 
-    this.taskForceService.setTarefa(
+    await this.taskForceService.setTarefa(
       this.keySala,
       this.keyProfissaoSorteada,
       registro.key,
