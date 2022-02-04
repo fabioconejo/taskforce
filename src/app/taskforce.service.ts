@@ -7,7 +7,7 @@ import {
   takeUntil,
   takeWhile,
   timeout,
-  catchError
+  catchError,
 } from 'rxjs/operators';
 import { interval, Observable, Subject, timer } from 'rxjs';
 import { DataSnapshot } from '@angular/fire/database/interfaces';
@@ -23,22 +23,17 @@ export class TaskforceService {
   criarSala(): string {
     var sala: any;
     var key: string;
-    key = Math.random()
-      .toString(36)
-      .substr(2, 5);
+    key = Math.random().toString(36).substr(2, 5);
 
     sala = {
       status: 'espera',
       numRodada: 1,
       vidas: 10,
       profissoes: [],
-      registros: []
+      registros: [],
     };
 
-    this.db.database
-      .ref('salas')
-      .child(key)
-      .set(sala);
+    this.db.database.ref('salas').child(key).set(sala);
 
     return key;
   }
@@ -50,7 +45,7 @@ export class TaskforceService {
       .ref('salas/')
       .orderByKey()
       .equalTo(keySala)
-      .once('value', snap => {
+      .once('value', (snap) => {
         result = snap.val() !== null;
       });
 
@@ -62,7 +57,7 @@ export class TaskforceService {
 
     await this.db.database
       .ref('salas/' + keySala + '/status/')
-      .once('value', snap => {
+      .once('value', (snap) => {
         result = snap.val() === 'espera';
       });
 
@@ -76,7 +71,7 @@ export class TaskforceService {
       .ref('salas/' + keySala + '/profissoes/')
       .orderByChild('responsavel')
       .equalTo(nick)
-      .once('value', snap => {
+      .once('value', (snap) => {
         result = snap.val() == null;
       });
 
@@ -118,10 +113,10 @@ export class TaskforceService {
       .list('salas/' + keySala + '/profissoes/')
       .snapshotChanges()
       .pipe(
-        map(changes => {
-          return changes.map(c => ({
+        map((changes) => {
+          return changes.map((c) => ({
             key: c.payload.key,
-            ...(c.payload.val() as {})
+            ...(c.payload.val() as {}),
           }));
         })
       );
@@ -145,7 +140,7 @@ export class TaskforceService {
         .ref('salas/' + keySala + '/profissoes/')
         .orderByChild('id')
         .equalTo(profissao.id)
-        .once('value', snap => {
+        .once('value', (snap) => {
           result = snap.val() !== null;
         });
     } while (result && i !== j % profissoes.length);
@@ -164,7 +159,7 @@ export class TaskforceService {
       imagem: profissao.imagem,
       responsavel: nickJogador,
       acertos: 0,
-      erros: 0
+      erros: 0,
     };
 
     let keyProfissao = this.db.database
@@ -187,7 +182,7 @@ export class TaskforceService {
 
     await this.db.database
       .ref('salas/' + keySala + '/profissoes/')
-      .once('value', snapshot => {
+      .once('value', (snapshot) => {
         j = Math.floor(Math.random() * Object.keys(snapshot.val()).length);
         keyProfissao = Object.keys(snapshot.val())[j];
       });
@@ -200,7 +195,7 @@ export class TaskforceService {
 
     await this.db.database
       .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
-      .once('value', snapshot => {
+      .once('value', (snapshot) => {
         profissao = snapshot.val();
       });
 
@@ -214,7 +209,7 @@ export class TaskforceService {
         id: 0,
         profissao: 'desconhecido',
         imagem: '000-unknown.png',
-        pronto: false
+        pronto: false,
       });
   }
 
@@ -229,7 +224,7 @@ export class TaskforceService {
 
     await this.db.database
       .ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/tarefas/')
-      .once('value', snapshot => {
+      .once('value', (snapshot) => {
         keyTarefa = Object.keys(snapshot.val())[
           Math.floor(Math.random() * Object.keys(snapshot.val()).length)
         ];
@@ -254,7 +249,7 @@ export class TaskforceService {
           '/tarefas/' +
           keyTarefa
       )
-      .once('value', snapshot => {
+      .once('value', (snapshot) => {
         tarefa = snapshot.val();
       });
 
@@ -318,7 +313,7 @@ export class TaskforceService {
 
     await this.db.database
       .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
-      .once('value', snapshot => {
+      .once('value', (snapshot) => {
         idProfissao = snapshot.val().id;
         snapshotTarefas = snapshot.child('tarefas').child(keyTarefa);
         idTarefa = snapshotTarefas.val().id;
@@ -329,7 +324,7 @@ export class TaskforceService {
       id: idTarefa,
       ativo: true,
       concluido: false,
-      texto: texto
+      texto: texto,
     };
 
     return this.db.database
@@ -348,10 +343,10 @@ export class TaskforceService {
       .list('salas/' + keySala + '/registros/')
       .snapshotChanges()
       .pipe(
-        map(changes => {
-          return changes.map(c => ({
+        map((changes) => {
+          return changes.map((c) => ({
             key: c.payload.key,
-            ...(c.payload.val() as {})
+            ...(c.payload.val() as {}),
           }));
         })
       );
@@ -366,10 +361,10 @@ export class TaskforceService {
     let refRegistros = this.db.database.ref('salas/' + keySala + '/registros/');
     let acaoIncorreta = true;
 
-    await refRegistros.once('value', async snapshot => {
+    await refRegistros.once('value', async (snapshot) => {
       let numTarefas = 0;
 
-      snapshot.forEach(r => {
+      snapshot.forEach((r) => {
         if (
           r.val().ativo &&
           r.val().idProfissao === registro.idProfissao &&
@@ -413,7 +408,7 @@ export class TaskforceService {
 
     await this.db.database
       .ref('salas/' + keySala + '/registros/' + keyRegistro + '/concluido')
-      .once('value', snapshot => {
+      .once('value', (snapshot) => {
         concluido = snapshot.val();
       });
 
@@ -441,7 +436,7 @@ export class TaskforceService {
     if (acerto) {
       await this.db.database
         .ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/acertos')
-        .once('value', snapshot => {
+        .once('value', (snapshot) => {
           valor = valor + snapshot.val();
         });
 
@@ -451,7 +446,7 @@ export class TaskforceService {
     } else {
       await this.db.database
         .ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/erros')
-        .once('value', snapshot => {
+        .once('value', (snapshot) => {
           valor = valor + snapshot.val();
         });
 
