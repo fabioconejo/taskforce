@@ -18,21 +18,27 @@
   overflow-x: auto;
 }
 
-.img-profissao {
+.fundo-profissao {
   width: 25%;
   height: 100%;
 
   margin-left: 5%;
 
   background: var(--personagem-bg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 
   shape-outside: circle();
   clip-path: circle();
 
   float: left;
+}
+
+.img-profissao {
+  height: 100%;
+  width: 100%;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .info-amigo {

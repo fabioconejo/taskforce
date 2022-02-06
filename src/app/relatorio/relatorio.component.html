@@ -3,7 +3,9 @@
     <table class="tabela-relatorio">
       <thead>
         <tr>
-          <th [ngClass]="(this.vida <= 0) ? 'titulo derrota' : 'titulo vitoria'"></th>
+          <th
+            [ngClass]="this.vida <= 0 ? 'titulo derrota' : 'titulo vitoria'"
+          ></th>
           <th>Tarefas Concluídas</th>
           <th>Vidas Perdidas</th>
         </tr>
@@ -11,20 +13,35 @@
       <tbody>
         <tr *ngFor="let l of lista">
           <td>
-            <div class="img-profissao" style.background-image="url({{baseUrl}}profissionais/{{l.imagem}})">
+            <div class="fundo-profissao">
+              <div
+                class="img-profissao"
+                style.background-image="url({{ baseUrl }}profissionais/{{
+                  l.imagem
+                }})"
+              ></div>
             </div>
+
             <div class="info-amigo">
-              <p class="nick">{{l.responsavel}}<br/><span class="texto-profissao">{{l.profissao}}</span></p>
+              <p class="nick">
+                {{ l.responsavel }}<br /><span class="texto-profissao">{{
+                  l.profissao
+                }}</span>
+              </p>
             </div>
           </td>
-          <td class="num num-concluidas">{{l.acertos}}</td>
-          <td class="num num-perdidas">{{l.erros}}</td>
+          <td class="num num-concluidas">{{ l.acertos }}</td>
+          <td class="num num-perdidas">{{ l.erros }}</td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <div class="acao">
-    <button [disabled]="this.desabilitado" [ngClass]="(this.vida <= 0) ? 'reiniciar' : 'proximo'" (click)="fecharRelatorio()"></button>
+    <button
+      [disabled]="this.desabilitado"
+      [ngClass]="this.vida <= 0 ? 'reiniciar' : 'proximo'"
+      (click)="fecharRelatorio()"
+    ></button>
   </div>
 </div>
