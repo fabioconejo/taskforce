@@ -8,8 +8,7 @@
   width: 100%;
   height: 100%;
   border-radius: 3px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(3px) brightness(102%);
+  background-color: var(--black-fogra-29);
   box-sizing: border-box;
   padding: 1%;
 }
