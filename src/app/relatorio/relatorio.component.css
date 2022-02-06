@@ -1,7 +1,7 @@
 table,
 th,
 td {
-  border: 1px solid var(--cultured);
+  border: 1px solid var(--box-border);
   border-collapse: collapse;
 }
 
@@ -37,7 +37,7 @@ td:nth-child(3) {
 }
 
 .card-relatorio {
-  background-color: var(--semi-white);
+  background-color: var(--box-bg);
   float: left;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
   overflow-y: auto;
@@ -72,7 +72,7 @@ td:nth-child(3) {
 
   margin-left: 5%;
 
-  background-color: var(--cultured);
+  background-color: var(--personagem-bg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
