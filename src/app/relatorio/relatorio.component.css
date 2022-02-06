@@ -39,6 +39,7 @@ td:nth-child(3) {
 .card-relatorio {
   background-color: var(--box-bg);
   float: left;
+  border-radius: 3px;
   border: 2px solid var(--box-border);
   overflow-y: auto;
 }
@@ -83,7 +84,7 @@ td:nth-child(3) {
 .img-profissao {
   width: 100%;
   height: 100%;
-  
+
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
