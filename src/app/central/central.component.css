@@ -24,7 +24,7 @@
 
   margin-left: 5%;
 
-  background-color: var(--personagem-bg);
+  background: var(--personagem-bg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

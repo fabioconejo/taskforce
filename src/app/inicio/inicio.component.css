@@ -33,7 +33,7 @@
 
   shape-outside: circle();
   clip-path: circle();
-  background-color: var(--personagem-bg);
+  background: var(--personagem-bg);
   float: left;
 }
 

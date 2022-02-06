@@ -25,7 +25,11 @@
   --ft-color: var(--semi-white);
   --box-bg: var(--black-fogra-29);
   --box-border: var(--space-cadet);
-  --personagem-bg: var(--space-cadet);
+  --personagem-bg: radial-gradient(
+    circle,
+    var(--space-cadet) 0%,
+    var(--black-fogra-29) 100%
+  );
   --slot-bg: var(--cultured);
   --slot-ativo: var(--blue-jeans);
   --monitor-bg: var(--black-fogra-39);
