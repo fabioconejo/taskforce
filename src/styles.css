@@ -25,6 +25,8 @@
   --box-bg: var(--black-fogra-29);
   --box-border: var(--space-cadet);
   --personagem-bg: var(--space-cadet);
+  --slot-bg: var(--cultured);
+  --slot-ativo: var(--blue-jeans);
 }
 
 * {

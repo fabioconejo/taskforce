@@ -147,14 +147,14 @@
   margin-left: 7.5%;
   margin-right: 7.5%;
   float: left;
-  background-color: var(--silver-chalice);
+  background-color: var(--slot-bg);
   shape-outside: circle();
   clip-path: circle();
   cursor: pointer;
 }
 
 .slot-ativo {
-  background-color: var(--blue-jeans);
+  background-color: var(--slot-ativo);
 }
 
 @keyframes pop {
