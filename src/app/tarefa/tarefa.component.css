@@ -1,8 +1,8 @@
 .tarefa {
   height: 100%;
   width: 100%;
-  background-color: var(--white);
-  border: 1px solid var(--cultured);
+  background-color: var(--box-bg);
+  border: 1px solid var(--box-border);
   box-sizing: border-box;
 }
 
