@@ -1,18 +1,18 @@
 @keyframes input-animation {
   0% {
-    color: var(--eeire-black);
+    color: var(--monitor-bg);
   }
   49% {
-    color: var(--eeire-black);
+    color: var(--monitor-bg);
   }
   50% {
-    color: var(--white);
+    color: var(--ft-color);
   }
   99% {
-    color: var(--white);
+    color: var(--ft-color);
   }
   100% {
-    color: var(--eeire-black);
+    color: var(--monitor-bg);
   }
 }
 
@@ -52,9 +52,9 @@
 .monitor {
   height: 100%;
   width: 100%;
-  background-color: var(--eeire-black);
+  background-color: var(--monitor-bg);
   border-radius: 3px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  border: 2px solid var(--box-border);
   overflow-y: auto;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .tempo-decorrido {
-  background-color: var(--eeire-black);
+  background-color: var(--monitor-bg);
   height: 100%;
   width: 100%;
   float: right;

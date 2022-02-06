@@ -19,14 +19,16 @@
   --eletric-purple: #be3fff;
 
   --black-fogra-29: #161925;
+  --black-fogra-39: #121212;
 
   --bg-color: var(--black-fogra-29);
-  --ft-color: var(--cultured);
+  --ft-color: var(--semi-white);
   --box-bg: var(--black-fogra-29);
   --box-border: var(--space-cadet);
   --personagem-bg: var(--space-cadet);
   --slot-bg: var(--cultured);
   --slot-ativo: var(--blue-jeans);
+  --monitor-bg: var(--black-fogra-39);
 }
 
 * {
@@ -55,7 +57,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--cultured);
+  background-color: var(--box-border);
   border-radius: 3px;
 }
 
