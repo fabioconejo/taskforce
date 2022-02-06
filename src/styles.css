@@ -17,12 +17,14 @@
   --black-fogra: #04050a;
   --eeire-black: #232323;
   --eletric-purple: #be3fff;
-  
+
   --black-fogra-29: #161925;
 
   --bg-color: var(--black-fogra-29);
-  --ft-colot: var(--space-cadet);
+  --ft-color: var(--cultured);
   --box-bg: var(--black-fogra-29);
+  --box-border: var(--space-cadet);
+  --personagem-bg: var(--space-cadet);
 }
 
 * {
@@ -40,7 +42,7 @@ body {
   background-image: url(https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/backpattern2.png);
   background-size: 150px;
   background-position: 0px 0px;
-  color: var(--space-cadet);
+  color: var(--ft-color);
 
   animation: bg-slide 15s linear infinite;
 }

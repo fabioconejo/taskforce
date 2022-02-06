@@ -16,12 +16,13 @@
 }
 
 .card {
-  background-color: var(--semi-white);
+  background-color: var(--box-bg);
   height: 90%;
   width: 80%;
   margin-left: 10%;
   margin-top: 2.5%;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  border: 2px solid var(--box-border);
+  border-radius: 3px;
   padding-top: 2.5%;
 }
 
@@ -32,7 +33,7 @@
 
   shape-outside: circle();
   clip-path: circle();
-  background-color: var(--cultured);
+  background-color: var(--personagem-bg);
   float: left;
 }
 
@@ -325,12 +326,10 @@
   .box-login {
     padding-left: 5%;
     padding-right: 5%;
-    border-right: 1px solid var(--cultured);
   }
 
   .box-tutorial {
     padding-left: 5%;
-    border-left: 1px solid var(--cultured);
   }
 
   .img-personagem {
