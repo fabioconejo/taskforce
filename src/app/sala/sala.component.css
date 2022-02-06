@@ -5,11 +5,12 @@
 
 .profissao-jogador {
   float: left;
-  background-color: var(--semi-white);
+  background-color: var(--box-bg);
   border-radius: 3px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
   padding: 1.25%;
   box-sizing: border-box;
+  border: 2px solid var(--box-border);
   border-left: 5px solid var(--cultured);
 }
 
@@ -85,11 +86,12 @@
 .profissao-amigo {
   position: relative;
   float: left;
-  background-color: var(--semi-white);
+  background-color: var(--box-bg);
   border-radius: 3px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
   padding: 1%;
+  border: 2px solid var(--box-border);
   border-left: 5px solid var(--cultured);
 }
 
