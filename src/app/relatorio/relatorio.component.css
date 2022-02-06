@@ -39,7 +39,7 @@ td:nth-child(3) {
 .card-relatorio {
   background-color: var(--box-bg);
   float: left;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  border: 2px solid var(--box-border);
   overflow-y: auto;
 }
 

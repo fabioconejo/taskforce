@@ -37,7 +37,7 @@ option {
   outline: none;
   border: none;
   font-size: 0.8em;
-  background-color: var(--eeire-black);
+  background-color: var(--monitor-bg);
   color: var(--semi-white);
   font-family: 'Roboto Mono';
   scroll-behavior: smooth;
