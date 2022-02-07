@@ -19,7 +19,8 @@ th {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 90%;
-  background-color: var(--box-border);
+  background-color: var(--box-bg);
+  border: 2px solid var(--box-border);
   color: var(--ft-color);
   text-align: center;
   border-radius: 3px;
@@ -220,6 +221,10 @@ td:nth-child(3) {
     font-size: 3.5vw;
   }
 
+  .tooltiptext {
+    font-size: 2.5vw;
+  }
+
   .nick {
     font-size: 4.5vw;
   }
@@ -253,6 +258,10 @@ td:nth-child(3) {
 
   th {
     font-size: 3vw;
+  }
+
+  .tooltiptext {
+    font-size: 2.5vw;
   }
 
   .nick {
@@ -292,6 +301,10 @@ td:nth-child(3) {
     font-size: 2vw;
   }
 
+  .tooltiptext {
+    font-size: 1.6vw;
+  }
+
   .nick {
     font-size: 2.75vw;
   }
@@ -329,6 +342,10 @@ td:nth-child(3) {
     font-size: 1.5vw;
   }
 
+  .tooltiptext {
+    font-size: 1.1vw;
+  }
+
   .nick {
     font-size: 2vw;
   }
@@ -364,6 +381,10 @@ td:nth-child(3) {
 
   th {
     font-size: 1.25vw;
+  }
+
+  .tooltiptext {
+    font-size: 1vw;
   }
 
   .nick {
