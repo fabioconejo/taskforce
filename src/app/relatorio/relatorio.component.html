@@ -6,8 +6,14 @@
           <th
             [ngClass]="this.vida <= 0 ? 'titulo derrota' : 'titulo vitoria'"
           ></th>
-          <th>Tarefas Concluídas</th>
-          <th>Vidas Perdidas</th>
+          <th class="tooltip">
+            Tarefas Concluídas
+            <div class="tooltiptext">teste</div>
+          </th>
+          <th class="tooltip">
+            Vidas Perdidas
+            <div class="tooltiptext">teste2</div>
+          </th>
         </tr>
       </thead>
       <tbody>

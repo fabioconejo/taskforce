@@ -12,19 +12,22 @@ th {
   padding: 2% 2% 0 2%;
 }
 
+.tooltip {
+  position: relative;
+}
+
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
+  width: 90%;
+  background-color: var(--box-border);
+  color: var(--ft-color);
   text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
+  border-radius: 3px;
   position: absolute;
   z-index: 1;
-  top: 150%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: -45%;
+  padding: 5% 0%;
 }
 
 .tooltip .tooltiptext::after {
@@ -35,7 +38,7 @@ th {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent black transparent;
+  border-color: transparent transparent var(--box-border) transparent;
 }
 
 .tooltip:hover .tooltiptext {
