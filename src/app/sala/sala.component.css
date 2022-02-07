@@ -132,9 +132,9 @@
 }
 
 .convidar {
-  background-color: var(--space-cadet);
+  background-color: var(--blue-jeans);
   color: var(--white);
-  box-shadow: 0px 6px var(--black-fogra);
+  box-shadow: 0px 6px var(--saphire-blue);
 }
 
 .convidar:active {
