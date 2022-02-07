@@ -18,8 +18,8 @@ th {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 90%;
-  background-color: var(--box-bg);
+  width: 95%;
+  background-color: var(--monitor-bg);
   border: 2px solid var(--box-border);
   color: var(--ft-color);
   text-align: center;
@@ -27,12 +27,13 @@ th {
   position: absolute;
   z-index: 1;
   left: 50%;
-  margin-left: -45%;
+  margin-left: -47.5%;
   padding: 5% 2.5%;
+  box-sizing: border-box;
 }
 
 .tooltip .tooltiptext::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 100%;
   left: 50%;
