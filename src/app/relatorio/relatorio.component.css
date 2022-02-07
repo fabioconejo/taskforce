@@ -27,7 +27,7 @@ th {
   z-index: 1;
   left: 50%;
   margin-left: -45%;
-  padding: 5% 0%;
+  padding: 5% 2.5%;
 }
 
 .tooltip .tooltiptext::after {
