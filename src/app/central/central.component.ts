@@ -1,4 +1,4 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import { animate, style, transition, trigger } from '@angular/animations';
@@ -30,6 +30,7 @@ export class CentralComponent implements OnInit {
   ) {}
 
   @Input() keySala: string;
+  @Output() keySalaChange = new EventEmitter();
   @Input() sala: Observable<any>;
   @Input() nickJogador: string;
 
@@ -75,7 +76,8 @@ export class CentralComponent implements OnInit {
             ))
           ) {
             this.keySala = null;
-            this.router.navigate(['/']);
+            this.keySalaChange.emit(this.keySala);
+            this.router.navigate(['/'])
           }
         }
 
