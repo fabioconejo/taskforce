@@ -95,6 +95,13 @@
   border-left: 5px solid var(--cultured);
 }
 
+.lista-acoes {
+  position: absolute;
+  top: 5%;
+  right: 2.5%;
+  cursor: pointer;
+}
+
 .img-amigo {
   float: left;
   background-image: url('https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/profissionais/000-unknown.png');

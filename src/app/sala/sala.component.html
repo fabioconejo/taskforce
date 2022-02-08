@@ -1,43 +1,94 @@
 <div class="sala">
-  <div class="profissao-jogador"
-    [style.display]="this.profissaoSorteada.responsavel === this.nickJogador ? 'inherit' : 'none'"
-    [style.border-left-color]="this.pronto ? 'var(--medium-sea-green)' : 'var(--tart-orange)'">
+  <div
+    class="profissao-jogador"
+    [style.display]="
+      this.profissaoSorteada.responsavel === this.nickJogador
+        ? 'inherit'
+        : 'none'
+    "
+    [style.border-left-color]="
+      this.pronto ? 'var(--medium-sea-green)' : 'var(--tart-orange)'
+    "
+  >
     <div class="cabecalho">
       <div class="img-coracao">
-        <p class="num-vidas">{{vidas}}x</p>
+        <p class="num-vidas">{{ vidas }}x</p>
       </div>
     </div>
 
     <div class="rodada">
-      <p>Rodada {{numRodada}}</p>
+      <p>Rodada {{ numRodada }}</p>
     </div>
 
-    <div class="img-jogador" style.background-image="url({{baseUrl}}profissionais/{{this.profissaoSorteada.imagem}})">
-    </div>
+    <div
+      class="img-jogador"
+      style.background-image="url({{ baseUrl }}profissionais/{{
+        this.profissaoSorteada.imagem
+      }})"
+    ></div>
 
     <div class="info">
-      <p>Sua profissão na rodada:<br/><span>{{this.profissaoSorteada.profissao}}</span></p>
+      <p>
+        Sua profissão na rodada:<br /><span>{{
+          this.profissaoSorteada.profissao
+        }}</span>
+      </p>
     </div>
   </div>
 
   <div class="amigos">
-    <div class="profissao-amigo" *ngFor="let l of listaProfissoesSorteadas | async"
+    <div
+      class="profissao-amigo"
+      *ngFor="let l of listaProfissoesSorteadas | async"
       [style.display]="l.responsavel === this.nickJogador ? 'none' : 'inherit'"
-      [style.border-left-color]="l.pronto ? 'var(--medium-sea-green)' : 'var(--tart-orange)'">
-      <div class="img-amigo" style.background-image="url({{baseUrl}}profissionais/{{l.imagem}})"></div>
+      [style.border-left-color]="
+        l.pronto ? 'var(--medium-sea-green)' : 'var(--tart-orange)'
+      "
+    >
+      <div class="lista-acoes">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="var(--blue-jeans)"
+          class="bi bi-three-dots-vertical"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+          />
+        </svg>
+      </div>
+      <div
+        class="img-amigo"
+        style.background-image="url({{ baseUrl }}profissionais/{{ l.imagem }})"
+      ></div>
       <div class="info-amigo">
-        <p>{{l.responsavel}}<br/><span>{{l.profissao}}</span></p>
+        <p>
+          {{ l.responsavel }}<br /><span>{{ l.profissao }}</span>
+        </p>
       </div>
     </div>
   </div>
 
-  <div class="acoes" [style.display]="this.profissaoSorteada.responsavel === this.nickJogador ? 'inherit' : 'none'">
+  <div
+    class="acoes"
+    [style.display]="
+      this.profissaoSorteada.responsavel === this.nickJogador
+        ? 'inherit'
+        : 'none'
+    "
+  >
     <div class="acao">
-      <button class="convidar" (click)="convidar()">{{textoConvite}}</button>
+      <button class="convidar" (click)="convidar()">{{ textoConvite }}</button>
     </div>
 
     <div class="acao">
-      <button [disabled]="desabilitado" [ngClass]="this.pronto ? 'cancelar' : 'pronto'" (click)='ficarPronto()'></button>
+      <button
+        [disabled]="desabilitado"
+        [ngClass]="this.pronto ? 'cancelar' : 'pronto'"
+        (click)="ficarPronto()"
+      ></button>
     </div>
   </div>
 </div>
