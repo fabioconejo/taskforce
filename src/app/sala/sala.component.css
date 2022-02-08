@@ -108,7 +108,7 @@
   background-color: var(--monitor-bg);
   border: 2px solid var(--box-border);
   border-radius: 3px;
-  padding: 100%;
+  padding: 50% 100%;
 
   outline: none;
   opacity: 0;
