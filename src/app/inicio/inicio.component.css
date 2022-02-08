@@ -25,6 +25,13 @@
   font-size: 2em;
 }
 
+.logo::after {
+  content: '_';
+  animation-name: input-animation;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
 .card {
   background-color: var(--box-bg);
   height: 90%;
@@ -180,6 +187,24 @@
 
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes input-animation {
+  0% {
+    color: var(--monitor-bg);
+  }
+  49% {
+    color: var(--monitor-bg);
+  }
+  50% {
+    color: var(--ft-color);
+  }
+  99% {
+    color: var(--ft-color);
+  }
+  100% {
+    color: var(--monitor-bg);
   }
 }
 
