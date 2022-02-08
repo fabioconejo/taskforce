@@ -100,8 +100,11 @@ export class SalaComponent implements OnInit {
     }, 3000);
   }
 
-  kickar() {
-    console.log("teste");
+  async kickar(keyProfissao) {
+    await this.taskForceService.removerProfissao(
+      this.keySala,
+      keyProfissao
+    );
   }
 
   async ficarPronto() {
