@@ -42,9 +42,9 @@ export class SalaComponent implements OnInit {
     this.desabilitado = true;
     this.taskForceService.limparRegistros(this.keySala);
     await this.sortearProfissao();
-    await this.removerProfissao();
     this.profissaoSorteadaChange.emit(this.profissaoSorteada);
     this.keyProfissaoSorteadaChange.emit(this.keyProfissaoSorteada);
+    await this.removerProfissao();
 
     this.pronto = false;
 
