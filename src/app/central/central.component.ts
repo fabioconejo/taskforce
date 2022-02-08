@@ -14,14 +14,14 @@ import { takeUntil } from 'rxjs/operators';
     trigger('fade', [
       transition(':enter', [
         style({ opacity: 0 }),
-        animate('300ms 300ms ease-out', style({ opacity: 1 }))
+        animate('300ms 300ms ease-out', style({ opacity: 1 })),
       ]),
       transition(':leave', [
         style({ opacity: 1 }),
-        animate('300ms ease-in', style({ opacity: 0 }))
-      ])
-    ])
-  ]
+        animate('300ms ease-in', style({ opacity: 0 })),
+      ]),
+    ]),
+  ],
 })
 export class CentralComponent implements OnInit {
   constructor(
@@ -52,7 +52,7 @@ export class CentralComponent implements OnInit {
   async ngOnInit() {
     this.flagRelatorio = false;
     this.sala = this.taskForceService.getSala(this.keySala);
-    this.sala.pipe(takeUntil(this.ngUnsubscribe)).subscribe(s => {
+    this.sala.pipe(takeUntil(this.ngUnsubscribe)).subscribe((s) => {
       this.numRodada = s.numRodada;
       this.statusSala = s.status;
       this.vidas = s.vidas;
@@ -62,17 +62,23 @@ export class CentralComponent implements OnInit {
       }
     });
 
-    this.listaProfissoesSorteadas = await this.taskForceService.getProfissoesSorteadas(
-      this.keySala
-    );
+    this.listaProfissoesSorteadas =
+      await this.taskForceService.getProfissoesSorteadas(this.keySala);
     this.listaProfissoesSorteadas
       .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe(async lista => {
-        if(await this.taskForceService.checarNick(this.keySala, this.nickJogador)) {
-          this.keySala = null;
-          this.router.navigate(['/']);
+      .subscribe(async (lista) => {
+        if(this.keyProfissaoSorteada){
+          if (
+            !(await this.taskForceService.getProfissao(
+              this.keySala,
+              this.keyProfissaoSorteada
+            ))
+          ) {
+            this.keySala = null;
+            this.router.navigate(['/']);
+          }
         }
-        
+
         this.numJogadores = lista.length;
         this.tempoMonitor = Math.floor(
           (10 + this.numJogadores * 5) * Math.pow(0.9, this.numRodada)
