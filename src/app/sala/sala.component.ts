@@ -4,7 +4,7 @@ import {
   Input,
   HostListener,
   EventEmitter,
-  Output
+  Output,
 } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -14,7 +14,7 @@ import { TaskforceService } from '../taskforce.service';
 @Component({
   selector: 'sala',
   templateUrl: './sala.component.html',
-  styleUrls: ['./sala.component.css']
+  styleUrls: ['./sala.component.css'],
 })
 export class SalaComponent implements OnInit {
   @Input() keySala: string;
@@ -54,7 +54,7 @@ export class SalaComponent implements OnInit {
 
     this.listaProfissoesSorteadas
       .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe(lista => {
+      .subscribe((lista) => {
         let total: number = lista.length;
         let prontos: number = 0;
 
@@ -101,10 +101,7 @@ export class SalaComponent implements OnInit {
   }
 
   async kickar(keyProfissao) {
-    await this.taskForceService.removerProfissao(
-      this.keySala,
-      keyProfissao
-    );
+    await this.taskForceService.removerProfissao(this.keySala, keyProfissao);
   }
 
   async ficarPronto() {

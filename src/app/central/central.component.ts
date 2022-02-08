@@ -67,7 +67,12 @@ export class CentralComponent implements OnInit {
     );
     this.listaProfissoesSorteadas
       .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe(lista => {
+      .subscribe(async lista => {
+        if(await this.taskForceService.checarNick(this.keySala, this.nickJogador)) {
+          this.keySala = null;
+          this.router.navigate(['/']);
+        }
+        
         this.numJogadores = lista.length;
         this.tempoMonitor = Math.floor(
           (10 + this.numJogadores * 5) * Math.pow(0.9, this.numRodada)
