@@ -100,6 +100,10 @@ export class SalaComponent implements OnInit {
     }, 3000);
   }
 
+  kickar() {
+    console.log("teste");
+  }
+
   async ficarPronto() {
     this.pronto = !this.pronto;
     await this.taskForceService.ficarPronto(

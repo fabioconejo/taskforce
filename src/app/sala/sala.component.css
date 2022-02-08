@@ -107,8 +107,8 @@
   right: 0;
   background-color: var(--monitor-bg);
   border: 2px solid var(--box-border);
-  padding: 5%;
-  
+  width: 100%;
+
   outline: none;
   opacity: 0;
   z-index: -1;
@@ -157,6 +157,16 @@
 
 .acao {
   float: left;
+}
+
+.kickar {
+  background-color: var(--tart-orange);
+  color: var(--white);
+  box-shadow: 0px 6px var(--firebrick);
+}
+
+.kickar:active {
+  box-shadow: 0px 2px var(--firebrick);
 }
 
 .convidar {
