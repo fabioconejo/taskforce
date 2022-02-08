@@ -9,10 +9,22 @@
 }
 
 .logo {
-  background-image: url('https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/logo.png');
+  /*background-image: url('https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/logo.png');
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
+  background-position: center;*/
+
+  width: 30%;
+  margin-left: 35%;
+  background-color: var(--monitor-bg);
+  border: 2px solid var(--box-border);
+  border-radius: 3px;
+  font-family: 'Roboto Mono';
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
 }
 
 .card {
