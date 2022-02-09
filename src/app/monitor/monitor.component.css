@@ -52,10 +52,38 @@
 .monitor {
   height: 100%;
   width: 100%;
+  position: relative;
   background-color: var(--monitor-bg);
   border-radius: 3px;
   border: 2px solid var(--box-border);
   overflow-y: auto;
+}
+
+.dica {
+  width: 90%;
+  height: 10%;
+  top: 5%;
+  left: 5%;
+  padding: 0.5%;
+
+  position: absolute;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--box-bg);
+  border: 2px solid var(--box-border);
+  border-radius: 3px;
+}
+
+.fechar {
+  position: absolute;
+  cursor: pointer;
+  right: 1%;
+  top: 5%;
+}
+
+.fechar:hover {
+  color: var(--blue-jeans);
 }
 
 .letreiro {

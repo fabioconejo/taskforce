@@ -1,10 +1,20 @@
 <div class="monitor">
+  <div class="dica">
+    Execute a tarefa ou informe-a para seus amigos para que eles possam
+    executá-la
+    <div class="fechar">x</div>
+  </div>
   <div class="letreiro">
-    <p style="--tamanho: {{(texto.length * 0.6) + 0.6}}em" [style.display]="pausa ? 'none' : 'flex'"
-      style.animation-duration="{{tempo}}s">{{texto}}</p>
+    <p
+      style="--tamanho: {{ texto.length * 0.6 + 0.6 }}em"
+      [style.display]="pausa ? 'none' : 'flex'"
+      style.animation-duration="{{ tempo }}s"
+    >
+      {{ texto }}
+    </p>
   </div>
 
   <div class="tempo" [style.display]="pausa ? 'none' : 'block'">
-    <div class="tempo-decorrido" style.animation-duration="{{tempo}}s"></div>
+    <div class="tempo-decorrido" style.animation-duration="{{ tempo }}s"></div>
   </div>
 </div>
