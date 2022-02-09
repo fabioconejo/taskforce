@@ -1,8 +1,8 @@
 <div class="monitor">
-  <div class="dica">
+  <div class="dica" [style.display]="dica ? 'grid' : 'none'">
     Execute a tarefa ou informe-a para seus amigos para que eles possam
     executá-la
-    <div class="fechar">x</div>
+    <div class="fechar" (click)="fechar()">x</div>
   </div>
   <div class="letreiro">
     <p
