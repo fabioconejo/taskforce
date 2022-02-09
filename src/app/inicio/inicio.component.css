@@ -9,11 +9,6 @@
 }
 
 .logo {
-  /*background-image: url('https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/logo.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;*/
-
   background-color: var(--monitor-bg);
   border: 2px solid var(--box-border);
   border-radius: 3px;
