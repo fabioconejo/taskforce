@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
         'https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/taskforce-print.png',
     });
     this.meta.addTag({
-      property: 'theme-color',
+      name: 'theme-color',
       content: 'var(--bg-color)',
     });
   }
