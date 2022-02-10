@@ -6,14 +6,14 @@ import { TaskforceService } from '../taskforce.service';
 @Component({
   selector: 'inicio',
   templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
   constructor(
     private taskForceService: TaskforceService,
     private router: Router
   ) {
-    this.router.events.subscribe(async val => {
+    this.router.events.subscribe(async (val) => {
       if (val instanceof RoutesRecognized) {
         try {
           this.keySala = val.state.root.firstChild.params['keySala'];
@@ -39,26 +39,26 @@ export class InicioComponent implements OnInit {
   carrossel: any = [
     {
       imagem: 'tutorial-0.png',
-      texto: 'Chama a galera para um chat de voz (Discord, Zoom, Skype...)'
+      texto: 'Chama a galera para um chat de voz (Discord, Zoom, Skype...)',
     },
     {
       imagem: 'tutorial-1.png',
-      texto: 'Veja qual profissão foi sorteada para você e para seus amigos'
+      texto: 'Veja qual profissão foi sorteada para você e para seus amigos',
     },
     {
       imagem: 'tutorial-2.png',
       texto:
-        'Fique atento à tarefa exibida no monitor e informe as tarefas que não são suas'
+        'Fique atento à tarefa exibida no monitor e informe as tarefas que não são suas',
     },
     {
       imagem: 'tutorial-3.png',
-      texto: 'Execute as tarefas que estão na sua responsabilidade'
+      texto: 'Execute as tarefas que estão na sua responsabilidade',
     },
     {
       imagem: 'tutorial-4.png',
       texto:
-        'Cuidado, cada falha significa vida a menos. Sobreviva o maior número de rodadas que conseguir'
-    }
+        'Cuidado, cada falha significa vida a menos. Sobreviva o maior número de rodadas que conseguir',
+    },
   ];
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
@@ -113,7 +113,7 @@ export class InicioComponent implements OnInit {
       '047-secretary.svg',
       '048-office-worker.svg',
       '049-firefighter.svg',
-      '050-pilot.svg'
+      '050-pilot.svg',
     ];
 
     this.nickJogador = '';
@@ -144,21 +144,34 @@ export class InicioComponent implements OnInit {
   }
 
   async entrarSala() {
-    if (this.nickJogador !== '') {
-      if (await this.taskForceService.checarExistenciaSala(this.keySala)) {
-        if (await this.taskForceService.checarStatusSala(this.keySala)) {
-          if (
-            await this.taskForceService.checarNick(
-              this.keySala,
-              this.nickJogador
-            )
-          ) {
-            this.keySalaChange.emit(this.keySala);
-            this.nickJogadorChange.emit(this.nickJogador);
-            this.router.navigate(['/' + this.keySala]);
-          }
-        }
-      }
+    if (this.nickJogador === '') {
+      this.exibirMensagem('O nick não pode estar vazio');
+      return;
     }
+
+    if (!(await this.taskForceService.checarExistenciaSala(this.keySala))) {
+      this.exibirMensagem('Esta sala não existe mais');
+      return;
+    }
+
+    if (!(await this.taskForceService.checarStatusSala(this.keySala))) {
+      this.exibirMensagem('A sala em partida, espere a rodada acabar para entrar');
+      return;
+    }
+
+    if (
+      !(await this.taskForceService.checarNick(this.keySala, this.nickJogador))
+    ) {
+      this.exibirMensagem('O nick já está em uso');
+      return;
+    }
+
+    this.keySalaChange.emit(this.keySala);
+    this.nickJogadorChange.emit(this.nickJogador);
+    this.router.navigate(['/' + this.keySala]);
+  }
+
+  exibirMensagem(msg:string) {
+    console.log(msg);
   }
 }
