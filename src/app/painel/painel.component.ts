@@ -7,7 +7,7 @@ import { TaskforceService } from '../taskforce.service';
 @Component({
   selector: 'painel',
   templateUrl: './painel.component.html',
-  styleUrls: ['./painel.component.css']
+  styleUrls: ['./painel.component.css'],
 })
 export class PainelComponent implements OnInit {
   @Input() keySala: string;
@@ -32,6 +32,7 @@ export class PainelComponent implements OnInit {
   textoExibicao: string;
   intervalo: any;
   pausa: boolean;
+  dica: boolean = true;
 
   ngUnsubscribe = new Subject();
 
@@ -46,7 +47,7 @@ export class PainelComponent implements OnInit {
     this.taskForceService
       .getRegistros(this.keySala)
       .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe(registros => {
+      .subscribe((registros) => {
         let concluidos: number = 0;
 
         registros.forEach((r: any) => {
@@ -67,9 +68,8 @@ export class PainelComponent implements OnInit {
 
   async atualizarTarefa() {
     this.pausa = true;
-    this.keyProfissaoMonitor = await this.taskForceService.sortearProfissaoMonitor(
-      this.keySala
-    );
+    this.keyProfissaoMonitor =
+      await this.taskForceService.sortearProfissaoMonitor(this.keySala);
     this.keyTarefaSorteada = await this.taskForceService.sortearTarefa(
       this.keySala,
       this.keyProfissaoMonitor
@@ -97,11 +97,11 @@ export class PainelComponent implements OnInit {
       .getRegistro(this.keySala, this.keyRegistro)
       .pipe(
         takeUntil(this.ngUnsubscribe),
-        takeWhile(r => {
+        takeWhile((r) => {
           return !r['concluido'];
         }, true),
         timeout(this.tempoMonitor * 1000),
-        catchError(async err => {
+        catchError(async (err) => {
           await this.taskForceService.desabilitarRegistro(
             this.keySala,
             this.keyRegistro,
@@ -113,7 +113,7 @@ export class PainelComponent implements OnInit {
           return [];
         })
       )
-      .subscribe(async r => {
+      .subscribe(async (r) => {
         if (r['concluido']) {
           await this.taskForceService.pontuarJogador(
             this.keySala,

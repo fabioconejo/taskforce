@@ -9,13 +9,12 @@ export class MonitorComponent implements OnInit {
   @Input() texto: string;
   @Input() tempo: number;
   @Input() pausa: boolean;
-
-  dica: boolean;
+  @Input() dica: boolean;
+  @Output() dicaChange =  new EventEmitter();
 
   constructor() {}
 
   ngOnInit() {
-    this.dica = true;
   }
 
   fechar() {
