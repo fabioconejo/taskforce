@@ -37,6 +37,7 @@ export class QuadroComponent implements OnInit {
   }
 
   fechar() {
+    this.dicaQuadro = false;
     this.dica = false;
     this.dicaChange.emit(this.dica);
   }
