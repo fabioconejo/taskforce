@@ -19,5 +19,6 @@ export class MonitorComponent implements OnInit {
 
   fechar() {
     this.dica = false;
+    this.dicaChange.emit(this.dica);
   }
 }
