@@ -42,6 +42,7 @@ export class CentralComponent implements OnInit {
   numJogadores: number;
   numTarefasNecessarias: number;
   flagRelatorio: boolean;
+  dica:boolean = true;
 
   listaProfissoesSorteadas: Observable<any>;
   keyProfissaoSorteada: string;

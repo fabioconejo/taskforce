@@ -20,6 +20,8 @@ export class PainelComponent implements OnInit {
   @Input() numRodada: number;
   @Input() flagRelatorio: boolean;
   @Output() flagRelatorioChange = new EventEmitter();
+  @Input() dica: boolean;
+  @Output() dicaChange = new EventEmitter();
 
   keyProfissaoMonitor: string;
   keyTarefaSorteada: string;
@@ -32,7 +34,6 @@ export class PainelComponent implements OnInit {
   textoExibicao: string;
   intervalo: any;
   pausa: boolean;
-  dica: boolean = true;
 
   ngUnsubscribe = new Subject();
 
@@ -163,6 +164,7 @@ export class PainelComponent implements OnInit {
   }
 
   ngOnDestroy() {
+    this.dicaChange.emit(this.dica);
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
   }
