@@ -12,6 +12,8 @@ export class QuadroComponent implements OnInit {
   @Input() tarefas: any;
   @Input() registro: any;
   @Output() quadroAtualizado = new EventEmitter();
+  @Input() dica: any;
+  @Output() dicaChange = new EventEmitter();
 
   tarefasArray: any;
 
@@ -26,5 +28,10 @@ export class QuadroComponent implements OnInit {
 
   tarefaExecutada(args: any) {
     this.quadroAtualizado.emit(args);
+  }
+
+  fechar() {
+    this.dica = false;
+    this.dicaChange.emit(this.dica);
   }
 }
