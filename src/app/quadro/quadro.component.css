@@ -1,4 +1,5 @@
 .quadro {
+  position: relative;
   height: 100%;
   width: 100%;
   border-radius: 3px;
@@ -27,6 +28,11 @@
   text-align: center;
 }
 
+.fechar {
+  position: absolute;
+  cursor: pointer;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .tarefa,
@@ -37,8 +43,8 @@
 
   .dica {
     width: 90%;
-    height: 20%;
-    top: 95%;
+    height: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%, 0%);
     line-height: 1.4em;
@@ -60,8 +66,8 @@
 
   .dica {
     width: 70%;
-    height: 20%;
-    top: 95%;
+    height: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%, 0%);
     line-height: 1.4em;
@@ -83,8 +89,8 @@
 
   .dica {
     width: 95%;
-    height: 15%;
-    top: 95%;
+    height: 5%;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%, 0%);
   }
@@ -109,8 +115,8 @@
 
   .dica {
     width: 70%;
-    height: 20%;
-    top: 95%;
+    height: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%, 0%);
     line-height: 1.6em;
@@ -132,8 +138,8 @@
 
   .dica {
     width: 90%;
-    height: 15%;
-    top: 95%;
+    height: 5%;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%, 0%);
   }
