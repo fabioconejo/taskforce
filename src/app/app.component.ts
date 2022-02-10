@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
     this.meta.addTag({
       name: 'theme-color',
       content: getComputedStyle(document.documentElement)
-      .getPropertyValue('var(--bg-color)'),
+      .getPropertyValue('--bg-color').trim(),
     });
   }
 
