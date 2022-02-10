@@ -61,12 +61,12 @@
 
 .nick {
   width: 80%;
-  height: 20%;
+  height: 25%;
   margin-left: 10%;
   float: left;
 }
 
-.nick p {
+.nickname {
   font-weight: 400;
   margin-top: 5%;
 }
@@ -84,6 +84,13 @@
 
   color: var(--ft-color);
   text-align: center;
+}
+
+.mensagem {
+  width: 100%;
+  text-align: right;
+  color: var(--tart-orange);
+  margin-top: 1%;
 }
 
 .login {
@@ -228,7 +235,7 @@
     margin-top: 5%;
   }
 
-  .nick p {
+  .nickname {
     font-size: 4vw;
   }
 
@@ -261,7 +268,7 @@
     margin-top: 10%;
   }
 
-  .nick p {
+  .nickname {
     font-size: 3.5vw;
   }
 
@@ -294,7 +301,7 @@
     margin-top: 10%;
   }
 
-  .nick p {
+  .nickname {
     font-size: 3vw;
   }
 
@@ -323,7 +330,7 @@
     margin-top: 10%;
   }
 
-  .nick p {
+  .nickname {
     font-size: 2vw;
   }
 
@@ -371,7 +378,7 @@
     margin-top: 10%;
   }
 
-  .nick p {
+  .nickname {
     font-size: 1.5vw;
   }
 
@@ -385,5 +392,9 @@
 
   .texto {
     font-size: 1.5vw;
+  }
+
+  .mensagem {
+    font-size: 1vw;
   }
 }

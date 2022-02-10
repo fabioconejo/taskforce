@@ -33,6 +33,7 @@ export class InicioComponent implements OnInit {
   @Input() nickJogador: string;
   @Output() nickJogadorChange = new EventEmitter();
 
+  mensagem = '';
   imagemBox: string;
   intervaloCarrossel: any;
   numCarrossel: number = 4;
@@ -134,6 +135,7 @@ export class InicioComponent implements OnInit {
 
   onKey(event) {
     this.nickJogador = event.target.value;
+    this.mensagem = '';
   }
 
   criarSala() {
@@ -144,34 +146,32 @@ export class InicioComponent implements OnInit {
   }
 
   async entrarSala() {
+    this.mensagem = '';
+
     if (this.nickJogador === '') {
-      this.exibirMensagem('O nick não pode estar vazio');
+      this.mensagem = 'O nick não pode estar vazio';
       return;
     }
 
     if (!(await this.taskForceService.checarExistenciaSala(this.keySala))) {
-      this.exibirMensagem('Esta sala não existe mais');
+      this.mensagem = 'Esta sala não existe mais';
       return;
     }
 
     if (!(await this.taskForceService.checarStatusSala(this.keySala))) {
-      this.exibirMensagem('A sala em partida, espere a rodada acabar para entrar');
+      this.mensagem = 'A sala em partida, aguarde';
       return;
     }
 
     if (
       !(await this.taskForceService.checarNick(this.keySala, this.nickJogador))
     ) {
-      this.exibirMensagem('O nick já está em uso');
+      this.mensagem = 'O nick já está em uso';
       return;
     }
 
     this.keySalaChange.emit(this.keySala);
     this.nickJogadorChange.emit(this.nickJogador);
     this.router.navigate(['/' + this.keySala]);
-  }
-
-  exibirMensagem(msg:string) {
-    console.log(msg);
   }
 }

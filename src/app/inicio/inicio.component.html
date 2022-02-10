@@ -6,8 +6,9 @@
         <div class="img-personagem" style.background-image="url({{baseUrl}}profissionais/{{imagemBox}})"></div>
       </div>
       <form class="nick">
-        <p>Nickname:</p>
+        <p class="nickname">Nickname:</p>
         <input type="text" maxlength="10" (keyup)="onKey($event)">
+        <p class="mensagem">{{mensagem}}</p>
       </form>
       <div class="login">
         <button *ngIf="!keySala" class="btn-login" (click)="criarSala()" [disabled]="nickJogador === ''">
