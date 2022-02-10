@@ -20,7 +20,7 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  background-color: var(--box-bg);
+  background-color: var(--monitor-bg);
   border: 2px solid var(--box-border);
   border-radius: 3px;
   box-sizing: border-box;
