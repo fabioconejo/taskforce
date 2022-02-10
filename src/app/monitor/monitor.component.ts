@@ -10,9 +10,9 @@ export class MonitorComponent implements OnInit {
   @Input() tempo: number;
   @Input() pausa: boolean;
   @Input() dica: boolean;
-  @Output() dicaChange =  new EventEmitter();
+  @Output() dicaChange = new EventEmitter();
 
-  dicaMonitor: boolean
+  dicaMonitor: boolean;
 
   constructor() {}
 
