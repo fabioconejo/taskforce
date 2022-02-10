@@ -134,11 +134,12 @@
   }
 
   .dica {
-    width: 90%;
-    height: 15%;
+    width: 70%;
+    height: 20%;
     top: 5%;
     left: 50%;
     transform: translate(-50%, 0%);
+    line-height: 1.4em;
   }
 
   .fechar {
@@ -154,11 +155,12 @@
   }
 
   .dica {
-    width: 90%;
-    height: 15%;
+    width: 70%;
+    height: 20%;
     top: 5%;
     left: 50%;
     transform: translate(-50%, 0%);
+    line-height: 1.4em;
   }
 
   .fechar {
@@ -179,6 +181,10 @@
     top: 5%;
     left: 50%;
     transform: translate(-50%, 0%);
+  }
+
+  .quebra-linha {
+    display: none;
   }
 
   .fechar {
@@ -204,7 +210,7 @@
 
   .fechar {
     right: 1%;
-    top: 5%;
+    top: -7.5%;
   }
 }
 
