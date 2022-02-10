@@ -40,7 +40,7 @@ export class InicioComponent implements OnInit {
   carrossel: any = [
     {
       imagem: 'tutorial-0.png',
-      texto: 'Chama a galera para um chat de voz (Discord, Zoom, Skype...)',
+      texto: 'Chama a galera para um chat de voz (sugestão de 4 a 10 pessoas)',
     },
     {
       imagem: 'tutorial-1.png',

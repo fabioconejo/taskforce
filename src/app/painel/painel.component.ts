@@ -146,6 +146,13 @@ export class PainelComponent implements OnInit {
   }
 
   async concluirRegistro(registro: any) {
+    await this.taskForceService.setTarefa(
+      this.keySala,
+      this.keyProfissaoSorteada,
+      registro.key,
+      { verbo: registro.texto }
+    );
+    
     if (this.pausa === false) {
       await this.taskForceService.concluirRegistro(
         this.keySala,
@@ -154,13 +161,6 @@ export class PainelComponent implements OnInit {
         this.vidas
       );
     }
-
-    await this.taskForceService.setTarefa(
-      this.keySala,
-      this.keyProfissaoSorteada,
-      registro.key,
-      { verbo: registro.texto }
-    );
   }
 
   ngOnDestroy() {

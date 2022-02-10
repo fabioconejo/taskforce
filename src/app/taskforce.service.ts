@@ -249,8 +249,8 @@ export class TaskforceService {
           '/tarefas/' +
           keyTarefa
       )
-      .once('value', (snapshot) => {
-        tarefa = snapshot.val();
+      .once('value', async (snapshot) => {
+        tarefa = await snapshot.val();
       });
 
     return tarefa;
