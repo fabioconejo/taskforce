@@ -17,7 +17,7 @@
     class="vazio"
     *ngFor="let item of [].constructor(maxNumTarefas - tarefasArray.length)"
   ></div>
-  <div class="dica">
+  <div class="dica" [style.display]="dicaQuadro ? 'grid' : 'none'">
     Clique no botão para executar a tarefa, <br class="quebra-linha">mas cuidado, tarefas erradas custam
     1 vida
     <div class="fechar" (click)="fechar()">x</div>

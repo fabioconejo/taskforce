@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'quadro',
   templateUrl: './quadro.component.html',
-  styleUrls: ['./quadro.component.css']
+  styleUrls: ['./quadro.component.css'],
 })
 export class QuadroComponent implements OnInit {
   maxNumTarefas: number = 8;
@@ -15,15 +15,21 @@ export class QuadroComponent implements OnInit {
   @Input() dica: any;
   @Output() dicaChange = new EventEmitter();
 
+  dicaQuadro: boolean;
+
   tarefasArray: any;
 
   constructor() {}
 
   ngOnInit() {
-    this.tarefasArray = Object.keys(this.tarefas).map(key => this.tarefas[key]);
+    this.tarefasArray = Object.keys(this.tarefas).map(
+      (key) => this.tarefas[key]
+    );
     Object.keys(this.tarefas).forEach((key, index) => {
       this.tarefasArray[index].key = key;
     });
+
+    this.dicaQuadro = this.dica;
   }
 
   tarefaExecutada(args: any) {

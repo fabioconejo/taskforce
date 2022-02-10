@@ -12,9 +12,12 @@ export class MonitorComponent implements OnInit {
   @Input() dica: boolean;
   @Output() dicaChange =  new EventEmitter();
 
+  dicaMonitor: boolean
+
   constructor() {}
 
   ngOnInit() {
+    this.dicaMonitor = this.dica;
   }
 
   fechar() {
