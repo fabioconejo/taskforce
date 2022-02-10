@@ -49,6 +49,18 @@
   }
 }
 
+@keyframes slide-in-bottom {
+  0% {
+    transform: translate(-50%, 5%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 0%);
+    opacity: 1;
+  }
+}
+
+
 .monitor {
   height: 100%;
   width: 100%;
@@ -69,6 +81,8 @@
   border-radius: 3px;
   box-sizing: border-box;
   text-align: center;
+
+  animation: slide-in-bottom 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.75s both;
 }
 
 .fechar {
@@ -135,7 +149,7 @@
 
   .dica {
     width: 90%;
-    height: 20%;
+    height: 25%;
     top: 5%;
     left: 50%;
     transform: translate(-50%, 0%);

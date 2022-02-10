@@ -1,3 +1,14 @@
+@keyframes slide-in-top {
+  0% {
+    transform: translate(-50%, -5%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 0%);
+    opacity: 1;
+  }
+}
+
 .quadro {
   position: relative;
   height: 100%;
@@ -26,6 +37,9 @@
   border-radius: 3px;
   box-sizing: border-box;
   text-align: center;
+
+  animation: slide-in-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.75s
+    both;
 }
 
 .fechar {
@@ -43,7 +57,7 @@
 
   .dica {
     width: 90%;
-    height: 10%;
+    height: 12.5%;
     bottom: 5%;
     left: 50%;
     transform: translate(-50%, 0%);

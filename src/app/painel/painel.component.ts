@@ -164,6 +164,7 @@ export class PainelComponent implements OnInit {
   }
 
   ngOnDestroy() {
+    this.dica = false;
     this.dicaChange.emit(this.dica);
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
