@@ -134,7 +134,7 @@
   }
 
   .dica {
-    width: 70%;
+    width: 90%;
     height: 20%;
     top: 5%;
     left: 50%;
@@ -144,7 +144,7 @@
 
   .fechar {
     right: 1%;
-    top: 5%;
+    top: -7.5%;
   }
 }
 
@@ -165,7 +165,7 @@
 
   .fechar {
     right: 1%;
-    top: 5%;
+    top: -7.5%;
   }
 }
 
@@ -176,7 +176,7 @@
   }
 
   .dica {
-    width: 90%;
+    width: 95%;
     height: 15%;
     top: 5%;
     left: 50%;
@@ -188,8 +188,8 @@
   }
 
   .fechar {
-    right: 1%;
-    top: 5%;
+    right: 0.75%;
+    top: -2.5%;
   }
 }
 
