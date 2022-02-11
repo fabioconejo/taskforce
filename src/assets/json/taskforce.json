@@ -2033,7 +2033,7 @@
         "tipo": "acao",
         "texto": "Ir na cabine durante ausência do piloto",
         "verbo": "Ir",
-        "complemento": "Cabine"
+        "complemento": "Cabine do piloto"
       },
       {
         "id": 3,
@@ -2808,6 +2808,15 @@
       },
       {
         "id": 14,
+        "tipo": "estado",
+        "eTexto": ["Ligar rádio", "Desligar rádio"],
+        "verbo": "Ligado",
+        "texto": "Ligar rádio",
+        "complemento": "Rádio",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 15,
         "tipo": "escolha",
         "texto": "Colocar na bandeira",
         "verbo": "Colocar",
@@ -2815,12 +2824,155 @@
         "lista": ["1", "2"]
       },
       {
-        "id": 15,
+        "id": 16,
         "tipo": "escolha",
         "texto": "Enrolar na corrida por",
         "verbo": "Enrolar",
         "complemento": "Bandeira",
         "lista": ["1 minuto", "5 minutos", "15 minutos", "25 minutos"]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "profissao": "Professor",
+    "imagem": "043-teacher.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Pedir para turma ficar quieta",
+        "verbo": "Pedir",
+        "complemento": "Turma ficar quieta"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Recusar a dar nota pra aluno chorão",
+        "verbo": "Recusar",
+        "complemento": "Dar nota pra aluno chorão"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Adiar prazo de entrega do trabalho",
+        "verbo": "Adiar",
+        "complemento": "Prazo de entrega do trabalho"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Passar slide",
+        "verbo": "Passar",
+        "complemento": "Slide"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Fazer aluno dar a aula que o professor deveria dar",
+        "verbo": "Fazer",
+        "complemento": "Aula que o professor deveria dar"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Trocar aluno de lugar",
+        "verbo": "Trocar",
+        "complemento": "Aluno de lugar"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Checar identidade de aluno durante a prova",
+        "verbo": "Checar",
+        "complemento": "Identidade do aluno durante a prova"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Apagar lousa",
+        "verbo": "Apagar",
+        "complemento": "Lousa"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Passar lição de casa",
+        "verbo": "Passar",
+        "complemento": "Lição de casa"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Fazer chamada",
+        "verbo": "Fazer",
+        "complemento": "Chamada"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Fazer canção sobre conteúdo de prova",
+        "verbo": "Fazer",
+        "complemento": "Canção sobre conteúdo de prova"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Dar aula teórica de educação física",
+        "verbo": "Dar",
+        "complemento": "Aula teórica de educação física"
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Acender luz da sala", "Apagar luz da sala"],
+        "verbo": "Acesa",
+        "texto": "Acender luz da sala",
+        "complemento": "Luz da sala",
+        "estado": ["Acesa", "Apagada"]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Falar bordão:",
+        "verbo": "Falar",
+        "complemento": "Bordão",
+        "lista": [
+          "Meu sálario tá pago, quem perde são vocês",
+          "A prova é em dupla, você e Deus",
+          "A prova tá fácil pra quem estudou",
+          "Professor não erra, se engana",
+          "Considerem matéria dada"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Definir dificuldade da prova para:",
+        "verbo": "Definir",
+        "complemento": "Dificuldade da prova",
+        "lista": ["Fácil", "Médio", "Difícil", "Vai todo mundo tirar 0"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Dar aula de:",
+        "verbo": "Dar",
+        "complemento": "Aula",
+        "lista": [
+          "Português",
+          "Matemática",
+          "Biologia",
+          "Física",
+          "Química",
+          "Artes",
+          "Educação Física",
+          "Inglês",
+          "Filosofia",
+          "Geografia",
+          "História",
+          "Sociologia"
+        ]
       }
     ]
   }
