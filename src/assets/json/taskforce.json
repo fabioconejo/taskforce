@@ -49,9 +49,9 @@
       {
         "id": 7,
         "tipo": "acao",
-        "texto": "Aplicar bezentacil",
+        "texto": "Aplicar bezetacil",
         "verbo": "Aplicar",
-        "complemento": "Bezentacil"
+        "complemento": "Bezetacil"
       },
       {
         "id": 8,
@@ -98,32 +98,20 @@
       {
         "id": 14,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar oxímetro",
-          "Desligar oxímetro"
-        ],
+        "eTexto": ["Ligar oxímetro", "Desligar oxímetro"],
         "verbo": "Ligado",
         "texto": "Ligar oxímetro",
         "complemento": "Oxímetro",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 15,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar monitor cardíaco",
-          "Desligar monitor cardíaco"
-        ],
+        "eTexto": ["Ligar monitor cardíaco", "Desligar monitor cardíaco"],
         "verbo": "Ligado",
         "texto": "Ligar monitor cardíaco",
         "complemento": "Monitor cardíaco",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 16,
@@ -131,11 +119,7 @@
         "texto": "Regular respirador para",
         "verbo": "Regular",
         "complemento": "Respirador",
-        "lista": [
-          "0 psi",
-          "20 psi",
-          "60 psi"
-        ]
+        "lista": ["0 psi", "20 psi", "60 psi"]
       },
       {
         "id": 17,
@@ -143,11 +127,7 @@
         "texto": "Ajustar desfibrilador para",
         "verbo": "Ajustar",
         "complemento": "Desfibrilador",
-        "lista": [
-          "1",
-          "2",
-          "3"
-        ]
+        "lista": ["1", "2", "3"]
       },
       {
         "id": 18,
@@ -155,11 +135,7 @@
         "texto": "Ajustar dose para",
         "verbo": "Ajustar",
         "complemento": "Dose",
-        "lista": [
-          "1x ao dia",
-          "2x ao dia",
-          "4x ao dia"
-        ]
+        "lista": ["1x ao dia", "2x ao dia", "4x ao dia"]
       }
     ]
   },
@@ -255,47 +231,29 @@
       {
         "id": 13,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar coifa",
-          "Desligar coifa"
-        ],
+        "eTexto": ["Ligar coifa", "Desligar coifa"],
         "verbo": "Ligado",
         "texto": "Ligar coifa",
         "complemento": "Coifa",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 14,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar fritadeira",
-          "Desligar fritadeira"
-        ],
+        "eTexto": ["Ligar fritadeira", "Desligar fritadeira"],
         "verbo": "Ligado",
         "texto": "Ligar fritadeira",
         "complemento": "Fritadeira",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 15,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar freezer",
-          "Desligar freezer"
-        ],
+        "eTexto": ["Ligar freezer", "Desligar freezer"],
         "verbo": "Ligado",
         "texto": "Ligar freezer",
         "complemento": "Freezer",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 16,
@@ -303,12 +261,7 @@
         "texto": "Ajustar temperatura do forno para",
         "verbo": "Ajustar",
         "complemento": "Temperatura do forno",
-        "lista": [
-          "160°C",
-          "190°C",
-          "200°C",
-          "250°C"
-        ]
+        "lista": ["160°C", "190°C", "200°C", "250°C"]
       },
       {
         "id": 17,
@@ -316,13 +269,7 @@
         "texto": "Regular velocidade da batedeira para",
         "verbo": "Regular",
         "complemento": "Velocidade da batedeira",
-        "lista": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ]
+        "lista": ["1", "2", "3", "4", "5"]
       },
       {
         "id": 18,
@@ -330,14 +277,7 @@
         "texto": "Usar boca do fogão de número",
         "verbo": "Usar",
         "complemento": "Boca do fogão",
-        "lista": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6"
-        ]
+        "lista": ["1", "2", "3", "4", "5", "6"]
       }
     ]
   },
@@ -426,32 +366,20 @@
       {
         "id": 12,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar globo de plasma",
-          "Desligar globo de plasma"
-        ],
+        "eTexto": ["Ligar globo de plasma", "Desligar globo de plasma"],
         "verbo": "Ligado",
         "texto": "Ligar globo de plasma",
         "complemento": "Globo de plasma",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 13,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar luz ultravioleta",
-          "Desligar luz ultravioleta"
-        ],
+        "eTexto": ["Ligar luz ultravioleta", "Desligar luz ultravioleta"],
         "verbo": "Ligado",
         "texto": "Ligar luz ultravioleta",
         "complemento": "Luz ultravioleta",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 14,
@@ -459,11 +387,7 @@
         "texto": "Ajustar zoom do microscópio para",
         "verbo": "Ajustar",
         "complemento": "Zoom do microscópio",
-        "lista": [
-          "150x",
-          "450x",
-          "900x"
-        ]
+        "lista": ["150x", "450x", "900x"]
       },
       {
         "id": 15,
@@ -471,11 +395,7 @@
         "texto": "Ajustar potência do bico de bunsen para",
         "verbo": "Ajustar",
         "complemento": "Potência do bico de bunsen",
-        "lista": [
-          "1",
-          "2",
-          "3"
-        ]
+        "lista": ["1", "2", "3"]
       },
       {
         "id": 16,
@@ -483,14 +403,7 @@
         "texto": "Regular potenciômetro para",
         "verbo": "Regular",
         "complemento": "Potenciômetro",
-        "lista": [
-          "10%",
-          "25%",
-          "36%",
-          "47%",
-          "83%",
-          "100%"
-        ]
+        "lista": ["10%", "25%", "36%", "47%", "83%", "100%"]
       }
     ]
   },
@@ -586,17 +499,11 @@
       {
         "id": 13,
         "tipo": "estado",
-        "eTexto": [
-          "Fazer postura",
-          "Desfazer postura"
-        ],
+        "eTexto": ["Fazer postura", "Desfazer postura"],
         "verbo": "Feita",
         "texto": "Feita postura",
         "complemento": "Postura",
-        "estado": [
-          "Feita",
-          "Desfeita"
-        ]
+        "estado": ["Feita", "Desfeita"]
       },
       {
         "id": 14,
@@ -604,12 +511,7 @@
         "texto": "Ajustar zoom do rifle para",
         "verbo": "Ajustar",
         "complemento": "Zoom do rifle",
-        "lista": [
-          "1x",
-          "2x",
-          "4x",
-          "8x"
-        ]
+        "lista": ["1x", "2x", "4x", "8x"]
       },
       {
         "id": 15,
@@ -617,13 +519,7 @@
         "texto": "Regular quantidade de explosivos para",
         "verbo": "Regular",
         "complemento": "Quantidade de explosivos",
-        "lista": [
-          "200g",
-          "400g",
-          "1kg",
-          "1,5kg",
-          "4kg"
-        ]
+        "lista": ["200g", "400g", "1kg", "1,5kg", "4kg"]
       }
     ]
   },
@@ -705,47 +601,29 @@
       {
         "id": 11,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar antivírus",
-          "Desligar antivírus"
-        ],
+        "eTexto": ["Ligar antivírus", "Desligar antivírus"],
         "verbo": "Ligado",
         "texto": "Ligar antivírus",
         "complemento": "Antivírus",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 12,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar firewall",
-          "Desligar firewall"
-        ],
+        "eTexto": ["Ligar firewall", "Desligar firewall"],
         "verbo": "Ligado",
         "texto": "Ligar firewall",
         "complemento": "Firewall",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 13,
         "tipo": "estado",
-        "eTexto": [
-          "Criptografar arquivo",
-          "Descriptografar arquivo"
-        ],
+        "eTexto": ["Criptografar arquivo", "Descriptografar arquivo"],
         "verbo": "Criptografado",
         "texto": "Criptografar arquivo",
         "complemento": "Arquivo",
-        "estado": [
-          "Criptografado",
-          "Descriptografado"
-        ]
+        "estado": ["Criptografado", "Descriptografado"]
       },
       {
         "id": 14,
@@ -753,12 +631,7 @@
         "texto": "Ajustar nível de segurança para",
         "verbo": "Ajustar",
         "complemento": "Nível de segurança",
-        "lista": [
-          "Baixo",
-          "Médio",
-          "Alto",
-          "Rigoroso"
-        ]
+        "lista": ["Baixo", "Médio", "Alto", "Rigoroso"]
       },
       {
         "id": 15,
@@ -794,13 +667,7 @@
         "texto": "Alterar DNS para",
         "verbo": "Alterar",
         "complemento": "DNS",
-        "lista": [
-          "Padrão",
-          "8.8.8.8",
-          "8.8.4.4",
-          "1.0.0.1",
-          "1.1.1.1"
-        ]
+        "lista": ["Padrão", "8.8.8.8", "8.8.4.4", "1.0.0.1", "1.1.1.1"]
       },
       {
         "id": 18,
@@ -808,11 +675,7 @@
         "texto": "Alterar certificado digital",
         "verbo": "Alterar",
         "complemento": "Certificado digital",
-        "lista": [
-          "A1",
-          "A3",
-          "SSL"
-        ]
+        "lista": ["A1", "A3", "SSL"]
       }
     ]
   },
@@ -922,10 +785,7 @@
         "verbo": "Incorporado",
         "texto": "Incorporar processo criativo",
         "complemento": "Processo criativo",
-        "estado": [
-          "Incorporado",
-          "Desincorporado"
-        ]
+        "estado": ["Incorporado", "Desincorporado"]
       },
       {
         "id": 15,
@@ -1044,17 +904,11 @@
       {
         "id": 14,
         "tipo": "estado",
-        "eTexto": [
-          "Cochilar na aula",
-          "Acordar na aula"
-        ],
+        "eTexto": ["Cochilar na aula", "Acordar na aula"],
         "verbo": "Cochilando",
         "texto": "Cochilar na aula",
         "complemento": "Na aula",
-        "estado": [
-          "Cochilando",
-          "Acordado"
-        ]
+        "estado": ["Cochilando", "Acordado"]
       },
       {
         "id": 15,
@@ -1062,12 +916,7 @@
         "texto": "Pegar DP em",
         "verbo": "Pegar",
         "complemento": "DP",
-        "lista": [
-          "1 matéria",
-          "3 matérias",
-          "6 matérias",
-          "todas as matérias"
-        ]
+        "lista": ["1 matéria", "3 matérias", "6 matérias", "todas as matérias"]
       }
     ]
   },
@@ -1163,32 +1012,20 @@
       {
         "id": 13,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar moedor de cana",
-          "Desligar moedor de cana"
-        ],
+        "eTexto": ["Ligar moedor de cana", "Desligar moedor de cana"],
         "verbo": "Ligado",
         "texto": "Ligar moedor de cana",
         "complemento": "Moedor de cana",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 14,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar canal do boi",
-          "Desligar canal do boi"
-        ],
+        "eTexto": ["Ligar canal do boi", "Desligar canal do boi"],
         "verbo": "Ligado",
         "texto": "Ligar canal do boi",
         "complemento": "Canal do boi",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 15,
@@ -1196,11 +1033,7 @@
         "texto": "Ajustar nível do agrotóxico para",
         "verbo": "Ajustar",
         "complemento": "Nível do agrotóxico",
-        "lista": [
-          "Baixo",
-          "Médio",
-          "Alto"
-        ]
+        "lista": ["Baixo", "Médio", "Alto"]
       },
       {
         "id": 16,
@@ -1312,32 +1145,20 @@
       {
         "id": 13,
         "tipo": "estado",
-        "eTexto": [
-          "Praticar esteira",
-          "Descansar da esteira"
-        ],
+        "eTexto": ["Praticar esteira", "Descansar da esteira"],
         "verbo": "Praticando",
         "texto": "Praticar esteira",
         "complemento": "Esteira",
-        "estado": [
-          "Praticando",
-          "Descansando"
-        ]
+        "estado": ["Praticando", "Descansando"]
       },
       {
         "id": 14,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar contador de passos",
-          "Desligar contador de passos"
-        ],
+        "eTexto": ["Ligar contador de passos", "Desligar contador de passos"],
         "verbo": "Ligado",
         "texto": "Ligar contador de passos",
         "complemento": "Contador de passos",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 15,
@@ -1345,13 +1166,7 @@
         "texto": "Pedalar",
         "verbo": "Pedalar",
         "complemento": "Pedalada",
-        "lista": [
-          "0km",
-          "2km",
-          "5km",
-          "7km",
-          "10km"
-        ]
+        "lista": ["0km", "2km", "5km", "7km", "10km"]
       },
       {
         "id": 16,
@@ -1359,14 +1174,7 @@
         "texto": "Caminhar",
         "verbo": "Caminhar",
         "complemento": "Caminhada",
-        "lista": [
-          "0km",
-          "1km",
-          "2km",
-          "3km",
-          "4km",
-          "5km"
-        ]
+        "lista": ["0km", "1km", "2km", "3km", "4km", "5km"]
       },
       {
         "id": 17,
@@ -1374,14 +1182,7 @@
         "texto": "Correr",
         "verbo": "Correr",
         "complemento": "Corrida",
-        "lista": [
-          "0m",
-          "50m",
-          "100m",
-          "150m",
-          "200m",
-          "500m"
-        ]
+        "lista": ["0m", "50m", "100m", "150m", "200m", "500m"]
       },
       {
         "id": 18,
@@ -1389,14 +1190,7 @@
         "texto": "Nadar",
         "verbo": "Nadar",
         "complemento": "Nado",
-        "lista": [
-          "0m",
-          "25m",
-          "50m",
-          "75m",
-          "100m",
-          "200m"
-        ]
+        "lista": ["0m", "25m", "50m", "75m", "100m", "200m"]
       },
       {
         "id": 19,
@@ -1404,14 +1198,7 @@
         "texto": "Levantar peso",
         "verbo": "Levantar",
         "complemento": "Peso",
-        "lista": [
-          "10kg",
-          "30kg",
-          "50kg",
-          "80kg",
-          "100kg",
-          "120kg"
-        ]
+        "lista": ["10kg", "30kg", "50kg", "80kg", "100kg", "120kg"]
       }
     ]
   },
@@ -1535,10 +1322,7 @@
         "verbo": "Ligado",
         "texto": "Ligar tornozeleira eletrônica",
         "complemento": "Tornozeleira eletrônica",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 17,
@@ -1669,17 +1453,11 @@
       {
         "id": 16,
         "tipo": "estado",
-        "eTexto": [
-          "Aprovar solicitação",
-          "Negar solicitação"
-        ],
+        "eTexto": ["Aprovar solicitação", "Negar solicitação"],
         "verbo": "Aprovado",
         "texto": "Aprovar solicitação",
         "complemento": "Solicitação",
-        "estado": [
-          "Aprovado",
-          "Negado"
-        ]
+        "estado": ["Aprovado", "Negado"]
       },
       {
         "id": 17,
@@ -1687,13 +1465,7 @@
         "texto": "Orientar para aguardar na fila por",
         "verbo": "Orientar",
         "complemento": "Aguardar na fila",
-        "lista": [
-          "5 minutos",
-          "15 minutos",
-          "1 hora",
-          "3 horas",
-          "6 horas"
-        ]
+        "lista": ["5 minutos", "15 minutos", "1 hora", "3 horas", "6 horas"]
       },
       {
         "id": 18,
@@ -1803,17 +1575,11 @@
       {
         "id": 13,
         "tipo": "estado",
-        "eTexto": [
-          "Colocar fones de proteção",
-          "Retirar fones de proteção"
-        ],
+        "eTexto": ["Colocar fones de proteção", "Retirar fones de proteção"],
         "verbo": "Colocado",
         "texto": "Colocar fones de proteção",
         "complemento": "Fones de proteção",
-        "estado": [
-          "Colocado",
-          "Retirado"
-        ]
+        "estado": ["Colocado", "Retirado"]
       },
       {
         "id": 14,
@@ -1821,13 +1587,7 @@
         "texto": "X = ",
         "verbo": "?",
         "complemento": "Valor de X",
-        "lista": [
-          "9",
-          "13",
-          "17",
-          "100",
-          "200"
-        ]
+        "lista": ["9", "13", "17", "100", "200"]
       },
       {
         "id": 15,
@@ -1835,12 +1595,7 @@
         "texto": "Y = ",
         "verbo": "?",
         "complemento": "Valor de Y",
-        "lista": [
-          "3,14159",
-          "2,71828",
-          "1,61803",
-          "6,0.10^23"
-        ]
+        "lista": ["3,14159", "2,71828", "1,61803", "6,0.10^23"]
       },
       {
         "id": 16,
@@ -1848,12 +1603,7 @@
         "texto": "f(z) = ",
         "verbo": "?",
         "complemento": "Valor de f(z)",
-        "lista": [
-          "(-b ± √Δ)/2a",
-          "a^2 + b^2 = c^2",
-          "2.π.r",
-          "b.h/2"
-        ]
+        "lista": ["(-b ± √Δ)/2a", "a^2 + b^2 = c^2", "2.π.r", "b.h/2"]
       }
     ]
   },
@@ -1949,47 +1699,29 @@
       {
         "id": 13,
         "tipo": "estado",
-        "eTexto": [
-          "Colocar traje espacial",
-          "Retirar traje espacial"
-        ],
+        "eTexto": ["Colocar traje espacial", "Retirar traje espacial"],
         "verbo": "Colocado",
         "texto": "Colocar traje espacial",
         "complemento": "Traje espacial",
-        "estado": [
-          "Colocado",
-          "Retirado"
-        ]
+        "estado": ["Colocado", "Retirado"]
       },
       {
         "id": 14,
         "tipo": "estado",
-        "eTexto": [
-          "Entrar em orbita",
-          "Sair de orbita"
-        ],
+        "eTexto": ["Entrar em orbita", "Sair de orbita"],
         "verbo": "Dentro",
         "texto": "Entrar em orbita",
         "complemento": "Orbita",
-        "estado": [
-          "Dentro",
-          "Fora"
-        ]
+        "estado": ["Dentro", "Fora"]
       },
       {
         "id": 15,
         "tipo": "estado",
-        "eTexto": [
-          "Entrar em estação espacial",
-          "Sair de estação espacial"
-        ],
+        "eTexto": ["Entrar em estação espacial", "Sair de estação espacial"],
         "verbo": "Dentro",
         "texto": "Entrar em estação espacial",
         "complemento": "Estação espacial",
-        "estado": [
-          "Dentro",
-          "Fora"
-        ]
+        "estado": ["Dentro", "Fora"]
       },
       {
         "id": 16,
@@ -1997,13 +1729,7 @@
         "texto": "Alterar força G para",
         "verbo": "Alterar",
         "complemento": "Força G",
-        "lista": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "10"
-        ]
+        "lista": ["1", "2", "3", "4", "10"]
       },
       {
         "id": 17,
@@ -2120,17 +1846,11 @@
       {
         "id": 14,
         "tipo": "estado",
-        "eTexto": [
-          "Entregar cardápio",
-          "Retirar cardápio"
-        ],
+        "eTexto": ["Entregar cardápio", "Retirar cardápio"],
         "verbo": "Entregue",
         "texto": "Entregar cardápio",
         "complemento": "Cardápio",
-        "estado": [
-          "Entregue",
-          "Retirado"
-        ]
+        "estado": ["Entregue", "Retirado"]
       },
       {
         "id": 15,
@@ -2138,11 +1858,7 @@
         "texto": "Alterar sugestão de gorjeta para",
         "verbo": "Alterar",
         "complemento": "Sugestão de gorjeta",
-        "lista": [
-          "10%",
-          "12%",
-          "15%"
-        ]
+        "lista": ["10%", "12%", "15%"]
       },
       {
         "id": 16,
@@ -2284,17 +2000,11 @@
       {
         "id": 17,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar registro d'água",
-          "Desligar registro d'água"
-        ],
+        "eTexto": ["Ligar registro d'água", "Desligar registro d'água"],
         "verbo": "Ligado",
         "texto": "Entrar em registro d'água",
         "complemento": "Registro d'água",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 18,
@@ -2302,11 +2012,7 @@
         "texto": "Ajustar pressão d'água para",
         "verbo": "Ajustar",
         "complemento": "Pressão d'água",
-        "lista": [
-          "Baixo",
-          "Médio",
-          "Alto"
-        ]
+        "lista": ["Baixo", "Médio", "Alto"]
       }
     ]
   },
@@ -2346,9 +2052,9 @@
       {
         "id": 5,
         "tipo": "acao",
-        "texto": "Dar um sorriso",
-        "verbo": "Dar",
-        "complemento": "Sorriso"
+        "texto": "Sorrir para todos a bordo",
+        "verbo": "Sorrir",
+        "complemento": "Todos a bordo"
       },
       {
         "id": 6,
@@ -2430,10 +2136,7 @@
         "verbo": "Acionadas",
         "texto": "Acionar máscaras de oxigênio",
         "complemento": "Máscaras de oxigênio",
-        "estado": [
-          "Acionadas",
-          "Removidas"
-        ]
+        "estado": ["Acionadas", "Removidas"]
       },
       {
         "id": 17,
@@ -2461,37 +2164,7 @@
           "Marati",
           "Tamil",
           "Turco",
-          "Urdu",
-          "Min nan",
-          "Jinyu",
-          "Gujarati",
-          "Polaco",
-          "Egípcio",
-          "Ucraniano",
-          "Italiano",
-          "Xiang",
-          "Malaio",
-          "Hakka",
-          "Kannada",
-          "Oriya",
-          "Panjabi",
-          "Sunda",
-          "Panjabi",
-          "Romeno",
-          "Bhojpuri",
-          "Azerbaijão",
-          "Farsi",
-          "Maitili",
-          "Hauçá",
-          "Argelino",
-          "Birmanês",
-          "Servo-croata",
-          "Gan",
-          "Awadhi",
-          "Tailandês",
-          "Holandês",
-          "Iorubá",
-          "Sindi"
+          "Urdu"
         ]
       }
     ]
@@ -2623,17 +2296,11 @@
       {
         "id": 18,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar iluminação",
-          "Desligar iluminação"
-        ],
+        "eTexto": ["Ligar iluminação", "Desligar iluminação"],
         "verbo": "Ligado",
         "texto": "Ligar iluminação",
         "complemento": "Iluminação",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 19,
@@ -2641,12 +2308,7 @@
         "texto": "Ajustar foco para",
         "verbo": "Ajustar",
         "complemento": "Foco",
-        "lista": [
-          "Automático",
-          "1x",
-          "3x",
-          "5x"
-        ]
+        "lista": ["Automático", "1x", "3x", "5x"]
       },
       {
         "id": 20,
@@ -2763,9 +2425,9 @@
       {
         "id": 14,
         "tipo": "acao",
-        "texto": "Fazer parceiria",
+        "texto": "Fazer parceria",
         "verbo": "Fazer",
-        "complemento": "Parceiria"
+        "complemento": "Parceria"
       },
       {
         "id": 15,
@@ -2784,17 +2446,11 @@
       {
         "id": 17,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar autotune",
-          "Desligar autotune"
-        ],
+        "eTexto": ["Ligar autotune", "Desligar autotune"],
         "verbo": "Ligado",
         "texto": "Ligar autotune",
         "complemento": "Autotune",
-        "estado": [
-          "Ligado",
-          "Desligado"
-        ]
+        "estado": ["Ligado", "Desligado"]
       },
       {
         "id": 18,
@@ -2802,15 +2458,7 @@
         "texto": "Cantar nota",
         "verbo": "Cantar",
         "complemento": "Nota",
-        "lista": [
-          "Dó",
-          "Ré",
-          "Mi",
-          "Fá",
-          "Sol",
-          "Lá",
-          "Si"
-        ]
+        "lista": ["Dó", "Ré", "Mi", "Fá", "Sol", "Lá", "Si"]
       }
     ]
   },
@@ -2920,17 +2568,11 @@
       {
         "id": 17,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar sirene",
-          "Desligar sirene"
-        ],
+        "eTexto": ["Ligar sirene", "Desligar sirene"],
         "verbo": "Ligada",
         "texto": "Ligar sirene",
         "complemento": "Sirene",
-        "estado": [
-          "Ligada",
-          "Desligada"
-        ]
+        "estado": ["Ligada", "Desligada"]
       },
       {
         "id": 18,
@@ -2938,12 +2580,7 @@
         "texto": "Dar tiro de aviso de número",
         "verbo": "Dar",
         "complemento": "Tiro de aviso",
-        "lista": [
-          "1",
-          "2",
-          "3",
-          "42"
-        ]
+        "lista": ["1", "2", "3", "42"]
       }
     ]
   },
@@ -3063,6 +2700,127 @@
         "texto": "Realizar orçamentos",
         "verbo": "Realizar",
         "complemento": "Orçamentos"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "profissao": "Taxista",
+    "imagem": "016-taxi-driver.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Reclamar de motorista de aplicativo",
+        "verbo": "Reclamar",
+        "complemento": "Motorista de aplicativo"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Seguir aquele carro",
+        "verbo": "Seguir",
+        "complemento": "Aquele carro"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Ultrapassar sinal vermelho",
+        "verbo": "Ultrapassar",
+        "complemento": "Sinal vermelho"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Cobrar corrida",
+        "verbo": "Cobrar",
+        "complemento": "Corrida"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Olhar no retrovisor",
+        "verbo": "Olhar",
+        "complemento": "Retrovisor"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Xingar motoqueiro",
+        "verbo": "Xingar",
+        "complemento": "Motoqueiro"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Estacionar no ponto de táxi",
+        "verbo": "Estacionar",
+        "complemento": "Ponto de táxi"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Arrumar táxi na oficina do Paulão",
+        "verbo": "Arrumar",
+        "complemento": "Táxi na oficina do Paulão"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Indicar pontos turísticos",
+        "verbo": "Arrumar",
+        "complemento": "Pontos turísticos"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Fumar dentro do carro",
+        "verbo": "Fumar",
+        "complemento": "Dentro do carro"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Conversar com passageiro",
+        "verbo": "Conversar",
+        "complemento": "Passageiro"
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": ["Ingressar em frota de táxi", "Sair de frota de táxi"],
+        "verbo": "Dentro",
+        "texto": "Ingressar em frota de táxi",
+        "complemento": "Frota de táxi",
+        "estado": ["Dentro", "Fora"]
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": [
+          "Acender luz do táxi para livre",
+          "Acender luz do táxi ocupado"
+        ],
+        "verbo": "Livre",
+        "texto": "Acender luz do táxi livre",
+        "complemento": "Luz do táxi",
+        "estado": ["Livre", "Ocupado"]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Colocar na bandeira",
+        "verbo": "Colocar",
+        "complemento": "Bandeira",
+        "lista": ["1", "2"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Enrolar na corrida por",
+        "verbo": "Enrolar",
+        "complemento": "Bandeira",
+        "lista": ["1 minuto", "5 minutos", "15 minutos", "25 minutos"]
       }
     ]
   }
