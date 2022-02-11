@@ -2973,6 +2973,56 @@
           "História",
           "Sociologia"
         ]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Conjugar o verbo ",
+        "verbo": "Dar",
+        "complemento": "Aula",
+        "lista": [
+          "Ser",
+          "Nadar",
+          "Fazer",
+          "Polir",
+          "Intervir",
+          "Compelir",
+          "Amafagafar"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "profissao": "Carteiro",
+    "imagem": "024-postman.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Reclamar de motorista de aplicativo",
+        "verbo": "Reclamar",
+        "complemento": "Motorista de aplicativo"
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": [
+          "Acender luz do táxi para livre",
+          "Acender luz do táxi ocupado"
+        ],
+        "verbo": "Livre",
+        "texto": "Acender luz do táxi livre",
+        "complemento": "Luz do táxi",
+        "estado": ["Livre", "Ocupado"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Enrolar na corrida por",
+        "verbo": "Enrolar",
+        "complemento": "Bandeira",
+        "lista": ["1 minuto", "5 minutos", "15 minutos", "25 minutos"]
       }
     ]
   }
