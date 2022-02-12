@@ -2855,9 +2855,9 @@
       {
         "id": 3,
         "tipo": "acao",
-        "texto": "Adiar prazo de entrega do trabalho",
-        "verbo": "Adiar",
-        "complemento": "Prazo de entrega do trabalho"
+        "texto": "Postegar entrega do trabalho",
+        "verbo": "Postegar",
+        "complemento": "Entrega do trabalho"
       },
       {
         "id": 4,
