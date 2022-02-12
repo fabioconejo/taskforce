@@ -3125,6 +3125,25 @@
           "Rua Borboletas Psicodélicas",
           "Rua Pato Donald"
         ]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Buscar cidade:",
+        "verbo": "Buscar",
+        "complemento": "Endereço",
+        "lista": [
+          "Ressaquinha - MG",
+          "Vassouras - RJ",
+          "Santa Rita do Passa Quatro - SP",
+          "Não Me Toque - RS",
+          "Nova Iorque - MA",
+          "Tailândia - PA",
+          "Xique-Xique - BA",
+          "Feliz Natal - MT",
+          "Sombrio - SC",
+          "Califórnia - PR"
+        ]
       }
     ]
   }
