@@ -2002,7 +2002,7 @@
         "tipo": "estado",
         "eTexto": ["Ligar registro d'água", "Desligar registro d'água"],
         "verbo": "Ligado",
-        "texto": "Entrar em registro d'água",
+        "texto": "Registro d'água",
         "complemento": "Registro d'água",
         "estado": ["Ligado", "Desligado"]
       },
@@ -2988,6 +2988,142 @@
           "Intervir",
           "Compelir",
           "Amafagafar"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "profissao": "Carteiro",
+    "imagem": "024-postman.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Entregar encomendas",
+        "verbo": "Entregar",
+        "complemento": "Encomendas"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Evitar a fadiga",
+        "verbo": "Evitar",
+        "complemento": "Fadiga"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Entregar cartas",
+        "verbo": "Entregar",
+        "complemento": "Cartas"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Arremessar pacote frágil",
+        "verbo": "Arremessar",
+        "complemento": "Pacote frágil"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Fugir de cachorro",
+        "verbo": "Fugir",
+        "complemento": "Cachorro"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Tentar contato com o destinatário",
+        "verbo": "Tentar",
+        "complemento": "Contato com destinatário"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Fingir que tenta contato com o destinatário",
+        "verbo": "Fingir",
+        "complemento": "Contato com destinatário"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Solicitar assinatura do destinatário",
+        "verbo": "Solicitar",
+        "complemento": "Assinatura do destinatário"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Efetuar logística reversa",
+        "verbo": "Efetuar",
+        "complemento": "Logística reversa"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Registrar código de rastreio",
+        "verbo": "Registrar",
+        "complemento": "Código de rastreio"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Informar código de rastreio",
+        "verbo": "Informar",
+        "complemento": "Código de rastreio"
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": ["Soltar campainha", "Pressionar campainha"],
+        "verbo": "Solta",
+        "texto": "Soltar campainha",
+        "complemento": "Campainha",
+        "estado": ["Solta", "Pressionada"]
+      },
+      {
+        "id": 13,
+        "tipo": "escolha",
+        "texto": "Trocar status da entrega para",
+        "verbo": "Trocar",
+        "complemento": "Status da entrega",
+        "lista": [
+          "A entrega não pode ser efetuada",
+          "Objeto postado",
+          "Objeto roubado",
+          "Objeto saiu para entrega ao destinatário",
+          "Objeto entregue ao destinatário"
+        ]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Buscar CEP:",
+        "verbo": "Buscar",
+        "complemento": "CEP",
+        "lista": [
+          "01310-200",
+          "04094-901",
+          "02030-000",
+          "01001-000",
+          "70100-000"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Buscar endereço:",
+        "verbo": "Buscar",
+        "complemento": "Endereço",
+        "lista": [
+          "Praça dos Enfartados",
+          "Rua do Corno",
+          "Travessa Maravilha Tristeza",
+          "Rua Só Nós Dois",
+          "Rua Borboletas Psicodélicas",
+          "Rua Pato Donald"
         ]
       }
     ]
