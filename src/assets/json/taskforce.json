@@ -2828,7 +2828,7 @@
         "tipo": "escolha",
         "texto": "Enrolar na corrida por",
         "verbo": "Enrolar",
-        "complemento": "Bandeira",
+        "complemento": "Corrida",
         "lista": ["1 minuto", "5 minutos", "15 minutos", "25 minutos"]
       }
     ]
