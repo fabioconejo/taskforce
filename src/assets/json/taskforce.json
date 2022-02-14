@@ -2798,11 +2798,11 @@
         "id": 13,
         "tipo": "estado",
         "eTexto": [
-          "Acender luz do táxi para livre",
-          "Acender luz do táxi ocupado"
+          "Sinalizar táxi como livre",
+          "Sinalizar táxi como ocupado"
         ],
         "verbo": "Livre",
-        "texto": "Acender luz do táxi livre",
+        "texto": "Sinalizar táxi como livre",
         "complemento": "Luz do táxi",
         "estado": ["Livre", "Ocupado"]
       },
@@ -3144,6 +3144,143 @@
           "Sombrio - SC",
           "Califórnia - PR"
         ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "profissao": "Palhaço",
+    "imagem": "005-clown.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Vestir figurino colorido",
+        "verbo": "Vestir",
+        "complemento": "Figurino colorido"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Chamar atenção de touro",
+        "verbo": "Chamar",
+        "complemento": "Atenção do touro"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Fazer trocadilho",
+        "verbo": "Fazer",
+        "complemento": "Trocadilho"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Provocar risada",
+        "verbo": "Provocar",
+        "complemento": "Risada"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Improvisar com o público",
+        "verbo": "Improvisar",
+        "complemento": "Público"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Imitar alguém",
+        "verbo": "Imitar",
+        "complemento": "Alguém"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Usar maquiagem",
+        "verbo": "Usar",
+        "complemento": "Maquiagem"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Assustar criança",
+        "verbo": "Assustar",
+        "complemento": "Criança"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Ser um doutor da alegria",
+        "verbo": "Ser",
+        "complemento": "Doutor da alegria"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Imitar alguém",
+        "verbo": "Imitar",
+        "complemento": "Alguém"
+      },
+      {
+        "id": 11,
+        "tipo": "estado",
+        "eTexto": [
+          "Colocar nariz de palhaço",
+          "Retirar nariz de palhaço"
+        ],
+        "verbo": "Colocado",
+        "texto": "Colocar nariz de palhaço",
+        "complemento": "Nariz de palhaço",
+        "estado": ["Colocado", "Retirado"]
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": [
+          "Fazer careta",
+          "Desfazer careta"
+        ],
+        "verbo": "Feita",
+        "texto": "Fazer careta",
+        "complemento": "Careta",
+        "estado": ["Feita", "Desfeita"]
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": [
+          "Entrar em grupo circense",
+          "Sair de grupo circense"
+        ],
+        "verbo": "Dentro",
+        "texto": "Entrar em grupo circense",
+        "complemento": "Grupo circense",
+        "estado": ["Dentro", "Fora"]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Fazer mímica de",
+        "verbo": "Fazer",
+        "complemento": "Mímica",
+        "lista": ["Parede", "Carro", "Escada", "Esteira", "Luta", "Cadeira"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Contar história",
+        "verbo": "Contar",
+        "complemento": "História",
+        "lista": ["Rápida", "Longa"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Contar piada de",
+        "verbo": "Contar",
+        "complemento": "Piada",
+        "lista": ["Trocadilho", "Animal", "Joãozinho", "Bêbado", "Tiozão"]
       }
     ]
   }
