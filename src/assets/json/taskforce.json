@@ -3581,7 +3581,161 @@
         "texto": "Ligar para cliente:",
         "verbo": "Ligar",
         "complemento": "Nome do cliente",
-        "lista": ["Alan Berrola", "Botelho Pinto", "Crispin Tudo", "Dayde Costa", "Jé Badura", "Zeca Gado"]
+        "lista": [
+          "Alan Berrola",
+          "Botelho Pinto",
+          "Crispin Tudo",
+          "Dayde Costa",
+          "Jé Badura",
+          "Zeca Gado"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "profissao": "Diarista",
+    "imagem": "008-maid.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Encher balde",
+        "verbo": "Encher",
+        "complemento": "Balde"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Molhar pano",
+        "verbo": "molhar",
+        "complemento": "Pano"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Esfregar chão",
+        "verbo": "Esfregar",
+        "complemento": "Chão"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Varrer casa",
+        "verbo": "Varrer",
+        "complemento": "Casa"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Limpar banheiro",
+        "verbo": "Limpar",
+        "complemento": "Banheiro"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Afastar mosca com pano de prato",
+        "verbo": "Afastar",
+        "complemento": "Pano de prato"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Tirar pó",
+        "verbo": "Tirar",
+        "complemento": "Pó"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Mover móveis",
+        "verbo": "Mover",
+        "complemento": "Móveis"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Estender roupas",
+        "verbo": "Estender",
+        "complemento": "Roupas"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Passar roupas",
+        "verbo": "Passar",
+        "complemento": "Roupas"
+      },
+      {
+        "id": 11,
+        "tipo": "estado",
+        "eTexto": ["Ligar aspirador", "Desligar aspirador"],
+        "verbo": "Ligado",
+        "texto": "Ligar aspirador",
+        "complemento": "Aspirador",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": ["Ligar lavadora de alta pressão", "Desligar lava louça"],
+        "verbo": "Ligada",
+        "texto": "Ligar lavadora de alta pressão",
+        "complemento": "Lavadora de alta pressão",
+        "estado": ["Ligada", "Desligada"]
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Ligar lava e seca", "Desligar lava e seca"],
+        "verbo": "Ligada",
+        "texto": "Ligar lava e seca",
+        "complemento": "Lava e seca",
+        "estado": ["Ligada", "Desligada"]
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": ["Ligar torneira", "Desligar torneira"],
+        "verbo": "Ligada",
+        "texto": "Ligar torneira",
+        "complemento": "Torneira",
+        "estado": ["Ligada", "Desligada"]
+      },
+      {
+        "id": 15,
+        "tipo": "estado",
+        "eTexto": ["Ligar ferro de passar", "Desligar ferro de passar"],
+        "verbo": "Ligado",
+        "texto": "Ligar ferro de passar",
+        "complemento": "Ferro de passsar",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 16,
+        "tipo": "estado",
+        "eTexto": ["Ligar enceradeira", "Desligar enceradeira"],
+        "verbo": "Ligada",
+        "texto": "Ligar enceradeira",
+        "complemento": "Enceradeira",
+        "estado": ["Ligada", "Desligada"]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Utilizar produto químico:",
+        "verbo": "Utilizar",
+        "complemento": "Produto químico",
+        "lista": [
+          "Detergente",
+          "Água Sanitária",
+          "Vinagre",
+          "Bicarbonato de Sódio",
+          "Álcool",
+          "Limpa-vridros",
+          "Desinfetante"
+        ]
       }
     ]
   }
