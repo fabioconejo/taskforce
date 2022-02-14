@@ -3322,10 +3322,7 @@
       {
         "id": 7,
         "tipo": "estado",
-        "eTexto": [
-          "Ligar motoserra",
-          "Desligar motoserra"
-        ],
+        "eTexto": ["Ligar motoserra", "Desligar motoserra"],
         "verbo": "Ligado",
         "texto": "Ligar motoserra",
         "complemento": "Motoserra",
@@ -3336,7 +3333,7 @@
         "tipo": "escolha",
         "texto": "Produzir feixe de",
         "verbo": "Produzir",
-        "complemento": "Feixe", 
+        "complemento": "Feixe",
         "lista": [
           "7 lenhas",
           "18 lenhas",
@@ -3350,7 +3347,7 @@
         "tipo": "escolha",
         "texto": "Extrair da seringueira",
         "verbo": "Extrair",
-        "complemento": "Seringueira", 
+        "complemento": "Seringueira",
         "lista": [
           "1 litro de látex",
           "2 litros de látex",
@@ -3363,21 +3360,15 @@
         "tipo": "escolha",
         "texto": "Acumular no caminhão",
         "verbo": "Acumular",
-        "complemento": "Caminhão", 
-        "lista": [
-          "3 toras",
-          "7 toras",
-          "15 toras",
-          "21 toras",
-          "28 toras"
-        ]
+        "complemento": "Caminhão",
+        "lista": ["3 toras", "7 toras", "15 toras", "21 toras", "28 toras"]
       },
       {
         "id": 11,
         "tipo": "escolha",
         "texto": "Usar camisa xadrez de cores",
         "verbo": "Usar",
-        "complemento": "Camisa xadrez de cores", 
+        "complemento": "Camisa xadrez de cores",
         "lista": [
           "Vermelho e preto",
           "Vermelho e verde",
@@ -3392,21 +3383,15 @@
         "tipo": "escolha",
         "texto": "Deixar barba crescer até",
         "verbo": "Deixar",
-        "complemento": "Barba", 
-        "lista": [
-          "5cm",
-          "7cm",
-          "10cm",
-          "15cm",
-          "20cm"
-        ]
+        "complemento": "Barba",
+        "lista": ["5cm", "7cm", "10cm", "15cm", "20cm"]
       },
       {
         "id": 13,
         "tipo": "escolha",
         "texto": "Cortar árvore com",
         "verbo": "Cortar",
-        "complemento": "Árvore", 
+        "complemento": "Árvore",
         "lista": [
           "Serrote",
           "Serra elétrica",
@@ -3420,7 +3405,7 @@
         "tipo": "escolha",
         "texto": "Plantar semente de",
         "verbo": "Plantar",
-        "complemento": "Semente", 
+        "complemento": "Semente",
         "lista": [
           "Acácia Australiana",
           "Calistemo",
@@ -3465,6 +3450,138 @@
           "Pinus",
           "Oliveira"
         ]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "profissao": "Telemarketing",
+    "imagem": "046-telemarketer.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Ligar para cliente",
+        "verbo": "Ligar",
+        "complemento": "Cliente"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Desligar na cara",
+        "verbo": "Na cara",
+        "complemento": "Desligar"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Cobrar dívida de cliente",
+        "verbo": "Cobrar",
+        "complemento": "Dívida de cliente"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Passar trote",
+        "verbo": "Passar",
+        "complemento": "Trote"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Usar gerúndio",
+        "verbo": "Usar",
+        "complemento": "Gerúndio"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Escutar reclamações",
+        "verbo": "Escutar",
+        "complemento": "Reclamações"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Tranferir ligação",
+        "verbo": "Transferir",
+        "complemento": "Ligação"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Bater meta de ligações",
+        "verbo": "Bater",
+        "complemento": "Meta de ligações"
+      },
+      {
+        "id": 9,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar interferência durante chamada",
+          "Desligar interferência durante chamada"
+        ],
+        "verbo": "Ligada",
+        "texto": "Ligar interferência durante chamada",
+        "complemento": "Interferência durante chamada",
+        "estado": ["Ligada", "Desligada"]
+      },
+      {
+        "id": 10,
+        "tipo": "estado",
+        "eTexto": ["Deixar microfone aberto", "Deixar microfone silenciado"],
+        "verbo": "Aberto",
+        "texto": "Deixar microfone aberto",
+        "complemento": "Microfone",
+        "estado": ["Aberto", "Silenciado"]
+      },
+      {
+        "id": 11,
+        "tipo": "escolha",
+        "texto": "Oferecer",
+        "verbo": "Oferecer",
+        "complemento": "Oferecimento",
+        "lista": ["Produto", "Serviço", "Desconto", "Plano"]
+      },
+      {
+        "id": 12,
+        "tipo": "escolha",
+        "texto": "Ligar as",
+        "verbo": "Ligar",
+        "complemento": "Horário",
+        "lista": ["08:00h", "00:30h", "04:20h", "14:45h", "16:20h"]
+      },
+      {
+        "id": 13,
+        "tipo": "escolha",
+        "texto": "Nota recebida pelo atendimento:",
+        "verbo": "Receber",
+        "complemento": "Nota",
+        "lista": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Pedir para aguardar na linha por:",
+        "verbo": "Pedir",
+        "complemento": "Aguardar na linha",
+        "lista": ["1min", "2min", "5min", "10min"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Ligar para o número:",
+        "verbo": "Ligar",
+        "complemento": "Número de telefone",
+        "lista": ["4002-8922", "4002-8923", "0500-2022-040", "0500-12345-40"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Ligar para cliente:",
+        "verbo": "Ligar",
+        "complemento": "Nome do cliente",
+        "lista": ["Alan Berrola", "Botelho Pinto", "Crispin Tudo", "Dayde Costa", "Jé Badura", "Zeca Gado"]
       }
     ]
   }
