@@ -2797,10 +2797,7 @@
       {
         "id": 13,
         "tipo": "estado",
-        "eTexto": [
-          "Sinalizar táxi como livre",
-          "Sinalizar táxi como ocupado"
-        ],
+        "eTexto": ["Sinalizar táxi como livre", "Sinalizar táxi como ocupado"],
         "verbo": "Livre",
         "texto": "Sinalizar táxi como livre",
         "complemento": "Luz do táxi",
@@ -3225,10 +3222,7 @@
       {
         "id": 11,
         "tipo": "estado",
-        "eTexto": [
-          "Colocar nariz de palhaço",
-          "Retirar nariz de palhaço"
-        ],
+        "eTexto": ["Colocar nariz de palhaço", "Retirar nariz de palhaço"],
         "verbo": "Colocado",
         "texto": "Colocar nariz de palhaço",
         "complemento": "Nariz de palhaço",
@@ -3237,10 +3231,7 @@
       {
         "id": 12,
         "tipo": "estado",
-        "eTexto": [
-          "Fazer careta",
-          "Desfazer careta"
-        ],
+        "eTexto": ["Fazer careta", "Desfazer careta"],
         "verbo": "Feita",
         "texto": "Fazer careta",
         "complemento": "Careta",
@@ -3249,10 +3240,7 @@
       {
         "id": 13,
         "tipo": "estado",
-        "eTexto": [
-          "Entrar em grupo circense",
-          "Sair de grupo circense"
-        ],
+        "eTexto": ["Entrar em grupo circense", "Sair de grupo circense"],
         "verbo": "Dentro",
         "texto": "Entrar em grupo circense",
         "complemento": "Grupo circense",
@@ -3281,6 +3269,202 @@
         "verbo": "Contar",
         "complemento": "Piada",
         "lista": ["Trocadilho", "Animal", "Joãozinho", "Bêbado", "Tiozão"]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "profissao": "Lenhador",
+    "imagem": "021-lamberjack.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Gritar 'Madeiraaaaa!'",
+        "verbo": "Gritar",
+        "complemento": "Madeiraaaaa!"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Extrair raiz",
+        "verbo": "Extrair",
+        "complemento": "Raiz"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Retirar folhas",
+        "verbo": "Retirar",
+        "complemento": "Folhas"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Partir tora ao meio",
+        "verbo": "Partir",
+        "complemento": "Tora ao meio"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Solicitar licenciamento ambiental",
+        "verbo": "Solicitar",
+        "complemento": "Licenciamento ambiental"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Remover cupim",
+        "verbo": "Remover",
+        "complemento": "Cupim"
+      },
+      {
+        "id": 7,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar motoserra",
+          "Desligar motoserra"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar motoserra",
+        "complemento": "Motoserra",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 8,
+        "tipo": "escolha",
+        "texto": "Produzir feixe de",
+        "verbo": "Produzir",
+        "complemento": "Feixe", 
+        "lista": [
+          "7 lenhas",
+          "18 lenhas",
+          "25 lenhas",
+          "40 lenhas",
+          "90 lenhas"
+        ]
+      },
+      {
+        "id": 9,
+        "tipo": "escolha",
+        "texto": "Extrair da seringueira",
+        "verbo": "Extrair",
+        "complemento": "Seringueira", 
+        "lista": [
+          "1 litro de látex",
+          "2 litros de látex",
+          "3 litros de látex",
+          "4 litros de látex"
+        ]
+      },
+      {
+        "id": 10,
+        "tipo": "escolha",
+        "texto": "Acumular no caminhão",
+        "verbo": "Acumular",
+        "complemento": "Caminhão", 
+        "lista": [
+          "3 toras",
+          "7 toras",
+          "15 toras",
+          "21 toras",
+          "28 toras"
+        ]
+      },
+      {
+        "id": 11,
+        "tipo": "escolha",
+        "texto": "Usar camisa xadrez de cores",
+        "verbo": "Usar",
+        "complemento": "Camisa xadrez de cores", 
+        "lista": [
+          "Vermelho e preto",
+          "Vermelho e verde",
+          "Verde e preto",
+          "Verde e azul",
+          "Azul e preto",
+          "Azul e verde"
+        ]
+      },
+      {
+        "id": 12,
+        "tipo": "escolha",
+        "texto": "Deixar barba crescer até",
+        "verbo": "Deixar",
+        "complemento": "Barba", 
+        "lista": [
+          "5cm",
+          "7cm",
+          "10cm",
+          "15cm",
+          "20cm"
+        ]
+      },
+      {
+        "id": 13,
+        "tipo": "escolha",
+        "texto": "Cortar árvore com",
+        "verbo": "Cortar",
+        "complemento": "Árvore", 
+        "lista": [
+          "Serrote",
+          "Serra elétrica",
+          "Serra de fio",
+          "Machado",
+          "Machadinha"
+        ]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Plantar semente de",
+        "verbo": "Plantar",
+        "complemento": "Semente", 
+        "lista": [
+          "Acácia Australiana",
+          "Calistemo",
+          "Castanheira",
+          "Cedro",
+          "Ipê",
+          "Jacarandá"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Cortar pé de",
+        "verbo": "Cortar",
+        "complemento": "Pé",
+        "lista": [
+          "Aroeira",
+          "Bambu",
+          "Castanheira",
+          "Cedro",
+          "Jatobá",
+          "Juazeiro",
+          "Pau-Brasil",
+          "Pinus",
+          "Oliveira"
+        ]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Podar muda de",
+        "verbo": "Podar",
+        "complemento": "Muda",
+        "lista": [
+          "Aroeira",
+          "Bambu",
+          "Castanheira",
+          "Cedro",
+          "Jatobá",
+          "Juazeiro",
+          "Pau-Brasil",
+          "Pinus",
+          "Oliveira"
+        ]
       }
     ]
   }
