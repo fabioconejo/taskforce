@@ -2761,7 +2761,7 @@
         "id": 9,
         "tipo": "acao",
         "texto": "Indicar pontos turísticos",
-        "verbo": "Arrumar",
+        "verbo": "Indicar",
         "complemento": "Pontos turísticos"
       },
       {
