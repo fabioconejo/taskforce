@@ -1965,40 +1965,33 @@
       {
         "id": 12,
         "tipo": "acao",
-        "texto": "Capturar animal silvestre",
-        "verbo": "Capturar",
-        "complemento": "Animal silvestre"
-      },
-      {
-        "id": 13,
-        "tipo": "acao",
         "texto": "Usar mangueira",
         "verbo": "Usar",
         "complemento": "Mangueira"
       },
       {
-        "id": 14,
+        "id": 13,
         "tipo": "acao",
         "texto": "Remover porta do carro",
         "verbo": "Remover",
         "complemento": "Porta do carro"
       },
       {
-        "id": 15,
+        "id": 14,
         "tipo": "acao",
         "texto": "Resgatar pessoa soterrada",
         "verbo": "Resgatar",
         "complemento": "Pessoa soterrada"
       },
       {
-        "id": 16,
+        "id": 15,
         "tipo": "acao",
         "texto": "Descer pelo cano",
         "verbo": "Descer",
         "complemento": "Cano"
       },
       {
-        "id": 17,
+        "id": 16,
         "tipo": "estado",
         "eTexto": ["Ligar registro d'água", "Desligar registro d'água"],
         "verbo": "Ligado",
@@ -2007,7 +2000,7 @@
         "estado": ["Ligado", "Desligado"]
       },
       {
-        "id": 18,
+        "id": 17,
         "tipo": "escolha",
         "texto": "Ajustar pressão d'água para",
         "verbo": "Ajustar",
@@ -3736,6 +3729,130 @@
           "Limpa-vridros",
           "Desinfetante"
         ]
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "profissao": "Caçador",
+    "imagem": "026-hunter.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Transportar animais",
+        "verbo": "Transportar",
+        "complemento": "Animais"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Vender animais",
+        "verbo": "Vender",
+        "complemento": "Animais"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Fugir de animal",
+        "verbo": "Fugir",
+        "complemento": "Animal"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Tirar foto com carcaça",
+        "verbo": "Tirar",
+        "complemento": "Foto com carcaça"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Usar cabeça como troféu",
+        "verbo": "Usar",
+        "complemento": "Cabeça como troféu"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Planejar safari",
+        "verbo": "Planejar",
+        "complemento": "Safari"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Adquirir licença para caça",
+        "verbo": "Adquirir",
+        "complemento": "Licença para caça"
+      },
+      {
+        "id": 8,
+        "tipo": "estado",
+        "eTexto": [
+          "Acionar armadilha",
+          "Retirar armadilha"
+        ],
+        "verbo": "Acionada",
+        "texto": "Acionar armadilha",
+        "complemento": "Armadilha",
+        "estado": ["Acionada", "Retirada"]
+      },
+      {
+        "id": 9,
+        "tipo": "escolha",
+        "texto": "Caçar com",
+        "verbo": "Caçar",
+        "complemento": "Arma",
+        "lista": ["Arco e flecha", "Rifle", "Zarabatana", "Lança", "Rede"]
+      },
+      {
+        "id": 10,
+        "tipo": "escolha",
+        "texto": "Extrair de animal:",
+        "verbo": "Extrair",
+        "complemento": "Material de animal",
+        "lista": ["Marfim", "Escama", "Pele", "Pérola", "Óleo", "Tinta"]
+      },
+      {
+        "id": 11,
+        "tipo": "escolha",
+        "texto": "Caçar animal de grande porte:",
+        "verbo": "Caçar",
+        "complemento": "Animal de grande porte",
+        "lista": ["Elefante", "Leão", "Avestruz", "Hipopótamo", "Mamute", "Zebra", "Girafa"]
+      },
+      {
+        "id": 12,
+        "tipo": "escolha",
+        "texto": "Sair na mão com um(a)",
+        "verbo": "Sair",
+        "complemento": "Na mão",
+        "lista": ["Crocodilo", "Tigre", "Urso", "Canguru", "Gorila"]
+      },
+      {
+        "id": 13,
+        "tipo": "escolha",
+        "texto": "Capturar animal de pequeno porte:",
+        "verbo": "Capturar",
+        "complemento": "Animal de pequeno porte",
+        "lista": ["Arara", "Andorinha", "Papagaio", "Serpente", "Tarântula"]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Esconder-se atrás de",
+        "verbo": "Esconder-se",
+        "complemento": "Atrás de",
+        "lista": ["Moita", "Árvore", "Pedra", "Vegetação"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Controlar dosagem de tranquilizante para",
+        "verbo": "Controlar",
+        "complemento": "Dosagem de tranquilizante",
+        "lista": ["200g", "350g", "480g", "610g"]
       }
     ]
   }
