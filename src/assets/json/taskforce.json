@@ -3789,10 +3789,7 @@
       {
         "id": 8,
         "tipo": "estado",
-        "eTexto": [
-          "Acionar armadilha",
-          "Retirar armadilha"
-        ],
+        "eTexto": ["Acionar armadilha", "Retirar armadilha"],
         "verbo": "Acionada",
         "texto": "Acionar armadilha",
         "complemento": "Armadilha",
@@ -3820,7 +3817,15 @@
         "texto": "Caçar animal de grande porte:",
         "verbo": "Caçar",
         "complemento": "Animal de grande porte",
-        "lista": ["Elefante", "Leão", "Avestruz", "Hipopótamo", "Mamute", "Zebra", "Girafa"]
+        "lista": [
+          "Elefante",
+          "Leão",
+          "Avestruz",
+          "Hipopótamo",
+          "Mamute",
+          "Zebra",
+          "Girafa"
+        ]
       },
       {
         "id": 12,
@@ -3853,6 +3858,137 @@
         "verbo": "Controlar",
         "complemento": "Dosagem de tranquilizante",
         "lista": ["200g", "350g", "480g", "610g"]
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "profissao": "Mecânico",
+    "imagem": "010-mechanic.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Sugerir peça ao cliente",
+        "verbo": "Sugerir",
+        "complemento": "Peça ao cliente"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Realizar manutenção no veículo",
+        "verbo": "Realizar",
+        "complemento": "Manutenção no veículo"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Trocar pneus",
+        "verbo": "Trocar",
+        "complemento": "Pneus"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Vefiricar água do carburador",
+        "verbo": "Vefiricar",
+        "complemento": "Água do carburador"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Trocar óleo do motor",
+        "verbo": "Trocar",
+        "complemento": "Óleo do motor"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Descobrir de onde vem o barulho",
+        "verbo": "Descobrir",
+        "complemento": "Onde vem o barulho"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Fazer chupeta",
+        "verbo": "Fazer",
+        "complemento": "Chupeta"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Trocar peça por outra mais barata",
+        "verbo": "Trocar",
+        "complemento": "Peça por peça mais barata"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Colocar insulfilm",
+        "verbo": "Colocar",
+        "complemento": "Insulfilm"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Sujar-se de graxa",
+        "verbo": "Sujar-se",
+        "complemento": "Graxa"
+      },
+      {
+        "id": 11,
+        "tipo": "estado",
+        "eTexto": ["Ligar macaco hidráulico", "Desligar macaco hidráulico"],
+        "verbo": "Ligado",
+        "texto": "Ligar macaco hidráulico",
+        "complemento": "Macaco hidráulico",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 12,
+        "tipo": "escolha",
+        "texto": "Escolher nome da oficina:",
+        "verbo": "Escolher",
+        "complemento": "Nome da oficina",
+        "lista": ["Oficina do Paulão", "Oficina do Paulo Guina", "Simas Turbo"]
+      },
+      {
+        "id": 13,
+        "tipo": "escolha",
+        "texto": "Dizer que o problema está",
+        "verbo": "Escolher",
+        "complemento": "Nome da oficina",
+        "lista": [
+          "No motor",
+          "No freio",
+          "No carburador",
+          "Na rebimboca da parafuseta"
+        ]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Desfazer amassado no",
+        "verbo": "Desfazer",
+        "complemento": "Amassado",
+        "lista": ["Capô", "Porta-malas", "Porta", "Teto"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Dar manutenção em",
+        "verbo": "Dar",
+        "complemento": "Manutenção",
+        "lista": ["Fusca", "Corsa", "Kombi", "Ferrari"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Cobrar no orçamento",
+        "verbo": "Cobrar",
+        "complemento": "Orçamento",
+        "lista": ["3x a mais", "4x a mais", "5x a mais", "6x a mais"]
       }
     ]
   }
