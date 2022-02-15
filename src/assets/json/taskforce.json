@@ -3268,7 +3268,7 @@
   {
     "id": 25,
     "profissao": "Lenhador",
-    "imagem": "021-lamberjack.svg",
+    "imagem": "021-lumberjack.svg",
     "tarefas": [
       {
         "id": 1,
@@ -3956,20 +3956,20 @@
       {
         "id": 13,
         "tipo": "escolha",
-        "texto": "Dizer que o problema está",
-        "verbo": "Escolher",
-        "complemento": "Nome da oficina",
+        "texto": "Dizer que o problema está no(a)",
+        "verbo": "Dizer",
+        "complemento": "Problema",
         "lista": [
-          "No motor",
-          "No freio",
-          "No carburador",
-          "Na rebimboca da parafuseta"
+          "Motor",
+          "Freio",
+          "Carburador",
+          "Rebimboca da parafuseta"
         ]
       },
       {
         "id": 14,
         "tipo": "escolha",
-        "texto": "Desfazer amassado no",
+        "texto": "Desfazer amassado no(a)",
         "verbo": "Desfazer",
         "complemento": "Amassado",
         "lista": ["Capô", "Porta-malas", "Porta", "Teto"]
@@ -4134,7 +4134,7 @@
         "texto": "Fazer o carro emitir som:",
         "verbo": "Fazer",
         "complemento": "Carro emitir som",
-        "lista": ["Vruuummm", "Vrooommm", "Inhéummmm", "Zoooooummm"]
+        "lista": ["Vruuummm", "Vrooommm", "Inhéummm", "Zoooooummm"]
       }
     ]
   }
