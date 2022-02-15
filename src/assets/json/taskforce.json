@@ -3991,5 +3991,151 @@
         "lista": ["3x a mais", "4x a mais", "5x a mais", "6x a mais"]
       }
     ]
+  },
+  {
+    "id": 30,
+    "profissao": "Piloto de corrida",
+    "imagem": "034-racer.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Passar por cima da zebra",
+        "verbo": "Passar",
+        "complemento": "Por cima da zebra"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Usar cinto de segurança",
+        "verbo": "Usar",
+        "complemento": "Cinto de segurança"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Virar para esquerda",
+        "verbo": "Virar",
+        "complemento": "Esquerda"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Virar para direita",
+        "verbo": "Virar",
+        "complemento": "Direita"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Fazer zerinho",
+        "verbo": "Fazer",
+        "complemento": "Zerinho"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Bater em pneus",
+        "verbo": "Bater",
+        "complemento": "Pneus"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Cruzar linha de chegada",
+        "verbo": "Cruzar",
+        "complemento": "Linha de chegada"
+      },
+      {
+        "id": 8,
+        "tipo": "estado",
+        "eTexto": ["Ligar farol", "Desligar farol"],
+        "verbo": "Ligado",
+        "texto": "Ligar farol",
+        "complemento": "Farol",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 9,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar limpador de parabrisa",
+          "Desligar limpador de parabrisa"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar limpador de parabrisa",
+        "complemento": "Limpador de parabrisa",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 10,
+        "tipo": "estado",
+        "eTexto": ["Ligar motor do carro", "Desligar motor do carro"],
+        "verbo": "Ligado",
+        "texto": "Ligar motor do carro",
+        "complemento": "Motor do carro",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 11,
+        "tipo": "estado",
+        "eTexto": ["Soltar acelerador", "Pressionar acelerador"],
+        "verbo": "Solto",
+        "texto": "Soltar acelerador",
+        "complemento": "Acelerador",
+        "estado": ["Solto", "Pressionado"]
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": ["Soltar freio", "Pressionar freio"],
+        "verbo": "Solto",
+        "texto": "Soltar freio",
+        "complemento": "Freio",
+        "estado": ["Solto", "Pressionado"]
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Soltar embreagem", "Pressionar embreagem"],
+        "verbo": "Solto",
+        "texto": "Soltar embreagem",
+        "complemento": "Embreagem",
+        "estado": ["Solto", "Pressionado"]
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": ["Soltar freio de mão", "Acionar freio de mão"],
+        "verbo": "Solto",
+        "texto": "Soltar freio de mão",
+        "complemento": "Freio de mão",
+        "estado": ["Solto", "Acionado"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Trocar para marcha",
+        "verbo": "Enrolar",
+        "complemento": "Bandeira",
+        "lista": ["1", "2", "3", "4", "5", "6", "R", "N"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Chegar em",
+        "verbo": "Chegar",
+        "complemento": "Colocação",
+        "lista": ["1º lugar", "2º lugar", "3º lugar", "30º lugar", "120º lugar"]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Fazer o carro emitir som:",
+        "verbo": "Fazer",
+        "complemento": "Carro emitir som",
+        "lista": ["Vruuummm", "Vrooommm", "Inhéummmm", "Zoooooummm"]
+      }
+    ]
   }
 ]
