@@ -1,39 +1,45 @@
 <div class="sala">
-  <div
-    class="profissao-jogador"
-    [style.display]="
-      this.profissaoSorteada.responsavel === this.nickJogador
-        ? 'inherit'
-        : 'none'
-    "
-    [style.border-left-color]="
-      this.pronto ? 'var(--medium-sea-green)' : 'var(--tart-orange)'
-    "
-  >
-    <div class="cabecalho">
-      <div class="img-coracao">
-        <p class="num-vidas">{{ vidas }}x</p>
+  <div class="container">
+    <div
+      class="profissao-jogador"
+      [style.display]="
+        this.profissaoSorteada.responsavel === this.nickJogador
+          ? 'inherit'
+          : 'none'
+      "
+      [style.border-left-color]="
+        this.pronto ? 'var(--medium-sea-green)' : 'var(--tart-orange)'
+      "
+    >
+      <div class="cabecalho">
+        <div class="img-coracao">
+          <p class="num-vidas">{{ vidas }}x</p>
+        </div>
+      </div>
+
+      <div class="rodada">
+        <p>Rodada {{ numRodada }}</p>
+      </div>
+
+      <div class="fundo-profissao">
+        <div
+          class="img-jogador"
+          style.background-image="url({{ baseUrl }}profissionais/{{
+            this.profissaoSorteada.imagem
+          }})"
+        ></div>
+      </div>
+
+      <div class="info">
+        <p>
+          {{ this.profissaoSorteada.responsavel }}<br /><span>{{
+            this.profissaoSorteada.profissao
+          }}</span>
+        </p>
       </div>
     </div>
 
-    <div class="rodada">
-      <p>Rodada {{ numRodada }}</p>
-    </div>
-
-    <div
-      class="img-jogador"
-      style.background-image="url({{ baseUrl }}profissionais/{{
-        this.profissaoSorteada.imagem
-      }})"
-    ></div>
-
-    <div class="info">
-      <p>
-        Sua profissão na rodada:<br /><span>{{
-          this.profissaoSorteada.profissao
-        }}</span>
-      </p>
-    </div>
+    <div class="configuracoes"></div>
   </div>
 
   <div class="amigos">
