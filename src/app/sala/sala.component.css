@@ -614,7 +614,7 @@
     width: 100%;
     height: 95%;
 
-    margin-top: 5%;
+    margin-top: 2.5%;
   }
 
   .info {
@@ -622,7 +622,7 @@
     height: 15%;
     margin-top: 2.5%;
     font-size: 2.5vw;
-    line-height: 0.5;
+    line-height: 0.6;
     float: left;
   }
 
