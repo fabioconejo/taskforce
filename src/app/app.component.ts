@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit, VERSION } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Meta } from '@angular/platform-browser';
 
 @Component({
@@ -20,7 +21,7 @@ import { Meta } from '@angular/platform-browser';
   ],
 })
 export class AppComponent implements OnInit {
-  constructor(private meta: Meta) {
+  constructor(private meta: Meta, private titleService: Title) {
     this.meta.addTag({ property: 'og:title', content: 'Task Force' });
     this.meta.addTag({
       property: 'og:description',
@@ -36,6 +37,7 @@ export class AppComponent implements OnInit {
       content: getComputedStyle(document.documentElement)
       .getPropertyValue('--bg-color').trim(),
     });
+    this.titleService.setTitle("Task Force");
   }
 
   keySala: string;
