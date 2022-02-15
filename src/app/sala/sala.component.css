@@ -319,6 +319,13 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 767px) {
+  .container {
+    height: 80%;
+    width: 100%;
+
+    margin-right: 1.5%;
+  }
+  
   .profissao-jogador {
     width: 97.5%;
     height: 40%;
@@ -432,14 +439,14 @@
   }
 
   .rodada p {
-    font-size: 2.5vw;
+    font-size: 3.5vw;
     margin-top: 2.5%;
   }
 
   .fundo-profissao {
     width: 100%;
     height: 60%;
-    margin-top: 2.5%;
+    margin-top: 5%;
   }
 
   .img-jogador {
@@ -453,12 +460,12 @@
     width: 100%;
     height: 25%;
     margin-top: 2.5%;
-    font-size: 2.5vw;
+    font-size: 3vw;
     line-height: 0.6;
   }
 
   .info span {
-    font-size: 1.25vw;
+    font-size: 1.5vw;
   }
 
   .amigos {
