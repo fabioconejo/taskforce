@@ -2968,8 +2968,8 @@
         "id": 17,
         "tipo": "escolha",
         "texto": "Conjugar o verbo ",
-        "verbo": "Dar",
-        "complemento": "Aula",
+        "verbo": "Conjugar",
+        "complemento": "Verbo",
         "lista": [
           "Ser",
           "Nadar",
