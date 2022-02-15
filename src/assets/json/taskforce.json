@@ -3920,7 +3920,7 @@
         "tipo": "acao",
         "texto": "Trocar peça por outra mais barata",
         "verbo": "Trocar",
-        "complemento": "Peça por peça mais barata"
+        "complemento": "Peça por outra mais barata"
       },
       {
         "id": 9,
