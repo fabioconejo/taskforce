@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 import { TaskforceService } from '../taskforce.service';
 
@@ -36,7 +37,7 @@ export class SalaComponent implements OnInit {
 
   baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
 
-  constructor(private taskForceService: TaskforceService) {}
+  constructor(private taskForceService: TaskforceService, private router: Router) {}
 
   async ngOnInit() {
     this.desabilitado = true;
@@ -91,8 +92,22 @@ export class SalaComponent implements OnInit {
     );
   }
 
+  alterarVisibilidadeURL() {
+    this.router.navigate(["/"]);
+  }
+
+  alterarPrivacidade() {
+
+  }
+
   convidar() {
-    navigator.clipboard.writeText(window.location.href);
+    let url = window.location.href
+    console.log(url.split("")[url.length-7]);
+    if (url.split("")[url.length-7] !== "/") {
+      url += this.keySala;
+    }
+
+    navigator.clipboard.writeText(url);
     this.textoConvite = 'Link copiado!';
 
     setTimeout(() => {
