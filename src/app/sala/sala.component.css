@@ -116,6 +116,7 @@
   justify-content: center;
   text-align: center;
   border-bottom: 1px solid var(--box-border);
+  font-weight: bold;
 }
 
 .item-config {
@@ -141,10 +142,23 @@
 }
 
 .acao-item-config button {
-  height: 80%;
+  height: 60%;
   width: 80%;
-  margin-top: 10%;
-  margin-left: 10%;
+  margin-left: 20%;
+}
+
+.url {
+  background-color: var(--medium-sea-green);
+  color: var(--white);
+  box-shadow: 0px 6px var(--sea-green);
+}
+
+.url:active {
+  box-shadow: 0px 2px var(--sea-green);
+}
+
+.url::before {
+  content: 'Visível';
 }
 
 .amigos {
@@ -707,6 +721,14 @@
 
   .titulo-config {
     font-size: 1.75vw;
+  }
+
+  .item-config {
+    font-size: 1.4vw;
+  }
+
+  .acao-item-config button {
+    font-size: 1.4vw;
   }
 
   .profissao-jogador {
