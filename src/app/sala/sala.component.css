@@ -161,6 +161,20 @@
   content: 'Visível';
 }
 
+.privacidade {
+  background-color: var(--medium-sea-green);
+  color: var(--white);
+  box-shadow: 0px 6px var(--sea-green);
+}
+
+.privacidade:active {
+  box-shadow: 0px 2px var(--sea-green);
+}
+
+.privacidade::before {
+  content: 'Aberta';
+}
+
 .amigos {
   float: left;
   overflow-y: auto;
