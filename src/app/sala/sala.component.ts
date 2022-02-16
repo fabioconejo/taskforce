@@ -27,6 +27,8 @@ export class SalaComponent implements OnInit {
   @Input() numRodada: number;
   @Input() vidas: number;
   @Input() listaProfissoesSorteadas: Observable<any>;
+  @Input() visibilidadeURL: boolean;
+  @Input() privacidade: boolean;
 
   pronto: boolean;
   desabilitado: boolean;
@@ -92,18 +94,26 @@ export class SalaComponent implements OnInit {
     );
   }
 
-  alterarVisibilidadeURL() {
-    this.router.navigate(["/"]);
+  async alterarVisibilidadeURL() {
+    this.visibilidadeURL = !this.visibilidadeURL;
+    await this.taskForceService.alterarVisibilidadeURL(
+      this.keySala,
+      this.visibilidadeURL
+    );
   }
 
-  alterarPrivacidade() {
-
+  async alterarPrivacidade() {
+    this.privacidade = !this.privacidade;
+    await this.taskForceService.alterarPrivacidade(
+      this.keySala,
+      this.privacidade
+    );
   }
 
   convidar() {
     let url = window.location.href
-    console.log(url.split("")[url.length-7]);
-    if (url.split("")[url.length-7] !== "/") {
+    console.log(url.substring(url.length - 5));
+    if (url.split("")[url.length-6] !== "/") {
       url += this.keySala;
     }
 

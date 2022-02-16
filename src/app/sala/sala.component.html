@@ -44,13 +44,27 @@
       <div class="item-config">
         <div class="texto-item-config">URL completa</div>
         <div class="acao-item-config">
-          <button class="url" (click)="alterarVisibilidadeURL()"></button>
+          <button
+            [ngClass]="
+              this.visibilidadeURL
+                ? 'url-visivel btn-verde'
+                : 'url-oculto btn-vermelho'
+            "
+            (click)="alterarVisibilidadeURL()"
+          ></button>
         </div>
       </div>
       <div class="item-config">
         <div class="texto-item-config">Privacidade</div>
         <div class="acao-item-config">
-          <button class="privacidade"></button>
+          <button
+            [ngClass]="
+              this.privacidade
+                ? 'privacidade-aberta btn-verde'
+                : 'privacidade-fechada btn-vermelho'
+            "
+            (click)="alterarPrivacidade("
+          ></button>
         </div>
       </div>
     </div>
@@ -109,7 +123,7 @@
     <div class="acao">
       <button
         [disabled]="desabilitado"
-        [ngClass]="this.pronto ? 'cancelar' : 'pronto'"
+        [ngClass]="this.pronto ? 'cancelar btn-vermelho' : 'pronto btn-verde'"
         (click)="ficarPronto()"
       ></button>
     </div>

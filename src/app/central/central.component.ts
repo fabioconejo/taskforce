@@ -1,4 +1,11 @@
-import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import { animate, style, transition, trigger } from '@angular/animations';
@@ -42,7 +49,9 @@ export class CentralComponent implements OnInit {
   numJogadores: number;
   numTarefasNecessarias: number;
   flagRelatorio: boolean;
-  dica:boolean = true;
+  dica: boolean = true;
+  visibilidadeURL: boolean;
+  privacidade: boolean;
 
   listaProfissoesSorteadas: Observable<any>;
   keyProfissaoSorteada: string;
@@ -58,6 +67,14 @@ export class CentralComponent implements OnInit {
       this.numRodada = s.numRodada;
       this.statusSala = s.status;
       this.vidas = s.vidas;
+      this.visibilidadeURL = s.visibilidadeURL;
+      this.privacidade = s.privacidade;
+
+      if (this.visibilidadeURL) {
+        this.router.navigate(['/' + this.keySala]);
+      } else {
+        this.router.navigate(['/']);
+      }
 
       if (this.vidas <= 0) {
         this.taskForceService.setStatusSala(this.keySala, 'espera');
@@ -69,7 +86,7 @@ export class CentralComponent implements OnInit {
     this.listaProfissoesSorteadas
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(async (lista) => {
-        if(this.keyProfissaoSorteada){
+        if (this.keyProfissaoSorteada) {
           if (
             !(await this.taskForceService.getProfissao(
               this.keySala,
@@ -78,7 +95,7 @@ export class CentralComponent implements OnInit {
           ) {
             this.keySala = null;
             this.keySalaChange.emit(this.keySala);
-            this.router.navigate(['/'])
+            this.router.navigate(['/']);
           }
         }
 

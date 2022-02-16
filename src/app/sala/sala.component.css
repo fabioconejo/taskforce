@@ -147,32 +147,20 @@
   margin-left: 20%;
 }
 
-.url {
-  background-color: var(--medium-sea-green);
-  color: var(--white);
-  box-shadow: 0px 6px var(--sea-green);
-}
-
-.url:active {
-  box-shadow: 0px 2px var(--sea-green);
-}
-
-.url::before {
+.url-visivel::before {
   content: 'Visível';
 }
 
-.privacidade {
-  background-color: var(--medium-sea-green);
-  color: var(--white);
-  box-shadow: 0px 6px var(--sea-green);
+.url-oculto::before {
+  content: 'Oculto';
 }
 
-.privacidade:active {
-  box-shadow: 0px 2px var(--sea-green);
-}
-
-.privacidade::before {
+.privacidade-aberta::before {
   content: 'Aberta';
+}
+
+.privacidade-fechada::before {
+  content: 'Fechada';
 }
 
 .amigos {
@@ -281,32 +269,32 @@
   box-shadow: 0px 2px var(--black-fogra);
 }
 
-.pronto {
+.pronto::before {
+  content: 'Pronto';
+}
+
+.cancelar::before {
+  content: 'Cancelar';
+}
+
+.btn-verde {
   background-color: var(--medium-sea-green);
   color: var(--white);
   box-shadow: 0px 6px var(--sea-green);
 }
 
-.pronto:active {
+.btn-verde:active {
   box-shadow: 0px 2px var(--sea-green);
 }
 
-.pronto::before {
-  content: 'Pronto';
-}
-
-.cancelar {
+.btn-vermelho{
   background-color: var(--tart-orange);
   color: var(--white);
   box-shadow: 0px 6px var(--firebrick);
 }
 
-.cancelar:active {
+.btn-vermelho:active {
   box-shadow: 0px 2px var(--firebrick);
-}
-
-.cancelar::before {
-  content: 'Cancelar';
 }
 
 /* Extra small devices (phones, 600px and down) */

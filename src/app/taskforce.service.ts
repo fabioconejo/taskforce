@@ -29,6 +29,8 @@ export class TaskforceService {
       status: 'espera',
       numRodada: 1,
       vidas: 10,
+      visibilidadeURL: true,
+      privacidade: true,
       profissoes: [],
       registros: [],
     };
@@ -474,5 +476,17 @@ export class TaskforceService {
     await this.db.database
       .ref('salas/' + keySala + '/profissoes/' + keyProfissao)
       .update({ pronto: valor });
+  }
+
+  async alterarVisibilidadeURL(keySala: string, valor: boolean) {
+    await this.db.database
+      .ref('salas/' + keySala)
+      .update({ visibilidadeURL: valor });
+  }
+
+  async alterarPrivacidade(keySala: string, valor: boolean) {
+    await this.db.database
+      .ref('salas/' + keySala)
+      .update({ privacidade: valor });
   }
 }
