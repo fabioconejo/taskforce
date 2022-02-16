@@ -105,6 +105,46 @@
   padding: 1.25%;
   box-sizing: border-box;
   border: 2px solid var(--box-border);
+  overflow: auto;
+}
+
+.titulo-config {
+  width: 100%;
+  height: 25%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid var(--box-border);
+}
+
+.item-config {
+  width: 100%;
+  height: 25%;
+  border-bottom: 1px solid var(--box-border);
+}
+
+.texto-item-config {
+  width: 60%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  float: left;
+}
+
+.acao-item-config {
+  width: 40%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  float: left;
+}
+
+.acao-item-config button {
+  height: 80%;
+  width: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
 }
 
 .amigos {
@@ -350,7 +390,7 @@
   .configuracoes {
     display: none;
   }
-  
+
   .profissao-jogador {
     width: 97.5%;
     height: 95%;
@@ -663,6 +703,10 @@
     width: 100%;
 
     margin-top: 3%;
+  }
+
+  .titulo-config {
+    font-size: 1.75vw;
   }
 
   .profissao-jogador {
