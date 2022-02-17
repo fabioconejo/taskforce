@@ -112,8 +112,8 @@ export class SalaComponent implements OnInit {
 
   convidar() {
     let url = window.location.href
-    console.log(url.substring(url.length - 5));
-    if (url.split("")[url.length-6] !== "/") {
+    
+    if (url.substring(url.length - 5) !== this.keySala) {
       url += this.keySala;
     }
 
