@@ -512,6 +512,18 @@
     margin-top: 3%;
   }
 
+  .titulo-config {
+    font-size: 2.5vw;
+  }
+
+  .item-config {
+    font-size: 2vw;
+  }
+
+  .acao-item-config button {
+    font-size: 2vw;
+  }
+
   .profissao-jogador {
     height: 52%;
     width: 100%;
@@ -615,6 +627,18 @@
     width: 100%;
 
     margin-top: 3%;
+  }
+
+  .titulo-config {
+    font-size: 1.75vw;
+  }
+
+  .item-config {
+    font-size: 1.5vw;
+  }
+
+  .acao-item-config button {
+    font-size: 1.5vw;
   }
 
   .profissao-jogador {
