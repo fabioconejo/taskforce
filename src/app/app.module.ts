@@ -17,6 +17,7 @@ import { QuadroComponent } from './quadro/quadro.component';
 import { CentralComponent } from './central/central.component';
 import { TaskforceService } from './taskforce.service';
 import { SalaComponent } from './sala/sala.component';
+import { ContagemComponent } from './contagem/contagem.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { RelatorioComponent } from './relatorio/relatorio.component';
 
@@ -39,6 +40,7 @@ import { RelatorioComponent } from './relatorio/relatorio.component';
     QuadroComponent,
     CentralComponent,
     SalaComponent,
+    ContagemComponent,
     InicioComponent,
     RelatorioComponent
   ],

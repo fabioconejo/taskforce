@@ -68,7 +68,7 @@ export class SalaComponent implements OnInit {
         });
 
         if (prontos === total && prontos > 0) {
-          this.taskForceService.setStatusSala(this.keySala, 'jogo');
+          this.taskForceService.setStatusSala(this.keySala, 'contagem');
         }
       });
   }
