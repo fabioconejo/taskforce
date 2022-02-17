@@ -489,4 +489,16 @@ export class TaskforceService {
       .ref('salas/' + keySala)
       .update({ privacidade: valor });
   }
+
+  async checarPrivacidadeSala(keySala: string):Promise<boolean> {
+    let result = false;
+
+    await this.db.database
+      .ref('salas/' + keySala + '/privacidade/')
+      .once('value', (snap) => {
+        result = snap.val();
+      });
+
+    return result;
+  }
 }

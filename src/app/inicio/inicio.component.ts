@@ -158,6 +158,11 @@ export class InicioComponent implements OnInit {
       return;
     }
 
+    if (!(await this.taskForceService.checarPrivacidadeSala(this.keySala))) {
+      this.mensagem = 'A sala está trancada';
+      return;
+    }
+
     if (!(await this.taskForceService.checarStatusSala(this.keySala))) {
       this.mensagem = 'A sala em partida, aguarde';
       return;
