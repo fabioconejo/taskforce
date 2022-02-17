@@ -46,7 +46,8 @@
     >
     </painel>
   </div>
-  <div *ngIf="statusSala === 'espera' && flagRelatorio === true">
+  <div *ngIf="statusSala === 'contagem'" [@fade]></div>
+  <div *ngIf="statusSala === 'espera' && flagRelatorio === true" [@fade]>
     <relatorio
       [keySala]="keySala"
       [vidas]="vidas"
