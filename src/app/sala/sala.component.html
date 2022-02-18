@@ -50,6 +50,7 @@
                 ? 'url-visivel btn-verde'
                 : 'url-oculto btn-vermelho'
             "
+            [disabled]="!lider"
             (click)="alterarVisibilidadeURL()"
           ></button>
         </div>
@@ -80,7 +81,11 @@
         l.pronto ? 'var(--medium-sea-green)' : 'var(--tart-orange)'
       "
     >
-      <div class="lista-acoes" tabindex="-1" [style.display]="lider ? 'inherit' : 'none'">
+      <div
+        class="lista-acoes"
+        tabindex="-1"
+        [style.display]="lider ? 'inherit' : 'none'"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
