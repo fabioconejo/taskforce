@@ -41,6 +41,16 @@
   right: 0;
 }
 
+.img-coroa {
+  position: absolute;
+
+  background-image: url('https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/crown.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 0;
+}
+
 .img-coracao:after {
   content: '';
   display: block;
