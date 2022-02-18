@@ -117,7 +117,7 @@ export class PainelComponent implements OnInit {
           this.corMonitor = 'vermelho';
           setTimeout(() => {
             this.corMonitor = '';
-          }, 1000);
+          }, 400);
           return [];
         })
       )
@@ -132,7 +132,7 @@ export class PainelComponent implements OnInit {
           this.corMonitor = 'verde';
           setTimeout(() => {
             this.corMonitor = '';
-          }, 1000);
+          }, 400);
           await this.atualizarTarefa();
         }
       });
@@ -179,14 +179,14 @@ export class PainelComponent implements OnInit {
         setTimeout(() => {
           this.corTarefa = '';
           this.idTarefaRecente = 0;
-        }, 600);
+        }, 400);
       } else {
         this.corTarefa = 'vermelho';
         this.idTarefaRecente = registro.id;
         setTimeout(() => {
           this.corTarefa = '';
           this.idTarefaRecente = 0;
-        }, 600);
+        }, 400);
       }
     }
   }
