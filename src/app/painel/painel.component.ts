@@ -34,7 +34,8 @@ export class PainelComponent implements OnInit {
   textoExibicao: string;
   intervalo: any;
   pausa: boolean;
-  corMonitor:string;
+  corMonitor: string;
+  corTarefa: string;
 
   ngUnsubscribe = new Subject();
 
@@ -112,10 +113,10 @@ export class PainelComponent implements OnInit {
             this.vidas
           );
           await this.atualizarTarefa();
-          this.corMonitor = "vermelho";
+          this.corMonitor = 'vermelho';
           setTimeout(() => {
             this.corMonitor = '';
-          }, 1000)
+          }, 1000);
           return [];
         })
       )
@@ -127,10 +128,10 @@ export class PainelComponent implements OnInit {
             true,
             0.5
           );
-          this.corMonitor = "verde";
+          this.corMonitor = 'verde';
           setTimeout(() => {
             this.corMonitor = '';
-          }, 1000)
+          }, 1000);
           await this.atualizarTarefa();
         }
       });
@@ -155,20 +156,33 @@ export class PainelComponent implements OnInit {
   }
 
   async concluirRegistro(registro: any) {
+    let result = false;
     await this.taskForceService.setTarefa(
       this.keySala,
       this.keyProfissaoSorteada,
       registro.key,
       { verbo: registro.texto }
     );
-    
+
     if (this.pausa === false) {
-      await this.taskForceService.concluirRegistro(
+      result = await this.taskForceService.concluirRegistro(
         this.keySala,
         this.keyProfissaoSorteada,
         registro,
         this.vidas
       );
+    }
+
+    if (result) {
+      this.corTarefa = 'verde';
+      setTimeout(() => {
+        this.corTarefa = '';
+      }, 1000);
+    } else {
+      this.corTarefa = 'vermelho';
+      setTimeout(() => {
+        this.corTarefa = '';
+      }, 1000);
     }
   }
 

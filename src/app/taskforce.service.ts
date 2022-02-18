@@ -359,7 +359,8 @@ export class TaskforceService {
     keyProfissao: string,
     registro: any,
     vidas: any
-  ) {
+  ):Promise<boolean> {
+    let result = false;
     let refRegistros = this.db.database.ref('salas/' + keySala + '/registros/');
     let acaoIncorreta = true;
 
@@ -386,13 +387,17 @@ export class TaskforceService {
           true,
           0.5 * numTarefas
         );
+        result = true;
       }
 
       if (acaoIncorreta) {
         this.removerVida(keySala, vidas);
         await this.pontuarJogador(keySala, keyProfissao, false, 1);
+        result = false;
       }
     });
+
+    return result;
   }
 
   async desabilitarRegistro(
