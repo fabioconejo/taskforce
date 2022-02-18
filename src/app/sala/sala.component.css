@@ -41,6 +41,12 @@
   right: 0;
 }
 
+.img-coracao:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
 .img-coroa {
   position: absolute;
 
@@ -51,7 +57,7 @@
   left: 0;
 }
 
-.img-coracao:after {
+.img-coroa:after {
   content: '';
   display: block;
   padding-bottom: 100%;
@@ -205,6 +211,18 @@
   cursor: pointer;
 }
 
+.img-coroa-2 {
+  position: absolute;
+  top: 2.5%;
+  right: 2.5%;
+  height: 20px;
+  width: 20px;
+  background-image: url('https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/crown.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .dropdown {
   position: absolute;
   right: 0;
@@ -334,7 +352,8 @@
     margin: 1.25%;
   }
 
-  .img-coracao {
+  .img-coracao,
+  .img-coroa {
     width: 7.5%;
   }
 
@@ -431,7 +450,8 @@
     margin: 1.25%;
   }
 
-  .img-coracao {
+  .img-coracao,
+  .img-coroa {
     width: 6.25%;
   }
 
@@ -547,7 +567,8 @@
     width: 100%;
   }
 
-  .img-coracao {
+  .img-coracao,
+  .img-coroa {
     width: 10%;
   }
 
@@ -664,7 +685,8 @@
     width: 100%;
   }
 
-  .img-coracao {
+  .img-coracao,
+  .img-coroa {
     width: 8.75%;
   }
 
@@ -780,7 +802,8 @@
     width: 100%;
   }
 
-  .img-coracao {
+  .img-coracao,
+  .img-coroa {
     width: 8.75%;
   }
 

@@ -15,7 +15,10 @@
         <div class="img-coracao">
           <p class="num-vidas">{{ vidas }}x</p>
         </div>
-        <div class="img-coroa"></div>
+        <div
+          class="img-coroa"
+          [style.display]="lider === nickJogador ? 'inherit' : 'none'"
+        ></div>
       </div>
 
       <div class="rodada">
@@ -83,9 +86,15 @@
       "
     >
       <div
+        class="img-coroa-2"
+        tabindex="-1"
+        [style.display]="lider === l.responsavel ? 'inherit' : 'none'"
+      >
+      </div>
+      <div
         class="lista-acoes"
         tabindex="-1"
-        [style.display]="lider ? 'inherit' : 'none'"
+        [style.display]="lider === nickJogador ? 'inherit' : 'none'"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
