@@ -83,6 +83,29 @@
   }
 }
 
+@keyframes errado {
+  0% {
+    box-shadow: 0px 0px 5px var(--monitor-bg) inset;
+    border-color: var(--box-border);
+  }
+  25% {
+    box-shadow: 0px 0px 5px var(--tart-orange) inset;
+    border-color: var(--tart-orange);
+  }
+  50% {
+    box-shadow: 0px 0px 5px var(--monitor-bg) inset;
+    border-color: var(--box-border);
+  }
+  75% {
+    box-shadow: 0px 0px 5px var(--tart-orange) inset;
+    border-color: var(--tart-orange);
+  }
+  100% {
+    box-shadow: 0px 0px 5px var(--monitor-bg) inset;
+    border-color: var(--box-border);
+  }
+}
+
 
 .monitor {
   height: 100%;
@@ -168,11 +191,14 @@
   animation-name: correto;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
+  animation-timing-function: ease;
 }
 
 .vermelho {
-  box-shadow: 0px 0px 5px var(--tart-orange) inset;
-  border-color: var(--tart-orange);
+  animation-name: errado;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
 }
 
 /* Extra small devices (phones, 600px and down) */
