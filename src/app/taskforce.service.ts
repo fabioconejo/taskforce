@@ -359,44 +359,37 @@ export class TaskforceService {
     keyProfissao: string,
     registro: any,
     vidas: any
-  ):Promise<boolean> {
-    let result = false;
+  ): Promise<boolean> {
+    let result = true;
     let refRegistros = this.db.database.ref('salas/' + keySala + '/registros/');
     let acaoIncorreta = true;
+    let snapshot = await refRegistros.once('value');
+    let numTarefas = 0;
 
-    await refRegistros.once('value', async (snapshot) => {
-      let numTarefas = 0;
-
-      snapshot.forEach((r) => {
-        if (
-          r.val().ativo &&
-          r.val().idProfissao === registro.idProfissao &&
-          r.val().id === registro.id &&
-          r.val().texto === registro.texto
-        ) {
-          refRegistros.child(r.key).update({ ativo: false, concluido: true });
-          acaoIncorreta = false;
-          numTarefas++;
-        }
-      });
-
-      if (numTarefas > 0) {
-        await this.pontuarJogador(
-          keySala,
-          keyProfissao,
-          true,
-          0.5 * numTarefas
-        );
-        result = true;
-      }
-
-      if (acaoIncorreta) {
-        this.removerVida(keySala, vidas);
-        await this.pontuarJogador(keySala, keyProfissao, false, 1);
-        result = false;
+    snapshot.forEach((r) => {
+      if (
+        r.val().ativo &&
+        r.val().idProfissao === registro.idProfissao &&
+        r.val().id === registro.id &&
+        r.val().texto === registro.texto
+      ) {
+        refRegistros.child(r.key).update({ ativo: false, concluido: true });
+        acaoIncorreta = false;
+        numTarefas++;
       }
     });
 
+    if (numTarefas > 0) {
+      await this.pontuarJogador(keySala, keyProfissao, true, 0.5 * numTarefas);
+      result = true;
+    }
+
+    if (acaoIncorreta) {
+      this.removerVida(keySala, vidas);
+      await this.pontuarJogador(keySala, keyProfissao, false, 1);
+      result = false;
+    }
+    
     return result;
   }
 
@@ -495,7 +488,7 @@ export class TaskforceService {
       .update({ privacidade: valor });
   }
 
-  async checarPrivacidadeSala(keySala: string):Promise<boolean> {
+  async checarPrivacidadeSala(keySala: string): Promise<boolean> {
     let result = false;
 
     await this.db.database

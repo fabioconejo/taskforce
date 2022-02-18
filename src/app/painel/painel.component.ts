@@ -171,18 +171,18 @@ export class PainelComponent implements OnInit {
         registro,
         this.vidas
       );
-    }
 
-    if (result) {
-      this.corTarefa = 'verde';
-      setTimeout(() => {
-        this.corTarefa = '';
-      }, 1000);
-    } else {
-      this.corTarefa = 'vermelho';
-      setTimeout(() => {
-        this.corTarefa = '';
-      }, 1000);
+      if (result) {
+        this.corTarefa = 'verde';
+        setTimeout(() => {
+          this.corTarefa = '';
+        }, 1000);
+      } else {
+        this.corTarefa = 'vermelho';
+        setTimeout(() => {
+          this.corTarefa = '';
+        }, 1000);
+      }
     }
   }
 
