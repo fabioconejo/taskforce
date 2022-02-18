@@ -18,4 +18,3 @@ platformBrowserDynamic()
     // Otherwise, log the boot error
   })
   .catch((err) => console.error(err));
-  
