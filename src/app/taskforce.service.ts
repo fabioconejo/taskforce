@@ -29,6 +29,7 @@ export class TaskforceService {
       status: 'espera',
       numRodada: 1,
       vidas: 10,
+      lider:' ',
       visibilidadeURL: true,
       privacidade: true,
       profissoes: [],
@@ -38,6 +39,10 @@ export class TaskforceService {
     this.db.database.ref('salas').child(key).set(sala);
 
     return key;
+  }
+
+  designarLider(keySala:string, nick:string) {
+    this.db.object('salas/' + keySala).update({ lider: nick });
   }
 
   async checarExistenciaSala(keySala: string): Promise<boolean> {

@@ -29,6 +29,7 @@ export class SalaComponent implements OnInit {
   @Input() listaProfissoesSorteadas: Observable<any>;
   @Input() visibilidadeURL: boolean;
   @Input() privacidade: boolean;
+  @Input() lider: boolean;
 
   pronto: boolean;
   desabilitado: boolean;

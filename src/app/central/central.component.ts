@@ -52,6 +52,7 @@ export class CentralComponent implements OnInit {
   dica: boolean = true;
   visibilidadeURL: boolean;
   privacidade: boolean;
+  lider:string
 
   listaProfissoesSorteadas: Observable<any>;
   keyProfissaoSorteada: string;
@@ -63,12 +64,20 @@ export class CentralComponent implements OnInit {
   async ngOnInit() {
     this.flagRelatorio = false;
     this.sala = this.taskForceService.getSala(this.keySala);
-    this.sala.pipe(takeUntil(this.ngUnsubscribe)).subscribe((s) => {
+    this.sala.pipe(takeUntil(this.ngUnsubscribe)).subscribe(async (s) => {
       this.numRodada = s.numRodada;
       this.statusSala = s.status;
       this.vidas = s.vidas;
       this.visibilidadeURL = s.visibilidadeURL;
       this.privacidade = s.privacidade;
+
+      if(!await this.taskForceService.checarNick(this.keySala, s.lider)) {
+        this.lider = s.lider;
+      }
+      else {
+        this.taskForceService.designarLider(this.keySala, this.nickJogador);
+        this.lider = this.nickJogador;
+      }
 
       if (this.visibilidadeURL) {
         this.router.navigate(['/' + this.keySala]);

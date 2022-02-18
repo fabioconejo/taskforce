@@ -139,10 +139,13 @@ export class InicioComponent implements OnInit {
   }
 
   criarSala() {
-    if (this.nickJogador !== '') {
-      this.keySala = this.taskForceService.criarSala();
-      this.entrarSala();
+    if (this.nickJogador === '') {
+      this.mensagem = 'O nick não pode estar vazio';
+      return;
     }
+    
+    this.keySala = this.taskForceService.criarSala();
+    this.entrarSala();
   }
 
   async entrarSala() {
