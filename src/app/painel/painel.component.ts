@@ -34,6 +34,7 @@ export class PainelComponent implements OnInit {
   textoExibicao: string;
   intervalo: any;
   pausa: boolean;
+  corMonitor:string;
 
   ngUnsubscribe = new Subject();
 
@@ -111,6 +112,7 @@ export class PainelComponent implements OnInit {
             this.vidas
           );
           await this.atualizarTarefa();
+          this.corMonitor = "vermelho";
           return [];
         })
       )
@@ -122,6 +124,7 @@ export class PainelComponent implements OnInit {
             true,
             0.5
           );
+          this.corMonitor = "verde";
           await this.atualizarTarefa();
         }
       });

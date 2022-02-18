@@ -9,6 +9,7 @@ export class MonitorComponent implements OnInit {
   @Input() texto: string;
   @Input() tempo: number;
   @Input() pausa: boolean;
+  @Input() corMonitor:string;
   @Input() dica: boolean;
   @Output() dicaChange = new EventEmitter();
 

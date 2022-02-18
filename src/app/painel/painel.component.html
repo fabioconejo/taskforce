@@ -1,6 +1,6 @@
 <div class="painel">
   <div class="monitor">
-    <monitor [texto]="textoExibicao" [tempo]="tempoMonitor" [pausa]="pausa" [(dica)]="dica"></monitor>
+    <monitor [texto]="textoExibicao" [tempo]="tempoMonitor" [pausa]="pausa" [(dica)]="dica" [corMonitor] = "corMonitor"></monitor>
   </div>
   <div class="quadro">
     <quadro [idProfissao]="profissaoSorteada.id" [tarefas]="profissaoSorteada.tarefas" [registro]="registro"
