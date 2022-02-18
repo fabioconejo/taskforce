@@ -20,14 +20,12 @@ export class TarefaComponent implements OnInit {
   @Input() lista: any;
   @Input() registro: any;
   @Input() corTarefa: string;
-  @Input() recemAtivo:boolean;
+  @Input() idTarefaRecente:number;
   @Output() tarefaExecutada = new EventEmitter();
 
   constructor() {}
 
   ngOnInit() {
-    this.recemAtivo = false
-
     switch (this.tipo) {
       case 'acao':
         this.corBotao = 'azul';
@@ -59,6 +57,5 @@ export class TarefaComponent implements OnInit {
 
   botaoClick(args: any) {
     this.tarefaExecutada.emit(args);
-    this.recemAtivo = true;
   }
 }

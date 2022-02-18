@@ -36,7 +36,7 @@ export class PainelComponent implements OnInit {
   pausa: boolean;
   corMonitor: string;
   corTarefa: string;
-  tarefaRecemAtiva:boolean
+  idTarefaRecente: number;
 
   ngUnsubscribe = new Subject();
 
@@ -175,16 +175,18 @@ export class PainelComponent implements OnInit {
 
       if (result) {
         this.corTarefa = 'verde';
+        this.idTarefaRecente = registro.id;
         setTimeout(() => {
           this.corTarefa = '';
-          this.tarefaRecemAtiva = false;
-        }, 1000);
+          this.idTarefaRecente = 0;
+        }, 600);
       } else {
         this.corTarefa = 'vermelho';
+        this.idTarefaRecente = registro.id;
         setTimeout(() => {
           this.corTarefa = '';
-          this.tarefaRecemAtiva = false;
-        }, 1000);
+          this.idTarefaRecente = 0;
+        }, 600);
       }
     }
   }

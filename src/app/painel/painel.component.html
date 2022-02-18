@@ -1,9 +1,22 @@
 <div class="painel">
   <div class="monitor">
-    <monitor [texto]="textoExibicao" [tempo]="tempoMonitor" [pausa]="pausa" [(dica)]="dica" [corMonitor] = "corMonitor"></monitor>
+    <monitor
+      [texto]="textoExibicao"
+      [tempo]="tempoMonitor"
+      [pausa]="pausa"
+      [(dica)]="dica"
+      [corMonitor]="corMonitor"
+    ></monitor>
   </div>
   <div class="quadro">
-    <quadro [idProfissao]="profissaoSorteada.id" [tarefas]="profissaoSorteada.tarefas" [registro]="registro"
-      (quadroAtualizado)="concluirRegistro($event)" [(dica)]="dica" [corTarefa]="corTarefa" [tarefaRecemAtiva]="tarefaRecemAtiva"></quadro>
+    <quadro
+      [idProfissao]="profissaoSorteada.id"
+      [tarefas]="profissaoSorteada.tarefas"
+      [registro]="registro"
+      (quadroAtualizado)="concluirRegistro($event)"
+      [(dica)]="dica"
+      [corTarefa]="corTarefa"
+      [idTarefaRecente]="idTarefaRecente"
+    ></quadro>
   </div>
 </div>
