@@ -19,9 +19,6 @@ export class MonitorComponent implements OnInit {
 
   ngOnInit() {
     this.dicaMonitor = this.dica;
-    setTimeout(() => {
-      this.corMonitor = '';
-    }, 1000)
   }
 
   fechar() {

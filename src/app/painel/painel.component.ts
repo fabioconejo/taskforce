@@ -113,6 +113,9 @@ export class PainelComponent implements OnInit {
           );
           await this.atualizarTarefa();
           this.corMonitor = "vermelho";
+          setTimeout(() => {
+            this.corMonitor = '';
+          }, 1000)
           return [];
         })
       )
@@ -125,6 +128,9 @@ export class PainelComponent implements OnInit {
             0.5
           );
           this.corMonitor = "verde";
+          setTimeout(() => {
+            this.corMonitor = '';
+          }, 1000)
           await this.atualizarTarefa();
         }
       });
