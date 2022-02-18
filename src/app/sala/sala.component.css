@@ -147,6 +147,14 @@
   margin-left: 20%;
 }
 
+.acao-item-config button:disabled,
+.acao-item-config button[disabled] {
+  background-color: var(--cultured);
+  box-shadow: 0px 6px var(--silver-chalice);
+  color: var(--silver-chalice);
+  cursor: default;
+}
+
 .url-visivel::before {
   content: 'Visível';
 }
@@ -287,7 +295,7 @@
   box-shadow: 0px 2px var(--sea-green);
 }
 
-.btn-vermelho{
+.btn-vermelho {
   background-color: var(--tart-orange);
   color: var(--white);
   box-shadow: 0px 6px var(--firebrick);

@@ -63,6 +63,7 @@
                 ? 'privacidade-aberta btn-verde'
                 : 'privacidade-fechada btn-vermelho'
             "
+            [disabled]="!lider"
             (click)="alterarPrivacidade()"
           ></button>
         </div>
