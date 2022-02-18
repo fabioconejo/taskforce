@@ -19,6 +19,7 @@ export class TarefaComponent implements OnInit {
   @Input() estado: any;
   @Input() lista: any;
   @Input() registro: any;
+  @Input() corTarefa: any;
   @Output() tarefaExecutada = new EventEmitter();
 
   constructor() {}

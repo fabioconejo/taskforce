@@ -6,6 +6,20 @@
   box-sizing: border-box;
 }
 
+.verde {
+  animation-name: correto;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+
+.vermelho {
+  animation-name: errado;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+
 .frase {
   width: 100%;
   height: 35%;
@@ -20,6 +34,36 @@
   width: 90%;
   height: 40%;
   margin-left: 5%;
+}
+
+@keyframes correto {
+  0% {
+    box-shadow: 0px 0px 5px var(--monitor-bg) inset;
+    border-color: var(--box-border);
+  }
+  40% {
+    box-shadow: 0px 0px 5px var(--medium-sea-green) inset;
+    border-color: var(--medium-sea-green);
+  }
+  100% {
+    box-shadow: 0px 0px 5px var(--monitor-bg) inset;
+    border-color: var(--box-border);
+  }
+}
+
+@keyframes errado {
+  0% {
+    box-shadow: 0px 0px 5px var(--monitor-bg) inset;
+    border-color: var(--box-border);
+  }
+  40% {
+    box-shadow: 0px 0px 5px var(--tart-orange) inset;
+    border-color: var(--tart-orange);
+  }
+  100% {
+    box-shadow: 0px 0px 5px var(--monitor-bg) inset;
+    border-color: var(--box-border);
+  }
 }
 
 /* Extra small devices (phones, 600px and down) */

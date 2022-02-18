@@ -11,6 +11,7 @@ export class QuadroComponent implements OnInit {
   @Input() idProfissao: number;
   @Input() tarefas: any;
   @Input() registro: any;
+  @Input() corTarefa: any;
   @Output() quadroAtualizado = new EventEmitter();
   @Input() dica: any;
   @Output() dicaChange = new EventEmitter();
