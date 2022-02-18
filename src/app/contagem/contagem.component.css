@@ -1,57 +1,167 @@
 .loader-6 {
-	height: 100%;
-	width: 100%;
+  height: 100%;
+  width: 100%;
   display: grid;
   justify-content: center;
   align-items: center;
   text-align: center;
   transform: rotate(0);
-  font-size: 6vw;
 }
 
 .loader-6 p {
-	animation: loader-6-3 1.5s cubic-bezier(0.075, 0.820, 0.165, 1.000) .25s 3;
+  animation: loader-6-3 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.25s 3;
+	opacity: 0;
 }
 
 .loader-6 span {
-	display: block;
-	position: absolute;
-	top: 0; left: 0;
-	bottom: 0; right: 0;
-	margin: auto;
-	height: 10vw;
-	width: 10vw;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }
 .loader-6 span::before,
 .loader-6 span::after {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0; left: 0;
-	bottom: 0; right: 0;
-	margin: auto;
-	height: 10vw;
-	width: 10vw;
-	border: 2px solid var(--eletric-purple);
-	border-radius: 50%;
-	opacity: 0;
-	-webkit-animation: loader-6-1 1.5s cubic-bezier(0.075, 0.820, 0.165, 1.000) 3;
-	        animation: loader-6-1 1.5s cubic-bezier(0.075, 0.820, 0.165, 1.000) 3;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border: 2px solid var(--eletric-purple);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-animation: loader-6-1 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 3;
+  animation: loader-6-1 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 3;
 }
 @keyframes loader-6-1 {
-	0%   { transform: translate3d(0, 0, 0) scale(0); opacity: 1; }
-	100% { transform: translate3d(0, 0, 0) scale(1.5); opacity: 0; }
+  0% {
+    transform: translate3d(0, 0, 0) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.5);
+    opacity: 0;
+  }
 }
 .loader-6 span::after {
-	-webkit-animation: loader-6-2 1.5s cubic-bezier(0.075, 0.820, 0.165, 1.000) .25s 3;
-	        animation: loader-6-2 1.5s cubic-bezier(0.075, 0.820, 0.165, 1.000) .25s 3;
+  -webkit-animation: loader-6-2 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.25s 3;
+  animation: loader-6-2 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.25s 3;
 }
 @keyframes loader-6-2 {
-	0%   { transform: translate3d(0, 0, 0) scale(0); opacity: 1; }
-	100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0; }
+  0% {
+    transform: translate3d(0, 0, 0) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+  }
 }
 @keyframes loader-6-3 {
-	0%   { transform: translate3d(0, 0, 0) scale(0); opacity: 1; }
-	70%  { opacity: 1; }
-	100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0; }
+  0% {
+    transform: translate3d(0, 0, 0) scale(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.loader-6 p {
+		font-size: 20vw;
+	}
+	
+	.loader-6 span {
+		height: 24vw;
+		width: 24vw;
+	}
+
+	.loader-6 span::before,
+	.loader-6 span::after {
+		height: 24vw;
+		width: 24vw;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+	.loader-6 p {
+		font-size: 16vw;
+	}
+	
+	.loader-6 span {
+		height: 20vw;
+		width: 20vw;
+	}
+
+	.loader-6 span::before,
+	.loader-6 span::after {
+		height: 20vw;
+		width: 20vw;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.loader-6 p {
+		font-size: 10vw;
+	}
+	
+	.loader-6 span {
+		height: 14vw;
+		width: 14vw;
+	}
+
+	.loader-6 span::before,
+	.loader-6 span::after {
+		height: 14vw;
+		width: 14vw;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.loader-6 p {
+		font-size: 6vw;
+	}
+	
+	.loader-6 span {
+		height: 10vw;
+		width: 10vw;
+	}
+
+	.loader-6 span::before,
+	.loader-6 span::after {
+		height: 10vw;
+		width: 10vw;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	.loader-6 p {
+		font-size: 6vw;
+	}
+	
+	.loader-6 span {
+		height: 10vw;
+		width: 10vw;
+	}
+
+	.loader-6 span::before,
+	.loader-6 span::after {
+		height: 10vw;
+		width: 10vw;
+	}
 }
