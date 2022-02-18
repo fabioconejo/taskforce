@@ -360,7 +360,7 @@ export class TaskforceService {
     registro: any,
     vidas: any
   ): Promise<boolean> {
-    let result = true;
+    let result = false;
     let refRegistros = this.db.database.ref('salas/' + keySala + '/registros/');
     let acaoIncorreta = true;
     let snapshot = await refRegistros.once('value');
@@ -389,7 +389,7 @@ export class TaskforceService {
       await this.pontuarJogador(keySala, keyProfissao, false, 1);
       result = false;
     }
-    
+
     return result;
   }
 
