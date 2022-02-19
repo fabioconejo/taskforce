@@ -49,6 +49,7 @@ export class CentralComponent implements OnInit {
   numJogadores: number;
   numTarefasNecessarias: number;
   flagRelatorio: boolean;
+  relatorioPartida:any = [];
   dica: boolean = true;
   visibilidadeURL: boolean;
   privacidade: boolean;
