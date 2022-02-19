@@ -62,7 +62,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let l of lista">
+        <tr *ngFor="let l of lista" [style.display]="this.vida <= 0 ? 'none' : 'inherit'">
           <td>
             <div class="fundo-profissao">
               <div
@@ -84,6 +84,29 @@
           <td class="num num-concluidas">{{ l.acertos }}</td>
           <td class="num num-perdidas">{{ l.erros }}</td>
         </tr>
+
+        <tr *ngFor="let l of relatorioPartida" [style.display]="this.vida <= 0 ? 'inherit' : 'none'">
+        <td>
+          <div class="fundo-profissao">
+            <div
+              class="img-profissao"
+              style.background-image="url({{ baseUrl }}profissionais/{{
+                l.imagem
+              }})"
+            ></div>
+          </div>
+
+          <div class="info-amigo">
+            <p class="nick">
+              {{ l.responsavel }}<br /><span class="texto-profissao">{{
+                l.profissao
+              }}</span>
+            </p>
+          </div>
+        </td>
+        <td class="num num-concluidas">{{ l.acertos }}</td>
+        <td class="num num-perdidas">{{ l.erros }}</td>
+      </tr>
       </tbody>
     </table>
   </div>

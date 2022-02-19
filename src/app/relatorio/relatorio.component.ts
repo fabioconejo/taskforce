@@ -49,7 +49,7 @@ export class RelatorioComponent implements OnInit {
             this.relatorioPartida[j].responsavel = l[i].responsavel;
             this.relatorioPartida[j].profissao = l[i].profissao;
             this.relatorioPartida[j].acertos += l[i].acertos;
-            this.relatorioPartida[j].erros += l[i].erro;
+            this.relatorioPartida[j].erros += l[i].erros;
             break;
           }
         }
