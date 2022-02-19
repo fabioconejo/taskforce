@@ -61,8 +61,8 @@
           </th>
         </tr>
       </thead>
-      <tbody>
-        <tr *ngFor="let l of lista" [style.display]="this.vida <= 0 ? 'none' : 'inherit'">
+      <tbody *ngIf="this.vida > 0">
+        <tr *ngFor="let l of lista">
           <td>
             <div class="fundo-profissao">
               <div
@@ -84,8 +84,10 @@
           <td class="num num-concluidas">{{ l.acertos }}</td>
           <td class="num num-perdidas">{{ l.erros }}</td>
         </tr>
+      </tbody>
 
-        <tr *ngFor="let l of relatorioPartida" [style.display]="this.vida <= 0 ? 'inherit' : 'none'">
+      <tbody *ngIf="this.vida <= 0">
+        <tr *ngFor="let l of relatorioPartida">
         <td>
           <div class="fundo-profissao">
             <div

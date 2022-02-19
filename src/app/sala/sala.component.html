@@ -54,7 +54,7 @@
                 ? 'url-visivel btn-verde'
                 : 'url-oculto btn-vermelho'
             "
-            [disabled]="!lider"
+            [disabled]="lider !== nickJogador"
             (click)="alterarVisibilidadeURL()"
           ></button>
         </div>
@@ -68,7 +68,7 @@
                 ? 'privacidade-aberta btn-verde'
                 : 'privacidade-fechada btn-vermelho'
             "
-            [disabled]="!lider"
+            [disabled]="lider !== nickJogador"
             (click)="alterarPrivacidade()"
           ></button>
         </div>
