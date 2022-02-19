@@ -2859,9 +2859,9 @@
       {
         "id": 5,
         "tipo": "acao",
-        "texto": "Fazer aluno dar a aula que o professor deveria dar",
-        "verbo": "Fazer",
-        "complemento": "Aula que o professor deveria dar"
+        "texto": "Passar lista de chamada",
+        "verbo": "Passar",
+        "complemento": "Lista de chamada"
       },
       {
         "id": 6,
@@ -2873,9 +2873,9 @@
       {
         "id": 7,
         "tipo": "acao",
-        "texto": "Checar identidade de aluno durante a prova",
-        "verbo": "Checar",
-        "complemento": "Identidade do aluno durante a prova"
+        "texto": "Encarar aluno durante a prova",
+        "verbo": "Encarar",
+        "complemento": "Aluno durante a prova"
       },
       {
         "id": 8,
@@ -2901,9 +2901,9 @@
       {
         "id": 11,
         "tipo": "acao",
-        "texto": "Fazer canção sobre conteúdo de prova",
+        "texto": "Fazer canção sobre conteúdo de aula",
         "verbo": "Fazer",
-        "complemento": "Canção sobre conteúdo de prova"
+        "complemento": "Canção sobre conteúdo de aula"
       },
       {
         "id": 12,
@@ -2924,15 +2924,15 @@
       {
         "id": 14,
         "tipo": "escolha",
-        "texto": "Falar bordão:",
-        "verbo": "Falar",
-        "complemento": "Bordão",
+        "texto": "Expulsar da sala",
+        "verbo": "Expulsar",
+        "complemento": "Sala",
         "lista": [
-          "Meu sálario tá pago, quem perde são vocês",
-          "A prova é em dupla, você e Deus",
-          "A prova tá fácil pra quem estudou",
-          "Professor não erra, se engana",
-          "Considerem matéria dada"
+          "1 aluno",
+          "2 alunos",
+          "3 alunos",
+          "10 alunos",
+          "A turma toda"
         ]
       },
       {
@@ -3601,7 +3601,7 @@
         "id": 2,
         "tipo": "acao",
         "texto": "Molhar pano",
-        "verbo": "molhar",
+        "verbo": "Molhar",
         "complemento": "Pano"
       },
       {
