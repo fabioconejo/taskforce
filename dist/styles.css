@@ -1,0 +1,168 @@
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,100;1,200;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap);
+
+/* Add application styles & imports to this file! */
+:root {
+  --white: #ffffff;
+  --semi-white: #fcfcfc;
+  --cultured: #ededed;
+  --dark-purple: #160c28;
+  --blue-jeans: #4ab6f2;
+  --medium-sea-green: #00bc65;
+  --tart-orange: #fa403f;
+  --saphire-blue: #186a94;
+  --sea-green: #008343;
+  --silver-chalice: #b3b3b3;
+  --firebrick: #b72a2a;
+  --space-cadet: #252d41;
+  --black-fogra: #04050a;
+  --eeire-black: #232323;
+  --eletric-purple: #be3fff;
+
+  --black-fogra-29: #161925;
+  --black-fogra-39: #121212;
+
+  --bg-color: var(--black-fogra-29);
+  --ft-color: var(--semi-white);
+  --box-bg: var(--black-fogra-29);
+  --box-border: var(--space-cadet);
+  --personagem-bg: radial-gradient(
+    circle,
+    var(--space-cadet) 0%,
+    var(--black-fogra-29) 100%
+  );
+  --slot-bg: var(--cultured);
+  --slot-ativo: var(--blue-jeans);
+  --monitor-bg: var(--black-fogra-39);
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color);
+  background-image: url(https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/backpattern2.png);
+  background-size: 150px;
+  background-position: 0px 0px;
+  color: var(--ft-color);
+
+  -webkit-animation: bg-slide 15s linear infinite;
+
+          animation: bg-slide 15s linear infinite;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--box-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-jeans);
+  border-radius: 3px;
+}
+button,
+select {
+  height: 100%;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 6px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.05s;
+  box-shadow: 0px 6px var(--box-shadow-color);
+  font-size: inherit;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+button:active,
+select:active {
+  margin-top: 4px;
+  margin-bottom: 2px;
+  box-shadow: 0px 2px var(--box-shadow-color);
+}
+select {
+  text-align: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23186a94' class='bi bi-caret-down-fill' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+option {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+  font-size: 0.8em;
+  background-color: var(--eeire-black);
+  color: var(--semi-white);
+  font-family: 'Roboto Mono';
+  scroll-behavior: smooth;
+}
+@-webkit-keyframes bg-slide {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 150px 150px;
+  }
+}
+@keyframes bg-slide {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 150px 150px;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  button,
+  select {
+    font-size: 20px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  button,
+  select {
+    font-size: 22px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  button,
+  select {
+    font-size: 22px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  button,
+  select {
+    font-size: 24px;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  button,
+  select {
+    font-size: 26px;
+  }
+}
+

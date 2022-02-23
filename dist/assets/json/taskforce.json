@@ -1,0 +1,4141 @@
+[
+  {
+    "id": 1,
+    "profissao": "Médico",
+    "imagem": "006-doctor.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Receitar remédio",
+        "verbo": "Receitar",
+        "complemento": "Remédio"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Medir pressão",
+        "verbo": "Medir",
+        "complemento": "Pressão"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Preencher prontuário",
+        "verbo": "Preencher",
+        "complemento": "Prontuário"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Indicar médico especialista",
+        "verbo": "Indicar",
+        "complemento": "Médico especialista"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Informar riscos da cirurgia",
+        "verbo": "Informar",
+        "complemento": "Riscos da cirurgia"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Atender paciente",
+        "verbo": "Atender",
+        "complemento": "Paciente"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Aplicar bezetacil",
+        "verbo": "Aplicar",
+        "complemento": "Bezetacil"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Realizar plantão",
+        "verbo": "Realizar",
+        "complemento": "Plantão"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Declarar óbito",
+        "verbo": "Declarar",
+        "complemento": "Óbito"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Realizar exame do toque",
+        "verbo": "Realizar",
+        "complemento": "Exame do toque"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Dar alta",
+        "verbo": "Dar",
+        "complemento": "Alta"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Falar que é virose",
+        "verbo": "Falar",
+        "complemento": "Virose"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Medir temperatura",
+        "verbo": "Medir",
+        "complemento": "Temperatura"
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": ["Ligar oxímetro", "Desligar oxímetro"],
+        "verbo": "Ligado",
+        "texto": "Ligar oxímetro",
+        "complemento": "Oxímetro",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 15,
+        "tipo": "estado",
+        "eTexto": ["Ligar monitor cardíaco", "Desligar monitor cardíaco"],
+        "verbo": "Ligado",
+        "texto": "Ligar monitor cardíaco",
+        "complemento": "Monitor cardíaco",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Regular respirador para",
+        "verbo": "Regular",
+        "complemento": "Respirador",
+        "lista": ["0 psi", "20 psi", "60 psi"]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Ajustar desfibrilador para",
+        "verbo": "Ajustar",
+        "complemento": "Desfibrilador",
+        "lista": ["1", "2", "3"]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Ajustar dose para",
+        "verbo": "Ajustar",
+        "complemento": "Dose",
+        "lista": ["1x ao dia", "2x ao dia", "4x ao dia"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "profissao": "Chef de cozinha",
+    "imagem": "039-chef.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Comprar ingredientes",
+        "verbo": "Comprar",
+        "complemento": "Ingredientes"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Limpar bancada",
+        "verbo": "Limpar",
+        "complemento": "Bancada"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Fatiar peixe",
+        "verbo": "Fatiar",
+        "complemento": "Peixe"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Limpar camarão",
+        "verbo": "Limpar",
+        "complemento": "Camarão"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Separar feijão",
+        "verbo": "Separar",
+        "complemento": "Feijão"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Lavar verduras",
+        "verbo": "Lavar",
+        "complemento": "Verduras"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Flambar bananas",
+        "verbo": "Flambar",
+        "complemento": "Bananas"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Experimentar comida",
+        "verbo": "Experimentar",
+        "complemento": "Comida"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Por sal e tempero",
+        "verbo": "Por",
+        "complemento": "Sal e tempero"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Preparar sobremesa",
+        "verbo": "Preparar",
+        "complemento": "Sobremesa"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Montar pratos",
+        "verbo": "Montar",
+        "complemento": "Pratos"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Deixar pão descansando",
+        "verbo": "Deixar",
+        "complemento": "Pão descansando"
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Ligar coifa", "Desligar coifa"],
+        "verbo": "Ligado",
+        "texto": "Ligar coifa",
+        "complemento": "Coifa",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": ["Ligar fritadeira", "Desligar fritadeira"],
+        "verbo": "Ligado",
+        "texto": "Ligar fritadeira",
+        "complemento": "Fritadeira",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 15,
+        "tipo": "estado",
+        "eTexto": ["Ligar freezer", "Desligar freezer"],
+        "verbo": "Ligado",
+        "texto": "Ligar freezer",
+        "complemento": "Freezer",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Ajustar temperatura do forno para",
+        "verbo": "Ajustar",
+        "complemento": "Temperatura do forno",
+        "lista": ["160°C", "190°C", "200°C", "250°C"]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Regular velocidade da batedeira para",
+        "verbo": "Regular",
+        "complemento": "Velocidade da batedeira",
+        "lista": ["1", "2", "3", "4", "5"]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Usar boca do fogão de número",
+        "verbo": "Usar",
+        "complemento": "Boca do fogão",
+        "lista": ["1", "2", "3", "4", "5", "6"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "profissao": "Cientista",
+    "imagem": "044-scientist.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Colocar lamínula",
+        "verbo": "Colocar",
+        "complemento": "Lamínula"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Anotar resultados",
+        "verbo": "Anotar",
+        "complemento": "Resultados"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Escrever artigo",
+        "verbo": "Escrever",
+        "complemento": "Artigo"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Publicar descoberta",
+        "verbo": "Publicar",
+        "complemento": "Descoberta"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Realizar testes em ratos",
+        "verbo": "Realizar",
+        "complemento": "Testes em ratos"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Fazer contas",
+        "verbo": "Fazer",
+        "complemento": "Contas"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Limpar béquer",
+        "verbo": "Limpar",
+        "complemento": "Béquer"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Decorar tabela periódica",
+        "verbo": "Decorar",
+        "complemento": "Tabela periódica"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Realizar amostragem",
+        "verbo": "Realizar",
+        "complemento": "Amostragem"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Ler artigos",
+        "verbo": "Ler",
+        "complemento": "Artigos"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Patentear invenção",
+        "verbo": "Patentear",
+        "complemento": "Invenção"
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": ["Ligar globo de plasma", "Desligar globo de plasma"],
+        "verbo": "Ligado",
+        "texto": "Ligar globo de plasma",
+        "complemento": "Globo de plasma",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Ligar luz ultravioleta", "Desligar luz ultravioleta"],
+        "verbo": "Ligado",
+        "texto": "Ligar luz ultravioleta",
+        "complemento": "Luz ultravioleta",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Ajustar zoom do microscópio para",
+        "verbo": "Ajustar",
+        "complemento": "Zoom do microscópio",
+        "lista": ["150x", "450x", "900x"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Ajustar potência do bico de bunsen para",
+        "verbo": "Ajustar",
+        "complemento": "Potência do bico de bunsen",
+        "lista": ["1", "2", "3"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Regular potenciômetro para",
+        "verbo": "Regular",
+        "complemento": "Potenciômetro",
+        "lista": ["10%", "25%", "36%", "47%", "83%", "100%"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "profissao": "Soldado",
+    "imagem": "030-soldier.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Defender país",
+        "verbo": "Defender",
+        "complemento": "País"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Treinar tiro ao alvo",
+        "verbo": "Treinar",
+        "complemento": "Tiro ao alvo"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Usar camuflagem",
+        "verbo": "Usar",
+        "complemento": "Camuflagem"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Cantar hino nacional",
+        "verbo": "Cantar",
+        "complemento": "Hino nacional"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Cantar hino da bandeira",
+        "verbo": "Cantar",
+        "complemento": "Hino da bandeira"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Obedecer ordem",
+        "verbo": "Obedecer",
+        "complemento": "Ordem"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Realizar flexão",
+        "verbo": "Realizar",
+        "complemento": "Flexão"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Realizar polichinelo",
+        "verbo": "Realizar",
+        "complemento": "Polichinelo"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Realizar abdominal",
+        "verbo": "Realizar",
+        "complemento": "Abdominal"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Recarregar fuzil",
+        "verbo": "Recarregar",
+        "complemento": "Fuzil"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Pilotar tanque de guerra",
+        "verbo": "Pilotar",
+        "complemento": "Tanque de guerra"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Sobreviver na floresta",
+        "verbo": "Sobreviver",
+        "complemento": "Floresta"
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Fazer postura", "Desfazer postura"],
+        "verbo": "Feita",
+        "texto": "Feita postura",
+        "complemento": "Postura",
+        "estado": ["Feita", "Desfeita"]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Ajustar zoom do rifle para",
+        "verbo": "Ajustar",
+        "complemento": "Zoom do rifle",
+        "lista": ["1x", "2x", "4x", "8x"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Regular quantidade de explosivos para",
+        "verbo": "Regular",
+        "complemento": "Quantidade de explosivos",
+        "lista": ["200g", "400g", "1kg", "1,5kg", "4kg"]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "profissao": "Hacker",
+    "imagem": "019-hacker.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Desenvolver spyware",
+        "verbo": "Desenvolver",
+        "complemento": "Spyware"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Desenvolver malware",
+        "verbo": "Desenvolver",
+        "complemento": "Malware"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Fazer programa",
+        "verbo": "Fazer",
+        "complemento": "Programa"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Perguntar senha para a vítima",
+        "verbo": "Perguntar",
+        "complemento": "Senha para a vítima"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Invadir banco de dados",
+        "verbo": "Invadir",
+        "complemento": "Banco de dados"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Vazar nudes",
+        "verbo": "Vazar",
+        "complemento": "Nudes"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Acessar deepweb",
+        "verbo": "Acessar",
+        "complemento": "Deepweb"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Expor dados pessoais",
+        "verbo": "Expor",
+        "complemento": "Dados pessoais"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Retirar dinheiro de contas",
+        "verbo": "Retirar",
+        "complemento": "Dinheiro de contas"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Despistar polícia federal",
+        "verbo": "Despistar",
+        "complemento": "Polícia federal"
+      },
+      {
+        "id": 11,
+        "tipo": "estado",
+        "eTexto": ["Ligar antivírus", "Desligar antivírus"],
+        "verbo": "Ligado",
+        "texto": "Ligar antivírus",
+        "complemento": "Antivírus",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": ["Ligar firewall", "Desligar firewall"],
+        "verbo": "Ligado",
+        "texto": "Ligar firewall",
+        "complemento": "Firewall",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Criptografar arquivo", "Descriptografar arquivo"],
+        "verbo": "Criptografado",
+        "texto": "Criptografar arquivo",
+        "complemento": "Arquivo",
+        "estado": ["Criptografado", "Descriptografado"]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Ajustar nível de segurança para",
+        "verbo": "Ajustar",
+        "complemento": "Nível de segurança",
+        "lista": ["Baixo", "Médio", "Alto", "Rigoroso"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Ajustar ataque DDoS para",
+        "verbo": "Ajustar",
+        "complemento": "Ataque DDoS",
+        "lista": [
+          "100 requisições",
+          "1000 requisições",
+          "10000 requisições",
+          "100000 requisições",
+          "1000000 requisições"
+        ]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Alterar IPv4 para",
+        "verbo": "Alterar",
+        "complemento": "IPv4",
+        "lista": [
+          "192.168.1.1",
+          "192.168.0.1",
+          "204.153.201.58",
+          "185.65.174.1",
+          "25.100.250.14"
+        ]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Alterar DNS para",
+        "verbo": "Alterar",
+        "complemento": "DNS",
+        "lista": ["Padrão", "8.8.8.8", "8.8.4.4", "1.0.0.1", "1.1.1.1"]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Alterar certificado digital",
+        "verbo": "Alterar",
+        "complemento": "Certificado digital",
+        "lista": ["A1", "A3", "SSL"]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "profissao": "Artista",
+    "imagem": "002-artist.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Escolher moldura",
+        "verbo": "Escolher",
+        "complemento": "Moldura"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Vender arte na praia",
+        "verbo": "Vender",
+        "complemento": "Arte na praia"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Pintar retrato",
+        "verbo": "Pintar",
+        "complemento": "Retrato"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Fazer artesanato",
+        "verbo": "Fazer",
+        "complemento": "Artesanato"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Esculpir mármore",
+        "verbo": "Esculpir",
+        "complemento": "Mármore"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Misturar cores",
+        "verbo": "Misturar",
+        "complemento": "Cores"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Fazer exposisões",
+        "verbo": "Fazer",
+        "complemento": "Exposisões"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Analisar quadros",
+        "verbo": "Analisar",
+        "complemento": "Quadros"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Participar da casa dos artistas",
+        "verbo": "Participar",
+        "complemento": "Casa dos artistas"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Visitar museu",
+        "verbo": "Visitar",
+        "complemento": "Museu"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Ver filmes",
+        "verbo": "Ver",
+        "complemento": "Filmes"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Escrever livros",
+        "verbo": "Escrever",
+        "complemento": "Livros"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Elogiar obra abstrata",
+        "verbo": "Elogiar",
+        "complemento": "Obra abstrata"
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": [
+          "Incorporar processo criativo",
+          "Desincorporar processo criativo"
+        ],
+        "verbo": "Incorporado",
+        "texto": "Incorporar processo criativo",
+        "complemento": "Processo criativo",
+        "estado": ["Incorporado", "Desincorporado"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Usar hashtag",
+        "verbo": "Usar",
+        "complemento": "hashtag",
+        "lista": [
+          "#OGolpeTaAiCaiQuemQuer",
+          "#Hashtag",
+          "#tbt",
+          "#PazEAmor",
+          "#BBB21",
+          "#happy",
+          "#love"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "profissao": "Universitária",
+    "imagem": "009-student.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Pedir pra por o nome no trabalho",
+        "verbo": "Pedir",
+        "complemento": "Nome no trabalho"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Colar na prova",
+        "verbo": "Colar",
+        "complemento": "Prova"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Realizar grupo de estudo",
+        "verbo": "Realizar",
+        "complemento": "Grupo de estudo"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Brigar com o grupo",
+        "verbo": "Brigar",
+        "complemento": "Grupo"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Chorar por nota para o professor",
+        "verbo": "Chorar por nota",
+        "complemento": "Professor"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Reivindicar direitos",
+        "verbo": "Reivindicar",
+        "complemento": "Direitos"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Estudar na biblioteca",
+        "verbo": "Estudar",
+        "complemento": "Biblioteca"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Ir para festas da faculdade",
+        "verbo": "Ir",
+        "complemento": "Festas da faculdade"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Refazer grade horária",
+        "verbo": "Refazer",
+        "complemento": "Grade horária"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Jubilar na faculdade",
+        "verbo": "Jubilar",
+        "complemento": "Faculdade"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Realizar colação de grau",
+        "verbo": "Realizar",
+        "complemento": "Colação de grau"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Assinar lista de chamada",
+        "verbo": "Assinar",
+        "complemento": "Lista de chamada"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Fazer TCC",
+        "verbo": "Fazer",
+        "complemento": "TCC"
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": ["Cochilar na aula", "Acordar na aula"],
+        "verbo": "Cochilando",
+        "texto": "Cochilar na aula",
+        "complemento": "Na aula",
+        "estado": ["Cochilando", "Acordado"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Pegar DP em",
+        "verbo": "Pegar",
+        "complemento": "DP",
+        "lista": ["1 matéria", "3 matérias", "6 matérias", "todas as matérias"]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "profissao": "Fazendeiro",
+    "imagem": "001-farmer.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Colher frutas",
+        "verbo": "Colher",
+        "complemento": "Frutas"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Ordenhar vaca",
+        "verbo": "Ordenhar",
+        "complemento": "Vaca"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Pegar ovos do galinheiro",
+        "verbo": "Pegar",
+        "complemento": "Ovos do galinheiro"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Abater porco",
+        "verbo": "Abater",
+        "complemento": "Porco"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Cortar lã da ovelha",
+        "verbo": "Cortar",
+        "complemento": "Lã da ovelha"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Cercar curral",
+        "verbo": "Cercar",
+        "complemento": "Curral"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Vestir espantalho",
+        "verbo": "Vestir",
+        "complemento": "Espantalho"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Regar plantação",
+        "verbo": "Regar",
+        "complemento": "Plantação"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Escovar o cavalo",
+        "verbo": "Escovar",
+        "complemento": "Cavalo"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Fazer um rock rural",
+        "verbo": "Fazer",
+        "complemento": "Rock rural"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Tocar berrante",
+        "verbo": "Tocar",
+        "complemento": "Berrante"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Participar de leilão de gado",
+        "verbo": "Participar",
+        "complemento": "Leilão de gado"
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Ligar moedor de cana", "Desligar moedor de cana"],
+        "verbo": "Ligado",
+        "texto": "Ligar moedor de cana",
+        "complemento": "Moedor de cana",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": ["Ligar canal do boi", "Desligar canal do boi"],
+        "verbo": "Ligado",
+        "texto": "Ligar canal do boi",
+        "complemento": "Canal do boi",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Ajustar nível do agrotóxico para",
+        "verbo": "Ajustar",
+        "complemento": "Nível do agrotóxico",
+        "lista": ["Baixo", "Médio", "Alto"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Ajustar preço da feira para",
+        "verbo": "Ajustar",
+        "complemento": "Preço da feira",
+        "lista": [
+          "100% de lucro",
+          "70% de lucro",
+          "50% de lucro",
+          "40% de lucro",
+          "25% de lucro",
+          "10% de lucro",
+          "0% de lucro"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "profissao": "Atleta",
+    "imagem": "023-athlete.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Jogar futebol",
+        "verbo": "Jogar",
+        "complemento": "Futebol"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Fazer acrobacias",
+        "verbo": "Fazer",
+        "complemento": "Acrobacias"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Jogar volei",
+        "verbo": "Jogar",
+        "complemento": "Volei"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Jogar basquete",
+        "verbo": "Jogar",
+        "complemento": "Basquete"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Patinar no gelo",
+        "verbo": "Patinar",
+        "complemento": "Gelo"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Perder para queniano na maratona",
+        "verbo": "Perder",
+        "complemento": "Queniano na maratona"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Amarrar o tênis",
+        "verbo": "Amarrar",
+        "complemento": "Tênis"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Falar sobre crossfit",
+        "verbo": "Falar",
+        "complemento": "Crossfit"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Tomar água",
+        "verbo": "Tomar",
+        "complemento": "Água"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Subir na balança",
+        "verbo": "Subir",
+        "complemento": "Balança"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Seguir dieta",
+        "verbo": "Seguir",
+        "complemento": "Dieta"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Fazer levantamento de copo",
+        "verbo": "Fazer",
+        "complemento": "Levantamento de copo"
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Praticar esteira", "Descansar da esteira"],
+        "verbo": "Praticando",
+        "texto": "Praticar esteira",
+        "complemento": "Esteira",
+        "estado": ["Praticando", "Descansando"]
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": ["Ligar contador de passos", "Desligar contador de passos"],
+        "verbo": "Ligado",
+        "texto": "Ligar contador de passos",
+        "complemento": "Contador de passos",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Pedalar",
+        "verbo": "Pedalar",
+        "complemento": "Pedalada",
+        "lista": ["0km", "2km", "5km", "7km", "10km"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Caminhar",
+        "verbo": "Caminhar",
+        "complemento": "Caminhada",
+        "lista": ["0km", "1km", "2km", "3km", "4km", "5km"]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Correr",
+        "verbo": "Correr",
+        "complemento": "Corrida",
+        "lista": ["0m", "50m", "100m", "150m", "200m", "500m"]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Nadar",
+        "verbo": "Nadar",
+        "complemento": "Nado",
+        "lista": ["0m", "25m", "50m", "75m", "100m", "200m"]
+      },
+      {
+        "id": 19,
+        "tipo": "escolha",
+        "texto": "Levantar peso",
+        "verbo": "Levantar",
+        "complemento": "Peso",
+        "lista": ["10kg", "30kg", "50kg", "80kg", "100kg", "120kg"]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "profissao": "Ladrão",
+    "imagem": "018-thief.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Roubar celular",
+        "verbo": "Roubar",
+        "complemento": "Celular"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Desviar carga",
+        "verbo": "Desviar",
+        "complemento": "Carga"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Invadir condomínio",
+        "verbo": "Invadir",
+        "complemento": "Condomínio"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Praticar estelionato em idoso",
+        "verbo": "Praticar",
+        "complemento": "Estelionato em idoso"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Lavar dinheiro",
+        "verbo": "Lavar",
+        "complemento": "Dinheiro"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Aceitar suborno",
+        "verbo": "Aceitar",
+        "complemento": "Suborno"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Por meia calça na cabeça",
+        "verbo": "Por",
+        "complemento": "Meia calça"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Gritar 'perdeu playboy'",
+        "verbo": "Gritar",
+        "complemento": "Perdeu playboy"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Planejar roubo a banco",
+        "verbo": "Planejar",
+        "complemento": "Roubo a banco"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Ficar de olheiro",
+        "verbo": "Ficar",
+        "complemento": "Olheiro"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Canditadar-se a cargo político",
+        "verbo": "Canditadar-se",
+        "complemento": "Cargo político"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Ingressar na milícia",
+        "verbo": "Ingressar",
+        "complemento": "Milícia"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Reunir-se com facção criminosa",
+        "verbo": "Reunir-se",
+        "complemento": "Facção criminosa"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Dividir grana com os comparsas",
+        "verbo": "Dividir",
+        "complemento": "Grana"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Fugir dos tiras",
+        "verbo": "Fugir",
+        "complemento": "Tiras"
+      },
+      {
+        "id": 16,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar tornozeleira eletrônica",
+          "Desligar tornozeleira eletrônica"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar tornozeleira eletrônica",
+        "complemento": "Tornozeleira eletrônica",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Renegociar resgate para",
+        "verbo": "Renegociar",
+        "complemento": "Resgate",
+        "lista": [
+          "1 coxinha e 1 guaraná",
+          "R$100,00",
+          "R$5000,00",
+          "R$10000,00",
+          "Meio milhão de reais"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "profissao": "Burocrata",
+    "imagem": "048-office-worker.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Pedir assinatura",
+        "verbo": "Pedir",
+        "complemento": "Assinatura"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Cobrar imposto",
+        "verbo": "Cobrar",
+        "complemento": "Imposto"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Tirar xerox",
+        "verbo": "Tirar",
+        "complemento": "Xerox"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Fazer reconhecimento em cartório",
+        "verbo": "Fazer",
+        "complemento": "Reconhecimento em cartório"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Solicitar foto 3x4",
+        "verbo": "Solicitar",
+        "complemento": "Foto 3x4"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Solicitar testemunhas",
+        "verbo": "Solicitar",
+        "complemento": "Testemunhas"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Solicitar certidão negativa de óbito",
+        "verbo": "Solicitar",
+        "complemento": "Certidão negativa de óbito"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Revisar papelada",
+        "verbo": "Revisar",
+        "complemento": "Papelada"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Orientar para pegar senha",
+        "verbo": "Orientar",
+        "complemento": "Senha"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Guardar documentos em caixas",
+        "verbo": "Guardar",
+        "complemento": "Documentos em caixas"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Guardar documentos nas gavetas",
+        "verbo": "Guardar",
+        "complemento": "Documentos nas gavetas"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Realizar reconhecimento de firma",
+        "verbo": "Realizar",
+        "complemento": "Reconhecimento de firma"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Escanear contrato",
+        "verbo": "Escanear",
+        "complemento": "Contrato"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Emitir segunda via do RG",
+        "verbo": "Emitir",
+        "complemento": "Segunda via do RG"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Cobrar taxa",
+        "verbo": "Cobrar",
+        "complemento": "Taxa"
+      },
+      {
+        "id": 16,
+        "tipo": "estado",
+        "eTexto": ["Aprovar solicitação", "Negar solicitação"],
+        "verbo": "Aprovado",
+        "texto": "Aprovar solicitação",
+        "complemento": "Solicitação",
+        "estado": ["Aprovado", "Negado"]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Orientar para aguardar na fila por",
+        "verbo": "Orientar",
+        "complemento": "Aguardar na fila",
+        "lista": ["5 minutos", "15 minutos", "1 hora", "3 horas", "6 horas"]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Pedir para aguardar em casa por",
+        "verbo": "Pedir",
+        "complemento": "Aguardar em casa",
+        "lista": [
+          "1 dia útil",
+          "3 dias útil",
+          "1 dia corrido",
+          "6 dia corridos",
+          "3 anos"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "profissao": "Engenheiro civil",
+    "imagem": "037-engineer.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Realizar medições",
+        "verbo": "Realizar",
+        "complemento": "Medições"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Avaliar material",
+        "verbo": "Avaliar",
+        "complemento": "Material"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Reunir com arquiteto",
+        "verbo": "Reunir",
+        "complemento": "Arquiteto"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Colocar capacete",
+        "verbo": "Colocar",
+        "complemento": "Capacete"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Cobrar mestre de obra",
+        "verbo": "Cobrar",
+        "complemento": "Mestre de obra"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Verificar consistência do cimento",
+        "verbo": "Verificar",
+        "complemento": "Consistência do cimento"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Adiar prazo de entrega",
+        "verbo": "Adiar",
+        "complemento": "Prazo de entrega"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Montar projeto no AutoCad",
+        "verbo": "Montar",
+        "complemento": "Projeto no AutoCad"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Responsabilizar-se pela obra",
+        "verbo": "Responsabilizar-se",
+        "complemento": "Obra"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Checar corpo de prova",
+        "verbo": "Checar",
+        "complemento": "Corpo de prova"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Avaliar fundação",
+        "verbo": "Avaliar",
+        "complemento": "Fundação"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Assinar planta",
+        "verbo": "Assinar",
+        "complemento": "Planta"
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Colocar fones de proteção", "Retirar fones de proteção"],
+        "verbo": "Colocado",
+        "texto": "Colocar fones de proteção",
+        "complemento": "Fones de proteção",
+        "estado": ["Colocado", "Retirado"]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "X = ",
+        "verbo": "?",
+        "complemento": "Valor de X",
+        "lista": ["9", "13", "17", "100", "200"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Y = ",
+        "verbo": "?",
+        "complemento": "Valor de Y",
+        "lista": ["3,14159", "2,71828", "1,61803", "6,0.10^23"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "f(z) = ",
+        "verbo": "?",
+        "complemento": "Valor de f(z)",
+        "lista": ["(-b ± √Δ)/2a", "a^2 + b^2 = c^2", "2.π.r", "b.h/2"]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "profissao": "Astronauta",
+    "imagem": "035-astronaut.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Coletar material",
+        "verbo": "Coletar",
+        "complemento": "Material"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Realizar contagem regressiva",
+        "verbo": "Realizar",
+        "complemento": "Contagem regressiva"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Deixar pegada na lua",
+        "verbo": "Deixar",
+        "complemento": "Pegada na lua"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Hastear bandeira do país",
+        "verbo": "Hastear",
+        "complemento": "Bandeira do país"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Verificar nível de oxigênio",
+        "verbo": "Verificar",
+        "complemento": "Nível de oxigênio"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Checar combustível",
+        "verbo": "Checar",
+        "complemento": "Combustível"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Desviar de lixo espacial",
+        "verbo": "Desviar",
+        "complemento": "Lixo espacial"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Desviar de asteroide",
+        "verbo": "Desviar",
+        "complemento": "Asteroide"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Acusar impostores",
+        "verbo": "Acusar",
+        "complemento": "Impostores"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Checar trajetória",
+        "verbo": "Checar",
+        "complemento": "Trajetória"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Realizar manutenções na nave",
+        "verbo": "Realizar",
+        "complemento": "Manutenções na nave"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Fazer piruetas na gravidade 0",
+        "verbo": "Fazer",
+        "complemento": "Piruetas na gravidade 0"
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Colocar traje espacial", "Retirar traje espacial"],
+        "verbo": "Colocado",
+        "texto": "Colocar traje espacial",
+        "complemento": "Traje espacial",
+        "estado": ["Colocado", "Retirado"]
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": ["Entrar em orbita", "Sair de orbita"],
+        "verbo": "Dentro",
+        "texto": "Entrar em orbita",
+        "complemento": "Orbita",
+        "estado": ["Dentro", "Fora"]
+      },
+      {
+        "id": 15,
+        "tipo": "estado",
+        "eTexto": ["Entrar em estação espacial", "Sair de estação espacial"],
+        "verbo": "Dentro",
+        "texto": "Entrar em estação espacial",
+        "complemento": "Estação espacial",
+        "estado": ["Dentro", "Fora"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Alterar força G para",
+        "verbo": "Alterar",
+        "complemento": "Força G",
+        "lista": ["1", "2", "3", "4", "10"]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Nomear missão espacial para",
+        "verbo": "Nomear",
+        "complemento": "Missão espacial",
+        "lista": [
+          "Jaime IV",
+          "Zezin III",
+          "Pedrão XIV",
+          "Maicon XXV",
+          "Cleber II"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "profissao": "Garçom",
+    "imagem": "040-waiter.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Anotar pedido",
+        "verbo": "Anotar",
+        "complemento": "Pedido"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Levar conta",
+        "verbo": "Levar",
+        "complemento": "Conta"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Equilibrar pratos",
+        "verbo": "Equilibrar",
+        "complemento": "Pratos"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Entregar pedidos à cozinha",
+        "verbo": "Entregar",
+        "complemento": "Pedidos à cozinha"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Tocar campainha da cozinha",
+        "verbo": "Tocar",
+        "complemento": "Campainha da cozinha"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Arrumar a mesa",
+        "verbo": "Arrumar",
+        "complemento": "Mesa"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Recolher cacos de vidro",
+        "verbo": "Recolher",
+        "complemento": "Cacos de vidro"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Guiar cliente até a mesa",
+        "verbo": "Guiar",
+        "complemento": "Cliente até a mesa"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Aguardar pedido",
+        "verbo": "Aguardar",
+        "complemento": "Pedido"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Perguntar 'mais alguma coisa, senhor?'",
+        "verbo": "Perguntar",
+        "complemento": "Mais alguma coisa?"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Perguntar se está tudo ok com o pedido",
+        "verbo": "Perguntar",
+        "complemento": "Está tudo ok com o pedido"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Avistar mão levantada",
+        "verbo": "Avistar",
+        "complemento": "Mão levantada"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Pedir para deixar a mesa livre",
+        "verbo": "Pedir",
+        "complemento": "Deixar a mesa livre"
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": ["Entregar cardápio", "Retirar cardápio"],
+        "verbo": "Entregue",
+        "texto": "Entregar cardápio",
+        "complemento": "Cardápio",
+        "estado": ["Entregue", "Retirado"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Alterar sugestão de gorjeta para",
+        "verbo": "Alterar",
+        "complemento": "Sugestão de gorjeta",
+        "lista": ["10%", "12%", "15%"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Ser chamado pelo apelido de",
+        "verbo": "Ser chamado",
+        "complemento": "Apelido",
+        "lista": [
+          "Amigo",
+          "Queridão",
+          "Gente boa",
+          "Mestre",
+          "Fera",
+          "Patrão",
+          "Chapa",
+          "Chefia",
+          "Campeão"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "profissao": "Bombeiro",
+    "imagem": "049-firefighter.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Conectar mangueira no hidrante",
+        "verbo": "Conectar",
+        "complemento": "Mangueira no hidrante"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Resgatar gato em árvore",
+        "verbo": "Resgatar",
+        "complemento": "Gato em árvore"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Apagar incêndio",
+        "verbo": "Apagar",
+        "complemento": "Incêndio"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Usar pé-de-cabra",
+        "verbo": "Usar",
+        "complemento": "Pé-de-cabra"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Colocar uniforme antifogo",
+        "verbo": "Colocar",
+        "complemento": "Uniforme antifogo"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Resgatar pessoa na janela",
+        "verbo": "Resgatar",
+        "complemento": "Pessoa na janela"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Alegar irregularidades no local",
+        "verbo": "Alegar",
+        "complemento": "Irregularidades no local"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Estender escada",
+        "verbo": "Estender",
+        "complemento": "Escada"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Pilotar caminhão",
+        "verbo": "Pilotar",
+        "complemento": "Caminhão"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Salvar pessoa de afogamento",
+        "verbo": "Salvar",
+        "complemento": "Pessoa de afogamento"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Usar extintor",
+        "verbo": "Usar",
+        "complemento": "Extintor"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Usar mangueira",
+        "verbo": "Usar",
+        "complemento": "Mangueira"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Remover porta do carro",
+        "verbo": "Remover",
+        "complemento": "Porta do carro"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Resgatar pessoa soterrada",
+        "verbo": "Resgatar",
+        "complemento": "Pessoa soterrada"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Descer pelo cano",
+        "verbo": "Descer",
+        "complemento": "Cano"
+      },
+      {
+        "id": 16,
+        "tipo": "estado",
+        "eTexto": ["Ligar registro d'água", "Desligar registro d'água"],
+        "verbo": "Ligado",
+        "texto": "Registro d'água",
+        "complemento": "Registro d'água",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Ajustar pressão d'água para",
+        "verbo": "Ajustar",
+        "complemento": "Pressão d'água",
+        "lista": ["Baixo", "Médio", "Alto"]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "profissao": "Comissária de voo",
+    "imagem": "031-air-hostess.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Dar bom dia",
+        "verbo": "Dar",
+        "complemento": "Bom dia"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Ir na cabine durante ausência do piloto",
+        "verbo": "Ir",
+        "complemento": "Cabine do piloto"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Acalmar passageiro",
+        "verbo": "Acalmar",
+        "complemento": "Passageiro"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Informar duração da viagem",
+        "verbo": "Informar",
+        "complemento": "Duração da viagem"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Sorrir para todos a bordo",
+        "verbo": "Sorrir",
+        "complemento": "Todos a bordo"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Servir lanche",
+        "verbo": "Servir",
+        "complemento": "Lanche"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Identificar terrorista",
+        "verbo": "Identificar",
+        "complemento": "Terrorista"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Instruir informações de segurança",
+        "verbo": "Instruir",
+        "complemento": "Informações de segurança"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Pilotar carrinho",
+        "verbo": "Pilotar",
+        "complemento": "Carrinho"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Pedir para desligar o celular",
+        "verbo": "Pedir",
+        "complemento": "Desligar o celular"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Levar objeto ao achados e perdidos",
+        "verbo": "Levar",
+        "complemento": "Objeto ao achados e perdidos"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Arrumar compartimento de bagagem",
+        "verbo": "Arrumar",
+        "complemento": "Compartimento de bagagem"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Verificar documentos de menor de idade",
+        "verbo": "Verificar",
+        "complemento": "Documentos de menor de idade"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Pedir para pôr o cinto de segurança",
+        "verbo": "Pedir",
+        "complemento": "Pôr o cinto de segurança"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Realizar primeiros socorros",
+        "verbo": "Realizar",
+        "complemento": "Primeiros socorros"
+      },
+      {
+        "id": 16,
+        "tipo": "estado",
+        "eTexto": [
+          "Acionar máscaras de oxigênio",
+          "Remover máscaras de oxigênio"
+        ],
+        "verbo": "Acionadas",
+        "texto": "Acionar máscaras de oxigênio",
+        "complemento": "Máscaras de oxigênio",
+        "estado": ["Acionadas", "Removidas"]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Falar em",
+        "verbo": "Falar",
+        "complemento": "Idioma",
+        "lista": [
+          "Mandarim",
+          "Espanhol",
+          "Inglês",
+          "Bengali",
+          "Hindi",
+          "Português",
+          "Russo",
+          "Japonês",
+          "Alemão",
+          "Chinês",
+          "Javanês",
+          "Coreano",
+          "Francês",
+          "Vietnamita",
+          "Telugo",
+          "Cantonês",
+          "Marati",
+          "Tamil",
+          "Turco",
+          "Urdu"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "profissao": "Fotógrafo",
+    "imagem": "041-photographer.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Tirar fotos",
+        "verbo": "Tirar",
+        "complemento": "Fotos"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Renomear arquivos",
+        "verbo": "Renomear",
+        "complemento": "Arquivos"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Ver paleta de cores",
+        "verbo": "Ver",
+        "complemento": "Paleta de cores"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Pedir para olhar para a câmera",
+        "verbo": "Pedir",
+        "complemento": "Olhar para a câmera"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Pedir para fazer pose",
+        "verbo": "Pedir",
+        "complemento": "Fazer pose"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Fazer ensaios sensuais",
+        "verbo": "Fazer",
+        "complemento": "Ensaios sensuais"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Fazer foto colagem",
+        "verbo": "Fazer",
+        "complemento": "Foto colagem"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Fotografar a lua",
+        "verbo": "Fotografar",
+        "complemento": "Lua"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Tirar foto do homem aranha",
+        "verbo": "Tirar",
+        "complemento": "Foto do homem aranha"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Comprar câmeras antigas",
+        "verbo": "Comprar",
+        "complemento": "Câmeras antigas"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Editar foto",
+        "verbo": "Editar",
+        "complemento": "Foto"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Postar fotos no instagram",
+        "verbo": "Postar",
+        "complemento": "Fotos no instagram"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Regular tripé",
+        "verbo": "Regular",
+        "complemento": "Tripé"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Pedir para dar um sorriso",
+        "verbo": "Pedir",
+        "complemento": "Dar um sorriso"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Pedir para ficar parado",
+        "verbo": "Pedir",
+        "complemento": "Ficar parado"
+      },
+      {
+        "id": 16,
+        "tipo": "acao",
+        "texto": "Pedir para ser espontâneo",
+        "verbo": "Pedir",
+        "complemento": "Ser espontâneo"
+      },
+      {
+        "id": 17,
+        "tipo": "acao",
+        "texto": "Fazer foto 3x4",
+        "verbo": "Fazer",
+        "complemento": "Foto 3x4"
+      },
+      {
+        "id": 18,
+        "tipo": "estado",
+        "eTexto": ["Ligar iluminação", "Desligar iluminação"],
+        "verbo": "Ligado",
+        "texto": "Ligar iluminação",
+        "complemento": "Iluminação",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 19,
+        "tipo": "escolha",
+        "texto": "Ajustar foco para",
+        "verbo": "Ajustar",
+        "complemento": "Foco",
+        "lista": ["Automático", "1x", "3x", "5x"]
+      },
+      {
+        "id": 20,
+        "tipo": "escolha",
+        "texto": "Cobrar album de formatura por",
+        "verbo": "Cobrar",
+        "complemento": "Album de formatura",
+        "lista": [
+          "R$1000,00",
+          "R$2000,00",
+          "R$3000,00",
+          "R$4000,00",
+          "R$5000,00"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "profissao": "Cantora",
+    "imagem": "042-singer.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Fazer cover",
+        "verbo": "Fazer",
+        "complemento": "Cover"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Cantar em barzinho",
+        "verbo": "Cantar",
+        "complemento": "Barzinho"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Fazer exercícios vocais",
+        "verbo": "Fazer",
+        "complemento": "Exercícios vocais"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Participar do The Voice",
+        "verbo": "Participar",
+        "complemento": "The Voice"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Apresentar-se no Faustão",
+        "verbo": "Apresentar-se",
+        "complemento": "Faustão"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Realizar teste no microfone",
+        "verbo": "Realizar",
+        "complemento": "Teste no microfone"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Desafinar no refrão",
+        "verbo": "Desafinar",
+        "complemento": "Refrão"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Cantar no trio elétrico",
+        "verbo": "Cantar",
+        "complemento": "Trio elétrico"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Ficar sem voz",
+        "verbo": "Ficar",
+        "complemento": "Sem voz"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Escrever música",
+        "verbo": "Escrever",
+        "complemento": "Música"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Decorar letra",
+        "verbo": "Decorar",
+        "complemento": "Letra"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Trocar estilo musical",
+        "verbo": "Trocar",
+        "complemento": "Estilo musical"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Escutar música",
+        "verbo": "Escutar",
+        "complemento": "Música"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Fazer parceria",
+        "verbo": "Fazer",
+        "complemento": "Parceria"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Sofrer plágio",
+        "verbo": "Sofrer",
+        "complemento": "Plágio"
+      },
+      {
+        "id": 16,
+        "tipo": "acao",
+        "texto": "Tocar instrumento",
+        "verbo": "Tocar",
+        "complemento": "Instrumento"
+      },
+      {
+        "id": 17,
+        "tipo": "estado",
+        "eTexto": ["Ligar autotune", "Desligar autotune"],
+        "verbo": "Ligado",
+        "texto": "Ligar autotune",
+        "complemento": "Autotune",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Cantar nota",
+        "verbo": "Cantar",
+        "complemento": "Nota",
+        "lista": ["Dó", "Ré", "Mi", "Fá", "Sol", "Lá", "Si"]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "profissao": "Policial",
+    "imagem": "045-police.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Abordar usuário de droga",
+        "verbo": "Abordar",
+        "complemento": "Usuário de droga"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Fazer blitz",
+        "verbo": "Fazer",
+        "complemento": "Blitz"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Revistar meliante",
+        "verbo": "Revistar",
+        "complemento": "Meliante"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Prender criminoso",
+        "verbo": "Prender",
+        "complemento": "Criminoso"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Fiscalizar político",
+        "verbo": "Fiscalizar",
+        "complemento": "Político"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Fazer boletim de ocorrência",
+        "verbo": "Fazer",
+        "complemento": "Boletim de ocorrência"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Realizar investigações",
+        "verbo": "Realizar",
+        "complemento": "Investigações"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Trocar tiro",
+        "verbo": "Trocar",
+        "complemento": "Tiro"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Perseguir 2 caras numa moto",
+        "verbo": "Perseguir",
+        "complemento": "2 caras numa moto"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Dar enquadro",
+        "verbo": "Dar",
+        "complemento": "Enquadro"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Algemar bandido",
+        "verbo": "Algemar",
+        "complemento": "Bandido"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Informar direto de ficar calado",
+        "verbo": "Informar",
+        "complemento": "Direto de ficar calado"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Subir na favela para fazer operação",
+        "verbo": "Subir",
+        "complemento": "Operação na favela"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Nomear operação de investigação",
+        "verbo": "Nomear",
+        "complemento": "Operação de investigação"
+      },
+      {
+        "id": 17,
+        "tipo": "estado",
+        "eTexto": ["Ligar sirene", "Desligar sirene"],
+        "verbo": "Ligada",
+        "texto": "Ligar sirene",
+        "complemento": "Sirene",
+        "estado": ["Ligada", "Desligada"]
+      },
+      {
+        "id": 18,
+        "tipo": "escolha",
+        "texto": "Dar tiro de aviso de número",
+        "verbo": "Dar",
+        "complemento": "Tiro de aviso",
+        "lista": ["1", "2", "3", "42"]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "profissao": "Secretária",
+    "imagem": "047-secretary.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Servir café",
+        "verbo": "Servir",
+        "complemento": "Café"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Anotar recados",
+        "verbo": "Anotar",
+        "complemento": "Recados"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Atender telefonemas",
+        "verbo": "Atender",
+        "complemento": "Telefonemas"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Mandar e-mails",
+        "verbo": "Mandar",
+        "complemento": "E-mails"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Organizar reuniões",
+        "verbo": "Organizar",
+        "complemento": "Reuniões"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Organizar arquivos",
+        "verbo": "Organizar",
+        "complemento": "Arquivos"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Receber encomendas",
+        "verbo": "Receber",
+        "complemento": "Encomendas"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Organizar agenda",
+        "verbo": "Organizar",
+        "complemento": "Agenda"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Flexbilizar horário",
+        "verbo": "Flexbilizar",
+        "complemento": "Horário"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Informar que tem uma visita",
+        "verbo": "Informar",
+        "complemento": "Que tem visita"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Lembrar chefe sobre reuniões",
+        "verbo": "Lembrar",
+        "complemento": "Chefe sobre reuniões"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Verificar se a sala está vazia",
+        "verbo": "Verificar",
+        "complemento": "Sala vazia"
+      },
+      {
+        "id": 13,
+        "tipo": "acao",
+        "texto": "Chamar técnico para arrumar projetor",
+        "verbo": "Chamar",
+        "complemento": "Técnico para arrumar projetor"
+      },
+      {
+        "id": 14,
+        "tipo": "acao",
+        "texto": "Pedir para visita aguardar",
+        "verbo": "Pedir",
+        "complemento": "Visita aguardar"
+      },
+      {
+        "id": 15,
+        "tipo": "acao",
+        "texto": "Pedir para visita entrar",
+        "verbo": "Pedir",
+        "complemento": "Visita entrar"
+      },
+      {
+        "id": 16,
+        "tipo": "acao",
+        "texto": "Realizar orçamentos",
+        "verbo": "Realizar",
+        "complemento": "Orçamentos"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "profissao": "Taxista",
+    "imagem": "016-taxi-driver.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Reclamar de motorista de aplicativo",
+        "verbo": "Reclamar",
+        "complemento": "Motorista de aplicativo"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Seguir aquele carro",
+        "verbo": "Seguir",
+        "complemento": "Aquele carro"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Ultrapassar sinal vermelho",
+        "verbo": "Ultrapassar",
+        "complemento": "Sinal vermelho"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Cobrar corrida",
+        "verbo": "Cobrar",
+        "complemento": "Corrida"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Olhar no retrovisor",
+        "verbo": "Olhar",
+        "complemento": "Retrovisor"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Xingar motoqueiro",
+        "verbo": "Xingar",
+        "complemento": "Motoqueiro"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Estacionar no ponto de táxi",
+        "verbo": "Estacionar",
+        "complemento": "Ponto de táxi"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Arrumar táxi na oficina do Paulão",
+        "verbo": "Arrumar",
+        "complemento": "Táxi na oficina do Paulão"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Indicar pontos turísticos",
+        "verbo": "Indicar",
+        "complemento": "Pontos turísticos"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Fumar dentro do carro",
+        "verbo": "Fumar",
+        "complemento": "Dentro do carro"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Conversar com passageiro",
+        "verbo": "Conversar",
+        "complemento": "Passageiro"
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": ["Ingressar em frota de táxi", "Sair de frota de táxi"],
+        "verbo": "Dentro",
+        "texto": "Ingressar em frota de táxi",
+        "complemento": "Frota de táxi",
+        "estado": ["Dentro", "Fora"]
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Sinalizar táxi como livre", "Sinalizar táxi como ocupado"],
+        "verbo": "Livre",
+        "texto": "Sinalizar táxi como livre",
+        "complemento": "Luz do táxi",
+        "estado": ["Livre", "Ocupado"]
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": ["Ligar rádio", "Desligar rádio"],
+        "verbo": "Ligado",
+        "texto": "Ligar rádio",
+        "complemento": "Rádio",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Colocar na bandeira",
+        "verbo": "Colocar",
+        "complemento": "Bandeira",
+        "lista": ["1", "2"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Enrolar na corrida por",
+        "verbo": "Enrolar",
+        "complemento": "Corrida",
+        "lista": ["1 minuto", "5 minutos", "15 minutos", "25 minutos"]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "profissao": "Professor",
+    "imagem": "043-teacher.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Pedir para turma ficar quieta",
+        "verbo": "Pedir",
+        "complemento": "Turma ficar quieta"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Recusar a dar nota pra aluno chorão",
+        "verbo": "Recusar",
+        "complemento": "Dar nota pra aluno chorão"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Postegar entrega do trabalho",
+        "verbo": "Postegar",
+        "complemento": "Entrega do trabalho"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Passar slide",
+        "verbo": "Passar",
+        "complemento": "Slide"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Passar lista de chamada",
+        "verbo": "Passar",
+        "complemento": "Lista de chamada"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Trocar aluno de lugar",
+        "verbo": "Trocar",
+        "complemento": "Aluno de lugar"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Encarar aluno durante a prova",
+        "verbo": "Encarar",
+        "complemento": "Aluno durante a prova"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Apagar lousa",
+        "verbo": "Apagar",
+        "complemento": "Lousa"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Passar lição de casa",
+        "verbo": "Passar",
+        "complemento": "Lição de casa"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Fazer chamada",
+        "verbo": "Fazer",
+        "complemento": "Chamada"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Fazer canção sobre conteúdo de aula",
+        "verbo": "Fazer",
+        "complemento": "Canção sobre conteúdo de aula"
+      },
+      {
+        "id": 12,
+        "tipo": "acao",
+        "texto": "Dar aula teórica de educação física",
+        "verbo": "Dar",
+        "complemento": "Aula teórica de educação física"
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Acender luz da sala", "Apagar luz da sala"],
+        "verbo": "Acesa",
+        "texto": "Acender luz da sala",
+        "complemento": "Luz da sala",
+        "estado": ["Acesa", "Apagada"]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Expulsar da sala",
+        "verbo": "Expulsar",
+        "complemento": "Sala",
+        "lista": [
+          "1 aluno",
+          "2 alunos",
+          "3 alunos",
+          "10 alunos",
+          "A turma toda"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Definir dificuldade da prova para:",
+        "verbo": "Definir",
+        "complemento": "Dificuldade da prova",
+        "lista": ["Fácil", "Médio", "Difícil", "Vai todo mundo tirar 0"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Dar aula de:",
+        "verbo": "Dar",
+        "complemento": "Aula",
+        "lista": [
+          "Português",
+          "Matemática",
+          "Biologia",
+          "Física",
+          "Química",
+          "Artes",
+          "Educação Física",
+          "Inglês",
+          "Filosofia",
+          "Geografia",
+          "História",
+          "Sociologia"
+        ]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Conjugar o verbo ",
+        "verbo": "Conjugar",
+        "complemento": "Verbo",
+        "lista": [
+          "Ser",
+          "Nadar",
+          "Fazer",
+          "Polir",
+          "Intervir",
+          "Compelir",
+          "Amafagafar"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "profissao": "Carteiro",
+    "imagem": "024-postman.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Entregar encomendas",
+        "verbo": "Entregar",
+        "complemento": "Encomendas"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Evitar a fadiga",
+        "verbo": "Evitar",
+        "complemento": "Fadiga"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Entregar cartas",
+        "verbo": "Entregar",
+        "complemento": "Cartas"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Arremessar pacote frágil",
+        "verbo": "Arremessar",
+        "complemento": "Pacote frágil"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Fugir de cachorro",
+        "verbo": "Fugir",
+        "complemento": "Cachorro"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Tentar contato com o destinatário",
+        "verbo": "Tentar",
+        "complemento": "Contato com destinatário"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Fingir que tenta contato com o destinatário",
+        "verbo": "Fingir",
+        "complemento": "Contato com destinatário"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Solicitar assinatura do destinatário",
+        "verbo": "Solicitar",
+        "complemento": "Assinatura do destinatário"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Efetuar logística reversa",
+        "verbo": "Efetuar",
+        "complemento": "Logística reversa"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Registrar código de rastreio",
+        "verbo": "Registrar",
+        "complemento": "Código de rastreio"
+      },
+      {
+        "id": 11,
+        "tipo": "acao",
+        "texto": "Informar código de rastreio",
+        "verbo": "Informar",
+        "complemento": "Código de rastreio"
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": ["Soltar campainha", "Pressionar campainha"],
+        "verbo": "Solta",
+        "texto": "Soltar campainha",
+        "complemento": "Campainha",
+        "estado": ["Solta", "Pressionada"]
+      },
+      {
+        "id": 13,
+        "tipo": "escolha",
+        "texto": "Trocar status da entrega para",
+        "verbo": "Trocar",
+        "complemento": "Status da entrega",
+        "lista": [
+          "A entrega não pode ser efetuada",
+          "Objeto postado",
+          "Objeto roubado",
+          "Objeto saiu para entrega ao destinatário",
+          "Objeto entregue ao destinatário"
+        ]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Buscar CEP:",
+        "verbo": "Buscar",
+        "complemento": "CEP",
+        "lista": [
+          "01310-200",
+          "04094-901",
+          "02030-000",
+          "01001-000",
+          "70100-000"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Buscar endereço:",
+        "verbo": "Buscar",
+        "complemento": "Endereço",
+        "lista": [
+          "Praça dos Enfartados",
+          "Rua do Corno",
+          "Travessa Maravilha Tristeza",
+          "Rua Só Nós Dois",
+          "Rua Borboletas Psicodélicas",
+          "Rua Pato Donald"
+        ]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Buscar cidade:",
+        "verbo": "Buscar",
+        "complemento": "Endereço",
+        "lista": [
+          "Ressaquinha - MG",
+          "Vassouras - RJ",
+          "Santa Rita do Passa Quatro - SP",
+          "Não Me Toque - RS",
+          "Nova Iorque - MA",
+          "Tailândia - PA",
+          "Xique-Xique - BA",
+          "Feliz Natal - MT",
+          "Sombrio - SC",
+          "Califórnia - PR"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "profissao": "Palhaço",
+    "imagem": "005-clown.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Vestir figurino colorido",
+        "verbo": "Vestir",
+        "complemento": "Figurino colorido"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Chamar atenção de touro",
+        "verbo": "Chamar",
+        "complemento": "Atenção do touro"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Fazer trocadilho",
+        "verbo": "Fazer",
+        "complemento": "Trocadilho"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Provocar risada",
+        "verbo": "Provocar",
+        "complemento": "Risada"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Improvisar com o público",
+        "verbo": "Improvisar",
+        "complemento": "Público"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Imitar alguém",
+        "verbo": "Imitar",
+        "complemento": "Alguém"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Usar maquiagem",
+        "verbo": "Usar",
+        "complemento": "Maquiagem"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Assustar criança",
+        "verbo": "Assustar",
+        "complemento": "Criança"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Ser um doutor da alegria",
+        "verbo": "Ser",
+        "complemento": "Doutor da alegria"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Imitar alguém",
+        "verbo": "Imitar",
+        "complemento": "Alguém"
+      },
+      {
+        "id": 11,
+        "tipo": "estado",
+        "eTexto": ["Colocar nariz de palhaço", "Retirar nariz de palhaço"],
+        "verbo": "Colocado",
+        "texto": "Colocar nariz de palhaço",
+        "complemento": "Nariz de palhaço",
+        "estado": ["Colocado", "Retirado"]
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": ["Fazer careta", "Desfazer careta"],
+        "verbo": "Feita",
+        "texto": "Fazer careta",
+        "complemento": "Careta",
+        "estado": ["Feita", "Desfeita"]
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Entrar em grupo circense", "Sair de grupo circense"],
+        "verbo": "Dentro",
+        "texto": "Entrar em grupo circense",
+        "complemento": "Grupo circense",
+        "estado": ["Dentro", "Fora"]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Fazer mímica de",
+        "verbo": "Fazer",
+        "complemento": "Mímica",
+        "lista": ["Parede", "Carro", "Escada", "Esteira", "Luta", "Cadeira"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Contar história",
+        "verbo": "Contar",
+        "complemento": "História",
+        "lista": ["Rápida", "Longa"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Contar piada de",
+        "verbo": "Contar",
+        "complemento": "Piada",
+        "lista": ["Trocadilho", "Animal", "Joãozinho", "Bêbado", "Tiozão"]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "profissao": "Lenhador",
+    "imagem": "021-lumberjack.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Gritar 'Madeiraaaaa!'",
+        "verbo": "Gritar",
+        "complemento": "Madeiraaaaa!"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Extrair raiz",
+        "verbo": "Extrair",
+        "complemento": "Raiz"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Retirar folhas",
+        "verbo": "Retirar",
+        "complemento": "Folhas"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Partir tora ao meio",
+        "verbo": "Partir",
+        "complemento": "Tora ao meio"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Solicitar licenciamento ambiental",
+        "verbo": "Solicitar",
+        "complemento": "Licenciamento ambiental"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Remover cupim",
+        "verbo": "Remover",
+        "complemento": "Cupim"
+      },
+      {
+        "id": 7,
+        "tipo": "estado",
+        "eTexto": ["Ligar motoserra", "Desligar motoserra"],
+        "verbo": "Ligado",
+        "texto": "Ligar motoserra",
+        "complemento": "Motoserra",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 8,
+        "tipo": "escolha",
+        "texto": "Produzir feixe de",
+        "verbo": "Produzir",
+        "complemento": "Feixe",
+        "lista": [
+          "7 lenhas",
+          "18 lenhas",
+          "25 lenhas",
+          "40 lenhas",
+          "90 lenhas"
+        ]
+      },
+      {
+        "id": 9,
+        "tipo": "escolha",
+        "texto": "Extrair da seringueira",
+        "verbo": "Extrair",
+        "complemento": "Seringueira",
+        "lista": [
+          "1 litro de látex",
+          "2 litros de látex",
+          "3 litros de látex",
+          "4 litros de látex"
+        ]
+      },
+      {
+        "id": 10,
+        "tipo": "escolha",
+        "texto": "Acumular no caminhão",
+        "verbo": "Acumular",
+        "complemento": "Caminhão",
+        "lista": ["3 toras", "7 toras", "15 toras", "21 toras", "28 toras"]
+      },
+      {
+        "id": 11,
+        "tipo": "escolha",
+        "texto": "Usar camisa xadrez de cores",
+        "verbo": "Usar",
+        "complemento": "Camisa xadrez de cores",
+        "lista": [
+          "Vermelho e preto",
+          "Vermelho e verde",
+          "Verde e preto",
+          "Verde e azul",
+          "Azul e preto",
+          "Azul e verde"
+        ]
+      },
+      {
+        "id": 12,
+        "tipo": "escolha",
+        "texto": "Deixar barba crescer até",
+        "verbo": "Deixar",
+        "complemento": "Barba",
+        "lista": ["5cm", "7cm", "10cm", "15cm", "20cm"]
+      },
+      {
+        "id": 13,
+        "tipo": "escolha",
+        "texto": "Cortar árvore com",
+        "verbo": "Cortar",
+        "complemento": "Árvore",
+        "lista": [
+          "Serrote",
+          "Serra elétrica",
+          "Serra de fio",
+          "Machado",
+          "Machadinha"
+        ]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Plantar semente de",
+        "verbo": "Plantar",
+        "complemento": "Semente",
+        "lista": [
+          "Acácia Australiana",
+          "Calistemo",
+          "Castanheira",
+          "Cedro",
+          "Ipê",
+          "Jacarandá"
+        ]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Cortar pé de",
+        "verbo": "Cortar",
+        "complemento": "Pé",
+        "lista": [
+          "Aroeira",
+          "Bambu",
+          "Castanheira",
+          "Cedro",
+          "Jatobá",
+          "Juazeiro",
+          "Pau-Brasil",
+          "Pinus",
+          "Oliveira"
+        ]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Podar muda de",
+        "verbo": "Podar",
+        "complemento": "Muda",
+        "lista": [
+          "Aroeira",
+          "Bambu",
+          "Castanheira",
+          "Cedro",
+          "Jatobá",
+          "Juazeiro",
+          "Pau-Brasil",
+          "Pinus",
+          "Oliveira"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "profissao": "Telemarketing",
+    "imagem": "046-telemarketer.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Ligar para cliente",
+        "verbo": "Ligar",
+        "complemento": "Cliente"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Desligar na cara",
+        "verbo": "Na cara",
+        "complemento": "Desligar"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Cobrar dívida de cliente",
+        "verbo": "Cobrar",
+        "complemento": "Dívida de cliente"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Passar trote",
+        "verbo": "Passar",
+        "complemento": "Trote"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Usar gerúndio",
+        "verbo": "Usar",
+        "complemento": "Gerúndio"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Escutar reclamações",
+        "verbo": "Escutar",
+        "complemento": "Reclamações"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Tranferir ligação",
+        "verbo": "Transferir",
+        "complemento": "Ligação"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Bater meta de ligações",
+        "verbo": "Bater",
+        "complemento": "Meta de ligações"
+      },
+      {
+        "id": 9,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar interferência durante chamada",
+          "Desligar interferência durante chamada"
+        ],
+        "verbo": "Ligada",
+        "texto": "Ligar interferência durante chamada",
+        "complemento": "Interferência durante chamada",
+        "estado": ["Ligada", "Desligada"]
+      },
+      {
+        "id": 10,
+        "tipo": "estado",
+        "eTexto": ["Deixar microfone aberto", "Deixar microfone silenciado"],
+        "verbo": "Aberto",
+        "texto": "Deixar microfone aberto",
+        "complemento": "Microfone",
+        "estado": ["Aberto", "Silenciado"]
+      },
+      {
+        "id": 11,
+        "tipo": "escolha",
+        "texto": "Oferecer",
+        "verbo": "Oferecer",
+        "complemento": "Oferecimento",
+        "lista": ["Produto", "Serviço", "Desconto", "Plano"]
+      },
+      {
+        "id": 12,
+        "tipo": "escolha",
+        "texto": "Ligar as",
+        "verbo": "Ligar",
+        "complemento": "Horário",
+        "lista": ["08:00h", "00:30h", "04:20h", "14:45h", "16:20h"]
+      },
+      {
+        "id": 13,
+        "tipo": "escolha",
+        "texto": "Nota recebida pelo atendimento:",
+        "verbo": "Receber",
+        "complemento": "Nota",
+        "lista": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Pedir para aguardar na linha por:",
+        "verbo": "Pedir",
+        "complemento": "Aguardar na linha",
+        "lista": ["1min", "2min", "5min", "10min"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Ligar para o número:",
+        "verbo": "Ligar",
+        "complemento": "Número de telefone",
+        "lista": ["4002-8922", "4002-8923", "0500-2022-040", "0500-12345-40"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Ligar para cliente:",
+        "verbo": "Ligar",
+        "complemento": "Nome do cliente",
+        "lista": [
+          "Alan Berrola",
+          "Botelho Pinto",
+          "Crispin Tudo",
+          "Dayde Costa",
+          "Jé Badura",
+          "Zeca Gado"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "profissao": "Diarista",
+    "imagem": "008-maid.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Encher balde",
+        "verbo": "Encher",
+        "complemento": "Balde"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Molhar pano",
+        "verbo": "Molhar",
+        "complemento": "Pano"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Esfregar chão",
+        "verbo": "Esfregar",
+        "complemento": "Chão"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Varrer casa",
+        "verbo": "Varrer",
+        "complemento": "Casa"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Limpar banheiro",
+        "verbo": "Limpar",
+        "complemento": "Banheiro"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Afastar mosca com pano de prato",
+        "verbo": "Afastar",
+        "complemento": "Pano de prato"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Tirar pó",
+        "verbo": "Tirar",
+        "complemento": "Pó"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Mover móveis",
+        "verbo": "Mover",
+        "complemento": "Móveis"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Estender roupas",
+        "verbo": "Estender",
+        "complemento": "Roupas"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Passar roupas",
+        "verbo": "Passar",
+        "complemento": "Roupas"
+      },
+      {
+        "id": 11,
+        "tipo": "estado",
+        "eTexto": ["Ligar aspirador", "Desligar aspirador"],
+        "verbo": "Ligado",
+        "texto": "Ligar aspirador",
+        "complemento": "Aspirador",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": ["Ligar lavadora de alta pressão", "Desligar lava louça"],
+        "verbo": "Ligada",
+        "texto": "Ligar lavadora de alta pressão",
+        "complemento": "Lavadora de alta pressão",
+        "estado": ["Ligada", "Desligada"]
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Ligar lava e seca", "Desligar lava e seca"],
+        "verbo": "Ligada",
+        "texto": "Ligar lava e seca",
+        "complemento": "Lava e seca",
+        "estado": ["Ligada", "Desligada"]
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": ["Ligar torneira", "Desligar torneira"],
+        "verbo": "Ligada",
+        "texto": "Ligar torneira",
+        "complemento": "Torneira",
+        "estado": ["Ligada", "Desligada"]
+      },
+      {
+        "id": 15,
+        "tipo": "estado",
+        "eTexto": ["Ligar ferro de passar", "Desligar ferro de passar"],
+        "verbo": "Ligado",
+        "texto": "Ligar ferro de passar",
+        "complemento": "Ferro de passsar",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 16,
+        "tipo": "estado",
+        "eTexto": ["Ligar enceradeira", "Desligar enceradeira"],
+        "verbo": "Ligada",
+        "texto": "Ligar enceradeira",
+        "complemento": "Enceradeira",
+        "estado": ["Ligada", "Desligada"]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Utilizar produto químico:",
+        "verbo": "Utilizar",
+        "complemento": "Produto químico",
+        "lista": [
+          "Detergente",
+          "Água Sanitária",
+          "Vinagre",
+          "Bicarbonato de Sódio",
+          "Álcool",
+          "Limpa-vridros",
+          "Desinfetante"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "profissao": "Caçador",
+    "imagem": "026-hunter.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Transportar animais",
+        "verbo": "Transportar",
+        "complemento": "Animais"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Vender animais",
+        "verbo": "Vender",
+        "complemento": "Animais"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Fugir de animal",
+        "verbo": "Fugir",
+        "complemento": "Animal"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Tirar foto com carcaça",
+        "verbo": "Tirar",
+        "complemento": "Foto com carcaça"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Usar cabeça como troféu",
+        "verbo": "Usar",
+        "complemento": "Cabeça como troféu"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Planejar safari",
+        "verbo": "Planejar",
+        "complemento": "Safari"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Adquirir licença para caça",
+        "verbo": "Adquirir",
+        "complemento": "Licença para caça"
+      },
+      {
+        "id": 8,
+        "tipo": "estado",
+        "eTexto": ["Acionar armadilha", "Retirar armadilha"],
+        "verbo": "Acionada",
+        "texto": "Acionar armadilha",
+        "complemento": "Armadilha",
+        "estado": ["Acionada", "Retirada"]
+      },
+      {
+        "id": 9,
+        "tipo": "escolha",
+        "texto": "Caçar com",
+        "verbo": "Caçar",
+        "complemento": "Arma",
+        "lista": ["Arco e flecha", "Rifle", "Zarabatana", "Lança", "Rede"]
+      },
+      {
+        "id": 10,
+        "tipo": "escolha",
+        "texto": "Extrair de animal:",
+        "verbo": "Extrair",
+        "complemento": "Material de animal",
+        "lista": ["Marfim", "Escama", "Pele", "Pérola", "Óleo", "Tinta"]
+      },
+      {
+        "id": 11,
+        "tipo": "escolha",
+        "texto": "Caçar animal de grande porte:",
+        "verbo": "Caçar",
+        "complemento": "Animal de grande porte",
+        "lista": [
+          "Elefante",
+          "Leão",
+          "Avestruz",
+          "Hipopótamo",
+          "Mamute",
+          "Zebra",
+          "Girafa"
+        ]
+      },
+      {
+        "id": 12,
+        "tipo": "escolha",
+        "texto": "Sair na mão com um(a)",
+        "verbo": "Sair",
+        "complemento": "Na mão",
+        "lista": ["Crocodilo", "Tigre", "Urso", "Canguru", "Gorila"]
+      },
+      {
+        "id": 13,
+        "tipo": "escolha",
+        "texto": "Capturar animal de pequeno porte:",
+        "verbo": "Capturar",
+        "complemento": "Animal de pequeno porte",
+        "lista": ["Arara", "Andorinha", "Papagaio", "Serpente", "Tarântula"]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Esconder-se atrás de",
+        "verbo": "Esconder-se",
+        "complemento": "Atrás de",
+        "lista": ["Moita", "Árvore", "Pedra", "Vegetação"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Controlar dosagem de tranquilizante para",
+        "verbo": "Controlar",
+        "complemento": "Dosagem de tranquilizante",
+        "lista": ["200g", "350g", "480g", "610g"]
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "profissao": "Mecânico",
+    "imagem": "010-mechanic.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Sugerir peça ao cliente",
+        "verbo": "Sugerir",
+        "complemento": "Peça ao cliente"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Realizar manutenção no veículo",
+        "verbo": "Realizar",
+        "complemento": "Manutenção no veículo"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Trocar pneus",
+        "verbo": "Trocar",
+        "complemento": "Pneus"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Vefiricar água do carburador",
+        "verbo": "Vefiricar",
+        "complemento": "Água do carburador"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Trocar óleo do motor",
+        "verbo": "Trocar",
+        "complemento": "Óleo do motor"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Descobrir de onde vem o barulho",
+        "verbo": "Descobrir",
+        "complemento": "Onde vem o barulho"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Fazer chupeta",
+        "verbo": "Fazer",
+        "complemento": "Chupeta"
+      },
+      {
+        "id": 8,
+        "tipo": "acao",
+        "texto": "Trocar peça por outra mais barata",
+        "verbo": "Trocar",
+        "complemento": "Peça por outra mais barata"
+      },
+      {
+        "id": 9,
+        "tipo": "acao",
+        "texto": "Colocar insulfilm",
+        "verbo": "Colocar",
+        "complemento": "Insulfilm"
+      },
+      {
+        "id": 10,
+        "tipo": "acao",
+        "texto": "Sujar-se de graxa",
+        "verbo": "Sujar-se",
+        "complemento": "Graxa"
+      },
+      {
+        "id": 11,
+        "tipo": "estado",
+        "eTexto": ["Ligar macaco hidráulico", "Desligar macaco hidráulico"],
+        "verbo": "Ligado",
+        "texto": "Ligar macaco hidráulico",
+        "complemento": "Macaco hidráulico",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 12,
+        "tipo": "escolha",
+        "texto": "Escolher nome da oficina:",
+        "verbo": "Escolher",
+        "complemento": "Nome da oficina",
+        "lista": ["Oficina do Paulão", "Oficina do Paulo Guina", "Simas Turbo"]
+      },
+      {
+        "id": 13,
+        "tipo": "escolha",
+        "texto": "Dizer que o problema está no(a)",
+        "verbo": "Dizer",
+        "complemento": "Problema",
+        "lista": [
+          "Motor",
+          "Freio",
+          "Carburador",
+          "Rebimboca da parafuseta"
+        ]
+      },
+      {
+        "id": 14,
+        "tipo": "escolha",
+        "texto": "Desfazer amassado no(a)",
+        "verbo": "Desfazer",
+        "complemento": "Amassado",
+        "lista": ["Capô", "Porta-malas", "Porta", "Teto"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Dar manutenção em",
+        "verbo": "Dar",
+        "complemento": "Manutenção",
+        "lista": ["Fusca", "Corsa", "Kombi", "Ferrari"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Cobrar no orçamento",
+        "verbo": "Cobrar",
+        "complemento": "Orçamento",
+        "lista": ["3x a mais", "4x a mais", "5x a mais", "6x a mais"]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "profissao": "Piloto de corrida",
+    "imagem": "034-racer.svg",
+    "tarefas": [
+      {
+        "id": 1,
+        "tipo": "acao",
+        "texto": "Passar por cima da zebra",
+        "verbo": "Passar",
+        "complemento": "Por cima da zebra"
+      },
+      {
+        "id": 2,
+        "tipo": "acao",
+        "texto": "Usar cinto de segurança",
+        "verbo": "Usar",
+        "complemento": "Cinto de segurança"
+      },
+      {
+        "id": 3,
+        "tipo": "acao",
+        "texto": "Virar para esquerda",
+        "verbo": "Virar",
+        "complemento": "Esquerda"
+      },
+      {
+        "id": 4,
+        "tipo": "acao",
+        "texto": "Virar para direita",
+        "verbo": "Virar",
+        "complemento": "Direita"
+      },
+      {
+        "id": 5,
+        "tipo": "acao",
+        "texto": "Fazer zerinho",
+        "verbo": "Fazer",
+        "complemento": "Zerinho"
+      },
+      {
+        "id": 6,
+        "tipo": "acao",
+        "texto": "Bater em pneus",
+        "verbo": "Bater",
+        "complemento": "Pneus"
+      },
+      {
+        "id": 7,
+        "tipo": "acao",
+        "texto": "Cruzar linha de chegada",
+        "verbo": "Cruzar",
+        "complemento": "Linha de chegada"
+      },
+      {
+        "id": 8,
+        "tipo": "estado",
+        "eTexto": ["Ligar farol", "Desligar farol"],
+        "verbo": "Ligado",
+        "texto": "Ligar farol",
+        "complemento": "Farol",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 9,
+        "tipo": "estado",
+        "eTexto": [
+          "Ligar limpador de parabrisa",
+          "Desligar limpador de parabrisa"
+        ],
+        "verbo": "Ligado",
+        "texto": "Ligar limpador de parabrisa",
+        "complemento": "Limpador de parabrisa",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 10,
+        "tipo": "estado",
+        "eTexto": ["Ligar motor do carro", "Desligar motor do carro"],
+        "verbo": "Ligado",
+        "texto": "Ligar motor do carro",
+        "complemento": "Motor do carro",
+        "estado": ["Ligado", "Desligado"]
+      },
+      {
+        "id": 11,
+        "tipo": "estado",
+        "eTexto": ["Soltar acelerador", "Pressionar acelerador"],
+        "verbo": "Solto",
+        "texto": "Soltar acelerador",
+        "complemento": "Acelerador",
+        "estado": ["Solto", "Pressionado"]
+      },
+      {
+        "id": 12,
+        "tipo": "estado",
+        "eTexto": ["Soltar freio", "Pressionar freio"],
+        "verbo": "Solto",
+        "texto": "Soltar freio",
+        "complemento": "Freio",
+        "estado": ["Solto", "Pressionado"]
+      },
+      {
+        "id": 13,
+        "tipo": "estado",
+        "eTexto": ["Soltar embreagem", "Pressionar embreagem"],
+        "verbo": "Solto",
+        "texto": "Soltar embreagem",
+        "complemento": "Embreagem",
+        "estado": ["Solto", "Pressionado"]
+      },
+      {
+        "id": 14,
+        "tipo": "estado",
+        "eTexto": ["Soltar freio de mão", "Acionar freio de mão"],
+        "verbo": "Solto",
+        "texto": "Soltar freio de mão",
+        "complemento": "Freio de mão",
+        "estado": ["Solto", "Acionado"]
+      },
+      {
+        "id": 15,
+        "tipo": "escolha",
+        "texto": "Trocar para marcha",
+        "verbo": "Enrolar",
+        "complemento": "Bandeira",
+        "lista": ["1", "2", "3", "4", "5", "6", "R", "N"]
+      },
+      {
+        "id": 16,
+        "tipo": "escolha",
+        "texto": "Chegar em",
+        "verbo": "Chegar",
+        "complemento": "Colocação",
+        "lista": ["1º lugar", "2º lugar", "3º lugar", "30º lugar", "120º lugar"]
+      },
+      {
+        "id": 17,
+        "tipo": "escolha",
+        "texto": "Fazer o carro emitir som:",
+        "verbo": "Fazer",
+        "complemento": "Carro emitir som",
+        "lista": ["Vruuummm", "Vrooommm", "Inhéummm", "Zoooooummm"]
+      }
+    ]
+  }
+]

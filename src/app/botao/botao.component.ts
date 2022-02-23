@@ -69,6 +69,8 @@ export class BotaoComponent implements OnInit {
         this.displayLista = 'block';
         break;
     }
+
+    document.documentElement.style.setProperty('--box-shadow-color', this.sombra);
   }
 
   inverter() {

@@ -5,6 +5,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {APP_BASE_HREF} from '@angular/common';
 
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app.routing';
@@ -45,6 +46,6 @@ import { RelatorioComponent } from './relatorio/relatorio.component';
     RelatorioComponent
   ],
   bootstrap: [AppComponent],
-  providers: [TaskforceService]
+  providers: [TaskforceService, {provide: APP_BASE_HREF, useValue : '/' }]
 })
 export class AppModule {}

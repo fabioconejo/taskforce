@@ -71,6 +71,7 @@
   border: 2px solid var(--box-border);
   box-sizing: border-box;
   float: left;
+  overflow: hidden;
 }
 
 .central div {
