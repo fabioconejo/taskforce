@@ -1,7 +1,6 @@
 <button
-    [style.background-color]="corFundo"
-    [style.color]="corFonte"
-    [style.font-size]="tamanhoFonte"
+  #b
+    [ngClass]="cor"
     [style.display]="displayBotao"
     (click)="inverter(); this.clique.emit({'key': key, 'id': id, 'idProfissao':idProfissao, 'tipo': tipo, 'texto': texto})"
   >
@@ -9,9 +8,7 @@
 </button>
 
 <select
-    [style.background-color]="corFundo"
-    [style.color]="corFonte"
-    [style.font-size]="tamanhoFonte"
+    [ngClass]="cor"
     [style.display]="displayLista"
     #l
     (change)="this.clique.emit({'key': key, 'id': id, 'idProfissao':idProfissao, 'tipo': tipo, 'texto': l.value})"

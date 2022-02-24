@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { style } from '@angular/animations';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'botao',
@@ -6,6 +7,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./botao.component.css']
 })
 export class BotaoComponent implements OnInit {
+  @ViewChild('b') button: ElementRef;
+  @ViewChild('l') list: ElementRef;
+
   displayBotao: string;
   displayLista: string;
   corFundo: string;
@@ -26,38 +30,10 @@ export class BotaoComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.atualizarCores();
+    this.checarTipoAcao();
   }
 
-  atualizarCores() {
-    switch (this.cor) {
-      case 'azul-escuro':
-        this.corFonte = 'var(--white)';
-        this.corFundo = 'var(--space-cadet)';
-        this.sombra = 'var(--black-fogra)';
-        break;
-      case 'azul':
-        this.corFonte = 'var(--white)';
-        this.corFundo = 'var(--blue-jeans)';
-        this.sombra = 'var(--saphire-blue)';
-        break;
-      case 'verde':
-        this.corFonte = 'var(--white)';
-        this.corFundo = 'var(--medium-sea-green)';
-        this.sombra = 'var(--sea-green)';
-        break;
-      case 'vermelho':
-        this.corFonte = 'var(--white)';
-        this.corFundo = 'var(--tart-orange)';
-        this.sombra = 'var(--firebrick)';
-        break;
-      default:
-        this.corFonte = 'var(--saphire-blue)';
-        this.corFundo = 'var(--cultured)';
-        this.sombra = 'var(--silver-chalice)';
-        break;
-    }
-
+  checarTipoAcao() {
     switch (this.tipo) {
       case 'botao':
         this.displayBotao = 'block';
@@ -70,7 +46,6 @@ export class BotaoComponent implements OnInit {
         break;
     }
 
-    document.documentElement.style.setProperty('--box-shadow-color', this.sombra);
   }
 
   inverter() {
@@ -83,7 +58,5 @@ export class BotaoComponent implements OnInit {
         this.cor = 'verde';
       }
     }
-
-    this.atualizarCores();
   }
 }
