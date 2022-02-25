@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
       }
     });
 
-    this.meta.addTag({ property: 'og:title', content: 'Task Force' });
+    this.meta.addTag({ property: 'og:title', content: 'Squad Task' });
     this.meta.addTag({
       property: 'og:description',
       content: 'Junte a galera e jogue online agora mesmo',
@@ -54,7 +54,7 @@ export class AppComponent implements OnInit {
         .getPropertyValue('--bg-color')
         .trim(),
     });
-    this.titleService.setTitle('Task Force');
+    this.titleService.setTitle('Squad Task');
   }
 
   keySala: string;

@@ -114,6 +114,10 @@ option {
   scroll-behavior: smooth;
 }
 
+input { 
+  -webkit-user-select:text;
+}
+
 @keyframes bg-slide {
   0% {
     background-position: 0px 0px;

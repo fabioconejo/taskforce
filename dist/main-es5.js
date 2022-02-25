@@ -1500,7 +1500,7 @@
           });
           this.meta.addTag({
             property: 'og:title',
-            content: 'Task Force'
+            content: 'Squad Task'
           });
           this.meta.addTag({
             property: 'og:description',
@@ -1514,7 +1514,7 @@
             name: 'theme-color',
             content: getComputedStyle(document.documentElement).getPropertyValue('--bg-color').trim()
           });
-          this.titleService.setTitle('Task Force');
+          this.titleService.setTitle('Squad Task');
         }
 
         _createClass(AppComponent, [{
@@ -2326,7 +2326,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<div class=\"inicio\">\r\n  <div class=\"logo\">Task Force</div>\r\n  <div class=\"box box-login\">\r\n    <div class=\"card\">\r\n      <div class=\"personagem\">\r\n        <div class=\"img-personagem\" style.background-image=\"url({{baseUrl}}profissionais/{{imagemBox}})\"></div>\r\n      </div>\r\n      <form class=\"nick\">\r\n        <p class=\"nickname\">Nickname:</p>\r\n        <input type=\"text\" maxlength=\"10\" (keyup)=\"onKey($event)\">\r\n        <p class=\"mensagem\">{{mensagem}}</p>\r\n      </form>\r\n      <div class=\"login\">\r\n        <button *ngIf=\"!keySala\" class=\"btn-login\" (click)=\"criarSala()\" [disabled]=\"nickJogador === ''\">\r\n          Criar sala\r\n        </button>\r\n        <button *ngIf=\"keySala\" class=\"btn-login\" (click)=\"entrarSala()\" [disabled]=\"nickJogador === ''\">\r\n          Entrar na sala\r\n      </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"box box-tutorial\">\r\n    <div class=\"card\">\r\n      <div class=\"titulo\">Como jogar?</div>\r\n      <div class=\"imagem\" style.background-image=\"url({{baseUrl}}{{carrossel[numCarrossel].imagem}}\"></div>\r\n      <div class=\"texto\">{{carrossel[numCarrossel].texto}}</div>\r\n      <div class=\"navegacao\">\r\n        <div class=\"slot\" [ngClass]=\"numCarrossel === 0 ? 'slot-ativo' : ''\" (click)=\"acessarCarrossel(0)\"></div>\r\n        <div class=\"slot\" [ngClass]=\"numCarrossel === 1 ? 'slot-ativo' : ''\" (click)=\"acessarCarrossel(1)\"></div>\r\n        <div class=\"slot\" [ngClass]=\"numCarrossel === 2 ? 'slot-ativo' : ''\" (click)=\"acessarCarrossel(2)\"></div>\r\n        <div class=\"slot\" [ngClass]=\"numCarrossel === 3 ? 'slot-ativo' : ''\" (click)=\"acessarCarrossel(3)\"></div>\r\n        <div class=\"slot\" [ngClass]=\"numCarrossel === 4 ? 'slot-ativo' : ''\" (click)=\"acessarCarrossel(4)\"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>";
+      __webpack_exports__["default"] = "<div class=\"inicio\">\r\n  <div class=\"logo\">Squad Task</div>\r\n  <div class=\"box box-login\">\r\n    <div class=\"card\">\r\n      <div class=\"personagem\">\r\n        <div class=\"img-personagem\" style.background-image=\"url({{baseUrl}}profissionais/{{imagemBox}})\"></div>\r\n      </div>\r\n      <form class=\"nick\">\r\n        <p class=\"nickname\">Nickname:</p>\r\n        <input type=\"text\" maxlength=\"10\" (keyup)=\"onKey($event)\">\r\n        <p class=\"mensagem\">{{mensagem}}</p>\r\n      </form>\r\n      <div class=\"login\">\r\n        <button *ngIf=\"!keySala\" class=\"btn-login\" (click)=\"criarSala()\" [disabled]=\"nickJogador === ''\">\r\n          Criar sala\r\n        </button>\r\n        <button *ngIf=\"keySala\" class=\"btn-login\" (click)=\"entrarSala()\" [disabled]=\"nickJogador === ''\">\r\n          Entrar na sala\r\n      </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"box box-tutorial\">\r\n    <div class=\"card\">\r\n      <div class=\"titulo\">Como jogar?</div>\r\n      <div class=\"imagem\" style.background-image=\"url({{baseUrl}}{{carrossel[numCarrossel].imagem}}\"></div>\r\n      <div class=\"texto\">{{carrossel[numCarrossel].texto}}</div>\r\n      <div class=\"navegacao\">\r\n        <div class=\"slot\" [ngClass]=\"numCarrossel === 0 ? 'slot-ativo' : ''\" (click)=\"acessarCarrossel(0)\"></div>\r\n        <div class=\"slot\" [ngClass]=\"numCarrossel === 1 ? 'slot-ativo' : ''\" (click)=\"acessarCarrossel(1)\"></div>\r\n        <div class=\"slot\" [ngClass]=\"numCarrossel === 2 ? 'slot-ativo' : ''\" (click)=\"acessarCarrossel(2)\"></div>\r\n        <div class=\"slot\" [ngClass]=\"numCarrossel === 3 ? 'slot-ativo' : ''\" (click)=\"acessarCarrossel(3)\"></div>\r\n        <div class=\"slot\" [ngClass]=\"numCarrossel === 4 ? 'slot-ativo' : ''\" (click)=\"acessarCarrossel(4)\"></div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>";
       /***/
     },
 

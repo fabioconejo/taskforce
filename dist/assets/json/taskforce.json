@@ -3628,9 +3628,9 @@
       {
         "id": 6,
         "tipo": "acao",
-        "texto": "Afastar mosca com pano de prato",
+        "texto": "Afastar mosca",
         "verbo": "Afastar",
-        "complemento": "Pano de prato"
+        "complemento": "Mosca"
       },
       {
         "id": 7,
@@ -3798,9 +3798,9 @@
       {
         "id": 9,
         "tipo": "escolha",
-        "texto": "Caçar com",
-        "verbo": "Caçar",
-        "complemento": "Arma",
+        "texto": "Escolher como arma para caça o(a)",
+        "verbo": "Escolher",
+        "complemento": "Arma de caça",
         "lista": ["Arco e flecha", "Rifle", "Zarabatana", "Lança", "Rede"]
       },
       {
@@ -3808,7 +3808,7 @@
         "tipo": "escolha",
         "texto": "Extrair de animal:",
         "verbo": "Extrair",
-        "complemento": "Material de animal",
+        "complemento": "Extração de animal",
         "lista": ["Marfim", "Escama", "Pele", "Pérola", "Óleo", "Tinta"]
       },
       {
