@@ -3109,7 +3109,7 @@
         "complemento": "Endereço",
         "lista": [
           "Praça dos Enfartados",
-          "Rua do Corno",
+          "Rua dos Bobos",
           "Travessa Maravilha Tristeza",
           "Rua Só Nós Dois",
           "Rua Borboletas Psicodélicas",
@@ -3125,8 +3125,6 @@
         "lista": [
           "Ressaquinha - MG",
           "Vassouras - RJ",
-          "Santa Rita do Passa Quatro - SP",
-          "Não Me Toque - RS",
           "Nova Iorque - MA",
           "Tailândia - PA",
           "Xique-Xique - BA",
@@ -3261,7 +3259,7 @@
         "texto": "Contar piada de",
         "verbo": "Contar",
         "complemento": "Piada",
-        "lista": ["Trocadilho", "Animal", "Joãozinho", "Bêbado", "Tiozão"]
+        "lista": ["Animal", "Joãozinho", "Bêbado", "Tiozão"]
       }
     ]
   },
@@ -3413,7 +3411,7 @@
         "tipo": "escolha",
         "texto": "Cortar pé de",
         "verbo": "Cortar",
-        "complemento": "Pé",
+        "complemento": "Pé de",
         "lista": [
           "Aroeira",
           "Bambu",
@@ -3431,7 +3429,7 @@
         "tipo": "escolha",
         "texto": "Podar muda de",
         "verbo": "Podar",
-        "complemento": "Muda",
+        "complemento": "Muda de",
         "lista": [
           "Aroeira",
           "Bambu",
@@ -3566,7 +3564,7 @@
         "texto": "Ligar para o número:",
         "verbo": "Ligar",
         "complemento": "Número de telefone",
-        "lista": ["4002-8922", "4002-8923", "0500-2022-040", "0500-12345-40"]
+        "lista": ["4002-8922", "0500-2022-040", "0500-12345-40"]
       },
       {
         "id": 16,
@@ -3575,12 +3573,18 @@
         "verbo": "Ligar",
         "complemento": "Nome do cliente",
         "lista": [
-          "Alan Berrola",
-          "Botelho Pinto",
-          "Crispin Tudo",
-          "Dayde Costa",
-          "Jé Badura",
-          "Zeca Gado"
+          "Danilo",
+          "Elias",
+          "Fabio",
+          "Flávio",
+          "Felipe",
+          "Guilherme",
+          "Gustavo",
+          "Henrique",
+          "Igor",
+          "Leandro",
+          "Renan",
+          "Thiago"
         ]
       }
     ]
