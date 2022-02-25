@@ -115,6 +115,9 @@ option {
   scroll-behavior: smooth;
 }
 input { 
+  -moz-user-select:text; 
+   -ms-user-select:text; 
+       user-select:text;
   -webkit-user-select:text;
 }
 @-webkit-keyframes bg-slide {
