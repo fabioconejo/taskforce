@@ -798,7 +798,7 @@
           "#Hashtag",
           "#tbt",
           "#PazEAmor",
-          "#BBB21",
+          "#BBB",
           "#happy",
           "#love"
         ]
@@ -1475,7 +1475,7 @@
         "complemento": "Aguardar em casa",
         "lista": [
           "1 dia útil",
-          "3 dias útil",
+          "3 dias úteis",
           "1 dia corrido",
           "6 dia corridos",
           "3 anos"
@@ -2838,9 +2838,9 @@
       {
         "id": 2,
         "tipo": "acao",
-        "texto": "Recusar a dar nota pra aluno chorão",
-        "verbo": "Recusar",
-        "complemento": "Dar nota pra aluno chorão"
+        "texto": "Arredondar nota de aluno",
+        "verbo": "Arredondar",
+        "complemento": "Nota de aluno"
       },
       {
         "id": 3,
@@ -2941,7 +2941,7 @@
         "texto": "Definir dificuldade da prova para:",
         "verbo": "Definir",
         "complemento": "Dificuldade da prova",
-        "lista": ["Fácil", "Médio", "Difícil", "Vai todo mundo tirar 0"]
+        "lista": ["Fácil", "Médio", "Difícil", "Vai geral tirar 0"]
       },
       {
         "id": 16,
@@ -2971,10 +2971,10 @@
         "verbo": "Conjugar",
         "complemento": "Verbo",
         "lista": [
-          "Ser",
-          "Nadar",
-          "Fazer",
-          "Polir",
+          "Tergiversar",
+          "Perscrutar",
+          "Justapor",
+          "Nitidificar",
           "Intervir",
           "Compelir",
           "Amafagafar"
@@ -3121,7 +3121,7 @@
         "tipo": "escolha",
         "texto": "Buscar cidade:",
         "verbo": "Buscar",
-        "complemento": "Endereço",
+        "complemento": "Cidade",
         "lista": [
           "Ressaquinha - MG",
           "Vassouras - RJ",
@@ -3178,9 +3178,9 @@
       {
         "id": 6,
         "tipo": "acao",
-        "texto": "Imitar alguém",
-        "verbo": "Imitar",
-        "complemento": "Alguém"
+        "texto": "Fazer palhaçada",
+        "verbo": "Fazer",
+        "complemento": "Palhaçada"
       },
       {
         "id": 7,
@@ -3540,7 +3540,7 @@
         "texto": "Ligar as",
         "verbo": "Ligar",
         "complemento": "Horário",
-        "lista": ["08:00h", "00:30h", "04:20h", "14:45h", "16:20h"]
+        "lista": ["00:30h", "04:20h", "08:00h", "14:45h", "16:20h"]
       },
       {
         "id": 13,
@@ -3952,14 +3952,6 @@
       {
         "id": 12,
         "tipo": "escolha",
-        "texto": "Escolher nome da oficina:",
-        "verbo": "Escolher",
-        "complemento": "Nome da oficina",
-        "lista": ["Oficina do Paulão", "Oficina do Paulo Guina", "Simas Turbo"]
-      },
-      {
-        "id": 13,
-        "tipo": "escolha",
         "texto": "Dizer que o problema está no(a)",
         "verbo": "Dizer",
         "complemento": "Problema",
@@ -3967,11 +3959,12 @@
           "Motor",
           "Freio",
           "Carburador",
+          "Suspensão",
           "Rebimboca da parafuseta"
         ]
       },
       {
-        "id": 14,
+        "id": 13,
         "tipo": "escolha",
         "texto": "Desfazer amassado no(a)",
         "verbo": "Desfazer",
@@ -3979,7 +3972,7 @@
         "lista": ["Capô", "Porta-malas", "Porta", "Teto"]
       },
       {
-        "id": 15,
+        "id": 14,
         "tipo": "escolha",
         "texto": "Dar manutenção em",
         "verbo": "Dar",
@@ -3987,7 +3980,7 @@
         "lista": ["Fusca", "Corsa", "Kombi", "Ferrari"]
       },
       {
-        "id": 16,
+        "id": 15,
         "tipo": "escolha",
         "texto": "Cobrar no orçamento",
         "verbo": "Cobrar",
