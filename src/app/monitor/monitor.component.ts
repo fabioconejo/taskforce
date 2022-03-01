@@ -13,16 +13,28 @@ export class MonitorComponent implements OnInit, OnChanges {
   @Input() dica: boolean;
   @Output() dicaChange = new EventEmitter();
 
+  blinkText: string;
   dicaMonitor: boolean;
 
   constructor() {}
 
   ngOnInit() {
+    this.blinkText = "_";
     this.dicaMonitor = this.dica;
+
+    setInterval(() => {
+      if(this.blinkText === '_') {
+        this.blinkText = " ";
+      }
+      else {
+        this.blinkText = "_";
+      }
+      
+    },700);
   }
 
   ngOnChanges() {
-    document.documentElement.style.setProperty('--tamanho', this.texto.length * 0.6 + 0.6 + 'em');
+    document.documentElement.style.setProperty('--tamanho', this.texto.length * 0.6 + 0.6 + 0.1 + 'em');
   }
 
   fechar() {

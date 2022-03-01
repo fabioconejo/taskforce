@@ -4114,7 +4114,7 @@
         "tipo": "escolha",
         "texto": "Trocar para marcha",
         "verbo": "Enrolar",
-        "complemento": "Bandeira",
+        "complemento": "Marcha",
         "lista": ["1", "2", "3", "4", "5", "6", "R", "N"]
       },
       {
