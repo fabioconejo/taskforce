@@ -38,23 +38,12 @@ export class AppComponent implements OnInit {
       }
     });
 
-    this.meta.addTag({ property: 'og:title', content: 'Squad Task' });
-    this.meta.addTag({
-      property: 'og:description',
-      content: 'Junte a galera e jogue online agora mesmo',
-    });
-    this.meta.addTag({
-      property: 'og:image',
-      content:
-        'https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/taskforce-print.png',
-    });
     this.meta.addTag({
       name: 'theme-color',
       content: getComputedStyle(document.documentElement)
         .getPropertyValue('--bg-color')
         .trim(),
     });
-    this.titleService.setTitle('Squad Task');
   }
 
   keySala: string;

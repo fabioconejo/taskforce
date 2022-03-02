@@ -17,7 +17,8 @@ export class TaskforceService {
   constructor(private db: AngularFireDatabase, private http: HttpClient) {}
 
   baseUrl(): string {
-    return 'https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/';
+    //return 'https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/';
+    return '';
   }
 
   criarSala(): string {
