@@ -5,6 +5,7 @@
   --white: #ffffff;
   --semi-white: #fcfcfc;
   --cultured: #ededed;
+  --purple: #241a36;
   --dark-purple: #160c28;
   --blue-jeans: #4ab6f2;
   --medium-sea-green: #00bc65;
@@ -47,7 +48,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: var(--bg-color);
-  background-image: url(https://raw.githubusercontent.com/fabioconejo/taskforce/master/src/assets/images/backpattern2.png);
+  background-image: url(assets/images/backpattern2.png);
   background-size: 150px;
   background-position: 0px 0px;
   color: var(--ft-color);

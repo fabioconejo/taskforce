@@ -78,7 +78,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<div class=\"amigos\">\r\n  <div class=\"amigo\" *ngFor=\"let l of listaProfissoesSorteadas | async\">\r\n    <div class=\"fundo-profissao\">\r\n      <div\r\n        class=\"img-profissao\"\r\n        style.background-image=\"url({{ baseUrl }}profissionais/{{ l.imagem }})\"\r\n      ></div>\r\n    </div>\r\n    <div class=\"info-amigo\">\r\n      <p class=\"nick\">\r\n        {{ l.responsavel }}<br /><span class=\"texto-profissao\">{{\r\n          l.profissao\r\n        }}</span>\r\n      </p>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"central\">\r\n  <div *ngIf=\"statusSala === 'espera' && flagRelatorio === false\" [@fade]>\r\n    <sala\r\n      [keySala]=\"keySala\"\r\n      [(keyProfissaoSorteada)]=\"keyProfissaoSorteada\"\r\n      [(profissaoSorteada)]=\"profissaoSorteada\"\r\n      [nickJogador]=\"nickJogador\"\r\n      [listaProfissoesSorteadas]=\"listaProfissoesSorteadas\"\r\n      [numRodada]=\"numRodada\"\r\n      [vidas]=\"vidas\"\r\n      [privacidade]=\"privacidade\"\r\n      [visibilidadeURL]=\"visibilidadeURL\"\r\n      [lider]=\"lider\"\r\n    >\r\n    </sala>\r\n  </div>\r\n  <div *ngIf=\"statusSala === 'jogo'\" [@fade]>\r\n    <painel\r\n      [keySala]=\"keySala\"\r\n      [keyJogador]=\"keyJogador\"\r\n      [vidas]=\"vidas\"\r\n      [keyProfissaoSorteada]=\"keyProfissaoSorteada\"\r\n      [profissaoSorteada]=\"profissaoSorteada\"\r\n      [tempoMonitor]=\"tempoMonitor\"\r\n      [numTarefasNecessarias]=\"numTarefasNecessarias\"\r\n      [numRodada]=\"numRodada\"\r\n      [(flagRelatorio)]=\"flagRelatorio\"\r\n      [(dica)]=\"dica\"\r\n    >\r\n    </painel>\r\n  </div>\r\n  <div *ngIf=\"statusSala === 'contagem'\" [@fade]><contagem [keySala]=\"keySala\"></contagem></div>\r\n  <div *ngIf=\"statusSala === 'espera' && flagRelatorio === true\" [@fade]>\r\n    <relatorio\r\n      [keySala]=\"keySala\"\r\n      [vidas]=\"vidas\"\r\n      [keyProfissaoSorteada]=\"keyProfissaoSorteada\"\r\n      [listaProfissoesSorteadas]=\"listaProfissoesSorteadas\"\r\n      [(relatorioPartida)]=\"relatorioPartida\"\r\n      [(flagRelatorio)]=\"flagRelatorio\"\r\n    ></relatorio>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<div class=\"amigos\">\r\n  <div class=\"amigo\" *ngFor=\"let l of listaProfissoesSorteadas | async\">\r\n    <div class=\"fundo-profissao\">\r\n      <div\r\n        class=\"img-profissao\"\r\n        style.background-image=\"url({{ baseUrl }}profissionais/{{ l.imagem }})\"\r\n      ></div>\r\n    </div>\r\n    <div class=\"info-amigo\">\r\n      <p class=\"nick\">\r\n        {{ l.responsavel }}<br /><span class=\"texto-profissao\">{{\r\n          l.profissao\r\n        }}</span>\r\n      </p>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"central\">\r\n  <div *ngIf=\"statusSala === 'espera' && flagRelatorio === false\" [@fade]>\r\n    <sala\r\n      [keySala]=\"keySala\"\r\n      [(keyProfissaoSorteada)]=\"keyProfissaoSorteada\"\r\n      [(profissaoSorteada)]=\"profissaoSorteada\"\r\n      [nickJogador]=\"nickJogador\"\r\n      [listaProfissoesSorteadas]=\"listaProfissoesSorteadas\"\r\n      [numRodada]=\"numRodada\"\r\n      [vidas]=\"vidas\"\r\n      [privacidade]=\"privacidade\"\r\n      [visibilidadeURL]=\"visibilidadeURL\"\r\n      [lider]=\"lider\"\r\n    >\r\n    </sala>\r\n  </div>\r\n  <div *ngIf=\"statusSala === 'jogo'\" [@fade]>\r\n    <painel\r\n      [keySala]=\"keySala\"\r\n      [keyJogador]=\"keyJogador\"\r\n      [vidas]=\"vidas\"\r\n      [keyProfissaoSorteada]=\"keyProfissaoSorteada\"\r\n      [profissaoSorteada]=\"profissaoSorteada\"\r\n      [tempoMonitor]=\"tempoMonitor\"\r\n      [numTarefasNecessarias]=\"numTarefasNecessarias\"\r\n      [numRodada]=\"numRodada\"\r\n      [(flagRelatorio)]=\"flagRelatorio\"\r\n      [(dica)]=\"dica\"\r\n    >\r\n    </painel>\r\n  </div>\r\n  <div *ngIf=\"statusSala === 'contagem'\" [@fade]><contagem [keySala]=\"keySala\"></contagem></div>\r\n  <div *ngIf=\"statusSala === 'espera' && flagRelatorio === true\" [@fade]>\r\n    <relatorio\r\n      [keySala]=\"keySala\"\r\n      [vidas]=\"vidas\"\r\n      [numRodada]=\"numRodada\"\r\n      [keyProfissaoSorteada]=\"keyProfissaoSorteada\"\r\n      [listaProfissoesSorteadas]=\"listaProfissoesSorteadas\"\r\n      [(relatorioPartida)]=\"relatorioPartida\"\r\n      [(flagRelatorio)]=\"flagRelatorio\"\r\n    ></relatorio>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1358,7 +1358,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<div class=\"relatorio\">\r\n  <div class=\"card-relatorio\">\r\n    <table class=\"tabela-relatorio\">\r\n      <thead>\r\n        <tr>\r\n          <th\r\n            [ngClass]=\"this.vida <= 0 ? 'titulo derrota' : 'titulo vitoria'\"\r\n          ></th>\r\n          <th class=\"tooltip\">\r\n            Tarefas Concluídas\r\n            <svg\r\n              xmlns=\"http://www.w3.org/2000/svg\"\r\n              width=\"16\"\r\n              height=\"16\"\r\n              fill=\"var(--ft-color)\"\r\n              class=\"bi bi-info-circle-fill\"\r\n              viewBox=\"0 0 16 16\"\r\n            >\r\n              <path\r\n                d=\"M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z\"\r\n              />\r\n            </svg>\r\n            <div class=\"tooltiptext\">\r\n              <p>\r\n                <span class=\"num-concluidas\">0.5</span> por tarefa informada\r\n              </p>\r\n              <br />\r\n              <p>\r\n                <span class=\"num-concluidas\">0.5</span> por tarefa executada\r\n              </p>\r\n            </div>\r\n          </th>\r\n          <th class=\"tooltip\">\r\n            Vidas Perdidas\r\n            <svg\r\n              xmlns=\"http://www.w3.org/2000/svg\"\r\n              width=\"16\"\r\n              height=\"16\"\r\n              fill=\"var(--ft-color)\"\r\n              class=\"bi bi-info-circle-fill\"\r\n              viewBox=\"0 0 16 16\"\r\n            >\r\n              <path\r\n                d=\"M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z\"\r\n              />\r\n            </svg>\r\n            <div class=\"tooltiptext\">\r\n              <p>\r\n                <span class=\"num-perdidas\">0.5</span> por tarefa não informada\r\n              </p>\r\n              <br />\r\n              <p>\r\n                <span class=\"num-perdidas\">0.5</span> por tarefa não executada\r\n              </p>\r\n              <br />\r\n              <p>\r\n                <span class=\"num-perdidas\">1</span> por execução de tarefa\r\n                errada\r\n              </p>\r\n            </div>\r\n          </th>\r\n        </tr>\r\n      </thead>\r\n      <tbody *ngIf=\"this.vida > 0\">\r\n        <tr *ngFor=\"let l of lista\">\r\n          <td>\r\n            <div class=\"fundo-profissao\">\r\n              <div\r\n                class=\"img-profissao\"\r\n                style.background-image=\"url({{ baseUrl }}profissionais/{{\r\n                  l.imagem\r\n                }})\"\r\n              ></div>\r\n            </div>\r\n\r\n            <div class=\"info-amigo\">\r\n              <p class=\"nick\">\r\n                {{ l.responsavel }}<br /><span class=\"texto-profissao\">{{\r\n                  l.profissao\r\n                }}</span>\r\n              </p>\r\n            </div>\r\n          </td>\r\n          <td class=\"num num-concluidas\">{{ l.acertos }}</td>\r\n          <td class=\"num num-perdidas\">{{ l.erros }}</td>\r\n        </tr>\r\n      </tbody>\r\n\r\n      <tbody *ngIf=\"this.vida <= 0\">\r\n        <tr *ngFor=\"let l of relatorioPartida\">\r\n        <td>\r\n          <div class=\"fundo-profissao\">\r\n            <div\r\n              class=\"img-profissao\"\r\n              style.background-image=\"url({{ baseUrl }}profissionais/{{\r\n                l.imagem\r\n              }})\"\r\n            ></div>\r\n          </div>\r\n\r\n          <div class=\"info-amigo\">\r\n            <p class=\"nick\">\r\n              {{ l.responsavel }}<br /><span class=\"texto-profissao\">{{\r\n                l.profissao\r\n              }}</span>\r\n            </p>\r\n          </div>\r\n        </td>\r\n        <td class=\"num num-concluidas\">{{ l.acertos }}</td>\r\n        <td class=\"num num-perdidas\">{{ l.erros }}</td>\r\n      </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n\r\n  <div class=\"acao\">\r\n    <button\r\n      [disabled]=\"this.desabilitado\"\r\n      [ngClass]=\"this.vida <= 0 ? 'reiniciar' : 'proximo'\"\r\n      (click)=\"fecharRelatorio()\"\r\n    ></button>\r\n  </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<div class=\"relatorio\">\r\n  <div class=\"card-relatorio\">\r\n    <table class=\"tabela-relatorio\">\r\n      <thead>\r\n        <tr>\r\n          <th *ngIf=\"this.vida > 0\"\r\n            Class=\"titulo vitoria\"\r\n          ></th>\r\n          <th *ngIf=\"this.vida <= 0\"\r\n            Class=\"titulo derrota\"\r\n          > #{{numRodada}}</th>\r\n          <th class=\"tooltip\">\r\n            Tarefas Concluídas\r\n            <svg\r\n              xmlns=\"http://www.w3.org/2000/svg\"\r\n              width=\"16\"\r\n              height=\"16\"\r\n              fill=\"var(--ft-color)\"\r\n              class=\"bi bi-info-circle-fill\"\r\n              viewBox=\"0 0 16 16\"\r\n            >\r\n              <path\r\n                d=\"M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z\"\r\n              />\r\n            </svg>\r\n            <div class=\"tooltiptext\">\r\n              <p>\r\n                <span class=\"num-concluidas\">0.5</span> por tarefa informada\r\n              </p>\r\n              <br />\r\n              <p>\r\n                <span class=\"num-concluidas\">0.5</span> por tarefa executada\r\n              </p>\r\n            </div>\r\n          </th>\r\n          <th class=\"tooltip\">\r\n            Vidas Perdidas\r\n            <svg\r\n              xmlns=\"http://www.w3.org/2000/svg\"\r\n              width=\"16\"\r\n              height=\"16\"\r\n              fill=\"var(--ft-color)\"\r\n              class=\"bi bi-info-circle-fill\"\r\n              viewBox=\"0 0 16 16\"\r\n            >\r\n              <path\r\n                d=\"M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z\"\r\n              />\r\n            </svg>\r\n            <div class=\"tooltiptext\">\r\n              <p>\r\n                <span class=\"num-perdidas\">0.5</span> por tarefa não informada\r\n              </p>\r\n              <br />\r\n              <p>\r\n                <span class=\"num-perdidas\">0.5</span> por tarefa não executada\r\n              </p>\r\n              <br />\r\n              <p>\r\n                <span class=\"num-perdidas\">1</span> por execução de tarefa\r\n                errada\r\n              </p>\r\n            </div>\r\n          </th>\r\n        </tr>\r\n      </thead>\r\n      <tbody *ngIf=\"this.vida > 0\">\r\n        <tr *ngFor=\"let l of lista\">\r\n          <td>\r\n            <div class=\"fundo-profissao\">\r\n              <img\r\n                class=\"img-profissao\"\r\n                src=\"{{ baseUrl }}profissionais/{{\r\n                  l.imagem\r\n                }}\"\r\n              />\r\n            </div>\r\n\r\n            <div class=\"info-amigo\">\r\n              <p class=\"nick\">\r\n                {{ l.responsavel }}<br /><span class=\"texto-profissao\">{{\r\n                  l.profissao\r\n                }}</span>\r\n              </p>\r\n            </div>\r\n          </td>\r\n          <td class=\"num num-concluidas\">{{ l.acertos }}</td>\r\n          <td class=\"num num-perdidas\">{{ l.erros }}</td>\r\n        </tr>\r\n      </tbody>\r\n\r\n      <tbody *ngIf=\"this.vida <= 0\">\r\n        <tr *ngFor=\"let l of relatorioPartida\">\r\n        <td>\r\n          <div class=\"fundo-profissao\">\r\n            <img\r\n                class=\"img-profissao\"\r\n                src=\"{{ baseUrl }}profissionais/{{\r\n                  l.imagem\r\n                }}\"\r\n              />\r\n          </div>\r\n\r\n          <div class=\"info-amigo\">\r\n            <p class=\"nick\">\r\n              {{ l.responsavel }}<br /><span class=\"texto-profissao\">{{\r\n                l.profissao\r\n              }}</span>\r\n            </p>\r\n          </div>\r\n        </td>\r\n        <td class=\"num num-concluidas\">{{ l.acertos }}</td>\r\n        <td class=\"num num-perdidas\">{{ l.erros }}</td>\r\n      </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n\r\n  <div class=\"acao-proximo\" *ngIf=\"this.vida > 0\">\r\n    <button\r\n      [disabled]=\"this.desabilitado\"\r\n      class=\"proximo\"\r\n      (click)=\"fecharRelatorio()\"\r\n    ></button>\r\n  </div>\r\n\r\n  <div class=\"acao-reiniciar\" *ngIf=\"this.vida <= 0\">\r\n    <button\r\n      class=\"compartilhar\"\r\n      [disabled]=\"this.desabilitado\"\r\n      (click)=\"compartilhar()\"\r\n    ><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" fill=\"currentColor\" class=\"bi bi-share-fill\" viewBox=\"0 -4 20 20\">\r\n      <path d=\"M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z\"/>\r\n    </svg> {{textoCompartilhar}}</button>\r\n    <button\r\n      [disabled]=\"this.desabilitado\"\r\n      class=\"reiniciar\"\r\n      (click)=\"fecharRelatorio()\"\r\n    ></button>\r\n  </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -1591,7 +1591,17 @@
       /* harmony import */
 
 
-      var _taskforce_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var dom_to_image__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! dom-to-image */
+      "cLAn");
+      /* harmony import */
+
+
+      var dom_to_image__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dom_to_image__WEBPACK_IMPORTED_MODULE_5__);
+      /* harmony import */
+
+
+      var _taskforce_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! ../taskforce.service */
       "tsgC");
 
@@ -1602,6 +1612,7 @@
           this.taskForceService = taskForceService;
           this.flagRelatorioChange = new _angular_core__WEBPACK_IMPORTED_MODULE_3__["EventEmitter"]();
           this.relatorioPartidaChange = new _angular_core__WEBPACK_IMPORTED_MODULE_3__["EventEmitter"]();
+          this.textoCompartilhar = "Compartilhar";
           this.lista = [];
           this.baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
         }
@@ -1761,6 +1772,106 @@
               }, _callee19, this);
             }));
           }
+        }, {
+          key: "mobileCheck",
+          value: function mobileCheck() {
+            var check = false;
+
+            (function (a) {
+              if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+
+            return check;
+          }
+        }, {
+          key: "compartilhar",
+          value: function compartilhar() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
+              var _this13 = this;
+
+              return regeneratorRuntime.wrap(function _callee21$(_context21) {
+                while (1) {
+                  switch (_context21.prev = _context21.next) {
+                    case 0:
+                      this.textoCompartilhar = 'Gerando imagem...';
+                      _context21.next = 3;
+                      return dom_to_image__WEBPACK_IMPORTED_MODULE_5___default.a.toBlob(document.querySelector(".tabela-relatorio")).then(function (blob) {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this13, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
+                          var imgClip, data;
+                          return regeneratorRuntime.wrap(function _callee20$(_context20) {
+                            while (1) {
+                              switch (_context20.prev = _context20.next) {
+                                case 0:
+                                  //@ts-ignore
+                                  imgClip = new ClipboardItem({
+                                    "image/png": blob
+                                  });
+                                  _context20.next = 3;
+                                  return navigator.clipboard.write([imgClip]);
+
+                                case 3:
+                                  if (!this.mobileCheck()) {
+                                    _context20.next = 15;
+                                    break;
+                                  }
+
+                                  data = {
+                                    files: [new File([blob], 'file.png', {
+                                      type: blob.type
+                                    })],
+                                    title: "",
+                                    text: "Rodada " + this.numRodada + " alcançada!\nhttps://squadtask.io"
+                                  };
+                                  _context20.prev = 5;
+
+                                  if (navigator.canShare(data)) {
+                                    _context20.next = 8;
+                                    break;
+                                  }
+
+                                  throw new Error("Can't share data.");
+
+                                case 8:
+                                  _context20.next = 10;
+                                  return navigator.share(data);
+
+                                case 10:
+                                  _context20.next = 15;
+                                  break;
+
+                                case 12:
+                                  _context20.prev = 12;
+                                  _context20.t0 = _context20["catch"](5);
+                                  console.error(_context20.t0.name, _context20.t0.message);
+
+                                case 15:
+                                  this.textoCompartilhar = 'Copiado p/ ctrl-v';
+
+                                case 16:
+                                case "end":
+                                  return _context20.stop();
+                              }
+                            }
+                          }, _callee20, this, [[5, 12]]);
+                        }));
+                      })["catch"](function (error) {
+                        _this13.textoCompartilhar = 'Falha ao copiar';
+                        console.error('oops, something went wrong!', error);
+                      });
+
+                    case 3:
+                      setTimeout(function () {
+                        _this13.textoCompartilhar = 'Compartilhar';
+                      }, 3000);
+
+                    case 4:
+                    case "end":
+                      return _context21.stop();
+                  }
+                }
+              }, _callee21, this);
+            }));
+          }
         }]);
 
         return RelatorioComponent;
@@ -1768,7 +1879,7 @@
 
       RelatorioComponent.ctorParameters = function () {
         return [{
-          type: _taskforce_service__WEBPACK_IMPORTED_MODULE_5__["TaskforceService"]
+          type: _taskforce_service__WEBPACK_IMPORTED_MODULE_6__["TaskforceService"]
         }];
       };
 
@@ -1777,6 +1888,9 @@
           type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
         }],
         vidas: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        numRodada: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
         }],
         keyProfissaoSorteada: [{
@@ -2036,7 +2150,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "table,\r\nth,\r\ntd {\r\n  border: 1px solid var(--box-border);\r\n  border-collapse: collapse;\r\n}\r\n\r\nth {\r\n  height: 15%;\r\n  vertical-align: bottom;\r\n  border: none;\r\n  padding: 2% 2% 0 2%;\r\n}\r\n\r\n.tooltip {\r\n  position: relative;\r\n}\r\n\r\n.tooltip .tooltiptext {\r\n  visibility: hidden;\r\n  width: 95%;\r\n  background-color: var(--monitor-bg);\r\n  border: 2px solid var(--box-border);\r\n  color: var(--ft-color);\r\n  text-align: center;\r\n  border-radius: 3px;\r\n  position: absolute;\r\n  z-index: 1;\r\n  left: 50%;\r\n  margin-left: -47.5%;\r\n  padding: 5% 2.5%;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.tooltip .tooltiptext::after {\r\n  content: '';\r\n  position: absolute;\r\n  bottom: 100%;\r\n  left: 50%;\r\n  margin-left: -5px;\r\n  border-width: 5px;\r\n  border-style: solid;\r\n  border-color: transparent transparent var(--box-border) transparent;\r\n}\r\n\r\n.tooltip:hover .tooltiptext {\r\n  visibility: visible;\r\n}\r\n\r\ntr {\r\n  height: 10vh;\r\n}\r\n\r\ntd {\r\n  vertical-align: middle;\r\n  text-align: center;\r\n  height: 10vh;\r\n}\r\n\r\ntd:nth-child(1) {\r\n  width: 30%;\r\n}\r\n\r\ntd:nth-child(2),\r\ntd:nth-child(3) {\r\n  width: 35%;\r\n}\r\n\r\n.relatorio {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n.card-relatorio {\r\n  background-color: var(--box-bg);\r\n  float: left;\r\n  border-radius: 3px;\r\n  border: 2px solid var(--box-border);\r\n  overflow-y: auto;\r\n}\r\n\r\n.tabela-relatorio {\r\n  width: 100%;\r\n  overflow: auto;\r\n}\r\n\r\n.titulo {\r\n  white-space: pre;\r\n  font-style: italic;\r\n  font-weight: bold;\r\n  text-align: left;\r\n  vertical-align: middle;\r\n}\r\n\r\n.vitoria::after {\r\n  content: 'Rodada \\A Concluída';\r\n  color: var(--blue-jeans);\r\n}\r\n\r\n.derrota::after {\r\n  content: 'Fim de \\A Partida';\r\n  color: var(--tart-orange);\r\n}\r\n\r\n.fundo-profissao {\r\n  width: 25%;\r\n  height: 100%;\r\n\r\n  margin-left: 5%;\r\n\r\n  background: var(--personagem-bg);\r\n\r\n  shape-outside: circle();\r\n  -webkit-clip-path: circle();\r\n          clip-path: circle();\r\n\r\n  float: left;\r\n}\r\n\r\n.img-profissao {\r\n  width: 100%;\r\n  height: 100%;\r\n\r\n  background-size: contain;\r\n  background-repeat: no-repeat;\r\n  background-position: center;\r\n}\r\n\r\n.info-amigo {\r\n  width: 65%;\r\n  height: 100%;\r\n  margin-left: 5%;\r\n\r\n  display: flex;\r\n  justify-content: left;\r\n  align-items: center;\r\n\r\n  float: left;\r\n}\r\n\r\n.nick {\r\n  padding-top: 5%;\r\n  line-height: 0.75;\r\n  font-weight: bold;\r\n  text-align: left;\r\n}\r\n\r\n.texto-profissao {\r\n  color: var(--blue-jeans);\r\n  font-weight: 400;\r\n}\r\n\r\n.num {\r\n  font-weight: bold;\r\n}\r\n\r\n.num-concluidas {\r\n  color: var(--medium-sea-green);\r\n}\r\n\r\n.num-perdidas {\r\n  color: var(--tart-orange);\r\n}\r\n\r\n.acao {\r\n  float: left;\r\n}\r\n\r\n.proximo {\r\n  background-color: var(--medium-sea-green);\r\n  color: var(--white);\r\n  box-shadow: 0px 6px var(--sea-green);\r\n}\r\n\r\n.proximo:active {\r\n  box-shadow: 0px 2px var(--sea-green);\r\n}\r\n\r\n.proximo::after {\r\n  content: 'Próxima rodada';\r\n}\r\n\r\n.proximo:disabled {\r\n  background-color: var(--cultured);\r\n  box-shadow: 0px 6px var(--silver-chalice);\r\n  color: var(--silver-chalice);\r\n  cursor: default;\r\n}\r\n\r\n.reiniciar {\r\n  background-color: var(--blue-jeans);\r\n  color: var(--white);\r\n  box-shadow: 0px 6px var(--saphire-blue);\r\n}\r\n\r\n.reiniciar:active {\r\n  box-shadow: 0px 2px var(--saphire-blue);\r\n}\r\n\r\n.reiniciar::after {\r\n  content: 'Nova partida';\r\n}\r\n\r\n.reiniciar:disabled {\r\n  background-color: var(--cultured);\r\n  box-shadow: 0px 6px var(--silver-chalice);\r\n  color: var(--silver-chalice);\r\n  cursor: default;\r\n}\r\n\r\n/* Extra small devices (phones, 600px and down) */\r\n\r\n@media only screen and (max-width: 600px) {\r\n  .card-relatorio {\r\n    width: 100%;\r\n    height: 80%;\r\n  }\r\n\r\n  .titulo {\r\n    font-size: 5.5vw;\r\n  }\r\n\r\n  th {\r\n    font-size: 3.5vw;\r\n  }\r\n\r\n  .tooltiptext {\r\n    font-size: 2.5vw;\r\n  }\r\n\r\n  .nick {\r\n    font-size: 4.5vw;\r\n  }\r\n\r\n  .texto-profissao {\r\n    font-size: 2.5vw;\r\n  }\r\n\r\n  .num {\r\n    font-size: 7vw;\r\n  }\r\n\r\n  .acao {\r\n    width: 90%;\r\n    height: 7.5%;\r\n    margin-left: 5%;\r\n    margin-top: 10%;\r\n  }\r\n}\r\n\r\n/* Small devices (portrait tablets and large phones, 600px and up) */\r\n\r\n@media only screen and (min-width: 600px) and (max-width: 767px) {\r\n  .card-relatorio {\r\n    width: 100%;\r\n    height: 80%;\r\n  }\r\n\r\n  .titulo {\r\n    font-size: 4.5vw;\r\n  }\r\n\r\n  th {\r\n    font-size: 3vw;\r\n  }\r\n\r\n  .tooltiptext {\r\n    font-size: 2.5vw;\r\n  }\r\n\r\n  .nick {\r\n    font-size: 3.5vw;\r\n  }\r\n\r\n  .texto-profissao {\r\n    font-size: 2vw;\r\n  }\r\n\r\n  .num {\r\n    font-size: 6vw;\r\n  }\r\n\r\n  .acao {\r\n    width: 70%;\r\n    height: 7.5%;\r\n    margin-left: 15%;\r\n    margin-top: 7.5%;\r\n  }\r\n}\r\n\r\n/* Medium devices (landscape tablets, 768px and up) */\r\n\r\n@media only screen and (min-width: 768px) and (max-width: 991px) {\r\n  .card-relatorio {\r\n    width: 70%;\r\n    height: 80%;\r\n    margin-top: 2.5%;\r\n    margin-left: 15%;\r\n  }\r\n\r\n  .titulo {\r\n    font-size: 3.5vw;\r\n  }\r\n\r\n  th {\r\n    font-size: 2vw;\r\n  }\r\n\r\n  .tooltiptext {\r\n    font-size: 1.6vw;\r\n  }\r\n\r\n  .nick {\r\n    font-size: 2.75vw;\r\n  }\r\n\r\n  .texto-profissao {\r\n    font-size: 1.5vw;\r\n  }\r\n\r\n  .num {\r\n    font-size: 4.5vw;\r\n  }\r\n\r\n  .acao {\r\n    width: 50%;\r\n    height: 7.5%;\r\n    margin-left: 25%;\r\n    margin-top: 2.5%;\r\n  }\r\n}\r\n\r\n/* Large devices (laptops/desktops, 992px and up) */\r\n\r\n@media only screen and (min-width: 992px) and (max-width: 1199px) {\r\n  .card-relatorio {\r\n    width: 70%;\r\n    height: 80%;\r\n    margin-top: 2.5%;\r\n    margin-left: 15%;\r\n  }\r\n\r\n  .titulo {\r\n    font-size: 2.5vw;\r\n  }\r\n\r\n  th {\r\n    font-size: 1.5vw;\r\n  }\r\n\r\n  .tooltiptext {\r\n    font-size: 1.1vw;\r\n  }\r\n\r\n  .nick {\r\n    font-size: 2vw;\r\n  }\r\n\r\n  .texto-profissao {\r\n    font-size: 1.25vw;\r\n  }\r\n\r\n  .num {\r\n    font-size: 3vw;\r\n  }\r\n\r\n  .acao {\r\n    width: 50%;\r\n    height: 7.5%;\r\n    margin-left: 25%;\r\n    margin-top: 2.5%;\r\n  }\r\n}\r\n\r\n/* Extra large devices (large laptops and desktops, 1200px and up) */\r\n\r\n@media only screen and (min-width: 1200px) {\r\n  .card-relatorio {\r\n    width: 70%;\r\n    height: 80%;\r\n    margin-top: 2.5%;\r\n    margin-left: 15%;\r\n  }\r\n\r\n  .titulo {\r\n    font-size: 2vw;\r\n  }\r\n\r\n  th {\r\n    font-size: 1.25vw;\r\n  }\r\n\r\n  .tooltiptext {\r\n    font-size: 1vw;\r\n  }\r\n\r\n  .nick {\r\n    font-size: 1.5vw;\r\n  }\r\n\r\n  .texto-profissao {\r\n    font-size: 1vw;\r\n  }\r\n\r\n  .num {\r\n    font-size: 2vw;\r\n  }\r\n\r\n  .acao {\r\n    width: 30%;\r\n    height: 7.5%;\r\n    margin-left: 35%;\r\n    margin-top: 2.5%;\r\n  }\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlbGF0b3Jpby5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7RUFHRSxtQ0FBbUM7RUFDbkMseUJBQXlCO0FBQzNCOztBQUVBO0VBQ0UsV0FBVztFQUNYLHNCQUFzQjtFQUN0QixZQUFZO0VBQ1osbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLFVBQVU7RUFDVixtQ0FBbUM7RUFDbkMsbUNBQW1DO0VBQ25DLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsa0JBQWtCO0VBQ2xCLGtCQUFrQjtFQUNsQixVQUFVO0VBQ1YsU0FBUztFQUNULG1CQUFtQjtFQUNuQixnQkFBZ0I7RUFDaEIsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0UsV0FBVztFQUNYLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1osU0FBUztFQUNULGlCQUFpQjtFQUNqQixpQkFBaUI7RUFDakIsbUJBQW1CO0VBQ25CLG1FQUFtRTtBQUNyRTs7QUFFQTtFQUNFLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsWUFBWTtBQUNkOztBQUVBO0VBQ0UsVUFBVTtBQUNaOztBQUVBOztFQUVFLFVBQVU7QUFDWjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSwrQkFBK0I7RUFDL0IsV0FBVztFQUNYLGtCQUFrQjtFQUNsQixtQ0FBbUM7RUFDbkMsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsV0FBVztFQUNYLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLGlCQUFpQjtFQUNqQixnQkFBZ0I7RUFDaEIsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0UsOEJBQThCO0VBQzlCLHdCQUF3QjtBQUMxQjs7QUFFQTtFQUNFLDRCQUE0QjtFQUM1Qix5QkFBeUI7QUFDM0I7O0FBRUE7RUFD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QUNoQixnQkFBZ0I7RUFDbEI7QUFDRjs7QUFFQSxvRUFBb0U7O0FBQ3BFO0VBQ0U7SUFDRSxVQUFVO0lBQ1YsV0FBVztJQUNYLGdCQUFnQjtJQUNoQixnQkFBZ0I7RUFDbEI7O0VBRUE7SUFDRSxjQUFjO0VBQ2hCOztFQUVBO0lBQ0UsaUJBQWlCO0VBQ25COztFQUVBO0lBQ0UsY0FBYztFQUNoQjs7RUFFQTtJQUNFLGdCQUFnQjtFQUNsQjs7RUFFQTtJQUNFLGNBQWM7RUFDaEI7O0VBRUE7SUFDRSxjQUFjO0VBQ2hCOztFQUVBO0lBQ0UsVUFBVTtJQUNWLFlBQVk7SUFDWixnQkFBZ0I7SUFDaEIsZ0JBQWdCO0VBQ2xCO0FBQ0YiLCJmaWxlIjoicmVsYXRvcmlvLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ0YWJsZSxcclxudGgsXHJcbnRkIHtcclxuICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1ib3gtYm9yZGVyKTtcclxuICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xyXG59XHJcblxyXG50aCB7XHJcbiAgaGVpZ2h0OiAxNSU7XHJcbiAgdmVydGljYWwtYWxpZ246IGJvdHRvbTtcclxuICBib3JkZXI6IG5vbmU7XHJcbiAgcGFkZGluZzogMiUgMiUgMCAyJTtcclxufVxyXG5cclxuLnRvb2x0aXAge1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxufVxyXG5cclxuLnRvb2x0aXAgLnRvb2x0aXB0ZXh0IHtcclxuICB2aXNpYmlsaXR5OiBoaWRkZW47XHJcbiAgd2lkdGg6IDk1JTtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1tb25pdG9yLWJnKTtcclxuICBib3JkZXI6IDJweCBzb2xpZCB2YXIoLS1ib3gtYm9yZGVyKTtcclxuICBjb2xvcjogdmFyKC0tZnQtY29sb3IpO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBib3JkZXItcmFkaXVzOiAzcHg7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHotaW5kZXg6IDE7XHJcbiAgbGVmdDogNTAlO1xyXG4gIG1hcmdpbi1sZWZ0OiAtNDcuNSU7XHJcbiAgcGFkZGluZzogNSUgMi41JTtcclxuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG59XHJcblxyXG4udG9vbHRpcCAudG9vbHRpcHRleHQ6OmFmdGVyIHtcclxuICBjb250ZW50OiAnJztcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgYm90dG9tOiAxMDAlO1xyXG4gIGxlZnQ6IDUwJTtcclxuICBtYXJnaW4tbGVmdDogLTVweDtcclxuICBib3JkZXItd2lkdGg6IDVweDtcclxuICBib3JkZXItc3R5bGU6IHNvbGlkO1xyXG4gIGJvcmRlci1jb2xvcjogdHJhbnNwYXJlbnQgdHJhbnNwYXJlbnQgdmFyKC0tYm94LWJvcmRlcikgdHJhbnNwYXJlbnQ7XHJcbn1cclxuXHJcbi50b29sdGlwOmhvdmVyIC50b29sdGlwdGV4dCB7XHJcbiAgdmlzaWJpbGl0eTogdmlzaWJsZTtcclxufVxyXG5cclxudHIge1xyXG4gIGhlaWdodDogMTB2aDtcclxufVxyXG5cclxudGQge1xyXG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGhlaWdodDogMTB2aDtcclxufVxyXG5cclxudGQ6bnRoLWNoaWxkKDEpIHtcclxuICB3aWR0aDogMzAlO1xyXG59XHJcblxyXG50ZDpudGgtY2hpbGQoMiksXHJcbnRkOm50aC1jaGlsZCgzKSB7XHJcbiAgd2lkdGg6IDM1JTtcclxufVxyXG5cclxuLnJlbGF0b3JpbyB7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4uY2FyZC1yZWxhdG9yaW8ge1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWJveC1iZyk7XHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbiAgYm9yZGVyLXJhZGl1czogM3B4O1xyXG4gIGJvcmRlcjogMnB4IHNvbGlkIHZhcigtLWJveC1ib3JkZXIpO1xyXG4gIG92ZXJmbG93LXk6IGF1dG87XHJcbn1cclxuXHJcbi50YWJlbGEtcmVsYXRvcmlvIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBvdmVyZmxvdzogYXV0bztcclxufVxyXG5cclxuLnRpdHVsbyB7XHJcbiAgd2hpdGUtc3BhY2U6IHByZTtcclxuICBmb250LXN0eWxlOiBpdGFsaWM7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgdGV4dC1hbGlnbjogbGVmdDtcclxuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG59XHJcblxyXG4udml0b3JpYTo6YWZ0ZXIge1xyXG4gIGNvbnRlbnQ6ICdSb2RhZGEgXFxBIENvbmNsdcOtZGEnO1xyXG4gIGNvbG9yOiB2YXIoLS1ibHVlLWplYW5zKTtcclxufVxyXG5cclxuLmRlcnJvdGE6OmFmdGVyIHtcclxuICBjb250ZW50OiAnRmltIGRlIFxcQSBQYXJ0aWRhJztcclxuICBjb2xvcjogdmFyKC0tdGFydC1vcmFuZ2UpO1xyXG59XHJcblxyXG4uZnVuZG8tcHJvZmlzc2FvIHtcclxuICB3aWR0aDogMjUlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuXHJcbiAgbWFyZ2luLWxlZnQ6IDUlO1xyXG5cclxuICBiYWNrZ3JvdW5kOiB2YXIoLS1wZXJzb25hZ2VtLWJnKTtcclxuXHJcbiAgc2hhcGUtb3V0c2lkZTogY2lyY2xlKCk7XHJcbiAgY2xpcC1wYXRoOiBjaXJjbGUoKTtcclxuXHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbn1cclxuXHJcbi5pbWctcHJvZmlzc2FvIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcblxyXG4gIGJhY2tncm91bmQtc2l6ZTogY29udGFpbjtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxufVxyXG5cclxuLmluZm8tYW1pZ28ge1xyXG4gIHdpZHRoOiA2NSU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIG1hcmdpbi1sZWZ0OiA1JTtcclxuXHJcbiAgZGlzcGxheTogZmxleDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGxlZnQ7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuXHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbn1cclxuXHJcbi5uaWNrIHtcclxuICBwYWRkaW5nLXRvcDogNSU7XHJcbiAgbGluZS1oZWlnaHQ6IDAuNzU7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgdGV4dC1hbGlnbjogbGVmdDtcclxufVxyXG5cclxuLnRleHRvLXByb2Zpc3NhbyB7XHJcbiAgY29sb3I6IHZhcigtLWJsdWUtamVhbnMpO1xyXG4gIGZvbnQtd2VpZ2h0OiA0MDA7XHJcbn1cclxuXHJcbi5udW0ge1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4ubnVtLWNvbmNsdWlkYXMge1xyXG4gIGNvbG9yOiB2YXIoLS1tZWRpdW0tc2VhLWdyZWVuKTtcclxufVxyXG5cclxuLm51bS1wZXJkaWRhcyB7XHJcbiAgY29sb3I6IHZhcigtLXRhcnQtb3JhbmdlKTtcclxufVxyXG5cclxuLmFjYW8ge1xyXG4gIGZsb2F0OiBsZWZ0O1xyXG59XHJcblxyXG4ucHJveGltbyB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbWVkaXVtLXNlYS1ncmVlbik7XHJcbiAgY29sb3I6IHZhcigtLXdoaXRlKTtcclxuICBib3gtc2hhZG93OiAwcHggNnB4IHZhcigtLXNlYS1ncmVlbik7XHJcbn1cclxuXHJcbi5wcm94aW1vOmFjdGl2ZSB7XHJcbiAgYm94LXNoYWRvdzogMHB4IDJweCB2YXIoLS1zZWEtZ3JlZW4pO1xyXG59XHJcblxyXG4ucHJveGltbzo6YWZ0ZXIge1xyXG4gIGNvbnRlbnQ6ICdQcsOzeGltYSByb2RhZGEnO1xyXG59XHJcblxyXG4ucHJveGltbzpkaXNhYmxlZCB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tY3VsdHVyZWQpO1xyXG4gIGJveC1zaGFkb3c6IDBweCA2cHggdmFyKC0tc2lsdmVyLWNoYWxpY2UpO1xyXG4gIGNvbG9yOiB2YXIoLS1zaWx2ZXItY2hhbGljZSk7XHJcbiAgY3Vyc29yOiBkZWZhdWx0O1xyXG59XHJcblxyXG4ucmVpbmljaWFyIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1ibHVlLWplYW5zKTtcclxuICBjb2xvcjogdmFyKC0td2hpdGUpO1xyXG4gIGJveC1zaGFkb3c6IDBweCA2cHggdmFyKC0tc2FwaGlyZS1ibHVlKTtcclxufVxyXG5cclxuLnJlaW5pY2lhcjphY3RpdmUge1xyXG4gIGJveC1zaGFkb3c6IDBweCAycHggdmFyKC0tc2FwaGlyZS1ibHVlKTtcclxufVxyXG5cclxuLnJlaW5pY2lhcjo6YWZ0ZXIge1xyXG4gIGNvbnRlbnQ6ICdOb3ZhIHBhcnRpZGEnO1xyXG59XHJcblxyXG4ucmVpbmljaWFyOmRpc2FibGVkIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1jdWx0dXJlZCk7XHJcbiAgYm94LXNoYWRvdzogMHB4IDZweCB2YXIoLS1zaWx2ZXItY2hhbGljZSk7XHJcbiAgY29sb3I6IHZhcigtLXNpbHZlci1jaGFsaWNlKTtcclxuICBjdXJzb3I6IGRlZmF1bHQ7XHJcbn1cclxuXHJcbi8qIEV4dHJhIHNtYWxsIGRldmljZXMgKHBob25lcywgNjAwcHggYW5kIGRvd24pICovXHJcbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpIHtcclxuICAuY2FyZC1yZWxhdG9yaW8ge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDgwJTtcclxuICB9XHJcblxyXG4gIC50aXR1bG8ge1xyXG4gICAgZm9udC1zaXplOiA1LjV2dztcclxuICB9XHJcblxyXG4gIHRoIHtcclxuICAgIGZvbnQtc2l6ZTogMy41dnc7XHJcbiAgfVxyXG5cclxuICAudG9vbHRpcHRleHQge1xyXG4gICAgZm9udC1zaXplOiAyLjV2dztcclxuICB9XHJcblxyXG4gIC5uaWNrIHtcclxuICAgIGZvbnQtc2l6ZTogNC41dnc7XHJcbiAgfVxyXG5cclxuICAudGV4dG8tcHJvZmlzc2FvIHtcclxuICAgIGZvbnQtc2l6ZTogMi41dnc7XHJcbiAgfVxyXG5cclxuICAubnVtIHtcclxuICAgIGZvbnQtc2l6ZTogN3Z3O1xyXG4gIH1cclxuXHJcbiAgLmFjYW8ge1xyXG4gICAgd2lkdGg6IDkwJTtcclxuICAgIGhlaWdodDogNy41JTtcclxuICAgIG1hcmdpbi1sZWZ0OiA1JTtcclxuICAgIG1hcmdpbi10b3A6IDEwJTtcclxuICB9XHJcbn1cclxuXHJcbi8qIFNtYWxsIGRldmljZXMgKHBvcnRyYWl0IHRhYmxldHMgYW5kIGxhcmdlIHBob25lcywgNjAwcHggYW5kIHVwKSAqL1xyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDYwMHB4KSBhbmQgKG1heC13aWR0aDogNzY3cHgpIHtcclxuICAuY2FyZC1yZWxhdG9yaW8ge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDgwJTtcclxuICB9XHJcblxyXG4gIC50aXR1bG8ge1xyXG4gICAgZm9udC1zaXplOiA0LjV2dztcclxuICB9XHJcblxyXG4gIHRoIHtcclxuICAgIGZvbnQtc2l6ZTogM3Z3O1xyXG4gIH1cclxuXHJcbiAgLnRvb2x0aXB0ZXh0IHtcclxuICAgIGZvbnQtc2l6ZTogMi41dnc7XHJcbiAgfVxyXG5cclxuICAubmljayB7XHJcbiAgICBmb250LXNpemU6IDMuNXZ3O1xyXG4gIH1cclxuXHJcbiAgLnRleHRvLXByb2Zpc3NhbyB7XHJcbiAgICBmb250LXNpemU6IDJ2dztcclxuICB9XHJcblxyXG4gIC5udW0ge1xyXG4gICAgZm9udC1zaXplOiA2dnc7XHJcbiAgfVxyXG5cclxuICAuYWNhbyB7XHJcbiAgICB3aWR0aDogNzAlO1xyXG4gICAgaGVpZ2h0OiA3LjUlO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDE1JTtcclxuICAgIG1hcmdpbi10b3A6IDcuNSU7XHJcbiAgfVxyXG59XHJcblxyXG4vKiBNZWRpdW0gZGV2aWNlcyAobGFuZHNjYXBlIHRhYmxldHMsIDc2OHB4IGFuZCB1cCkgKi9cclxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWluLXdpZHRoOiA3NjhweCkgYW5kIChtYXgtd2lkdGg6IDk5MXB4KSB7XHJcbiAgLmNhcmQtcmVsYXRvcmlvIHtcclxuICAgIHdpZHRoOiA3MCU7XHJcbiAgICBoZWlnaHQ6IDgwJTtcclxuICAgIG1hcmdpbi10b3A6IDIuNSU7XHJcbiAgICBtYXJnaW4tbGVmdDogMTUlO1xyXG4gIH1cclxuXHJcbiAgLnRpdHVsbyB7XHJcbiAgICBmb250LXNpemU6IDMuNXZ3O1xyXG4gIH1cclxuXHJcbiAgdGgge1xyXG4gICAgZm9udC1zaXplOiAydnc7XHJcbiAgfVxyXG5cclxuICAudG9vbHRpcHRleHQge1xyXG4gICAgZm9udC1zaXplOiAxLjZ2dztcclxuICB9XHJcblxyXG4gIC5uaWNrIHtcclxuICAgIGZvbnQtc2l6ZTogMi43NXZ3O1xyXG4gIH1cclxuXHJcbiAgLnRleHRvLXByb2Zpc3NhbyB7XHJcbiAgICBmb250LXNpemU6IDEuNXZ3O1xyXG4gIH1cclxuXHJcbiAgLm51bSB7XHJcbiAgICBmb250LXNpemU6IDQuNXZ3O1xyXG4gIH1cclxuXHJcbiAgLmFjYW8ge1xyXG4gICAgd2lkdGg6IDUwJTtcclxuICAgIGhlaWdodDogNy41JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAyNSU7XHJcbiAgICBtYXJnaW4tdG9wOiAyLjUlO1xyXG4gIH1cclxufVxyXG5cclxuLyogTGFyZ2UgZGV2aWNlcyAobGFwdG9wcy9kZXNrdG9wcywgOTkycHggYW5kIHVwKSAqL1xyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDk5MnB4KSBhbmQgKG1heC13aWR0aDogMTE5OXB4KSB7XHJcbiAgLmNhcmQtcmVsYXRvcmlvIHtcclxuICAgIHdpZHRoOiA3MCU7XHJcbiAgICBoZWlnaHQ6IDgwJTtcclxuICAgIG1hcmdpbi10b3A6IDIuNSU7XHJcbiAgICBtYXJnaW4tbGVmdDogMTUlO1xyXG4gIH1cclxuXHJcbiAgLnRpdHVsbyB7XHJcbiAgICBmb250LXNpemU6IDIuNXZ3O1xyXG4gIH1cclxuXHJcbiAgdGgge1xyXG4gICAgZm9udC1zaXplOiAxLjV2dztcclxuICB9XHJcblxyXG4gIC50b29sdGlwdGV4dCB7XHJcbiAgICBmb250LXNpemU6IDEuMXZ3O1xyXG4gIH1cclxuXHJcbiAgLm5pY2sge1xyXG4gICAgZm9udC1zaXplOiAydnc7XHJcbiAgfVxyXG5cclxuICAudGV4dG8tcHJvZmlzc2FvIHtcclxuICAgIGZvbnQtc2l6ZTogMS4yNXZ3O1xyXG4gIH1cclxuXHJcbiAgLm51bSB7XHJcbiAgICBmb250LXNpemU6IDN2dztcclxuICB9XHJcblxyXG4gIC5hY2FvIHtcclxuICAgIHdpZHRoOiA1MCU7XHJcbiAgICBoZWlnaHQ6IDcuNSU7XHJcbiAgICBtYXJnaW4tbGVmdDogMjUlO1xyXG4gICAgbWFyZ2luLXRvcDogMi41JTtcclxuICB9XHJcbn1cclxuXHJcbi8qIEV4dHJhIGxhcmdlIGRldmljZXMgKGxhcmdlIGxhcHRvcHMgYW5kIGRlc2t0b3BzLCAxMjAwcHggYW5kIHVwKSAqL1xyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDEyMDBweCkge1xyXG4gIC5jYXJkLXJlbGF0b3JpbyB7XHJcbiAgICB3aWR0aDogNzAlO1xyXG4gICAgaGVpZ2h0OiA4MCU7XHJcbiAgICBtYXJnaW4tdG9wOiAyLjUlO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDE1JTtcclxuICB9XHJcblxyXG4gIC50aXR1bG8ge1xyXG4gICAgZm9udC1zaXplOiAydnc7XHJcbiAgfVxyXG5cclxuICB0aCB7XHJcbiAgICBmb250LXNpemU6IDEuMjV2dztcclxuICB9XHJcblxyXG4gIC50b29sdGlwdGV4dCB7XHJcbiAgICBmb250LXNpemU6IDF2dztcclxuICB9XHJcblxyXG4gIC5uaWNrIHtcclxuICAgIGZvbnQtc2l6ZTogMS41dnc7XHJcbiAgfVxyXG5cclxuICAudGV4dG8tcHJvZmlzc2FvIHtcclxuICAgIGZvbnQtc2l6ZTogMXZ3O1xyXG4gIH1cclxuXHJcbiAgLm51bSB7XHJcbiAgICBmb250LXNpemU6IDJ2dztcclxuICB9XHJcblxyXG4gIC5hY2FvIHtcclxuICAgIHdpZHRoOiAzMCU7XHJcbiAgICBoZWlnaHQ6IDcuNSU7XHJcbiAgICBtYXJnaW4tbGVmdDogMzUlO1xyXG4gICAgbWFyZ2luLXRvcDogMi41JTtcclxuICB9XHJcbn1cclxuIl19 */";
+      __webpack_exports__["default"] = "table,\r\nth,\r\ntd {\r\n  border: 1px solid var(--box-border);\r\n  border-collapse: collapse;\r\n}\r\n\r\nth {\r\n  height: 15%;\r\n  vertical-align: bottom;\r\n  border: none;\r\n  padding: 2% 2% 0 2%;\r\n}\r\n\r\n.tooltip {\r\n  position: relative;\r\n}\r\n\r\n.tooltip .tooltiptext {\r\n  visibility: hidden;\r\n  width: 95%;\r\n  background-color: var(--monitor-bg);\r\n  border: 2px solid var(--box-border);\r\n  color: var(--ft-color);\r\n  text-align: center;\r\n  border-radius: 3px;\r\n  position: absolute;\r\n  z-index: 1;\r\n  left: 50%;\r\n  margin-left: -47.5%;\r\n  padding: 5% 2.5%;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.tooltip .tooltiptext::after {\r\n  content: '';\r\n  position: absolute;\r\n  bottom: 100%;\r\n  left: 50%;\r\n  margin-left: -5px;\r\n  border-width: 5px;\r\n  border-style: solid;\r\n  border-color: transparent transparent var(--box-border) transparent;\r\n}\r\n\r\n.tooltip:hover .tooltiptext {\r\n  visibility: visible;\r\n}\r\n\r\ntr {\r\n  height: 10vh;\r\n}\r\n\r\ntd {\r\n  vertical-align: middle;\r\n  text-align: center;\r\n  height: 10vh;\r\n}\r\n\r\ntd:nth-child(1) {\r\n  width: 30%;\r\n}\r\n\r\ntd:nth-child(2),\r\ntd:nth-child(3) {\r\n  width: 35%;\r\n}\r\n\r\n.relatorio {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n.card-relatorio {\r\n  background-color: var(--box-bg);\r\n  float: left;\r\n  border-radius: 3px;\r\n  border: 2px solid var(--box-border);\r\n  overflow-y: auto;\r\n}\r\n\r\n.tabela-relatorio {\r\n  background-color: var(--box-bg);\r\n  width: 100%;\r\n  overflow: auto;\r\n}\r\n\r\n.titulo {\r\n  white-space: pre;\r\n  font-style: italic;\r\n  font-weight: bold;\r\n  text-align: left;\r\n  vertical-align: middle;\r\n}\r\n\r\n.vitoria::before {\r\n  content: 'Rodada \\A Concluída';\r\n  color: var(--blue-jeans);\r\n}\r\n\r\n.derrota::before {\r\n  content: 'Fim de \\A Partida';\r\n  color: var(--tart-orange);\r\n}\r\n\r\n.fundo-profissao {\r\n  width: 25%;\r\n  height: 100%;\r\n\r\n  margin-left: 5%;\r\n\r\n  /*background: var(--personagem-bg);\r\n\r\n  shape-outside: circle();\r\n  clip-path: circle();*/\r\n\r\n  float: left;\r\n}\r\n\r\n.img-profissao {\r\n  width: 100%;\r\n  height: 100%;\r\n  \r\n  /*background-size: contain;\r\n  background-repeat: no-repeat;\r\n  background-position: center;*/\r\n}\r\n\r\n.info-amigo {\r\n  width: 60%;\r\n  height: 100%;\r\n  margin-left: 5%;\r\n\r\n  display: flex;\r\n  justify-content: left;\r\n  align-items: center;\r\n\r\n  float: left;\r\n}\r\n\r\n.nick {\r\n  padding-top: 5%;\r\n  line-height: 0.75;\r\n  font-weight: bold;\r\n  text-align: left;\r\n}\r\n\r\n.texto-profissao {\r\n  color: var(--blue-jeans);\r\n  font-weight: 400;\r\n}\r\n\r\n.num {\r\n  font-weight: bold;\r\n}\r\n\r\n.num-concluidas {\r\n  color: var(--medium-sea-green);\r\n}\r\n\r\n.num-perdidas {\r\n  color: var(--tart-orange);\r\n}\r\n\r\n.acao-proximo {\r\n  float: left;\r\n}\r\n\r\n.acao-reiniciar {\r\n  float: left;\r\n}\r\n\r\n.proximo {\r\n  background-color: var(--medium-sea-green);\r\n  color: var(--white);\r\n  box-shadow: 0px 6px var(--sea-green);\r\n}\r\n\r\n.proximo:active {\r\n  box-shadow: 0px 2px var(--sea-green);\r\n}\r\n\r\n.proximo::after {\r\n  content: 'Próxima rodada';\r\n}\r\n\r\n.proximo:disabled {\r\n  background-color: var(--cultured);\r\n  box-shadow: 0px 6px var(--silver-chalice);\r\n  color: var(--silver-chalice);\r\n  cursor: default;\r\n}\r\n\r\n.reiniciar {\r\n  width: 47.5%;\r\n  float: left;\r\n  margin-left: 5%;\r\n\r\n  background-color: var(--blue-jeans);\r\n  color: var(--white);\r\n  box-shadow: 0px 6px var(--saphire-blue);\r\n}\r\n\r\n.reiniciar:active {\r\n  box-shadow: 0px 2px var(--saphire-blue);\r\n}\r\n\r\n.reiniciar::after {\r\n  content: 'Nova partida';\r\n}\r\n\r\n.reiniciar:disabled {\r\n  background-color: var(--cultured);\r\n  box-shadow: 0px 6px var(--silver-chalice);\r\n  color: var(--silver-chalice);\r\n  cursor: default;\r\n}\r\n\r\n.compartilhar {\r\n  width: 47.5%;\r\n  float: left;\r\n\r\n  background-color: var(--purple);\r\n  color: var(--white);\r\n  box-shadow: 0px 6px var(--dark-purple);\r\n}\r\n\r\n.compartilhar:active {\r\n  box-shadow: 0px 2px var(--dark-purple);\r\n}\r\n\r\n.compartilhar:disabled {\r\n  background-color: var(--cultured);\r\n  box-shadow: 0px 6px var(--silver-chalice);\r\n  color: var(--silver-chalice);\r\n  cursor: default;\r\n}\r\n\r\n/* Extra small devices (phones, 600px and down) */\r\n\r\n@media only screen and (max-width: 600px) {\r\n  .card-relatorio {\r\n    width: 100%;\r\n    height: 80%;\r\n  }\r\n\r\n  .titulo {\r\n    font-size: 5.3vw;\r\n  }\r\n\r\n  th {\r\n    font-size: 3.5vw;\r\n  }\r\n\r\n  .tooltiptext {\r\n    font-size: 2.5vw;\r\n  }\r\n\r\n  .nick {\r\n    font-size: 4.5vw;\r\n  }\r\n\r\n  .texto-profissao {\r\n    font-size: 2.5vw;\r\n  }\r\n\r\n  .num {\r\n    font-size: 7vw;\r\n  }\r\n\r\n  .acao-proximo {\r\n    width: 90%;\r\n    height: 7.5%;\r\n    margin-left: 5%;\r\n    margin-top: 10%;\r\n  }\r\n\r\n  .acao-reiniciar {\r\n    width: 100%;\r\n    height: 7.5%;\r\n    margin-left: 0%;\r\n    margin-top: 7.5%;\r\n  }\r\n}\r\n\r\n/* Small devices (portrait tablets and large phones, 600px and up) */\r\n\r\n@media only screen and (min-width: 600px) and (max-width: 767px) {\r\n  .card-relatorio {\r\n    width: 100%;\r\n    height: 80%;\r\n  }\r\n\r\n  .titulo {\r\n    font-size: 4.3vw;\r\n  }\r\n\r\n  th {\r\n    font-size: 3vw;\r\n  }\r\n\r\n  .tooltiptext {\r\n    font-size: 2.5vw;\r\n  }\r\n\r\n  .nick {\r\n    font-size: 3.5vw;\r\n  }\r\n\r\n  .texto-profissao {\r\n    font-size: 2vw;\r\n  }\r\n\r\n  .num {\r\n    font-size: 6vw;\r\n  }\r\n\r\n  .acao-proximo {\r\n    width: 70%;\r\n    height: 7.5%;\r\n    margin-left: 15%;\r\n    margin-top: 7.5%;\r\n  }\r\n  \r\n  .acao-reiniciar {\r\n    width: 100%;\r\n    height: 7.5%;\r\n    margin-left: 0%;\r\n    margin-top: 7.5%;\r\n  }\r\n}\r\n\r\n/* Medium devices (landscape tablets, 768px and up) */\r\n\r\n@media only screen and (min-width: 768px) and (max-width: 991px) {\r\n  .card-relatorio {\r\n    width: 70%;\r\n    height: 80%;\r\n    margin-top: 2.5%;\r\n    margin-left: 15%;\r\n  }\r\n\r\n  .titulo {\r\n    font-size: 3.3vw;\r\n  }\r\n\r\n  th {\r\n    font-size: 2vw;\r\n  }\r\n\r\n  .tooltiptext {\r\n    font-size: 1.6vw;\r\n  }\r\n\r\n  .nick {\r\n    font-size: 2.75vw;\r\n  }\r\n\r\n  .texto-profissao {\r\n    font-size: 1.5vw;\r\n  }\r\n\r\n  .num {\r\n    font-size: 4.5vw;\r\n  }\r\n\r\n  .acao-proximo {\r\n    width: 50%;\r\n    height: 7.5%;\r\n    margin-left: 25%;\r\n    margin-top: 2.5%;\r\n  }\r\n\r\n  .acao-reiniciar {\r\n    width: 70%;\r\n    height: 7.5%;\r\n    margin-left: 15%;\r\n    margin-top: 2.5%;\r\n  }\r\n}\r\n\r\n/* Large devices (laptops/desktops, 992px and up) */\r\n\r\n@media only screen and (min-width: 992px) and (max-width: 1199px) {\r\n  .card-relatorio {\r\n    width: 70%;\r\n    height: 80%;\r\n    margin-top: 2.5%;\r\n    margin-left: 15%;\r\n  }\r\n\r\n  .titulo {\r\n    font-size: 2.3vw;\r\n  }\r\n\r\n  th {\r\n    font-size: 1.5vw;\r\n  }\r\n\r\n  .tooltiptext {\r\n    font-size: 1.1vw;\r\n  }\r\n\r\n  .nick {\r\n    font-size: 2vw;\r\n  }\r\n\r\n  .texto-profissao {\r\n    font-size: 1.25vw;\r\n  }\r\n\r\n  .num {\r\n    font-size: 3vw;\r\n  }\r\n\r\n  .acao-proximo {\r\n    width: 50%;\r\n    height: 7.5%;\r\n    margin-left: 25%;\r\n    margin-top: 2.5%;\r\n  }\r\n\r\n  .acao-reiniciar {\r\n    width: 70%;\r\n    height: 7.5%;\r\n    margin-left: 15%;\r\n    margin-top: 2.5%;\r\n  }\r\n}\r\n\r\n/* Extra large devices (large laptops and desktops, 1200px and up) */\r\n\r\n@media only screen and (min-width: 1200px) {\r\n  .card-relatorio {\r\n    width: 70%;\r\n    height: 80%;\r\n    margin-top: 2.5%;\r\n    margin-left: 15%;\r\n  }\r\n\r\n  .titulo {\r\n    font-size: 1.8vw;\r\n  }\r\n\r\n  th {\r\n    font-size: 1.25vw;\r\n  }\r\n\r\n  .tooltiptext {\r\n    font-size: 1vw;\r\n  }\r\n\r\n  .nick {\r\n    font-size: 1.5vw;\r\n  }\r\n\r\n  .texto-profissao {\r\n    font-size: 1vw;\r\n  }\r\n\r\n  .num {\r\n    font-size: 2vw;\r\n  }\r\n\r\n  .acao-proximo {\r\n    width: 30%;\r\n    height: 7.5%;\r\n    margin-left: 35%;\r\n    margin-top: 2.5%;\r\n  }\r\n\r\n  .acao-reiniciar {\r\n    width: 60%;\r\n    height: 7.5%;\r\n    margin-left: 20%;\r\n    margin-top: 2.5%;\r\n  }\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlbGF0b3Jpby5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7RUFHRSxtQ0FBbUM7RUFDbkMseUJBQXlCO0FBQzNCOztBQUVBO0VBQ0UsV0FBVztFQUNYLHNCQUFzQjtFQUN0QixZQUFZO0VBQ1osbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLFVBQVU7RUFDVixtQ0FBbUM7RUFDbkMsbUNBQW1DO0VBQ25DLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsa0JBQWtCO0VBQ2xCLGtCQUFrQjtFQUNsQixVQUFVO0VBQ1YsU0FBUztFQUNULG1CQUFtQjtFQUNuQixnQkFBZ0I7RUFDaEIsc0JBQXNCO0FBQ3hCOztBQUVBO0VBQ0UsV0FBVztFQUNYLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1osU0FBUztFQUNULGlCQUFpQjtFQUNqQixpQkFBaUI7RUFDakIsbUJBQW1CO0VBQ25CLG1FQUFtRTtBQUNyRTs7QUFFQTtFQUNFLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsWUFBWTtBQUNkOztBQUVBO0VBQ0UsVUFBVTtBQUNaOztBQUVBOztFQUVFLFVBQVU7QUFDWjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSwrQkFBK0I7RUFDL0IsV0FBVztFQUNYLGtCQUFrQjtFQUNsQixtQ0FBbUM7RUFDbkMsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsK0JBQStCO0VBQy9CLFdBQVc7RUFDWCxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixpQkFBaUI7RUFDakIsZ0JBQWdCO0VBQ2hCLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLDhCQUE4QjtFQUM5Qix3QkFBd0I7QUFDMUI7O0FBRUE7RUFDRSw0QkFBNEI7RUFDNUIseUJBQXlCO0FB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RUFDbEI7O0VBRUE7SUFDRSxVQUFVO0lBQ1YsWUFBWTtJQUNaLGdCQUFnQjtJQUNoQixnQkFBZ0I7RUFDbEI7QUFDRjs7QUFFQSxtREFBbUQ7O0FBQ25EO0VBQ0U7SUFDRSxVQUFVO0lBQ1YsV0FBVztJQUNYLGdCQUFnQjtJQUNoQixnQkFBZ0I7RUFDbEI7O0VBRUE7SUFDRSxnQkFBZ0I7RUFDbEI7O0VBRUE7SUFDRSxnQkFBZ0I7RUFDbEI7O0VBRUE7SUFDRSxnQkFBZ0I7RUFDbEI7O0VBRUE7SUFDRSxjQUFjO0VBQ2hCOztFQUVBO0lBQ0UsaUJBQWlCO0VBQ25COztFQUVBO0lBQ0UsY0FBYztFQUNoQjs7RUFFQTtJQUNFLFVBQVU7SUFDVixZQUFZO0lBQ1osZ0JBQWdCO0lBQ2hCLGdCQUFnQjtFQUNsQjs7RUFFQTtJQUNFLFVBQVU7SUFDVixZQUFZO0lBQ1osZ0JBQWdCO0lBQ2hCLGdCQUFnQjtFQUNsQjtBQUNGOztBQUVBLG9FQUFvRTs7QUFDcEU7RUFDRTtJQUNFLFVBQVU7SUFDVixXQUFXO0lBQ1gsZ0JBQWdCO0lBQ2hCLGdCQUFnQjtFQUNsQjs7RUFFQTtJQUNFLGdCQUFnQjtFQUNsQjs7RUFFQTtJQUNFLGlCQUFpQjtFQUNuQjs7RUFFQTtJQUNFLGNBQWM7RUFDaEI7O0VBRUE7SUFDRSxnQkFBZ0I7RUFDbEI7O0VBRUE7SUFDRSxjQUFjO0VBQ2hCOztFQUVBO0lBQ0UsY0FBYztFQUNoQjs7RUFFQTtJQUNFLFVBQVU7SUFDVixZQUFZO0lBQ1osZ0JBQWdCO0lBQ2hCLGdCQUFnQjtFQUNsQjs7RUFFQTtJQUNFLFVBQVU7SUFDVixZQUFZO0lBQ1osZ0JBQWdCO0lBQ2hCLGdCQUFnQjtFQUNsQjtBQUNGIiwiZmlsZSI6InJlbGF0b3Jpby5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsidGFibGUsXHJcbnRoLFxyXG50ZCB7XHJcbiAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tYm94LWJvcmRlcik7XHJcbiAgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTtcclxufVxyXG5cclxudGgge1xyXG4gIGhlaWdodDogMTUlO1xyXG4gIHZlcnRpY2FsLWFsaWduOiBib3R0b207XHJcbiAgYm9yZGVyOiBub25lO1xyXG4gIHBhZGRpbmc6IDIlIDIlIDAgMiU7XHJcbn1cclxuXHJcbi50b29sdGlwIHtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuXHJcbi50b29sdGlwIC50b29sdGlwdGV4dCB7XHJcbiAgdmlzaWJpbGl0eTogaGlkZGVuO1xyXG4gIHdpZHRoOiA5NSU7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbW9uaXRvci1iZyk7XHJcbiAgYm9yZGVyOiAycHggc29saWQgdmFyKC0tYm94LWJvcmRlcik7XHJcbiAgY29sb3I6IHZhcigtLWZ0LWNvbG9yKTtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgYm9yZGVyLXJhZGl1czogM3B4O1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICB6LWluZGV4OiAxO1xyXG4gIGxlZnQ6IDUwJTtcclxuICBtYXJnaW4tbGVmdDogLTQ3LjUlO1xyXG4gIHBhZGRpbmc6IDUlIDIuNSU7XHJcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxufVxyXG5cclxuLnRvb2x0aXAgLnRvb2x0aXB0ZXh0OjphZnRlciB7XHJcbiAgY29udGVudDogJyc7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIGJvdHRvbTogMTAwJTtcclxuICBsZWZ0OiA1MCU7XHJcbiAgbWFyZ2luLWxlZnQ6IC01cHg7XHJcbiAgYm9yZGVyLXdpZHRoOiA1cHg7XHJcbiAgYm9yZGVyLXN0eWxlOiBzb2xpZDtcclxuICBib3JkZXItY29sb3I6IHRyYW5zcGFyZW50IHRyYW5zcGFyZW50IHZhcigtLWJveC1ib3JkZXIpIHRyYW5zcGFyZW50O1xyXG59XHJcblxyXG4udG9vbHRpcDpob3ZlciAudG9vbHRpcHRleHQge1xyXG4gIHZpc2liaWxpdHk6IHZpc2libGU7XHJcbn1cclxuXHJcbnRyIHtcclxuICBoZWlnaHQ6IDEwdmg7XHJcbn1cclxuXHJcbnRkIHtcclxuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBoZWlnaHQ6IDEwdmg7XHJcbn1cclxuXHJcbnRkOm50aC1jaGlsZCgxKSB7XHJcbiAgd2lkdGg6IDMwJTtcclxufVxyXG5cclxudGQ6bnRoLWNoaWxkKDIpLFxyXG50ZDpudGgtY2hpbGQoMykge1xyXG4gIHdpZHRoOiAzNSU7XHJcbn1cclxuXHJcbi5yZWxhdG9yaW8ge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxufVxyXG5cclxuLmNhcmQtcmVsYXRvcmlvIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1ib3gtYmcpO1xyXG4gIGZsb2F0OiBsZWZ0O1xyXG4gIGJvcmRlci1yYWRpdXM6IDNweDtcclxuICBib3JkZXI6IDJweCBzb2xpZCB2YXIoLS1ib3gtYm9yZGVyKTtcclxuICBvdmVyZmxvdy15OiBhdXRvO1xyXG59XHJcblxyXG4udGFiZWxhLXJlbGF0b3JpbyB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tYm94LWJnKTtcclxuICB3aWR0aDogMTAwJTtcclxuICBvdmVyZmxvdzogYXV0bztcclxufVxyXG5cclxuLnRpdHVsbyB7XHJcbiAgd2hpdGUtc3BhY2U6IHByZTtcclxuICBmb250LXN0eWxlOiBpdGFsaWM7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgdGV4dC1hbGlnbjogbGVmdDtcclxuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG59XHJcblxyXG4udml0b3JpYTo6YmVmb3JlIHtcclxuICBjb250ZW50OiAnUm9kYWRhIFxcQSBDb25jbHXDrWRhJztcclxuICBjb2xvcjogdmFyKC0tYmx1ZS1qZWFucyk7XHJcbn1cclxuXHJcbi5kZXJyb3RhOjpiZWZvcmUge1xyXG4gIGNvbnRlbnQ6ICdGaW0gZGUgXFxBIFBhcnRpZGEnO1xyXG4gIGNvbG9yOiB2YXIoLS10YXJ0LW9yYW5nZSk7XHJcbn1cclxuXHJcbi5mdW5kby1wcm9maXNzYW8ge1xyXG4gIHdpZHRoOiAyNSU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG5cclxuICBtYXJnaW4tbGVmdDogNSU7XHJcblxyXG4gIC8qYmFja2dyb3VuZDogdmFyKC0tcGVyc29uYWdlbS1iZyk7XHJcblxyXG4gIHNoYXBlLW91dHNpZGU6IGNpcmNsZSgpO1xyXG4gIGNsaXAtcGF0aDogY2lyY2xlKCk7Ki9cclxuXHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbn1cclxuXHJcbi5pbWctcHJvZmlzc2FvIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgXHJcbiAgLypiYWNrZ3JvdW5kLXNpemU6IGNvbnRhaW47XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7Ki9cclxufVxyXG5cclxuLmluZm8tYW1pZ28ge1xyXG4gIHdpZHRoOiA2MCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIG1hcmdpbi1sZWZ0OiA1JTtcclxuXHJcbiAgZGlzcGxheTogZmxleDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGxlZnQ7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuXHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbn1cclxuXHJcbi5uaWNrIHtcclxuICBwYWRkaW5nLXRvcDogNSU7XHJcbiAgbGluZS1oZWlnaHQ6IDAuNzU7XHJcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgdGV4dC1hbGlnbjogbGVmdDtcclxufVxyXG5cclxuLnRleHRvLXByb2Zpc3NhbyB7XHJcbiAgY29sb3I6IHZhcigtLWJsdWUtamVhbnMpO1xyXG4gIGZvbnQtd2VpZ2h0OiA0MDA7XHJcbn1cclxuXHJcbi5udW0ge1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4ubnVtLWNvbmNsdWlkYXMge1xyXG4gIGNvbG9yOiB2YXIoLS1tZWRpdW0tc2VhLWdyZWVuKTtcclxufVxyXG5cclxuLm51bS1wZXJkaWRhcyB7XHJcbiAgY29sb3I6IHZhcigtLXRhcnQtb3JhbmdlKTtcclxufVxyXG5cclxuLmFjYW8tcHJveGltbyB7XHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbn1cclxuXHJcbi5hY2FvLXJlaW5pY2lhciB7XHJcbiAgZmxvYXQ6IGxlZnQ7XHJcbn1cclxuXHJcbi5wcm94aW1vIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1tZWRpdW0tc2VhLWdyZWVuKTtcclxuICBjb2xvcjogdmFyKC0td2hpdGUpO1xyXG4gIGJveC1zaGFkb3c6IDBweCA2cHggdmFyKC0tc2VhLWdyZWVuKTtcclxufVxyXG5cclxuLnByb3hpbW86YWN0aXZlIHtcclxuICBib3gtc2hhZG93OiAwcHggMnB4IHZhcigtLXNlYS1ncmVlbik7XHJcbn1cclxuXHJcbi5wcm94aW1vOjphZnRlciB7XHJcbiAgY29udGVudDogJ1Byw7N4aW1hIHJvZGFkYSc7XHJcbn1cclxuXHJcbi5wcm94aW1vOmRpc2FibGVkIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1jdWx0dXJlZCk7XHJcbiAgYm94LXNoYWRvdzogMHB4IDZweCB2YXIoLS1zaWx2ZXItY2hhbGljZSk7XHJcbiAgY29sb3I6IHZhcigtLXNpbHZlci1jaGFsaWNlKTtcclxuICBjdXJzb3I6IGRlZmF1bHQ7XHJcbn1cclxuXHJcbi5yZWluaWNpYXIge1xyXG4gIHdpZHRoOiA0Ny41JTtcclxuICBmbG9hdDogbGVmdDtcclxuICBtYXJnaW4tbGVmdDogNSU7XHJcblxyXG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWJsdWUtamVhbnMpO1xyXG4gIGNvbG9yOiB2YXIoLS13aGl0ZSk7XHJcbiAgYm94LXNoYWRvdzogMHB4IDZweCB2YXIoLS1zYXBoaXJlLWJsdWUpO1xyXG59XHJcblxyXG4ucmVpbmljaWFyOmFjdGl2ZSB7XHJcbiAgYm94LXNoYWRvdzogMHB4IDJweCB2YXIoLS1zYXBoaXJlLWJsdWUpO1xyXG59XHJcblxyXG4ucmVpbmljaWFyOjphZnRlciB7XHJcbiAgY29udGVudDogJ05vdmEgcGFydGlkYSc7XHJcbn1cclxuXHJcbi5yZWluaWNpYXI6ZGlzYWJsZWQge1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWN1bHR1cmVkKTtcclxuICBib3gtc2hhZG93OiAwcHggNnB4IHZhcigtLXNpbHZlci1jaGFsaWNlKTtcclxuICBjb2xvcjogdmFyKC0tc2lsdmVyLWNoYWxpY2UpO1xyXG4gIGN1cnNvcjogZGVmYXVsdDtcclxufVxyXG5cclxuLmNvbXBhcnRpbGhhciB7XHJcbiAgd2lkdGg6IDQ3LjUlO1xyXG4gIGZsb2F0OiBsZWZ0O1xyXG5cclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1wdXJwbGUpO1xyXG4gIGNvbG9yOiB2YXIoLS13aGl0ZSk7XHJcbiAgYm94LXNoYWRvdzogMHB4IDZweCB2YXIoLS1kYXJrLXB1cnBsZSk7XHJcbn1cclxuXHJcbi5jb21wYXJ0aWxoYXI6YWN0aXZlIHtcclxuICBib3gtc2hhZG93OiAwcHggMnB4IHZhcigtLWRhcmstcHVycGxlKTtcclxufVxyXG5cclxuLmNvbXBhcnRpbGhhcjpkaXNhYmxlZCB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tY3VsdHVyZWQpO1xyXG4gIGJveC1zaGFkb3c6IDBweCA2cHggdmFyKC0tc2lsdmVyLWNoYWxpY2UpO1xyXG4gIGNvbG9yOiB2YXIoLS1zaWx2ZXItY2hhbGljZSk7XHJcbiAgY3Vyc29yOiBkZWZhdWx0O1xyXG59XHJcblxyXG4vKiBFeHRyYSBzbWFsbCBkZXZpY2VzIChwaG9uZXMsIDYwMHB4IGFuZCBkb3duKSAqL1xyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDYwMHB4KSB7XHJcbiAgLmNhcmQtcmVsYXRvcmlvIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiA4MCU7XHJcbiAgfVxyXG5cclxuICAudGl0dWxvIHtcclxuICAgIGZvbnQtc2l6ZTogNS4zdnc7XHJcbiAgfVxyXG5cclxuICB0aCB7XHJcbiAgICBmb250LXNpemU6IDMuNXZ3O1xyXG4gIH1cclxuXHJcbiAgLnRvb2x0aXB0ZXh0IHtcclxuICAgIGZvbnQtc2l6ZTogMi41dnc7XHJcbiAgfVxyXG5cclxuICAubmljayB7XHJcbiAgICBmb250LXNpemU6IDQuNXZ3O1xyXG4gIH1cclxuXHJcbiAgLnRleHRvLXByb2Zpc3NhbyB7XHJcbiAgICBmb250LXNpemU6IDIuNXZ3O1xyXG4gIH1cclxuXHJcbiAgLm51bSB7XHJcbiAgICBmb250LXNpemU6IDd2dztcclxuICB9XHJcblxyXG4gIC5hY2FvLXByb3hpbW8ge1xyXG4gICAgd2lkdGg6IDkwJTtcclxuICAgIGhlaWdodDogNy41JTtcclxuICAgIG1hcmdpbi1sZWZ0OiA1JTtcclxuICAgIG1hcmdpbi10b3A6IDEwJTtcclxuICB9XHJcblxyXG4gIC5hY2FvLXJlaW5pY2lhciB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogNy41JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAwJTtcclxuICAgIG1hcmdpbi10b3A6IDcuNSU7XHJcbiAgfVxyXG59XHJcblxyXG4vKiBTbWFsbCBkZXZpY2VzIChwb3J0cmFpdCB0YWJsZXRzIGFuZCBsYXJnZSBwaG9uZXMsIDYwMHB4IGFuZCB1cCkgKi9cclxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWluLXdpZHRoOiA2MDBweCkgYW5kIChtYXgtd2lkdGg6IDc2N3B4KSB7XHJcbiAgLmNhcmQtcmVsYXRvcmlvIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiA4MCU7XHJcbiAgfVxyXG5cclxuICAudGl0dWxvIHtcclxuICAgIGZvbnQtc2l6ZTogNC4zdnc7XHJcbiAgfVxyXG5cclxuICB0aCB7XHJcbiAgICBmb250LXNpemU6IDN2dztcclxuICB9XHJcblxyXG4gIC50b29sdGlwdGV4dCB7XHJcbiAgICBmb250LXNpemU6IDIuNXZ3O1xyXG4gIH1cclxuXHJcbiAgLm5pY2sge1xyXG4gICAgZm9udC1zaXplOiAzLjV2dztcclxuICB9XHJcblxyXG4gIC50ZXh0by1wcm9maXNzYW8ge1xyXG4gICAgZm9udC1zaXplOiAydnc7XHJcbiAgfVxyXG5cclxuICAubnVtIHtcclxuICAgIGZvbnQtc2l6ZTogNnZ3O1xyXG4gIH1cclxuXHJcbiAgLmFjYW8tcHJveGltbyB7XHJcbiAgICB3aWR0aDogNzAlO1xyXG4gICAgaGVpZ2h0OiA3LjUlO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDE1JTtcclxuICAgIG1hcmdpbi10b3A6IDcuNSU7XHJcbiAgfVxyXG4gIFxyXG4gIC5hY2FvLXJlaW5pY2lhciB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogNy41JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAwJTtcclxuICAgIG1hcmdpbi10b3A6IDcuNSU7XHJcbiAgfVxyXG59XHJcblxyXG4vKiBNZWRpdW0gZGV2aWNlcyAobGFuZHNjYXBlIHRhYmxldHMsIDc2OHB4IGFuZCB1cCkgKi9cclxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWluLXdpZHRoOiA3NjhweCkgYW5kIChtYXgtd2lkdGg6IDk5MXB4KSB7XHJcbiAgLmNhcmQtcmVsYXRvcmlvIHtcclxuICAgIHdpZHRoOiA3MCU7XHJcbiAgICBoZWlnaHQ6IDgwJTtcclxuICAgIG1hcmdpbi10b3A6IDIuNSU7XHJcbiAgICBtYXJnaW4tbGVmdDogMTUlO1xyXG4gIH1cclxuXHJcbiAgLnRpdHVsbyB7XHJcbiAgICBmb250LXNpemU6IDMuM3Z3O1xyXG4gIH1cclxuXHJcbiAgdGgge1xyXG4gICAgZm9udC1zaXplOiAydnc7XHJcbiAgfVxyXG5cclxuICAudG9vbHRpcHRleHQge1xyXG4gICAgZm9udC1zaXplOiAxLjZ2dztcclxuICB9XHJcblxyXG4gIC5uaWNrIHtcclxuICAgIGZvbnQtc2l6ZTogMi43NXZ3O1xyXG4gIH1cclxuXHJcbiAgLnRleHRvLXByb2Zpc3NhbyB7XHJcbiAgICBmb250LXNpemU6IDEuNXZ3O1xyXG4gIH1cclxuXHJcbiAgLm51bSB7XHJcbiAgICBmb250LXNpemU6IDQuNXZ3O1xyXG4gIH1cclxuXHJcbiAgLmFjYW8tcHJveGltbyB7XHJcbiAgICB3aWR0aDogNTAlO1xyXG4gICAgaGVpZ2h0OiA3LjUlO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDI1JTtcclxuICAgIG1hcmdpbi10b3A6IDIuNSU7XHJcbiAgfVxyXG5cclxuICAuYWNhby1yZWluaWNpYXIge1xyXG4gICAgd2lkdGg6IDcwJTtcclxuICAgIGhlaWdodDogNy41JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAxNSU7XHJcbiAgICBtYXJnaW4tdG9wOiAyLjUlO1xyXG4gIH1cclxufVxyXG5cclxuLyogTGFyZ2UgZGV2aWNlcyAobGFwdG9wcy9kZXNrdG9wcywgOTkycHggYW5kIHVwKSAqL1xyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDk5MnB4KSBhbmQgKG1heC13aWR0aDogMTE5OXB4KSB7XHJcbiAgLmNhcmQtcmVsYXRvcmlvIHtcclxuICAgIHdpZHRoOiA3MCU7XHJcbiAgICBoZWlnaHQ6IDgwJTtcclxuICAgIG1hcmdpbi10b3A6IDIuNSU7XHJcbiAgICBtYXJnaW4tbGVmdDogMTUlO1xyXG4gIH1cclxuXHJcbiAgLnRpdHVsbyB7XHJcbiAgICBmb250LXNpemU6IDIuM3Z3O1xyXG4gIH1cclxuXHJcbiAgdGgge1xyXG4gICAgZm9udC1zaXplOiAxLjV2dztcclxuICB9XHJcblxyXG4gIC50b29sdGlwdGV4dCB7XHJcbiAgICBmb250LXNpemU6IDEuMXZ3O1xyXG4gIH1cclxuXHJcbiAgLm5pY2sge1xyXG4gICAgZm9udC1zaXplOiAydnc7XHJcbiAgfVxyXG5cclxuICAudGV4dG8tcHJvZmlzc2FvIHtcclxuICAgIGZvbnQtc2l6ZTogMS4yNXZ3O1xyXG4gIH1cclxuXHJcbiAgLm51bSB7XHJcbiAgICBmb250LXNpemU6IDN2dztcclxuICB9XHJcblxyXG4gIC5hY2FvLXByb3hpbW8ge1xyXG4gICAgd2lkdGg6IDUwJTtcclxuICAgIGhlaWdodDogNy41JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAyNSU7XHJcbiAgICBtYXJnaW4tdG9wOiAyLjUlO1xyXG4gIH1cclxuXHJcbiAgLmFjYW8tcmVpbmljaWFyIHtcclxuICAgIHdpZHRoOiA3MCU7XHJcbiAgICBoZWlnaHQ6IDcuNSU7XHJcbiAgICBtYXJnaW4tbGVmdDogMTUlO1xyXG4gICAgbWFyZ2luLXRvcDogMi41JTtcclxuICB9XHJcbn1cclxuXHJcbi8qIEV4dHJhIGxhcmdlIGRldmljZXMgKGxhcmdlIGxhcHRvcHMgYW5kIGRlc2t0b3BzLCAxMjAwcHggYW5kIHVwKSAqL1xyXG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDEyMDBweCkge1xyXG4gIC5jYXJkLXJlbGF0b3JpbyB7XHJcbiAgICB3aWR0aDogNzAlO1xyXG4gICAgaGVpZ2h0OiA4MCU7XHJcbiAgICBtYXJnaW4tdG9wOiAyLjUlO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDE1JTtcclxuICB9XHJcblxyXG4gIC50aXR1bG8ge1xyXG4gICAgZm9udC1zaXplOiAxLjh2dztcclxuICB9XHJcblxyXG4gIHRoIHtcclxuICAgIGZvbnQtc2l6ZTogMS4yNXZ3O1xyXG4gIH1cclxuXHJcbiAgLnRvb2x0aXB0ZXh0IHtcclxuICAgIGZvbnQtc2l6ZTogMXZ3O1xyXG4gIH1cclxuXHJcbiAgLm5pY2sge1xyXG4gICAgZm9udC1zaXplOiAxLjV2dztcclxuICB9XHJcblxyXG4gIC50ZXh0by1wcm9maXNzYW8ge1xyXG4gICAgZm9udC1zaXplOiAxdnc7XHJcbiAgfVxyXG5cclxuICAubnVtIHtcclxuICAgIGZvbnQtc2l6ZTogMnZ3O1xyXG4gIH1cclxuXHJcbiAgLmFjYW8tcHJveGltbyB7XHJcbiAgICB3aWR0aDogMzAlO1xyXG4gICAgaGVpZ2h0OiA3LjUlO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDM1JTtcclxuICAgIG1hcmdpbi10b3A6IDIuNSU7XHJcbiAgfVxyXG5cclxuICAuYWNhby1yZWluaWNpYXIge1xyXG4gICAgd2lkdGg6IDYwJTtcclxuICAgIGhlaWdodDogNy41JTtcclxuICAgIG1hcmdpbi1sZWZ0OiAyMCU7XHJcbiAgICBtYXJnaW4tdG9wOiAyLjUlO1xyXG4gIH1cclxufVxyXG4iXX0= */";
       /***/
     },
 
@@ -2487,13 +2601,13 @@
         _createClass(QuadroComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this13 = this;
+            var _this14 = this;
 
             this.tarefasArray = Object.keys(this.tarefas).map(function (key) {
-              return _this13.tarefas[key];
+              return _this14.tarefas[key];
             });
             Object.keys(this.tarefas).forEach(function (key, index) {
-              _this13.tarefasArray[index].key = key;
+              _this14.tarefasArray[index].key = key;
             });
             this.dicaQuadro = this.dica;
           }
@@ -2654,7 +2768,7 @@
           this.router = router;
           this.keySalaChange = new _angular_core__WEBPACK_IMPORTED_MODULE_3__["EventEmitter"]();
           this.relatorioPartida = [];
-          this.dica = true;
+          this.dica = false;
           this.ngUnsubscribe = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Subject"]();
           this.baseUrl = this.taskForceService.baseUrl() + 'assets/images/';
         }
@@ -2662,37 +2776,37 @@
         _createClass(CentralComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
-              var _this14 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
+              var _this15 = this;
 
-              return regeneratorRuntime.wrap(function _callee22$(_context22) {
+              return regeneratorRuntime.wrap(function _callee24$(_context24) {
                 while (1) {
-                  switch (_context22.prev = _context22.next) {
+                  switch (_context24.prev = _context24.next) {
                     case 0:
                       this.flagRelatorio = false;
                       this.sala = this.taskForceService.getSala(this.keySala);
                       this.sala.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["takeUntil"])(this.ngUnsubscribe)).subscribe(function (s) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this14, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
-                          return regeneratorRuntime.wrap(function _callee20$(_context20) {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this15, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
+                          return regeneratorRuntime.wrap(function _callee22$(_context22) {
                             while (1) {
-                              switch (_context20.prev = _context20.next) {
+                              switch (_context22.prev = _context22.next) {
                                 case 0:
                                   this.numRodada = s.numRodada;
                                   this.statusSala = s.status;
                                   this.vidas = s.vidas;
                                   this.visibilidadeURL = s.visibilidadeURL;
                                   this.privacidade = s.privacidade;
-                                  _context20.next = 7;
+                                  _context22.next = 7;
                                   return this.taskForceService.checarNick(this.keySala, s.lider);
 
                                 case 7:
-                                  if (_context20.sent) {
-                                    _context20.next = 11;
+                                  if (_context22.sent) {
+                                    _context22.next = 11;
                                     break;
                                   }
 
                                   this.lider = s.lider;
-                                  _context20.next = 13;
+                                  _context22.next = 13;
                                   break;
 
                                 case 11:
@@ -2712,34 +2826,34 @@
 
                                 case 15:
                                 case "end":
-                                  return _context20.stop();
+                                  return _context22.stop();
                               }
                             }
-                          }, _callee20, this);
+                          }, _callee22, this);
                         }));
                       });
-                      _context22.next = 5;
+                      _context24.next = 5;
                       return this.taskForceService.getProfissoesSorteadas(this.keySala);
 
                     case 5:
-                      this.listaProfissoesSorteadas = _context22.sent;
+                      this.listaProfissoesSorteadas = _context24.sent;
                       this.listaProfissoesSorteadas.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["takeUntil"])(this.ngUnsubscribe)).subscribe(function (lista) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this14, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
-                          return regeneratorRuntime.wrap(function _callee21$(_context21) {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this15, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
+                          return regeneratorRuntime.wrap(function _callee23$(_context23) {
                             while (1) {
-                              switch (_context21.prev = _context21.next) {
+                              switch (_context23.prev = _context23.next) {
                                 case 0:
                                   if (!this.keyProfissaoSorteada) {
-                                    _context21.next = 7;
+                                    _context23.next = 7;
                                     break;
                                   }
 
-                                  _context21.next = 3;
+                                  _context23.next = 3;
                                   return this.taskForceService.getProfissao(this.keySala, this.keyProfissaoSorteada);
 
                                 case 3:
-                                  if (_context21.sent) {
-                                    _context21.next = 7;
+                                  if (_context23.sent) {
+                                    _context23.next = 7;
                                     break;
                                   }
 
@@ -2754,19 +2868,19 @@
 
                                 case 10:
                                 case "end":
-                                  return _context21.stop();
+                                  return _context23.stop();
                               }
                             }
-                          }, _callee21, this);
+                          }, _callee23, this);
                         }));
                       });
 
                     case 7:
                     case "end":
-                      return _context22.stop();
+                      return _context24.stop();
                   }
                 }
-              }, _callee22, this);
+              }, _callee24, this);
             }));
           }
         }, {
@@ -2891,15 +3005,15 @@
         _createClass(MonitorComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this15 = this;
+            var _this16 = this;
 
             this.blinkText = "_";
             this.dicaMonitor = this.dica;
             setInterval(function () {
-              if (_this15.blinkText === '_') {
-                _this15.blinkText = " ";
+              if (_this16.blinkText === '_') {
+                _this16.blinkText = " ";
               } else {
-                _this15.blinkText = "_";
+                _this16.blinkText = "_";
               }
             }, 700);
           }
@@ -3065,58 +3179,6 @@
         }, {
           key: "checarExistenciaSala",
           value: function checarExistenciaSala(keySala) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
-              var result;
-              return regeneratorRuntime.wrap(function _callee23$(_context23) {
-                while (1) {
-                  switch (_context23.prev = _context23.next) {
-                    case 0:
-                      result = false;
-                      _context23.next = 3;
-                      return this.db.database.ref('salas/').orderByKey().equalTo(keySala).once('value', function (snap) {
-                        result = snap.val() !== null;
-                      });
-
-                    case 3:
-                      return _context23.abrupt("return", result);
-
-                    case 4:
-                    case "end":
-                      return _context23.stop();
-                  }
-                }
-              }, _callee23, this);
-            }));
-          }
-        }, {
-          key: "checarStatusSala",
-          value: function checarStatusSala(keySala) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
-              var result;
-              return regeneratorRuntime.wrap(function _callee24$(_context24) {
-                while (1) {
-                  switch (_context24.prev = _context24.next) {
-                    case 0:
-                      result = false;
-                      _context24.next = 3;
-                      return this.db.database.ref('salas/' + keySala + '/status/').once('value', function (snap) {
-                        result = snap.val() === 'espera';
-                      });
-
-                    case 3:
-                      return _context24.abrupt("return", result);
-
-                    case 4:
-                    case "end":
-                      return _context24.stop();
-                  }
-                }
-              }, _callee24, this);
-            }));
-          }
-        }, {
-          key: "checarNick",
-          value: function checarNick(keySala, nick) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
               var result;
               return regeneratorRuntime.wrap(function _callee25$(_context25) {
@@ -3125,8 +3187,8 @@
                     case 0:
                       result = false;
                       _context25.next = 3;
-                      return this.db.database.ref('salas/' + keySala + '/profissoes/').orderByChild('responsavel').equalTo(nick).once('value', function (snap) {
-                        result = snap.val() == null;
+                      return this.db.database.ref('salas/').orderByKey().equalTo(keySala).once('value', function (snap) {
+                        result = snap.val() !== null;
                       });
 
                     case 3:
@@ -3138,6 +3200,58 @@
                   }
                 }
               }, _callee25, this);
+            }));
+          }
+        }, {
+          key: "checarStatusSala",
+          value: function checarStatusSala(keySala) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
+              var result;
+              return regeneratorRuntime.wrap(function _callee26$(_context26) {
+                while (1) {
+                  switch (_context26.prev = _context26.next) {
+                    case 0:
+                      result = false;
+                      _context26.next = 3;
+                      return this.db.database.ref('salas/' + keySala + '/status/').once('value', function (snap) {
+                        result = snap.val() === 'espera';
+                      });
+
+                    case 3:
+                      return _context26.abrupt("return", result);
+
+                    case 4:
+                    case "end":
+                      return _context26.stop();
+                  }
+                }
+              }, _callee26, this);
+            }));
+          }
+        }, {
+          key: "checarNick",
+          value: function checarNick(keySala, nick) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
+              var result;
+              return regeneratorRuntime.wrap(function _callee27$(_context27) {
+                while (1) {
+                  switch (_context27.prev = _context27.next) {
+                    case 0:
+                      result = false;
+                      _context27.next = 3;
+                      return this.db.database.ref('salas/' + keySala + '/profissoes/').orderByChild('responsavel').equalTo(nick).once('value', function (snap) {
+                        result = snap.val() == null;
+                      });
+
+                    case 3:
+                      return _context27.abrupt("return", result);
+
+                    case 4:
+                    case "end":
+                      return _context27.stop();
+                  }
+                }
+              }, _callee27, this);
             }));
           }
         }, {
@@ -3186,31 +3300,31 @@
         }, {
           key: "sortearProfissao",
           value: function sortearProfissao(keySala, nickJogador, numRodada) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee28() {
               var profissoes, profissao, result, i, j, numTarefas, tarefas, info, keyProfissao, _i;
 
-              return regeneratorRuntime.wrap(function _callee26$(_context26) {
+              return regeneratorRuntime.wrap(function _callee28$(_context28) {
                 while (1) {
-                  switch (_context26.prev = _context26.next) {
+                  switch (_context28.prev = _context28.next) {
                     case 0:
-                      _context26.next = 2;
+                      _context28.next = 2;
                       return this.getProfissoes();
 
                     case 2:
-                      profissoes = _context26.sent;
+                      profissoes = _context28.sent;
                       i = Math.floor(Math.random() * profissoes.length);
                       j = i;
 
                     case 5:
                       profissao = profissoes[j++ % profissoes.length];
-                      _context26.next = 8;
+                      _context28.next = 8;
                       return this.db.database.ref('salas/' + keySala + '/profissoes/').orderByChild('id').equalTo(profissao.id).once('value', function (snap) {
                         result = snap.val() !== null;
                       });
 
                     case 8:
                       if (result && i !== j % profissoes.length) {
-                        _context26.next = 5;
+                        _context28.next = 5;
                         break;
                       }
 
@@ -3235,60 +3349,9 @@
                         this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/tarefas/').push(tarefas[_i]);
                       }
 
-                      return _context26.abrupt("return", keyProfissao);
+                      return _context28.abrupt("return", keyProfissao);
 
                     case 16:
-                    case "end":
-                      return _context26.stop();
-                  }
-                }
-              }, _callee26, this);
-            }));
-          }
-        }, {
-          key: "sortearProfissaoMonitor",
-          value: function sortearProfissaoMonitor(keySala) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
-              var keyProfissao, snapshotTarefas, j;
-              return regeneratorRuntime.wrap(function _callee27$(_context27) {
-                while (1) {
-                  switch (_context27.prev = _context27.next) {
-                    case 0:
-                      _context27.next = 2;
-                      return this.db.database.ref('salas/' + keySala + '/profissoes/').once('value', function (snapshot) {
-                        j = Math.floor(Math.random() * Object.keys(snapshot.val()).length);
-                        keyProfissao = Object.keys(snapshot.val())[j];
-                      });
-
-                    case 2:
-                      return _context27.abrupt("return", keyProfissao);
-
-                    case 3:
-                    case "end":
-                      return _context27.stop();
-                  }
-                }
-              }, _callee27, this);
-            }));
-          }
-        }, {
-          key: "getProfissao",
-          value: function getProfissao(keySala, keyProfissao) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee28() {
-              var profissao;
-              return regeneratorRuntime.wrap(function _callee28$(_context28) {
-                while (1) {
-                  switch (_context28.prev = _context28.next) {
-                    case 0:
-                      _context28.next = 2;
-                      return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao).once('value', function (snapshot) {
-                        profissao = snapshot.val();
-                      });
-
-                    case 2:
-                      return _context28.abrupt("return", profissao);
-
-                    case 3:
                     case "end":
                       return _context28.stop();
                   }
@@ -3297,14 +3360,65 @@
             }));
           }
         }, {
-          key: "resetarProfissao",
-          value: function resetarProfissao(keySala, keyProfissao) {
+          key: "sortearProfissaoMonitor",
+          value: function sortearProfissaoMonitor(keySala) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee29() {
+              var keyProfissao, snapshotTarefas, j;
               return regeneratorRuntime.wrap(function _callee29$(_context29) {
                 while (1) {
                   switch (_context29.prev = _context29.next) {
                     case 0:
                       _context29.next = 2;
+                      return this.db.database.ref('salas/' + keySala + '/profissoes/').once('value', function (snapshot) {
+                        j = Math.floor(Math.random() * Object.keys(snapshot.val()).length);
+                        keyProfissao = Object.keys(snapshot.val())[j];
+                      });
+
+                    case 2:
+                      return _context29.abrupt("return", keyProfissao);
+
+                    case 3:
+                    case "end":
+                      return _context29.stop();
+                  }
+                }
+              }, _callee29, this);
+            }));
+          }
+        }, {
+          key: "getProfissao",
+          value: function getProfissao(keySala, keyProfissao) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee30() {
+              var profissao;
+              return regeneratorRuntime.wrap(function _callee30$(_context30) {
+                while (1) {
+                  switch (_context30.prev = _context30.next) {
+                    case 0:
+                      _context30.next = 2;
+                      return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao).once('value', function (snapshot) {
+                        profissao = snapshot.val();
+                      });
+
+                    case 2:
+                      return _context30.abrupt("return", profissao);
+
+                    case 3:
+                    case "end":
+                      return _context30.stop();
+                  }
+                }
+              }, _callee30, this);
+            }));
+          }
+        }, {
+          key: "resetarProfissao",
+          value: function resetarProfissao(keySala, keyProfissao) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee31() {
+              return regeneratorRuntime.wrap(function _callee31$(_context31) {
+                while (1) {
+                  switch (_context31.prev = _context31.next) {
+                    case 0:
+                      _context31.next = 2;
                       return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao).update({
                         id: 0,
                         profissao: 'desconhecido',
@@ -3314,50 +3428,6 @@
 
                     case 2:
                     case "end":
-                      return _context29.stop();
-                  }
-                }
-              }, _callee29, this);
-            }));
-          }
-        }, {
-          key: "removerProfissao",
-          value: function removerProfissao(keySala, keyProfissao) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee30() {
-              return regeneratorRuntime.wrap(function _callee30$(_context30) {
-                while (1) {
-                  switch (_context30.prev = _context30.next) {
-                    case 0:
-                      _context30.next = 2;
-                      return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao).remove();
-
-                    case 2:
-                    case "end":
-                      return _context30.stop();
-                  }
-                }
-              }, _callee30, this);
-            }));
-          }
-        }, {
-          key: "sortearTarefa",
-          value: function sortearTarefa(keySala, keyProfissao) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee31() {
-              var keyTarefa;
-              return regeneratorRuntime.wrap(function _callee31$(_context31) {
-                while (1) {
-                  switch (_context31.prev = _context31.next) {
-                    case 0:
-                      _context31.next = 2;
-                      return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/tarefas/').once('value', function (snapshot) {
-                        keyTarefa = Object.keys(snapshot.val())[Math.floor(Math.random() * Object.keys(snapshot.val()).length)];
-                      });
-
-                    case 2:
-                      return _context31.abrupt("return", keyTarefa);
-
-                    case 3:
-                    case "end":
                       return _context31.stop();
                   }
                 }
@@ -3365,40 +3435,40 @@
             }));
           }
         }, {
-          key: "getTarefa",
-          value: function getTarefa(keySala, keyProfissao, keyTarefa) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee33() {
-              var _this16 = this;
+          key: "removerProfissao",
+          value: function removerProfissao(keySala, keyProfissao) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee32() {
+              return regeneratorRuntime.wrap(function _callee32$(_context32) {
+                while (1) {
+                  switch (_context32.prev = _context32.next) {
+                    case 0:
+                      _context32.next = 2;
+                      return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao).remove();
 
-              var tarefa;
+                    case 2:
+                    case "end":
+                      return _context32.stop();
+                  }
+                }
+              }, _callee32, this);
+            }));
+          }
+        }, {
+          key: "sortearTarefa",
+          value: function sortearTarefa(keySala, keyProfissao) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee33() {
+              var keyTarefa;
               return regeneratorRuntime.wrap(function _callee33$(_context33) {
                 while (1) {
                   switch (_context33.prev = _context33.next) {
                     case 0:
                       _context33.next = 2;
-                      return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/tarefas/' + keyTarefa).once('value', function (snapshot) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this16, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee32() {
-                          return regeneratorRuntime.wrap(function _callee32$(_context32) {
-                            while (1) {
-                              switch (_context32.prev = _context32.next) {
-                                case 0:
-                                  _context32.next = 2;
-                                  return snapshot.val();
-
-                                case 2:
-                                  tarefa = _context32.sent;
-
-                                case 3:
-                                case "end":
-                                  return _context32.stop();
-                              }
-                            }
-                          }, _callee32);
-                        }));
+                      return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/tarefas/').once('value', function (snapshot) {
+                        keyTarefa = Object.keys(snapshot.val())[Math.floor(Math.random() * Object.keys(snapshot.val()).length)];
                       });
 
                     case 2:
-                      return _context33.abrupt("return", tarefa);
+                      return _context33.abrupt("return", keyTarefa);
 
                     case 3:
                     case "end":
@@ -3409,22 +3479,66 @@
             }));
           }
         }, {
+          key: "getTarefa",
+          value: function getTarefa(keySala, keyProfissao, keyTarefa) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee35() {
+              var _this17 = this;
+
+              var tarefa;
+              return regeneratorRuntime.wrap(function _callee35$(_context35) {
+                while (1) {
+                  switch (_context35.prev = _context35.next) {
+                    case 0:
+                      _context35.next = 2;
+                      return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/tarefas/' + keyTarefa).once('value', function (snapshot) {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this17, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee34() {
+                          return regeneratorRuntime.wrap(function _callee34$(_context34) {
+                            while (1) {
+                              switch (_context34.prev = _context34.next) {
+                                case 0:
+                                  _context34.next = 2;
+                                  return snapshot.val();
+
+                                case 2:
+                                  tarefa = _context34.sent;
+
+                                case 3:
+                                case "end":
+                                  return _context34.stop();
+                              }
+                            }
+                          }, _callee34);
+                        }));
+                      });
+
+                    case 2:
+                      return _context35.abrupt("return", tarefa);
+
+                    case 3:
+                    case "end":
+                      return _context35.stop();
+                  }
+                }
+              }, _callee35, this);
+            }));
+          }
+        }, {
           key: "setTarefa",
           value: function setTarefa(keySala, keyProfissao, keyTarefa, tarefa) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee34() {
-              return regeneratorRuntime.wrap(function _callee34$(_context34) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee36() {
+              return regeneratorRuntime.wrap(function _callee36$(_context36) {
                 while (1) {
-                  switch (_context34.prev = _context34.next) {
+                  switch (_context36.prev = _context36.next) {
                     case 0:
-                      _context34.next = 2;
+                      _context36.next = 2;
                       return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/tarefas/' + keyTarefa).update(tarefa);
 
                     case 2:
                     case "end":
-                      return _context34.stop();
+                      return _context36.stop();
                   }
                 }
-              }, _callee34, this);
+              }, _callee36, this);
             }));
           }
         }, {
@@ -3460,13 +3574,13 @@
         }, {
           key: "adicionarRegistro",
           value: function adicionarRegistro(keySala, keyProfissao, keyTarefa, texto) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee35() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee37() {
               var registro, idProfissao, idTarefa, snapshotTarefas;
-              return regeneratorRuntime.wrap(function _callee35$(_context35) {
+              return regeneratorRuntime.wrap(function _callee37$(_context37) {
                 while (1) {
-                  switch (_context35.prev = _context35.next) {
+                  switch (_context37.prev = _context37.next) {
                     case 0:
-                      _context35.next = 2;
+                      _context37.next = 2;
                       return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao).once('value', function (snapshot) {
                         idProfissao = snapshot.val().id;
                         snapshotTarefas = snapshot.child('tarefas').child(keyTarefa);
@@ -3481,14 +3595,14 @@
                         concluido: false,
                         texto: texto
                       };
-                      return _context35.abrupt("return", this.db.database.ref('salas/' + keySala + '/registros/').push(registro).key);
+                      return _context37.abrupt("return", this.db.database.ref('salas/' + keySala + '/registros/').push(registro).key);
 
                     case 4:
                     case "end":
-                      return _context35.stop();
+                      return _context37.stop();
                   }
                 }
-              }, _callee35, this);
+              }, _callee37, this);
             }));
           }
         }, {
@@ -3510,20 +3624,20 @@
         }, {
           key: "concluirRegistro",
           value: function concluirRegistro(keySala, keyProfissao, registro, vidas) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee36() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee38() {
               var result, refRegistros, acaoIncorreta, snapshot, numTarefas;
-              return regeneratorRuntime.wrap(function _callee36$(_context36) {
+              return regeneratorRuntime.wrap(function _callee38$(_context38) {
                 while (1) {
-                  switch (_context36.prev = _context36.next) {
+                  switch (_context38.prev = _context38.next) {
                     case 0:
                       result = false;
                       refRegistros = this.db.database.ref('salas/' + keySala + '/registros/');
                       acaoIncorreta = true;
-                      _context36.next = 5;
+                      _context38.next = 5;
                       return refRegistros.once('value');
 
                     case 5:
-                      snapshot = _context36.sent;
+                      snapshot = _context38.sent;
                       numTarefas = 0;
                       snapshot.forEach(function (r) {
                         if (r.val().ativo && r.val().idProfissao === registro.idProfissao && r.val().id === registro.id && r.val().texto === registro.texto) {
@@ -3537,11 +3651,11 @@
                       });
 
                       if (!(numTarefas > 0)) {
-                        _context36.next = 12;
+                        _context38.next = 12;
                         break;
                       }
 
-                      _context36.next = 11;
+                      _context38.next = 11;
                       return this.pontuarJogador(keySala, keyProfissao, true, 0.5 * numTarefas);
 
                     case 11:
@@ -3549,57 +3663,57 @@
 
                     case 12:
                       if (!acaoIncorreta) {
-                        _context36.next = 17;
+                        _context38.next = 17;
                         break;
                       }
 
                       this.removerVida(keySala, vidas);
-                      _context36.next = 16;
+                      _context38.next = 16;
                       return this.pontuarJogador(keySala, keyProfissao, false, 1);
 
                     case 16:
                       result = false;
 
                     case 17:
-                      return _context36.abrupt("return", result);
+                      return _context38.abrupt("return", result);
 
                     case 18:
                     case "end":
-                      return _context36.stop();
+                      return _context38.stop();
                   }
                 }
-              }, _callee36, this);
+              }, _callee38, this);
             }));
           }
         }, {
           key: "desabilitarRegistro",
           value: function desabilitarRegistro(keySala, keyRegistro, keyProfissao, keyProfissaoMonitor, vidas) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee37() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee39() {
               var concluido;
-              return regeneratorRuntime.wrap(function _callee37$(_context37) {
+              return regeneratorRuntime.wrap(function _callee39$(_context39) {
                 while (1) {
-                  switch (_context37.prev = _context37.next) {
+                  switch (_context39.prev = _context39.next) {
                     case 0:
                       concluido = true;
                       this.db.database.ref('salas/' + keySala + '/registros/' + keyRegistro).update({
                         ativo: false
                       });
-                      _context37.next = 4;
+                      _context39.next = 4;
                       return this.db.database.ref('salas/' + keySala + '/registros/' + keyRegistro + '/concluido').once('value', function (snapshot) {
                         concluido = snapshot.val();
                       });
 
                     case 4:
                       if (concluido) {
-                        _context37.next = 10;
+                        _context39.next = 10;
                         break;
                       }
 
-                      _context37.next = 7;
+                      _context39.next = 7;
                       return this.pontuarJogador(keySala, keyProfissao, false, 0.5);
 
                     case 7:
-                      _context37.next = 9;
+                      _context39.next = 9;
                       return this.pontuarJogador(keySala, keyProfissaoMonitor, false, 0.5);
 
                     case 9:
@@ -3607,10 +3721,10 @@
 
                     case 10:
                     case "end":
-                      return _context37.stop();
+                      return _context39.stop();
                   }
                 }
-              }, _callee37, this);
+              }, _callee39, this);
             }));
           }
         }, {
@@ -3628,17 +3742,17 @@
         }, {
           key: "pontuarJogador",
           value: function pontuarJogador(keySala, keyProfissao, acerto, valor) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee38() {
-              return regeneratorRuntime.wrap(function _callee38$(_context38) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee40() {
+              return regeneratorRuntime.wrap(function _callee40$(_context40) {
                 while (1) {
-                  switch (_context38.prev = _context38.next) {
+                  switch (_context40.prev = _context40.next) {
                     case 0:
                       if (!acerto) {
-                        _context38.next = 6;
+                        _context40.next = 6;
                         break;
                       }
 
-                      _context38.next = 3;
+                      _context40.next = 3;
                       return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/acertos').once('value', function (snapshot) {
                         valor = valor + snapshot.val();
                       });
@@ -3647,11 +3761,11 @@
                       this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao).update({
                         acertos: valor
                       });
-                      _context38.next = 9;
+                      _context40.next = 9;
                       break;
 
                     case 6:
-                      _context38.next = 8;
+                      _context40.next = 8;
                       return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao + '/erros').once('value', function (snapshot) {
                         valor = valor + snapshot.val();
                       });
@@ -3663,10 +3777,10 @@
 
                     case 9:
                     case "end":
-                      return _context38.stop();
+                      return _context40.stop();
                   }
                 }
-              }, _callee38, this);
+              }, _callee40, this);
             }));
           }
         }, {
@@ -3679,54 +3793,6 @@
         }, {
           key: "resetarSala",
           value: function resetarSala(keySala) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee39() {
-              return regeneratorRuntime.wrap(function _callee39$(_context39) {
-                while (1) {
-                  switch (_context39.prev = _context39.next) {
-                    case 0:
-                      _context39.next = 2;
-                      return this.db.database.ref('salas/' + keySala).update({
-                        vidas: 10,
-                        numRodada: 1
-                      });
-
-                    case 2:
-                    case "end":
-                      return _context39.stop();
-                  }
-                }
-              }, _callee39, this);
-            }));
-          }
-        }, {
-          key: "removerSala",
-          value: function removerSala(keySala) {
-            this.db.database.ref('salas/' + keySala).remove();
-          }
-        }, {
-          key: "ficarPronto",
-          value: function ficarPronto(keySala, keyProfissao, valor) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee40() {
-              return regeneratorRuntime.wrap(function _callee40$(_context40) {
-                while (1) {
-                  switch (_context40.prev = _context40.next) {
-                    case 0:
-                      _context40.next = 2;
-                      return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao).update({
-                        pronto: valor
-                      });
-
-                    case 2:
-                    case "end":
-                      return _context40.stop();
-                  }
-                }
-              }, _callee40, this);
-            }));
-          }
-        }, {
-          key: "alterarVisibilidadeURL",
-          value: function alterarVisibilidadeURL(keySala, valor) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee41() {
               return regeneratorRuntime.wrap(function _callee41$(_context41) {
                 while (1) {
@@ -3734,7 +3800,8 @@
                     case 0:
                       _context41.next = 2;
                       return this.db.database.ref('salas/' + keySala).update({
-                        visibilidadeURL: valor
+                        vidas: 10,
+                        numRodada: 1
                       });
 
                     case 2:
@@ -3746,16 +3813,21 @@
             }));
           }
         }, {
-          key: "alterarPrivacidade",
-          value: function alterarPrivacidade(keySala, valor) {
+          key: "removerSala",
+          value: function removerSala(keySala) {
+            this.db.database.ref('salas/' + keySala).remove();
+          }
+        }, {
+          key: "ficarPronto",
+          value: function ficarPronto(keySala, keyProfissao, valor) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee42() {
               return regeneratorRuntime.wrap(function _callee42$(_context42) {
                 while (1) {
                   switch (_context42.prev = _context42.next) {
                     case 0:
                       _context42.next = 2;
-                      return this.db.database.ref('salas/' + keySala).update({
-                        privacidade: valor
+                      return this.db.database.ref('salas/' + keySala + '/profissoes/' + keyProfissao).update({
+                        pronto: valor
                       });
 
                     case 2:
@@ -3767,29 +3839,71 @@
             }));
           }
         }, {
-          key: "checarPrivacidadeSala",
-          value: function checarPrivacidadeSala(keySala) {
+          key: "alterarVisibilidadeURL",
+          value: function alterarVisibilidadeURL(keySala, valor) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee43() {
-              var result;
               return regeneratorRuntime.wrap(function _callee43$(_context43) {
                 while (1) {
                   switch (_context43.prev = _context43.next) {
                     case 0:
-                      result = false;
-                      _context43.next = 3;
-                      return this.db.database.ref('salas/' + keySala + '/privacidade/').once('value', function (snap) {
-                        result = snap.val();
+                      _context43.next = 2;
+                      return this.db.database.ref('salas/' + keySala).update({
+                        visibilidadeURL: valor
                       });
 
-                    case 3:
-                      return _context43.abrupt("return", result);
-
-                    case 4:
+                    case 2:
                     case "end":
                       return _context43.stop();
                   }
                 }
               }, _callee43, this);
+            }));
+          }
+        }, {
+          key: "alterarPrivacidade",
+          value: function alterarPrivacidade(keySala, valor) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee44() {
+              return regeneratorRuntime.wrap(function _callee44$(_context44) {
+                while (1) {
+                  switch (_context44.prev = _context44.next) {
+                    case 0:
+                      _context44.next = 2;
+                      return this.db.database.ref('salas/' + keySala).update({
+                        privacidade: valor
+                      });
+
+                    case 2:
+                    case "end":
+                      return _context44.stop();
+                  }
+                }
+              }, _callee44, this);
+            }));
+          }
+        }, {
+          key: "checarPrivacidadeSala",
+          value: function checarPrivacidadeSala(keySala) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee45() {
+              var result;
+              return regeneratorRuntime.wrap(function _callee45$(_context45) {
+                while (1) {
+                  switch (_context45.prev = _context45.next) {
+                    case 0:
+                      result = false;
+                      _context45.next = 3;
+                      return this.db.database.ref('salas/' + keySala + '/privacidade/').once('value', function (snap) {
+                        result = snap.val();
+                      });
+
+                    case 3:
+                      return _context45.abrupt("return", result);
+
+                    case 4:
+                    case "end":
+                      return _context45.stop();
+                  }
+                }
+              }, _callee45, this);
             }));
           }
         }]);

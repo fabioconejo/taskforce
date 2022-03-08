@@ -3,9 +3,12 @@
     <table class="tabela-relatorio">
       <thead>
         <tr>
-          <th
-            [ngClass]="this.vida <= 0 ? 'titulo derrota' : 'titulo vitoria'"
+          <th *ngIf="this.vida > 0"
+            Class="titulo vitoria"
           ></th>
+          <th *ngIf="this.vida <= 0"
+            Class="titulo derrota"
+          > #{{numRodada}}</th>
           <th class="tooltip">
             Tarefas Concluídas
             <svg
@@ -65,12 +68,12 @@
         <tr *ngFor="let l of lista">
           <td>
             <div class="fundo-profissao">
-              <div
+              <img
                 class="img-profissao"
-                style.background-image="url({{ baseUrl }}profissionais/{{
+                src="{{ baseUrl }}profissionais/{{
                   l.imagem
-                }})"
-              ></div>
+                }}"
+              />
             </div>
 
             <div class="info-amigo">
@@ -90,12 +93,12 @@
         <tr *ngFor="let l of relatorioPartida">
         <td>
           <div class="fundo-profissao">
-            <div
-              class="img-profissao"
-              style.background-image="url({{ baseUrl }}profissionais/{{
-                l.imagem
-              }})"
-            ></div>
+            <img
+                class="img-profissao"
+                src="{{ baseUrl }}profissionais/{{
+                  l.imagem
+                }}"
+              />
           </div>
 
           <div class="info-amigo">
@@ -113,10 +116,25 @@
     </table>
   </div>
 
-  <div class="acao">
+  <div class="acao-proximo" *ngIf="this.vida > 0">
     <button
       [disabled]="this.desabilitado"
-      [ngClass]="this.vida <= 0 ? 'reiniciar' : 'proximo'"
+      class="proximo"
+      (click)="fecharRelatorio()"
+    ></button>
+  </div>
+
+  <div class="acao-reiniciar" *ngIf="this.vida <= 0">
+    <button
+      class="compartilhar"
+      [disabled]="this.desabilitado"
+      (click)="compartilhar()"
+    ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-share-fill" viewBox="0 -4 20 20">
+      <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+    </svg> {{textoCompartilhar}}</button>
+    <button
+      [disabled]="this.desabilitado"
+      class="reiniciar"
       (click)="fecharRelatorio()"
     ></button>
   </div>

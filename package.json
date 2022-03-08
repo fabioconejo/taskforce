@@ -13,8 +13,10 @@
     "@angular/platform-browser-dynamic": "11.2.14",
     "@angular/router": "11.2.14",
     "@firebase/app": "^0.6.27",
+    "dom-to-image": "^2.6.0",
     "firebase": "^8.9.1",
     "firebase-tools": "^9.16.0",
+    "html2canvas": "^1.4.1",
     "rxjs": "6.6.7",
     "tslib": "2.3.0",
     "zone.js": "0.11.4"

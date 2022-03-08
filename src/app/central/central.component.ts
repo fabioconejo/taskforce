@@ -50,7 +50,7 @@ export class CentralComponent implements OnInit {
   numTarefasNecessarias: number;
   flagRelatorio: boolean;
   relatorioPartida:any = [];
-  dica: boolean = true;
+  dica: boolean = false;
   visibilidadeURL: boolean;
   privacidade: boolean;
   lider:string
